@@ -51,7 +51,7 @@ function CreerTableau(string $invite)
 {
     do
     {
-        // on demande les prix un par un
+        // on demande les nombres un par un
         $nombre = DemanderEntier($invite);
         $tab[]=$nombre;
     } while ($nombre != 0); // on s'arrete quand le nombre est = à 0
@@ -60,15 +60,21 @@ function CreerTableau(string $invite)
 }
 
 //
-echo DemanderEntier("note :", false)."\n";
-// echo DemanderEntier("note positive:", true)."\n";
-// echo DemanderEntier("entrer une valeur :", false)."\n";
-//afficher tableau
+//  echo DemanderEntier("note :", false)."\n";
+//  echo DemanderEntier("note positive:", true)."\n";
+//  echo DemanderEntier("entrer une valeur :", false)."\n";
 
-print_r($tab);
-//trier tableau
-//croissant par valeur
-sort($tab,$invite());
-//decroissant par valeur
-rsort($tab,$invite);
-//croissant par valeur et par association clé-valeur
+// //creer un tabeau $invite
+// $invite = "Entrez un nombre (0 pour terminer) : ";
+// $tableau = CreerTableau($invite);
+
+// echo "Le tableau saisi est : ";
+// foreach ($tableau as $nombre) {
+//     echo $nombre . " " . "\t";};
+//     //afficher tableau
+//      print_r ($tab,$invite);
+
+
+
+function afficheTableau(array $tab){
+    echo implode("\t", $tab)."\n";
