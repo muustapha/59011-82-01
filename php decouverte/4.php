@@ -26,6 +26,7 @@ echo '</ul>'; {
     return $traits;
 
 
+
 /**
  * Création d'un tableau à 2 dimensions
  *
