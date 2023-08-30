@@ -3,7 +3,7 @@
     $motComplet = readline("entrer un mot: ");
     $lettre = readline("entrer une lettre:");
   
-    $longueurLigne = 11;
+    $longueurLigne = "";
     $ligne = str_repeat("_", $longueurLigne);
     
     echo $ligne;
