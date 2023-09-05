@@ -1,0 +1,20 @@
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#myImage {
+    width: 200px; /* Ajustez la taille de l'image selon vos besoins */
+    transition: transform 0.5s ease-in-out; /* Ajoute une transition fluide */
+}
+
+#rotateButton {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
