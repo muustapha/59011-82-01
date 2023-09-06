@@ -39,7 +39,7 @@
 
 #bottom {
     bottom: 90%;
-    left: 6.5%;
+    left: 6%;
     transform: translateX(-50%);
 }
 
@@ -50,7 +50,44 @@
 }
 
 #right {
-    top: 3.5%;
+    top: 3%;
     right: 88%   ;
     transform: translateY(50%);
+}
+
+
+
+
+
+#obstacle {
+    position: absolute;
+    height: 1vh;
+    width: 100vw;
+    background-color: #000000;
+    left: 1vw;
+    top: 13vh;
+}
+#obstacle1 {
+    position: absolute;
+    height: 1vh;
+    width: 100.5vw;
+    background-color: #000000;
+    left: 0vw;
+    top: 85vh;
+}
+#obstacle2 {
+    position: absolute;
+    height: 85vh;
+    width: 0.5vw;
+    background-color: #000000;
+    left: vw;
+    top: vh;
+}
+#obstacle3 {
+    position: absolute;
+    height: 85vh;
+    width: 0.5vw;
+    background-color: #000000;
+    left: 100vw;
+    top: vh;
 }
