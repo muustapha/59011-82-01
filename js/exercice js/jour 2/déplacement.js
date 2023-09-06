@@ -6,23 +6,22 @@ const LeftButton = document.getElementById('left');
 const RightButton = document.getElementById('right');
 const BottomButton = document.getElementById('bottom');
 const carre = document.getElementById('carre');
-let y=126;
-let x=10.1;
-const step = 20; // Le nombre de pixels à déplacer à chaque clic
- 
-function initPosition() {
-    carre.style.transform = `translate(${x}px, ${y}px)`;
-}
 
-initPosition();
+const step = 20; // Le nombre de pixels à déplacer à chaque clic
+
+let y = 103;
+let x = 20;
+
 
 let isDragging = false; // Indicateur de glissement
 let offsetX, offsetY; // Offset pour garder la position relative de la souris par rapport au carré
 let mouseX = 0; // Variable pour stocker la position X de la souris
 let mouseY = 0; // Variable pour stocker la position Y de la souris
+function updatePosition() {
+    carre.style.transform = `translate(${x}px, ${y}px)`;
+}
 
-
-
+updatePosition
 
 // Ajouter des gestionnaires d'événements aux boutons
 UpButton.addEventListener('click', up); // Appel de la fonction 'up' pour déplacer vers le haut
@@ -30,10 +29,8 @@ LeftButton.addEventListener('click', left); // Appel de la fonction 'left' pour 
 RightButton.addEventListener('click', right); // Appel de la fonction 'right' pour déplacer vers la droite
 BottomButton.addEventListener('click', down); // Appel de la fonction 'down' pour déplacer vers le bas
 
-function updatePosition() {
-    carre.style.transform = `translate(${x}px, ${y}px)`;
-}
 
+updatePosition();
 
 // Fonctions pour déplacer le carré en utilisant translate
 function up() {
@@ -68,12 +65,6 @@ document.addEventListener('keydown', (event) => {
         right();
     }
 });
-
-
-
-carre.style.position = 'absolute';
-carre.style.transform = 'translate(0px, 0px)';
-
 // Gestionnaire d'événement pour le mouvement de la souris
 document.addEventListener('mousemove', (event) => {
     if (isDragging) {
