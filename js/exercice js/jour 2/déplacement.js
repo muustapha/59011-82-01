@@ -1,4 +1,4 @@
-
+updatePosition
 
 // // Récupérer les boutons de direction
 const UpButton = document.getElementById('top');
@@ -7,7 +7,7 @@ const RightButton = document.getElementById('right');
 const BottomButton = document.getElementById('bottom');
 const carre = document.getElementById('carre');
 
-const step = 20; // Le nombre de pixels à déplacer à chaque clic
+const step = 5; // Le nombre de pixels à déplacer à chaque clic
 
 let y = 103;
 let x = 20;
@@ -99,4 +99,21 @@ document.addEventListener('mouseup', () => {
 carre.addEventListener('dragstart', (event) => {
     event.preventDefault();
 });
-
+function collision() {
+    const carre = document.getElementById('carre');
+    const carreRect = carre.getBoundingClientRect();
+    
+    const obstacles = document.querySelectorAll('.obstacle');
+    for (const obstacle of obstacles) {
+        const obstacleRect = obstacle.getBoundingClientRect();
+        if (
+            !(carreRect.top > obstacleRect.bottom ||
+            carreRect.bottom < obstacleRect.top ||
+            carreRect.right < obstacleRect.left ||
+            carreRect.left > obstacleRect.right)
+        ) {
+            return true;
+        }
+    }
+    return false;
+}

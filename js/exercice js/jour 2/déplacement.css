@@ -101,126 +101,246 @@
 
 #obstacle {
     position: absolute;
-    height: 3vh;
-    width: 5vw;
+    height: 1vh;
+    width: 4vw;
     background-color: #ff000080;
     left: 1.5vw;
-    top: 19.3vh;
+    top: 19vh;
 }
 
 #obstacle1 {
     position: absolute;
-    height: 76vh;
-    width: 2vw;
+    height: 80vh;
+    width: 0.5vw;
     background-color: #ff000080;
-    left: 3vw;
-    top: 3vh;
+    left: 3.5vw;
+    top: 1vh;
 }
 
 #obstacle2 {
     position: absolute;
-    height: 30vh;
-    width: 2vw;
+    height: 31vh;
+    width: 0.5vw;
     background-color: #ff000080;
-    left: 9vw;
+    left: 7vw;
     top: 0.5vh;
 }
 
 #obstacle3 {
     position: absolute;
-    height: 35vh;
-    width: 2vw;
+    height: 36vh;
+    width: 0.5vw;
     background-color: #ff000080;
-    left: 9vw;
+    left: 7vw;
     top: 37vh;
 }
 
 #obstacle4 {
     position: absolute;
-    height: 3vh;
+    height: 1vh;
     width: 50vw;
     background-color: #ff000080;
-    left: 11vw;
+    left: 7.5vw;
     top: 0.5vh;
 }
 
 #obstacle5 {
     position: absolute;
-    height: 3vh;
-    width: 30vw;
+    height: 1vh;
+    width: 10vw;
     background-color: #ff000080;
-    left: 11vw;
-    top: 27.5vh;
+    left: 7.5vw;
+    top: 30.5vh;
 }
 
 #obstacle6 {
     position: absolute;
-    height: 3vh;
-    width: 50vw;
+    height: 1vh;
+    width: 7vw;
     background-color: #ff000080;
-    left: 11vw;
+    left: 7.5vw;
     top: 37vh;
 }
 
 #obstacle7 {
     position: absolute;
-    height: 3vh;
-    width: 50vw;
+    height: 1vh;
+    width: 1vw;
     background-color: #ff000080;
-    left: 11vw;
-    top: 0.5vh;
+    left:7.5vw;
+    top: 72vh;
 }
 
 #obstacle8 {
     position: absolute;
-    height: 76vh;
-    width: 2vw;
+    height: 30vh;
+    width: 0.5vw;
     background-color: #ff000080;
-    left: 3vw;
-    top: 3vh;
+    left: 14vw;
+    top: 38vh;
 }
 
 #obstacle9 {
     position: absolute;
-    height: 76vh;
-    width: 2vw;
+    height: 30vh;
+    width: 0.5vw;
     background-color: #ff000080;
-    left: 3vw;
-    top: 3vh;
+    left: 17.5vw;
+    top: 30.5vh;
 }
 
 #obstacle10 {
     position: absolute;
     height: 76vh;
-    width: 2vw;
+    width: 0.5vw;
     background-color: #ff000080;
-    left: 3vw;
-    top: 3vh;
+    left: 50vw;
+    top: 15vh;
 }
 
 #obstacle11 {
     position: absolute;
-    height: 76vh;
-    width: 2vw;
+    height: 46vh;
+    width: 0.5vw;
     background-color: #ff000080;
-    left: 3vw;
-    top: 3vh;
+    left: 21vw;
+    top: 14.5vh;
 }
 
 #obstacle12 {
     position: absolute;
     height: 76vh;
-    width: 2vw;
+    width: 0.5vw;
     background-color: #ff000080;
-    left: 3vw;
-    top: 3vh;
+    left: 60.5vw;
+    top: 0.5vh;
 }
 
 #obstacle13 {
     position: absolute;
     height: 76vh;
-    width: 2vw;
+    width: 0.5vw;
     background-color: #ff000080;
-    left: 3vw;
-    top: 3vh;
+    left: 57vw;
+    top: 1.5vh;
+}
+#obstacle14 {
+    position: absolute;
+    height: 1vh;
+    width: 50vw;
+    background-color: #ff000080;
+    left: 7.5vw;
+    top: 0.5vh;
+}#obstacle15 {
+    position: absolute;
+    height: 1vh;
+    width: 50vw;
+    background-color: #ff000080;
+    left: 7.5vw;
+    top: 0.5vh;
+}#obstacle16 {
+    position: absolute;
+    height: 1vh;
+    width: 50vw;
+    background-color: #ff000080;
+    left: 7.5vw;
+    top: 0.5vh;
+}#obstacle17 {
+    position: absolute;
+    height: 1vh;
+    width: 50vw;
+    background-color: #ff000080;
+    left: 7.5vw;
+    top: 0.5vh;
+}#obstacle18 {
+    position: absolute;
+    height: 1vh;
+    width: 50vw;
+    background-color: #ff000080;
+    left: 7.5vw;
+    top: 0.5vh;
+}#obstacle19 {
+    position: absolute;
+    height: 1vh;
+    width: 50vw;
+    background-color: #ff000080;
+    left: 7.5vw;
+    top: 0.5vh;
+}#obstacle20 {
+    position: absolute;
+    height: 1vh;
+    width: 50vw;
+    background-color: #ff000080;
+    left: 7.5vw;
+    top: 0.5vh;
+}#obstacle21 {
+    position: absolute;
+    height: 1vh;
+    width: 50vw;
+    background-color: #ff000080;
+    left: 7.5vw;
+    top: 0.5vh;
+}#obstacle22{
+    position: absolute;
+    height: 1vh;
+    width: 50vw;
+    background-color: #ff000080;
+    left: 7.5vw;
+    top: 0.5vh;
+}#obstacle23 {
+    position: absolute;
+    height: 1vh;
+    width: 50vw;
+    background-color: #ff000080;
+    left: 7.5vw;
+    top: 0.5vh;
+}#obstacle24 {
+    position: absolute;
+    height: 1vh;
+    width: 50vw;
+    background-color: #ff000080;
+    left: 7.5vw;
+    top: 0.5vh;
+}#obstacle25 {
+    position: absolute;
+    height: 1vh;
+    width: 50vw;
+    background-color: #ff000080;
+    left: 7.5vw;
+    top: 0.5vh;
+}#obstacle26 {
+    position: absolute;
+    height: 1vh;
+    width: 50vw;
+    background-color: #ff000080;
+    left: 7.5vw;
+    top: 0.5vh;
+}#obstacle27 {
+    position: absolute;
+    height: 1vh;
+    width: 50vw;
+    background-color: #ff000080;
+    left: 7.5vw;
+    top: 0.5vh;
+}#obstacle28 {
+    position: absolute;
+    height: 1vh;
+    width: 50vw;
+    background-color: #ff000080;
+    left: 7.5vw;
+    top: 0.5vh;
+}#obstacle29 {
+    position: absolute;
+    height: 1vh;
+    width: 50vw;
+    background-color: #ff000080;
+    left: 7.5vw;
+    top: 0.5vh;
+}#obstacle31 {
+    position: absolute;
+    height: 1vh;
+    width: 50vw;
+    background-color: #ff000080;
+    left: 7.5vw;
+    top: 0.5vh;
 }
