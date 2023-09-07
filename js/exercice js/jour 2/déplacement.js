@@ -21,7 +21,7 @@ function updatePosition() {
     carre.style.transform = `translate(${x}px, ${y}px)`;
 }
 
-updatePosition
+updatePosition()
 
 // Ajouter des gestionnaires d'événements aux boutons
 UpButton.addEventListener('click', up); // Appel de la fonction 'up' pour déplacer vers le haut
@@ -99,6 +99,9 @@ document.addEventListener('mouseup', () => {
 carre.addEventListener('dragstart', (event) => {
     event.preventDefault();
 });
+
+// fonction collision
+
 function collision() {
     const carre = document.getElementById('carre');
     const carreRect = carre.getBoundingClientRect();
@@ -117,3 +120,102 @@ function collision() {
     }
     return false;
 }
+
+// collision avec touches du clavier
+
+document.addEventListener('keydown', (event) => {
+    if (collision()) {
+        switch (event.key) {
+            case 'ArrowUp':
+                y += 10;
+                break;
+            case 'ArrowDown':
+                y -= 10;
+                break;
+            case 'ArrowLeft':
+                x += 10;
+                break;
+            case 'ArrowRight':
+                x -= 10;
+                break;
+        }
+        updatePosition();
+    }
+});
+
+// collision avec flèches à l'écran
+
+UpButton.addEventListener('click', () => {
+    if (collision()) {
+        y += 10;
+        updatePosition();
+    }
+});
+
+BottomButton.addEventListener('click', () => {
+    if (collision()) {
+        y -= 10;
+        updatePosition();
+    }
+});
+
+LeftButton.addEventListener('click', () => {
+    if (collision()) {
+        x += 10;
+        updatePosition();
+    }
+});
+
+RightButton.addEventListener('click', () => {
+    if (collision()) {
+        x -= 10;
+        updatePosition();
+    }
+});
+
+// collision avec glissement de la souris
+
+document.addEventListener('mousemove', (event) => {
+    if (isDragging) {
+        x = event.clientX - offsetX;
+        y = event.clientY - offsetY;
+        if (collision()) {
+            x = mouseX;
+            y = mouseY;
+        }
+        updatePosition();
+    }
+});
+
+// collision avec clic de souris enfoncé   
+
+carre.addEventListener('mousedown', (event) => {
+    isDragging = true;
+    const rect = carre.getBoundingClientRect();
+    offsetX = event.clientX - rect.left;
+    offsetY = event.clientY - rect.top;
+    mouseX = x;
+    mouseY = y;
+    if (collision()) {
+        x = mouseX;
+        y = mouseY;
+    }
+    updatePosition();
+});     
+
+
+// collision avec relâchement du clic de souris 
+
+document.addEventListener('mouseup', () => {
+    isDragging = false;
+    updatePosition();
+});     
+
+
+// collision avec annulation de la sélection de texte lors du glissement
+
+carre.addEventListener('dragstart', (event) => {
+    event.preventDefault();
+    updatePosition();
+});
+
