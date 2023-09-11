@@ -12,7 +12,13 @@ const step = 5; // Le nombre de pixels à déplacer à chaque clic
 let y = 103;
 let x = 20;
 
-
+var obstacleDiv = document.getElementById("obstacle");
+        for (var i = 1; i <= 95; i++) {
+            var obstacle = document.createElement("div");
+            obstacle.className = "obstacle";
+            obstacle.id = "obstacle" + i;
+            obstacleDiv.appendChild(obstacle);
+        }
 let isDragging = false; // Indicateur de glissement
 let offsetX, offsetY; // Offset pour garder la position relative de la souris par rapport au carré
 let mouseX = 0; // Variable pour stocker la position X de la souris
@@ -21,7 +27,6 @@ function updatePosition() {
     carre.style.transform = `translate(${x}px, ${y}px)`;
 }
 
-updatePosition()
 
 // Ajouter des gestionnaires d'événements aux boutons
 UpButton.addEventListener('click', up); // Appel de la fonction 'up' pour déplacer vers le haut
@@ -103,6 +108,7 @@ carre.addEventListener('dragstart', (event) => {
 // fonction collision
 
 function collision() {
+    console.log('collision');
     const carre = document.getElementById('carre');
     const carreRect = carre.getBoundingClientRect();
     
