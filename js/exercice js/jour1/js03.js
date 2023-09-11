@@ -69,3 +69,4 @@ titres.forEach((titre) => {
 // Version 2 : Changer la couleur du titre cliqué (rotation sur 3 couleurs)
 const couleurs = ["red", "green", "blue"];
    
+
