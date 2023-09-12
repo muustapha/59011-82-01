@@ -28,4 +28,16 @@ join employee e2
 ON e1.salary = e2.salary  
 where e1.salary>e2.salary
 
-ALTER TABLE public.employee ALTER COLUMN superior_id TYPE int USING superior_id::int;
+select*
+from employee e1 
+join employee e2
+on e1.id = e2.superior_id
+
+select e1.last_name as name_superior,
+e1.salary as salary_superior,
+e2.last_name as name_employee,
+e2.salary as salary_employee
+from employee e1
+join employee e2
+ON e1.id = e2.superior_id  
+where e1.salary<e2.salary
