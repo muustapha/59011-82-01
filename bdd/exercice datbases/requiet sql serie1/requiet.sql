@@ -1,13 +1,13 @@
-select
+1 select
     *
 from
     employee
-select
+2 select
     name
 from
     department;
 
-select
+3 select
     last_name,
     hiring_date,
     superior_id,
@@ -15,23 +15,23 @@ select
 from
     employee;
 
-select
+4 select
     title
 from
     employee;
 
-select
+5 select
     distinct title
 from
     employee;
 
-select
+6 select
     *
-from
+ from
     employee
 where
     salary > 2500
-select
+7 select
     last_name,
     id,
     department_id
@@ -39,7 +39,7 @@ from
     employee
 where
     title = 'secrétaire'
-select
+8 select
     name,
     department_id
 from
@@ -47,7 +47,7 @@ from
     department
 where
     department_id > 40
-select
+9 select
     last_name,
     first_name
 from
@@ -56,7 +56,7 @@ order by
     last_name 'représentant'
     and department_id = 35
     and salary > 20000
-select
+10 select
     last_name,
     title,
     salary
@@ -65,7 +65,7 @@ from
 where
     title like 'représentant'
     or title like 'président'
-select
+11 select
     last_name,
     title,
     department_id,
@@ -76,7 +76,7 @@ where
     department_id = 34
     and title like 'représentant'
     or title like 'président'
-select
+12 select
     last_name,
     title,
     department_id,
@@ -89,7 +89,7 @@ where
         title like 'secrétaire'
         and department_id = 34
     )
-select
+13 select
     last_name,
     salary
 from
@@ -97,28 +97,28 @@ from
 where
     salary >= 20000
     and salary <= 30000
-select
+14 select
     last_name
 from
     employee
 where
     last_name like 'h%';
 
-select
+15 select
     last_name
 from
     employee
 where
     last_name like '%n';
 
-select
+16 select
     last_name
 from
     employee
 where
     last_name like '__u%';
 
-select
+17 select
     salary,
     last_name
 from
@@ -128,7 +128,7 @@ where
 order by
     salary;
 
-select
+18 select
     salary,
     last_name
 from
@@ -138,7 +138,7 @@ where
 order by
     salary desc;
 
-select
+19 select
     title,
     salary,
     last_name
@@ -148,7 +148,7 @@ order by
     title asc,
     salary desc;
 
-select
+20 select
     commission_rate,
     salary,
     last_name
@@ -157,7 +157,7 @@ from
 order by
     commission_rate asc;
 
-select
+21 select
     last_name,
     salary,
     commission_rate,
@@ -166,7 +166,7 @@ from
     employee
 where
     commission_rate is null
-select
+22 select
     last_name,
     salary,
     commission_rate,
@@ -175,7 +175,7 @@ from
     employee
 where
     commission_rate is not null
-select
+23 select
     last_name,
     salary,
     commission_rate,
@@ -184,7 +184,7 @@ from
     employee
 where
     commission_rate < 15
-select
+24 select
     last_name,
     salary,
     commission_rate,
@@ -193,14 +193,14 @@ from
     employee
 where
     commission_rate > 15
-select
+25 select
     last_name,
     salary,
     commission_rate,
     title
 from
     employee
-SELECT
+26 SELECT
     last_name,
     salary,
     commission_rate,
@@ -210,7 +210,7 @@ FROM
 WHERE
     commission_rate IS NOT NULL;
 
-SELECT
+27 SELECT
     last_name,
     salary,
     commission_rate,
@@ -222,22 +222,22 @@ WHERE
 order by
     commission_rate asc;
 
-select
+28 select
     concat (last_name, ' ', first_name) as nom_prénom
 from
     employee;
 
-SELECT
+29 SELECT
     SUBSTR(last_name, 0, 6) as cinq_premiere_lettres
 FROM
     employee
-select
+30 select
     last_name,
     position ('r' in last_name) as rang_de_le_lettre_r
 from
     employee;
 
-select
+31 select
     last_name,
     upper(last_name),
     lower(last_name)
@@ -246,8 +246,10 @@ from
 where
     last_name = 'vrante'
     
-select
+32 select
     last_name,
     length(last_name)
 from
     employee
+
+    
