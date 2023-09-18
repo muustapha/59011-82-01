@@ -89,3 +89,36 @@ having avg(salary) > (select avg (salary) from employee e  where title='représe
 23 select count(salary) as nb_salary,count(commission_rate ) as nb_commission_rate
  from employee e 
 
+
+
+
+
+
+SELECT s.name, COUNT(r.id) AS Nbr_of_room
+FROM room r
+join hotel h ON r.hotel_id = h.id
+join station s on h.id_station = s.id
+GROUP BY
+s."name" ;
+
+SELECT s.name, COUNT(r.id) AS Nbr_of_room
+FROM room r
+join hotel h ON r.hotel_id = h.id
+join station s on h.id_station = s.id
+where r.capacity>1
+GROUP BY
+s.name;
+
+
+SELECT h.name
+FROM hotel h
+join room r ON h.id = r.hotel_id
+join booking b on r.id = b.room_id
+where b.client_id='Squire'
+
+select  s.name, avg(stay_end_date-stay_start_date)as duree_moyenne
+FROM station s
+JOIN hotel h ON s.id = h.station_id
+JOIN room r ON h.id = r.hotel_id
+JOIN booking b ON r.id = b.room_id
+GROUP BY s.name;

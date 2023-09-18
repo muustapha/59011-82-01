@@ -36,14 +36,29 @@ label  {
     margin: 0.25em 1em 0.25em 0;
     padding: 0;
 }
-
-
-input, textarea{
+/* input, textarea{
     margin: 0.25em 0 0.25em 0;
     padding: 0.25em;
     border: 5px solid rgba(217, 290, 0, 0.322);
     border-radius: 0.25em;
     background-color:linear-gradient(to right,#17ec5e,white);
     font-size: 1em;
-    color: #333333;
+    color: #333333;} */
+
+  /* Style pour les champs corrects */
+  .inputCorrect {
+    /* Ajoutez ici les styles que vous souhaitez pour les champs valides */
+    border: 3.5px solid green; /* Exemple : bordure verte pour les champs valides */
+}
+
+/* Style pour les champs vides */
+.inputVide {
+    /* Ajoutez ici les styles que vous souhaitez pour les champs vides */
+    border: 3.5px solid gray; /* Exemple : bordure grise pour les champs vides */
+}
+
+/* Style pour les champs incorrects */
+.inputIncorrect {
+    /* Ajoutez ici les styles que vous souhaitez pour les champs invalides */
+    border: 3.5px solid rgb(255, 0, 0); /* Exemple : bordure rouge pour les champs invalides */
 }
