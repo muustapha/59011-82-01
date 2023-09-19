@@ -1,10 +1,8 @@
-
-
 <?php
 
 
 class Formulaire{
-    private $id;    
+    public $id;    
     public $nom;
     public $numeroDeTelephone;
     public $codePostal;
@@ -33,24 +31,24 @@ class Formulaire{
     
         }
 
-        genererFormulaire();
+        genererFormulaire($formulaire);
     
-        function verifierFormulaire ()
-        {
-            if (isset($_POST['submit'])) {
-                if (empty($_POST['nom']) || empty($_POST['numeroDeTelephone']) || empty($_POST['codePostal']) || empty($_POST['email']) || empty($_POST['motDePasse'])) {
-                    echo "veuillez remplir tous les champs";
-                } else {
-                    $nom = $_POST['nom'];
-                    $numeroDeTelephone = $_POST['numeroDeTelephone'];
-                    $codePostal = $_POST['codePostal'];
-                    $email = $_POST['email'];
-                    $motDePasse = $_POST['motDePasse'];
-                    echo "nom : " . $nom . "<br>";
-                    echo "numeroDeTelephone : " . $numeroDeTelephone . "<br>";
-                    echo "codePostal : " . $codePostal . "<br>";
-                    echo "email : " . $email . "<br>";
-                    echo "motDePasse : " . $motDePasse . "<br>";}}}
+//         function verifierFormulaire ()
+//         {
+//             if (isset($_POST['submit'])) {
+//                 if (empty($_POST['nom']) || empty($_POST['numeroDeTelephone']) || empty($_POST['codePostal']) || empty($_POST['email']) || empty($_POST['motDePasse'])) {
+//                     echo "veuillez remplir tous les champs";
+//                 } else {
+//                     $nom = $_POST['nom'];
+//                     $numeroDeTelephone = $_POST['numeroDeTelephone'];
+//                     $codePostal = $_POST['codePostal'];
+//                     $email = $_POST['email'];
+//                     $motDePasse = $_POST['motDePasse'];
+//                     echo "nom : " . $nom . "<br>";
+//                     echo "numeroDeTelephone : " . $numeroDeTelephone . "<br>";
+//                     echo "codePostal : " . $codePostal . "<br>";
+//                     echo "email : " . $email . "<br>";
+//                     echo "motDePasse : " . $motDePasse . "<br>";}}}
 
-                    verifierFormulaire();   
-?>
+//                     verifierFormulaire();   
+// ?>

@@ -11,17 +11,13 @@
 
     <form action="formulaire" method="post">
         <label for="nom">Nom :</label>
-        <input type="text" id="nom" name="nom" required pattern="[A-Za-z]+" class="inputVide"><br><br>
-
-
-
+        <input type="text" id="nom" name="nom" required pattern="[A-Za-z]+" class="inputVide"><br><br> 
 
 
         <label for="telephone">Numéro de téléphone :</label>
         <input type="tel" id="telephone" name="telephone" required pattern="[0-9]{10}" class="inputVide"><br><br>
       
           
-
         <label for="codePostal">Code postal :</label>
         <input type="text" id="codePostal" name="codePostal" required pattern="[0-9]{5}" class="inputVide"><br><br>
         
@@ -33,7 +29,8 @@
         <label for="motDePasse">Mot de passe :</label>
         <input type="password" id="motDePasse" name="motDePasse" required class="inputVide"><br><br>
         
-        <!-- <input type="submit" value="S'inscrire"> -->
+        <label for = "submit"></label>
+        <input type="submit" value="inscription">
        
     </form>
     
