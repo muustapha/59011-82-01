@@ -8,9 +8,9 @@ body {
     padding: 0;
 }
  
-h2 {
+h1 {
     text-align: center;
-    color: rgb(61, 88, 5);
+    color: rgba(104, 3, 254, 0.568);
     margin: 0;
     padding: 0;
     margin-top: 100px;
@@ -61,9 +61,4 @@ label  {
 .inputIncorrect {
     /* Ajoutez ici les styles que vous souhaitez pour les champs invalides */
     border: 3.5px solid rgb(255, 0, 0); /* Exemple : bordure rouge pour les champs invalides */
-}
-
-
-body {
-    background-color: aqua;
 }

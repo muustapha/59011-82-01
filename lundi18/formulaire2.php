@@ -20,7 +20,7 @@ class Formulaire{
     $this->motDePasse=$motDePasse;  
      }}
     
-        function genererFormulaire()
+        function genererFormulaire($formulaire)
         {
             echo "<form action='formulaire2.php' method='post'>";
             echo "<input type='text' name='nom' placeholder='nom'>";
