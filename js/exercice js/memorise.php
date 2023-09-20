@@ -1,0 +1,4 @@
+$nombreDeJoueurs =
+$nombreDeCartes =
+$nombreDeMauvaiseTentative =
+$tempsTentative =
