@@ -1,7 +1,7 @@
-var nbrsDeJoueur =
-var nbrsDeCarte =
-var nbrsDeMauvaiseTentative =
-var tempsTentative =
+var nbrsDeJoueur ="" ;
+var nbrsDeCarte = "";
+var nbrsDeMauvaiseTentative = "";
+var tempsTentative = "";
 var carte = [];
 
 function randomCard() {
@@ -9,13 +9,13 @@ function randomCard() {
 }
    console.log (randomCard);   
 
-functionturnerCarte() {  var carte = document.getElementById("start");
-    start.addEventListener("click", function () {
-        init();
-}}
-function affichage ()
+function distribuercarte() {
+    for (let i = 0; i < nbrsDeCarte; i++) {
+        carte.push(randomCard());
+    }
+    console.log(carte);
+}
 
-function checkCarte() 
 
 function init() {
     nbrsDeJoueur = prompt("Combien de joueur ?");
@@ -25,7 +25,27 @@ function init() {
     distribuercarte();
 }
 init();
-function startPlay () {
-  
-    });
+
+grille = document.getElementById("carte");
+
+temp = document.querySelector("template");
+
+
+//on recopie le template
+// const element = temp.content.cloneNode(true); // on clone le template
+// grille.appendChild(element);    // on ajoute la ligne à la grille
+
+// on recopie le template en boucle
+// for (let i = 0; i < 10; i++) {
+//     const element2 = temp.content.cloneNode(true); // on clone le template
+//     grille.appendChild(element2);    // on ajoute la ligne à la grille
+// }
+
+// on modifie le template avant de l'ajouter
+
+
+for (let i = 0; i < 10; i++) {
+    const element3 = temp.content.cloneNode(true); // on clone le template
+    grille.appendChild(element3);    // on ajoute la ligne à la grille
+    grille.innerHTML = grille.innerHTML.replaceAll("verso", "carte");
 }
