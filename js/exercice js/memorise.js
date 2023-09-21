@@ -1,34 +1,91 @@
-var nbrsDeJoueur ="" ;
+var nbrsDeJoueur = "";
 var nbrsDeCarte = "";
 var nbrsDeMauvaiseTentative = "";
 var tempsTentative = "";
 var carte = [];
+var partieEnCours = false;
+var joueurActuel = 1;   
+const arrayCarte = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8];
 
 function randomCard() {
     return Math.floor(Math.random() * 10) + 1;
 }
-   console.log (randomCard);   
+console.log(randomCard());
 
-function distribuercarte() {
+
+function distribuerCarte() {
     for (let i = 0; i < nbrsDeCarte; i++) {
-        carte.push(randomCard());
+        const index = Math.floor(Math.random() * arrayCarte.length);
+        const carteValeur = arrayCarte.splice(index, 1)[0];
+        carte.push(carteValeur);
     }
     console.log(carte);
 }
 
-
-function init() {
-    nbrsDeJoueur = prompt("Combien de joueur ?");
-    nbrsDeCarte = prompt("Combien de carte ?");
-    nbrsDeMauvaiseTentative = prompt("Combien de mauvaise tentative ?");
-    tempsTentative = prompt("Combien de temps pour la tentative ?");
-    distribuercarte();
+function afficherJoueurActuel() {
+    document.getElementById('joueurActuel').innerHTML = "Joueur " + joueurActuel;
 }
-init();
 
-grille = document.getElementById("carte");
 
-temp = document.querySelector("template");
+function démarrer() {
+    if (!partieEnCours) {
+        partieEnCours = true;
+        console.log("Début de la partie");
+        // Ajoutez ici la logique pour initialiser la partie
+    }
+    afficherJoueurActuel();
+}
+
+function retournerCarte(carte) {
+    if (partieEnCours) {
+        const verso = carte.querySelector('.verso');
+        verso.style.display = 'none';
+    }
+}
+
+const cartes = document.querySelectorAll(".carte");
+cartes.forEach(carte => {
+    carte.addEventListener("click", () => {
+        démarrer();
+        retournerCarte(carte);
+    });
+});
+
+function passerAuJoueurSuivant() { joueurActuel = (joueurActuel % nbrsDeJoueur) +1;
+    afficherJoueurActuel();}
+
+    function init() {
+        nbrsDeJoueur = document.getElementById("nombreJoueurs").value;
+        nbrsDeCarte = document.getElementById("nombreCartes").value;
+        nbrsDeMauvaiseTentative = prompt("Combien de mauvaise tentative ?");
+        tempsTentative = prompt("Combien de temps pour la tentative ?");
+        distribuerCarte(); afficherJoueurActuel();
+    }
+    init();
+
+    grille = document.getElementById("carte");
+
+    temp = document.querySelector("template");
+
+    document.getElementById("nombreCartes").addEventListener("change", function () {
+        nbrsDeCarte = document.getElementById("nombreCartes").value;
+        resetGrille();
+    });
+  
+    function resetGrille() {
+        grille.innerHTML = "";
+        for (let i = 0; i < nbrsDeCarte; i++) {
+            const element = temp.content.cloneNode(true); // on clone le template
+            element.querySelector('.verso').classList.remove('verso'); // Supprime la classe "verso"
+            element.querySelector('.verso').classList.add('carte'); // Ajoute la classe "carte"
+            grille.appendChild(element); // on ajoute l'élément cloné à la grille
+        }
+    }
+    
+    
+
+
+
 
 
 //on recopie le template
@@ -44,8 +101,7 @@ temp = document.querySelector("template");
 // on modifie le template avant de l'ajouter
 
 
-for (let i = 0; i < 10; i++) {
-    const element3 = temp.content.cloneNode(true); // on clone le template
-    grille.appendChild(element3);    // on ajoute la ligne à la grille
-    grille.innerHTML = grille.innerHTML.replaceAll("verso", "carte");
-}
+// for (let i = 0; i < nbrsDeCarte; i++) {
+//     const element3 = temp.content.cloneNode(true); // on clone le template
+//     grille.appendChild(element3); }   // on ajoute la ligne à la grille
+//     grille.innerHTML = grille.innerHTML.replaceAll("verso",
