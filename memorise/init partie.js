@@ -1,3 +1,4 @@
+
 init partie
 definir le nombre de joueur
 definir le nombre de carte

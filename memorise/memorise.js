@@ -1,145 +1,139 @@
-var nbrsDeJoueurs = "";
-var nbrsDePaires = "";
-var nbrsDeMauvaiseTentative = "";
-var tempsTentative = "";
-var carte = [];
-var partieEnCours = false;
-var joueurActuel = 1;
-
-const arrayCarte = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10];
-
-const imagesCarte = {
-    1: "images/1.png",
-    2: "images/2.png",
-    3: "images/3.png",
-    4: "images/4.png",
-    5: "images/5.png",
-    6: "images/6.png",
-    7: "images/7.png",
-    8: "images/8.png",
-    9: "images/9.png",
-    10: "images/10.png"
-};
-
-function randomCard() {
-    return Math.floor(Math.random() * arrayCarte.length);
-}
-
-function distribuerCarte() {
-    for (let i = 0; i < nbrsDePaires; i++) {
-        const index = randomCard();
-        const carteValeur = arrayCarte.splice(index, 1)[0];
-        carte.push(carteValeur);
-        carte.push(carteValeur);
-    }
-}
-
-function afficherJoueurActuel() {
-    document.getElementById('joueurActuel').innerHTML = "Joueur " + joueurActuel;
-}
-init
-
-const nombreJoueursSelect = document.getElementById("nombreJoueurs");
-const nombreDePairesSelect = document.getElementById("nombreDePaires");
-const startButton = document.getElementById("start");
-
-function activerDemarrerButton() {
-    if (nombreJoueursSelect.value !== "0" && nombreDePairesSelect.value !== "0") {
-        startButton.disabled = false;
-    } else {
-        startButton.disabled = true;
-    }
-}
-
-nombreJoueursSelect.addEventListener("change", activerDemarrerButton);
-nombreDePairesSelect.addEventListener("change", activerDemarrerButton);
-
-function démarrer()
-{   
 
 
-    
-    afficherJoueurActuel();
-}
+/************************LES VARIABLES ******************************************** */
+tabCartesRetournees = []; // contient les cartes affichés en même temps
 
-function retournerCarte(carte) {
-    if (partieEnCours) {
-        const verso = carte.querySelector('.verso');
-        verso.style.display = 'none';
-    }
-}
-
-const cartes = document.querySelectorAll(".carte");
-cartes.forEach(carte => {
-    carte.addEventListener("click", () => {
-        démarrer();
-        retournerCarte(carte);
+/************************LES LISTENERS ******************************************** */
+// gestion des combobox
+lesSelect = document.querySelectorAll("select");
+if (lesSelect != undefined) {
+    lesSelect.forEach(element => {
+        element.addEventListener("change", gestionDemarrer)
     });
-});
-
-function passerAuJoueurSuivant() {
-    joueurActuel = (joueurActuel % nbrsDeJoueurs) + 1;
-    afficherJoueurActuel();
+}
+// gestion du click sur reset
+reset = document.querySelector("#reset")
+if (reset != undefined) {
+    reset.addEventListener("click", () => {
+        location.reload();
+    })
+}
+// gestion du click sur demarrer
+demarrer = document.querySelector("#start")
+if (demarrer != undefined) {
+    demarrer.addEventListener("click", demarrerJeu)
 }
 
-function init() {
-    nbrsDeJoueurs = document.getElementById("nombreJoueurs").value;
-    nbrsDePaires = document.getElementById("nombreDePaires").value;
-    nbrsDeMauvaiseTentative = prompt("Combien de mauvaise tentative ?");
-    tempsTentative = prompt("Combien de temps pour la tentative ?");
-    distribuerCarte();
-    afficherJoueurActuel();
-}
-
-grille = document.getElementById("grille");
-temp = document.querySelector("template");
-
-document.getElementById("nombreDePaires").addEventListener("change", function () {
-    nbrsDePaires = document.getElementById("nombreDePaires").value;
-    resetGrille();
-});
-
-function resetGrille() {
-    grille.innerHTML = "";
-    for (let i = 0; i < nbrsDePaires; i++) {
-        const element = temp.content.cloneNode(true);
-        element.querySelector('.verso').classList.remove('verso');
-        element.querySelector('.verso').classList.add('carte');
-
-        const carteValeur = carte[i];
-        const cheminImage = imagesCarte[carteValeur];
-        const imgElement = document.createElement("img");
-        imgElement.setAttribute("src", cheminImage);
-
-        element.querySelector('.carte').appendChild(imgElement);
-
-        grille.appendChild(element);
+/************************LES FONCTIONS ******************************************** */
+/**
+ * Active le bouton quand les combos sont renseignées
+ */
+function gestionDemarrer() {
+    if (lesSelect[0].value != "" && lesSelect[1].value != "") {
+        document.querySelector("#start").disabled = false;
     }
 }
 
-init();
+/**
+ * Gère les paramètres, ffiches les cartes et lance le jeu
+ */
+function demarrerJeu() {
+    // bloquer l'accès aux paramètres
+    lesSelect.forEach(element => {
+        element.disabled = true;
+    });
+    demarrer.disabled = true;
+    debugger;
+    nbPair = lesSelect[1].value
+    // Preparer la repartition aléatoire des cartes
+    tabCartes = gererRepartitionCartes(nbPair)
+
+    //afficher les cartes
+    cards = document.querySelector(".cards")
+    temp = document.querySelector("template")
+    for (let index = 0; index < nbPair * 2; index++) {
+        elt = temp.content.cloneNode(true)
+        cards.appendChild(elt);
+        eltAjoute = cards.children[index]
+        eltAjoute.addEventListener("click", clickCarte)
+        eltAjoute.setAttribute("data-image", tabCartes[index])
+    }
+}
+/**
+ * 
+ * Met un numero pour chaque pair 2 fois dans le tableau et le trie aléatoirement
+ * @param {*} nbPair 
+ */
+function gererRepartitionCartes(nbPair) {
+    tab = []
+    for (let index = 0; index < nbPair; index++) {
+        tab.push(index + 1)
+        tab.push(index + 1)// on veut 2 fois chaque valeur dans le tableau pour constituer des pairs
+    }
+    tab.sort(() => Math.random() - 0.5)
+    console.log(tab)
+    return tab
+}
 
 
+function clickCarte(event) {
+    debugger;
+    let card = event.target
+    if (tabCartesRetournees.length < 2) {
+        FlipCard(card, true);
+        if (!tabCartesRetournees.includes(card)) // pour eviter le clic 2 fois sur la même carte
+            tabCartesRetournees.push(card);
+        if (tabCartesRetournees.length == 2) { // au 2ème clic on entre avec longueur =1, on retourne une carte donc longueur =2
+            if (CheckCard(tabCartesRetournees)) {
+                // les cartes sont les m^mes
+                //on retire les listeners de ces cartes
+                tabCartesRetournees.forEach(element => {
+                    element.removeEventListener("click", clickCarte)
+                });
+
+                //on vide le tableau des cartes cliquées
+                tabCartesRetournees = []
+            }
+            else {
+                // les cartes ne sont pas les mêmes 
+                setTimeout(() => {
+                    tabCartesRetournees.forEach(element => {
+                        FlipCard(element, false)
+                    })
+
+                    //on vide le tableau des cartes cliquées
+                    tabCartesRetournees = []
+                }, 3000)
+            }
+        }
+    }
+}
 
 
+/**
+ * Retourne la carte
+ * si verso est vrai, on affiche l'image, sinon on remets la plage
+ * @param {*} card balise image concernée
+ * @param {*} verso  boolean
+ */
+function FlipCard(card, verso) {
 
 
+card.src = verso ? "./img/" + card.getAttribute("data-image") + ".jpg" : "./img/versomemory.jpg" //card.getAttribute("data-image")
+console.log(card.src);
+}
 
-
-//on recopie le template
-// const element = temp.content.cloneNode(true); // on clone le template
-// grille.appendChild(element);    // on ajoute la ligne à la grille
-
-// on recopie le template en boucle
-// for (let i = 0; i < 10; i++) {
-//     const element2 = temp.content.cloneNode(true); // on clone le template
-//     grille.appendChild(element2);    // on ajoute la ligne à la grille
-// }
-
-// on modifie le template avant de l'ajouter
-
-
-// for (let i = 0; i < nbrsDeCarte; i++) {
-//     const element3 = temp.content.cloneNode(true); // on clone le template
-//     grille.appendChild(element3); }   // on ajoute la ligne à la grille
-//     grille.innerHTML = grille.innerHTML.replaceAll("verso");
+/**
+ * Vérifie si les cartes sont identiques
+ * @param {*} tab 
+ * @returns vrai si les cartes sont identiques faux sinon
+ */
+function CheckCard(tab) {
+    let dataimage = tab[0].getAttribute("data-image")
+    let index = 1
+    while (index < tab.length && tab[index].getAttribute("data-image") == dataimage) {
+        index++
+    }
+    if (index == tab.length) return true
+    return false
+}
