@@ -3,16 +3,31 @@ class Cercle
 {
     /*****************Attributs***************** */
     private $_diametre;
+    private $_rayon;
 
     /*****************Accesseurs***************** */
-    public function getDiametre()
+    public function get_diametre()
     {
         return $this->_diametre;
     }
 
-    public function setDiametre($diametre)
+    public function set_diametre($_diametre)
     {
-        $this->_diametre = $diametre;
+        $this->_diametre = $_diametre;
+        $this->_rayon = $_diametre / 2; // mise à jour du rayon
+        return $this;
+    }
+
+    public function get_rayon()
+    {
+        return $this->_rayon;
+    }
+
+    public function set_rayon($_rayon)
+    {
+        $this->_rayon = $_rayon;
+        $this->_diametre = $_rayon * 2; // mise à jour du diamètre
+        return $this;
     }
 
     /*****************Constructeur***************** */
@@ -36,19 +51,23 @@ class Cercle
         }
     }
 
+
     /*****************Autres Méthodes***************** */
     function perimetre()
     {
-        return pi() * $this->_diametre;
+        return 2 * pi() * $this->get_rayon();
     }
 
     function aire()
     {
-        return pi()/4 * pow($this->_diametre, 2);
+        return pi() * pow($this->get_rayon(), 2);
     }
 
     function __toString()
     {
-        return "diametre:".$this->_diametre ." perimetre:".$this->perimetre()." aire:".$this->aire();
+        return "diametre:".$this->get_diametre()." perimetre:".$this->perimetre()." aire:".$this->aire();
     }
-}  
+}
+
+
+?>

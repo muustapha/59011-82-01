@@ -1,5 +1,5 @@
 <?php
-class 
+class Employe
 {
 
     /*****************Attributs***************** */
@@ -7,7 +7,7 @@ class
     private $_prenom;
     private $_dateEmbauche;
     private $_fonction;
-    private $_salaireAnnuelle;
+    private $_salaireAnnuel;
     private $_serviceEmploye;            
     /*****************Accesseurs***************** */
     public function getNom()
@@ -50,14 +50,14 @@ class
         $this->_fonction = $fonction;
     }
 
-    public function getSalaireAnnuelle()
+    public function getSalaireAnnuel()
     {
-        return $this->_salaireAnnuelle;
+        return $this->_salaireAnnuel;
     }
 
-    public function setSalaireAnnuelle($salaireAnnuelle)
+    public function setSalaireAnnuel($salaireAnnuel)
     {
-        $this->_salaireAnnuelle = $salaireAnnuelle;
+        $this->_salaireAnnuel = $salaireAnnuel;
     }
 
     public function getServiceEmploye()
@@ -93,7 +93,7 @@ class
 
     /*****************Autres Méthodes***************** */
     
-    function ancienneter()
+    function anciennete()
     {
         $_dateDuJour = new DateTime();
         $_dateEmbauche = new DateTime($this->getDateEmbauche());
@@ -102,7 +102,40 @@ class
 
 
     }
-   
+function PrimeAnnuelle() {
 
-    
+           return $this->getSalaireAnnuel() * 0.05;
+
 }
+        function PrimeAnciennete(){
+      return  ($this->getSalaireAnnuel() * 0.02)*$this->anciennete();
+        }
+        
+        function PrimeTotale() {
+            return $this->PrimeAnnuelle() + $this->PrimeAnciennete();
+        }
+        
+            
+        function __toString()
+        {
+          return  "Ordre de transfert envoyé à la banque pour un montant de :" .$this->primeTotale()."euros.";
+        }
+
+       
+    
+    
+
+
+function ordreTransfert() {
+    $dateVersement = new DateTime('2023-09-26'); // Date de versement
+    $dateDuJour = new DateTime();
+
+    if ($dateDuJour->format('m-d') == $dateVersement->format('m-d')) {
+        return "Ordre de transfert envoyé à la banque pour un montant de : " . $this->primeTotale() . " euros.";
+    } else {
+        return "Aucun ordre de transfert n'a été envoyé aujourd'hui.";
+    }
+}
+}
+?>
+    
