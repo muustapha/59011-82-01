@@ -6,7 +6,7 @@ class Voiture
     /*****************Attributs***************** */
    private $_couleur;
    private $_marque;
-   private $_modèle;
+   private $_modele;
    private $_nbreDeKilometres;
    private $_motorisation;
     
@@ -14,58 +14,58 @@ class Voiture
 
     public function getCouleur()
     {
-        return $this->couleur;
+        return $this->_couleur;
     }
 
     public function setCouleur($couleur)
     {
-        $this->couleur = $couleur;
+        $this->_couleur = $couleur;
     }
 
     public function getMarque()
     {
-        return $this->marque;
+        return $this->_marque;
     }
 
     public function setMarque($marque)
     {
-        $this->marque = $marque;
+        $this->_marque = $marque;
     }
 
-    public function getModèle()
+    public function getModele()
     {
-        return $this->modèle;
+        return $this->_modele;
     }
 
-    public function setModèle($modèle)
+    public function setModele($modele)
     {
-        $this->modèle = $modèle;
+        $this->_modele = $modele;
     }
 
     
-    public function getNbreDeKilometre()
+    public function getNbreDeKilometres()
     {
-        return $this->nbreDeKilometre;
+        return $this->_nbreDeKilometres;
     }
 
     public function setNbreDeKilometres($nbreDeKilometres)
     {
-        $this->nbreDeKilometre = $nbreDeKilometre;
+        $this->_nbreDeKilometres = $nbreDeKilometres;
     }
 
     public function getMotorisation()
     {
-        return $this->motorisation;
+        return $this->_motorisation;
     }
 
     public function setMotorisation($motorisation)
     {
-        $this->motorisation = $motorisation;
+        $this->_motorisation = $motorisation;
     }
-}
+
     /*****************Constructeur***************** */
 
-     function __construct(array $options = [])
+    public function __construct(array $options = [])
     {
         if (!empty($options)) // empty : renvoi vrai si le tableau est vide
         {
@@ -87,39 +87,39 @@ class Voiture
     /*****************Autres Méthodes***************** */
     
     /**
-     * Transforme l'objet en chaine de caractères
+     * Transforme l'objet en chaine de caracteres
      *
      * @return String
      */
- function __toString ()
-    {
-  
-echo "Cette voiture est une" $this->getModele, "de la marque" $this->.getMarque, "de couleur"$this-> getcouleur, "de motorisation"
-getMotorisation,$this->getNbreDeKilometres "avec Nb de kilomètres," 
-      return "";
-    }
+
+function __toString()
+{
+    return "Cette voiture est une " . $this->getModele() . " de la marque " . $this->getMarque() . " de couleur " . $this->getCouleur() . " de motorisation " . $this->getMotorisation() . " avec " . $this->getNbreDeKilometres() . " km.";
+}
+}
     
-$objet1 = new voiture ([
-'marque'=>"citroen",
+    
+$objet1 = new Voiture ([
+"marque"=>"citroen",
 "modele"=>"c4",
-"nbreDeKilometre"=>10000,
-
-
+"nbreDeKilometres"=>10000,
 ]);
-$objet2 = new voiture([
+
+$objet2 = new Voiture([
 "marque"=>"renauld",
-"couleur"=>"rouge"
+"couleur"=>"rouge",
 ]);
-print r ($objet)
+print_r ($objet);
 
+?>
 // parametre 
 // @ nbreDeKilometre
 
 
- function 
+
 
     // /**
-    //  * Renvoi vrai si l'objet en paramètre est égal à l'objet appelant
+    //  * Renvoi vrai si l'objet en parametre est égal à l'objet appelant
     //  *
     //  * @param [type] $obj
     //  * @return bool
@@ -139,7 +139,7 @@ print r ($objet)
     //  * @return void
     //  */
     //   public static function compareTo($obj1, $obj2)
-    // {
+    // 
     //     return 0;
 
     //
