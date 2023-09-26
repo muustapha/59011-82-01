@@ -9,7 +9,6 @@ class
     private $_fonction;
     private $_salaireAnnuelle;
     private $_serviceEmploye;            
-    private $_dateDuJour;
     /*****************Accesseurs***************** */
     public function getNom()
     {
@@ -96,6 +95,10 @@ class
     
     function ancienneter()
     {
+        $_dateDuJour = new DateTime();
+        $_dateEmbauche = new DateTime($this->getDateEmbauche());
+        $interval = $_dateDuJour->diff($_dateEmbauche);
+        return $interval->format('%y');
 
 
     }

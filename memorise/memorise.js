@@ -56,7 +56,7 @@ function demarrerJeu() {
         cards.appendChild(elt);
         eltAjoute = cards.children[index]
         eltAjoute.addEventListener("click", clickCarte)
-        eltAjoute.setAttribute("data-image", tabCartes[index])
+        eltAjoute.querySelector("img").setAttribute("data-image", tabCartes[index])
     }
 }
 /**
@@ -119,7 +119,7 @@ function clickCarte(event) {
 function FlipCard(card, verso) {
 
 
-card.src = verso ? "./img/" + card.getAttribute("data-image") + ".jpg" : "./img/versomemory.jpg" //card.getAttribute("data-image")
+card.src = verso ? "img/" + card.getAttribute("data-image") + ".jpg" : "img/versomemory.jpg" //card.getAttribute("data-image")
 console.log(card.src);
 }
 
