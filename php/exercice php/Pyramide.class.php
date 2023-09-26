@@ -1,5 +1,5 @@
 <?php
-class Pyramide extends Triangle
+class Pyramide extends TriangleRectangle
 {
     private $_hauteur;
 

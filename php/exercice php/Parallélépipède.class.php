@@ -1,4 +1,5 @@
 <?php
+
 class Parallelepipede extends Rectangle
 {
     private $_hauteur;

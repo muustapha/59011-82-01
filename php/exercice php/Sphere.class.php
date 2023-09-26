@@ -1,21 +1,24 @@
 <?php
-class Cercle 
+class Sphere extends Cercle
 {
+
     /*****************Attributs***************** */
-    private $_diametre;
+    private $_volume;
 
     /*****************Accesseurs***************** */
-    public function getDiametre()
+       
+    public function getVolume()
     {
-        return $this->_diametre;
+        return $this->_volume;
     }
 
-    public function setDiametre($diametre)
+    public function setVolume($volume)
     {
-        $this->_diametre = $diametre;
+        $this->_volume = $volume;
     }
-
+    
     /*****************Constructeur***************** */
+
     public function __construct(array $options = [])
     {
         if (!empty($options)) // empty : renvoi vrai si le tableau est vide
@@ -23,32 +26,23 @@ class Cercle
             $this->hydrate($options);
         }
     }
-
     public function hydrate($data)
     {
         foreach ($data as $key => $value)
         {
             $methode = "set" . ucfirst($key); //ucfirst met la 1ere lettre en majuscule
-            if (is_callable([$this, $methode])) // is_callable verifie que la methode existe
+            if (is_callable(([$this, $methode]))) // is_callable verifie que la methode existe
             {
                 $this->$methode($value);
             }
         }
+
     }
 
     /*****************Autres Méthodes***************** */
-    function perimetre()
-    {
-        return pi() * $this->_diametre;
+    public function volume()
+    {       // 4/3 PI R3
+        return 4/3*pi()*pow($this->getRayon(),3);
     }
-
-    function aire()
-    {
-        return pi()/4 * pow($this->_diametre, 2);
-    }
-
-    function __toString()
-    {
-        return "diametre:".$this->_diametre ." perimetre:".$this->perimetre()." aire:".$this->aire();
-    }
-}  
+}
+?>
