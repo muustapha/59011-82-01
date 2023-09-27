@@ -8,7 +8,9 @@ class Employe
     private $_dateEmbauche;
     private $_fonction;
     private $_salaireAnnuel;
-    private $_serviceEmploye;            
+    private $_serviceEmploye;
+    static public $_compteur;
+    private $_agence;
     /*****************Accesseurs***************** */
     public function getNom()
     {
@@ -69,7 +71,28 @@ class Employe
     {
         $this->_serviceEmploye = $serviceEmploye;
     }
-    
+
+    public function getCompteur()
+    {
+        return $this->_compteur;
+    }
+
+    public function setCompteur($compteur)
+    {
+        $this->_compteur = $compteur;
+    }
+
+    public function getAgence()
+    {
+        return $this->_agence;
+    }
+
+    public function setAgence(Agence $agence)
+    {
+        $this->_agence = $agence;
+    }
+
+
     /*****************Constructeur***************** */
 
     public function __construct(array $options = [])
@@ -78,64 +101,101 @@ class Employe
         {
             $this->hydrate($options);
         }
+       self::setCompteur(self::getCompteur() + 1);
     }
+ 
+
     public function hydrate($data)
     {
-        foreach ($data as $key => $value)
-        {
+        foreach ($data as $key => $value) {
             $methode = "set" . ucfirst($key); //ucfirst met la 1ere lettre en majuscule
             if (is_callable(([$this, $methode]))) // is_callable verifie que la methode existe
             {
                 $this->$methode($value);
             }
         }
+  
     }
 
     /*****************Autres Méthodes***************** */
+  
     
-    function anciennete(){
+    public static function compareToNomPrenom($obj1, $obj2)
+    {
+        
+            if (strcmp($obj1->getNom(),$obj2->getNom())==0)
+            {
+                return strcmp($obj1->getPrenom(),$obj2->getPrenom());
+            }
+            return strcmp($obj1->getNom(),$obj2->getNom());
+    }
+    
+    public static function compareToServiceNomPrenom($obj1, $obj2)
+    {
+        if ($obj1->getService() < $obj2->getService())
+        {
+            return -1;
+        }
+        else if ($obj1->getService() > $obj2->getService())
+        {
+            return 1;
+        }
+        else
+        {
+            return self::compareToNomPrenom($obj1, $obj2);
+        }
+  
+ 
+     
+
+    function anciennete()
+    {
         $dateEmbauche = new DateTime($this->getDateEmbauche());
         $dateDuJour = new DateTime();
         $interval = $dateEmbauche->diff($dateDuJour);
         return $interval->format('%y');
     }
- 
 
 
+
+
+    function PrimeAnnuelle()
+    {
+
+        return $this->getSalaireAnnuel()*1000 * 0.05;
     }
-function PrimeAnnuelle() {
+    function PrimeAnciennete()
+    {
+        return ($this->getSalaireAnnuel()*1000 * 0.02) * $this->anciennete();
+    }
 
-           return $this->getSalaireAnnuel() * 0.05;
-
-}
-        function PrimeAnciennete(){
-      return  ($this->getSalaireAnnuel() * 0.02)*$this->anciennete();
-        }
-        
-        function PrimeTotale() {
-            return $this->PrimeAnnuelle() + $this->PrimeAnciennete();
-        }
-        
-            
-        function __toString()
-        {
-          return  "Ordre de transfert envoyé à la banque pour un montant de :" .$this->primeTotale()."euros.";
-        }
-
-       
-    
-    
+    function PrimeTotale()
+    {
+        return $this->PrimeAnnuelle() + $this->PrimeAnciennete();
+    }
 
 
-function ordreTransfert() {
-    $dateVersement = new DateTime('2023-09-26'); // Date de versement
-    $dateDuJour = new DateTime();
+    function __toString()
+    {
+        return  "Ordre de transfert envoyé à la banque pour un montant de :" . $this->primeTotale() . "euros.";
+    }
 
-   $dateDuJour->format('m-d') == $dateVersement->format('m-d') {
-    return "Ordre de transfert envoyé à la banque pour un montant de : " . $this->primeTotale() . " euros.";
-   }
+
+
+
+
+
+    function ordreTransfert()
+    {
+        $dateVersement = new DateTime('2023-09-26'); // Date de versement
+        $dateDuJour = new DateTime();
+
+        $dateDuJour->format('m-d') == $dateVersement->format('m-d');
+        return "Ordre de transfert envoyé à la banque pour un montant de : " . $this->primeTotale() . " euros.";
+    }
 }
 
+?>
 
 
 
