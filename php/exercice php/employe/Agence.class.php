@@ -7,7 +7,7 @@ class Agence
     private $_adresse;
     private $_codePostal;
     private $_ville;
-
+private $_modeDeRestauration;   
     /*****************Accesseurs***************** */
 
     public function getNom()
@@ -49,7 +49,25 @@ class Agence
     {
         $this->_ville = $ville;
     }
-    
+    /**
+ * Get the value of _modeDeRestauration
+ */ 
+public function get_modeDeRestauration()
+{
+return $this->_modeDeRestauration;
+}
+
+/**
+ * Set the value of _modeDeRestauration
+ *
+ * @return  self
+ */ 
+public function set_modeDeRestauration($_modeDeRestauration)
+{
+$this->_modeDeRestauration = $_modeDeRestauration;
+
+return $this;
+}
     /*****************Constructeur***************** */
 
     public function __construct(array $options = [])
@@ -107,6 +125,12 @@ class Agence
     {
         return 0;
     }
+
+    public function afficherModeRestaurationEmployes()
+    {
+        foreach ($this->_listeEmploye as $employe) {
+            echo "L'employé " . $employe->getNom() . " " . $employe->getPrenom() . " de l'agence " . $this->getNom() . " a pour mode de restauration : " . $this->getModeRestauration() . "\n";
+        }
 
 }
 ?>

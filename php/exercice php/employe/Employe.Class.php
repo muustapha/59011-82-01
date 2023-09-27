@@ -11,6 +11,7 @@ class Employe
     private $_serviceEmploye;
     static $_compteur;
     private $_agence;
+    private $_enfants = array();
     /*****************Accesseurs***************** */
     public function getNom()
     {
@@ -92,7 +93,25 @@ class Employe
         $this->_agence = $agence;
     }
 
+    /**
+     * Get the value of _enfants
+     */ 
+    public function get_enfants()
+    {
+        return $this->_enfants;
+    }
 
+    /**
+     * Set the value of _enfants
+     *
+     * @return  self
+     */ 
+    public function set_enfants($_enfants)
+    {
+        $this->_enfants = $_enfants;
+
+        return $this;
+    }
     /*****************Constructeur***************** */
 
     public function __construct(array $options = [])
@@ -193,7 +212,76 @@ class Employe
         $dateDuJour->format('m-d') == $dateVersement->format('m-d');
         return "Ordre de transfert envoyé à la banque pour un montant de : " . $this->primeTotale() . " euros.";
     }
+
+public function peutAvoirChequesVacances()
+    {
+        return ($this->anciennete() >= 1);
+    }
+    public function getChequesNoel()
+    {
+        $chequesNoel = [
+            "20 euros" => 0,
+            "30 euros" => 0,
+            "50 euros" => 0
+        ];
+
+        foreach ($this->_enfants as $enfant) {
+            $age = $enfant->getAge();
+            if ($age <= 10) {
+                $chequesNoel["20 euros"]++;
+            } elseif ($age <= 15) {
+                $chequesNoel["30 euros"]++;
+            } elseif ($age <= 18) {
+                $chequesNoel["50 euros"]++;
+            }
+        }
+
+        if (array_sum($chequesNoel) > 0) {
+            echo $this->_nom . " " . $this->_prenom . " a le droit d'avoir des chèques Noël\n";
+            foreach ($chequesNoel as $montant => $nombre) {
+                if ($nombre > 0) {
+                    echo "- " . $nombre . " chèque(s) de " . $montant . "\n";
+                }
+            }
+        } else {
+            echo $this->_nom . " " . $this->_prenom . " n'a pas le droit d'avoir des chèques Noël\n";
+        }
+    }
+
+
 }
+public function getChequesNoel()
+    {
+        $chequesNoel = [
+            "20 euros" => 0,
+            "30 euros" => 0,
+            "50 euros" => 0
+        ];
+
+        foreach ($this->_enfants as $enfant) {
+            $age = $enfant->getAge();
+            if ($age <= 10) {
+                $chequesNoel["20 euros"]++;
+            } elseif ($age <= 15) {
+                $chequesNoel["30 euros"]++;
+            } elseif ($age <= 18) {
+                $chequesNoel["50 euros"]++;
+            }
+        }
+
+        if (array_sum($chequesNoel) > 0) {
+            echo $this->_nom . " " . $this->_prenom . " a le droit d'avoir des chèques Noël\n";
+            foreach ($chequesNoel as $montant => $nombre) {
+                if ($nombre > 0) {
+                    echo "- " . $nombre . " chèque(s) de " . $montant . "\n";
+                }
+            }
+        } else {
+            echo $this->_nom . " " . $this->_prenom . " n'a pas le droit d'avoir des chèques Noël\n";
+        }
+    }
+}
+?>
 ?>
 
 

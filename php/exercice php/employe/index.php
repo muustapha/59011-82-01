@@ -20,40 +20,45 @@ $employe1 = new Employe([
     "Nom" => "Moulin",
     "Prenom" => "Jean",
     "DateEmbauche" => "01/01/2000",
-    "Fonction" => "directeur",
-    "SalaireAnnuel" => 30000
+    "Fonction" => "résistant",
+    "SalaireAnnuel" => 30000,
+    "agence" =>"miracle"
 ]);
 
 $employe2 = new Employe([
     "Nom" => "Nguyen",
     "Prenom" => "Xinh",
     "DateEmbauche" => "01/01/2005",
-    "Fonction" => "directeur",
-    "SalaireAnnuel" => 35000
+    "Fonction" => "general",
+    "SalaireAnnuel" => 35000,
+    "agence" =>"horizon"
 ]);
 
 $employe3 = new Employe([
     "Nom" => "Ali",
     "Prenom" => "Mohamed",
     "DateEmbauche" => "01/01/2010",
-    "Fonction" => "directeur",
-    "SalaireAnnuel" => 40000
+    "Fonction" => "boxeur",
+    "SalaireAnnuel" => 40000,
+    "agence" =>"abondance"
 ]);
 
 $employe4 = new Employe([
     "Nom" => "Parks",
     "Prenom" => "Rosa",
     "DateEmbauche" => "01/01/2015",
-    "Fonction" => "directeur",
-    "SalaireAnnuel" => 45000
+    "Fonction" => "conductrice de bus",
+    "SalaireAnnuel" => 45000,
+    "agence" =>"miracle"
 ]);
 
 $employe5 = new Employe([
     "Nom" => "Nascimiento",
     "Prenom" => "Edson",
     "DateEmbauche" => "01/01/2020",
-    "Fonction" => "directeur",
-    "SalaireAnnuel" => 50000
+    "Fonction" => "footballeur",
+    "SalaireAnnuel" => 50000,
+    "agence" =>"horizon"
 ]);
 
 echo "Il y a " . Employe::getCompteur() . " employé créé \n";
@@ -62,21 +67,24 @@ $agence1 = new agence([
     "Nom" => "miracle",
     "adresse" => "21 rue des miracles",
     "codePostal" => "69007",
-    "ville" => "lyon"
+    "ville" => "lyon",
+"modeRestauration" => "ticket restaurant"
 ]);
 
 $agence2 = new agence([
     "Nom" => "horizon",
     "adresse" => "33 rue horizon",
     "codePostal" => "75001",
-    "ville" => "Paris"
+    "ville" => "Paris",
+"modeRestauration" => "restaurant d'entreprise"
 ]);
 
 $agence3 = new agence([
     "Nom" => "abondance",
     "adresse" => "55 rue abondance",
     "codePostal" => "06000",
-    "ville" => "Nice"
+    "ville" => "Nice",
+"modeRestauration" => "ticket restaurant"
 ]);
 
 $listeEmploye = [$employe1, $employe2, $employe3, $employe4, $employe5];
@@ -114,7 +122,40 @@ function afficheTableau2($listeEmploye)
     echo "\n";
 }
 
+// verif chèque vacance
+if ($employe->peutAvoirChequesVacances()) {
+    echo $employe->getNom() . " " . $employe->getPrenom() . " peut avoir des chèques vacances\n";
+} else {
+    echo $employe->getNom() . " " . $employe->getPrenom() . " ne peut pas avoir des chèques vacances\n";
+}
 
+}
+}
+/ Création des enfants
+$enfant1 = new Enfant([
+    "nom" => "moulin",
+    "prenom" => "Lucie",
+    "dateNaissance" => "01/01/2010"
+]);
 
+$enfant2 = new Enfant([
+    "nom" => "moulin",
+    "prenom" => "Pierre",
+    "dateNaissance" => "01/01/2005"
+]);
+
+$enfant3 = new Enfant([
+    "nom" => "moulin",
+    "prenom" => "Marie",
+    "dateNaissance" => "01/01/2002"
+]);
+
+// Ajout des enfants à l'employé
+$employe->ajouterEnfant($enfant1);
+$employe->ajouterEnfant($enfant2);
+$employe->ajouterEnfant($enfant3);
+
+// Attribution des chèques Noël
+$employe->getChequesNoel();
 
 ?>
