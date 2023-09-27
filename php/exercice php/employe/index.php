@@ -104,7 +104,7 @@ function MasseSalariale($listeEmploye)
 
 echo "La masse salariale est de : " . MasseSalariale($listeEmploye) . " euros\n";
 
-function afficheTableau($listeEmploye)
+function afficheTableau2($listeEmploye)
 {
     echo "\n";
     foreach ($listeEmploye as $elt) // le tableau est parcouru de la 1ere à la dernière case, les cases sont mises tour à tous dans $elt
@@ -114,18 +114,6 @@ function afficheTableau($listeEmploye)
     echo "\n";
 }
 
-
-
-// function TrieEmployeNomPrenom()
-// {
-//     return sort($ListeEmploye(),["Nom","Prenom"]);
-// }
-
-// function TrieEmployeServiceNomPrenom()
-// {
-//     return sort($ListeEmploye(),["$Service","Nom","Prenom"]);
-
-// }
 
 
 

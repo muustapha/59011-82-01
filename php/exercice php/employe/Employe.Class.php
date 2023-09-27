@@ -9,7 +9,7 @@ class Employe
     private $_fonction;
     private $_salaireAnnuel;
     private $_serviceEmploye;
-    static public $_compteur;
+    static $_compteur;
     private $_agence;
     /*****************Accesseurs***************** */
     public function getNom()
@@ -72,14 +72,14 @@ class Employe
         $this->_serviceEmploye = $serviceEmploye;
     }
 
-    public function getCompteur()
+    public static function getCompteur()
     {
-        return $this->_compteur;
+        return self::$compteur;
     }
 
-    public function setCompteur($compteur)
+    public static function setCompteur($compteur)
     {
-        $this->_compteur = $compteur;
+        self::$compteur = $compteur;
     }
 
     public function getAgence()
@@ -101,7 +101,7 @@ class Employe
         {
             $this->hydrate($options);
         }
-       self::setCompteur(self::getCompteur() + 1);
+     self::setCompteur(self::getCompteur() + 1);
     }
  
 
@@ -145,7 +145,7 @@ class Employe
             return self::compareToNomPrenom($obj1, $obj2);
         }
   
- 
+    }
      
 
     function anciennete()
@@ -194,25 +194,9 @@ class Employe
         return "Ordre de transfert envoyé à la banque pour un montant de : " . $this->primeTotale() . " euros.";
     }
 }
-
 ?>
 
 
 
 
 
-// function NombreEploye()
-// {
-//     return count($ListeEmploye());
-// }
-
-// function TrieEmployeNomPrenom()
-// {
-//     return sort($ListeEmploye(),["Nom","Prenom"]);
-// }
-
-// function TrieEmployeServiceNomPrenom()
-// {
-//     return sort($ListeEmploye(),["$Service","Nom","Prenom"]);
-
-// }
