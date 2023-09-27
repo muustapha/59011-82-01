@@ -93,12 +93,13 @@ class Employe
 
     /*****************Autres Méthodes***************** */
     
-    function anciennete()
-    {
-        $_dateDuJour = new DateTime();
-        $_dateEmbauche = new DateTime($this->getDateEmbauche());
-        $interval = $_dateDuJour->diff($_dateEmbauche);
+    function anciennete(){
+        $dateEmbauche = new DateTime($this->getDateEmbauche());
+        $dateDuJour = new DateTime();
+        $interval = $dateEmbauche->diff($dateDuJour);
         return $interval->format('%y');
+    }
+ 
 
 
     }
@@ -130,12 +131,28 @@ function ordreTransfert() {
     $dateVersement = new DateTime('2023-09-26'); // Date de versement
     $dateDuJour = new DateTime();
 
-    if ($dateDuJour->format('m-d') == $dateVersement->format('m-d')) {
-        return "Ordre de transfert envoyé à la banque pour un montant de : " . $this->primeTotale() . " euros.";
-    } else {
-        return "Aucun ordre de transfert n'a été envoyé aujourd'hui.";
-    }
+   $dateDuJour->format('m-d') == $dateVersement->format('m-d') {
+    return "Ordre de transfert envoyé à la banque pour un montant de : " . $this->primeTotale() . " euros.";
+   }
 }
-}
-?>
-    
+
+
+
+
+
+
+// function NombreEploye()
+// {
+//     return count($ListeEmploye());
+// }
+
+// function TrieEmployeNomPrenom()
+// {
+//     return sort($ListeEmploye(),["Nom","Prenom"]);
+// }
+
+// function TrieEmployeServiceNomPrenom()
+// {
+//     return sort($ListeEmploye(),["$Service","Nom","Prenom"]);
+
+// }

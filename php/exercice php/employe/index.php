@@ -1,6 +1,16 @@
-<?php
-require 'Employe.php';
+<?php           
 
+function ChargerClasse($Employe)
+{
+require $Employe.'.Class.php';
+}
+spl_autoload_register('ChargerClasse');
+
+
+
+// $DateVersement = new DateTime("2023-09-27");
+// $DateDuJour = new DateTime("2023-09-27");
+// echo "Ordre de transfert envoyé à la banque pour un montant de : " . $this->primeTotale() . " euros.";
 
 $employe1 = new Employe([
     "Nom" => "Moulin",
@@ -45,6 +55,8 @@ $employe5 = new Employe
     "SalaireAnnuel" => 50000
 
 ]);
+$
+$listeEmploye=[$employe1,$employe2,$employe3,$employe4,$employe5];
 
 echo "Montant de la prime de : " . $employe1->getNom() . " : " . $employe1->primeTotale() . " euros\n";
 echo "Montant de la prime de : " . $employe2->getNom() . " : " . $employe2->primeTotale() . " euros\n";
@@ -52,3 +64,11 @@ echo "Montant de la prime de : " . $employe3->getNom() . " : " . $employe3->prim
 echo "Montant de la prime de : " . $employe4->getNom() . " : " . $employe4->primeTotale() . " euros\n";
 echo "Montant de la prime de : " . $employe5->getNom() . " : " . $employe5->primeTotale() . " euros\n";
 
+function MasseSalariale ($listeEmploye){
+$somme=0;
+    foreach ($listeEmploye as $key => $value) {
+       $somme += $value->getSalaireAnnuel+$value->getPrimeTotal ;
+    }
+return $somme
+
+}

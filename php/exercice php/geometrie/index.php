@@ -32,3 +32,4 @@ require $classe.'.Class.php';
 spl_autoload_register('ChargerClasse3');
 $Sphere1 = new Sphere(["rayon" => 50]);
 echo $Sphere1->__toString();
+
