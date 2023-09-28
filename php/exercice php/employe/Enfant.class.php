@@ -1,16 +1,15 @@
 <?php
-class Agence
+class Enfant
 {
 
     /*****************Attributs***************** */
     private $_nom;
-    private $_adresse;
-    private $_codePostal;
-    private $_ville;
-private $_modeDeRestauration;   
-    /*****************Accesseurs***************** */
+    private $_prenom;
+    private $_age;
+    
 
-    public function getNom()
+    /*****************Accesseurs***************** */
+  public function getNom()
     {
         return $this->_nom;
     }
@@ -20,54 +19,26 @@ private $_modeDeRestauration;
         $this->_nom = $nom;
     }
 
-    public function getAdresse()
+    public function getPrenom()
     {
-        return $this->_adresse;
+        return $this->_prenom;
     }
 
-    public function setAdresse($adresse)
+    public function setPrenom($prenom)
     {
-        $this->_adresse = $adresse;
+        $this->_prenom = $prenom;
     }
 
-    public function getCodePostal()
+    public function getAge()
     {
-        return $this->_codePostal;
+        return $this->_age;
     }
 
-    public function setCodePostal($codePostal)
+    public function setAge($age)
     {
-        $this->_codePostal = $codePostal;
+        $this->_age = $age;
     }
-
-    public function getVille()
-    {
-        return $this->_ville;
-    }
-
-    public function setVille($ville)
-    {
-        $this->_ville = $ville;
-    }
-    /**
- * Get the value of _modeDeRestauration
- */ 
-public function get_modeDeRestauration()
-{
-return $this->_modeDeRestauration;
-}
-
-/**
- * Set the value of _modeDeRestauration
- *
- * @return  self
- */ 
-public function set_modeDeRestauration($_modeDeRestauration)
-{
-$this->_modeDeRestauration = $_modeDeRestauration;
-
-return $this;
-}
+    
     /*****************Constructeur***************** */
 
     public function __construct(array $options = [])
@@ -115,7 +86,7 @@ return $this;
      * Compare 2 objets
      * Renvoi 1 si le 1er est >
      *        0 si ils sont égaux
-     *        _1 si le 1er est <
+     *        -1 si le 1er est <
      *
      * @param [type] $obj1
      * @param [type] $obj2
@@ -126,8 +97,5 @@ return $this;
         return 0;
     }
 
-    
-
+  
 }
-
-?>

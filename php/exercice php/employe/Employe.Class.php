@@ -9,9 +9,9 @@ class Employe
     private $_fonction;
     private $_salaireAnnuel;
     private $_serviceEmploye;
-    static $_compteur;
-    private $_agence;
-    private $_enfants = array();
+    private static $compteur;
+    private  $_agence;
+    private  $_enfants = [] ;
     /*****************Accesseurs***************** */
     public function getNom()
     {
@@ -73,12 +73,12 @@ class Employe
         $this->_serviceEmploye = $serviceEmploye;
     }
 
-    public static function getCompteur()
+    private static function getCompteur()
     {
         return self::$compteur;
     }
 
-    public static function setCompteur($compteur)
+    private static function setCompteur($compteur)
     {
         self::$compteur = $compteur;
     }
@@ -106,7 +106,7 @@ class Employe
      *
      * @return  self
      */ 
-    public function set_enfants($_enfants)
+    public function set_enfants(Enfant $_enfants)
     {
         $this->_enfants = $_enfants;
 
@@ -250,38 +250,7 @@ public function peutAvoirChequesVacances()
 
 
 }
-public function getChequesNoel()
-    {
-        $chequesNoel = [
-            "20 euros" => 0,
-            "30 euros" => 0,
-            "50 euros" => 0
-        ];
 
-        foreach ($this->_enfants as $enfant) {
-            $age = $enfant->getAge();
-            if ($age <= 10) {
-                $chequesNoel["20 euros"]++;
-            } elseif ($age <= 15) {
-                $chequesNoel["30 euros"]++;
-            } elseif ($age <= 18) {
-                $chequesNoel["50 euros"]++;
-            }
-        }
-
-        if (array_sum($chequesNoel) > 0) {
-            echo $this->_nom . " " . $this->_prenom . " a le droit d'avoir des chèques Noël\n";
-            foreach ($chequesNoel as $montant => $nombre) {
-                if ($nombre > 0) {
-                    echo "- " . $nombre . " chèque(s) de " . $montant . "\n";
-                }
-            }
-        } else {
-            echo $this->_nom . " " . $this->_prenom . " n'a pas le droit d'avoir des chèques Noël\n";
-        }
-    }
-}
-?>
 ?>
 
 

@@ -61,7 +61,7 @@ $employe5 = new Employe([
     "agence" =>"horizon"
 ]);
 
-echo "Il y a " . Employe::getCompteur() . " employé créé \n";
+// echo "Il y a " . Employe::getCompteur() . " employé créé \n";
 
 $agence1 = new agence([
     "Nom" => "miracle",
@@ -129,32 +129,42 @@ if ($employe->peutAvoirChequesVacances()) {
     echo $employe->getNom() . " " . $employe->getPrenom() . " ne peut pas avoir des chèques vacances\n";
 }
 
-}
-}
-/ Création des enfants
-$enfant1 = new Enfant([
+
+
+// / Création des enfants
+$enfant1 = new enfant([
     "nom" => "moulin",
-    "prenom" => "Lucie",
+    "prenom" => "paul",
     "dateNaissance" => "01/01/2010"
 ]);
 
-$enfant2 = new Enfant([
+$enfant2 = new enfant([
     "nom" => "moulin",
     "prenom" => "Pierre",
     "dateNaissance" => "01/01/2005"
 ]);
 
-$enfant3 = new Enfant([
+$enfant3 = new enfant([
     "nom" => "moulin",
     "prenom" => "Marie",
     "dateNaissance" => "01/01/2002"
 ]);
-
+$enfant4 = new enfant([
+    "nom" => "nguyen",
+    "prenom" => "chun-lee",
+    "dateNaissance" => "01/05/2000"
+]);
+$enfant5 = new enfant([
+    "nom" => "ali",
+    "prenom" => "maryum",
+    "dateNaissance" => "11/05/2005"
+]);   
 // Ajout des enfants à l'employé
-$employe->ajouterEnfant($enfant1);
-$employe->ajouterEnfant($enfant2);
-$employe->ajouterEnfant($enfant3);
-
+$employe($employe1)->ajouterEnfant($enfant1);
+$employe($employe1)->ajouterEnfant($enfant2);
+$employe($employe1)->ajouterEnfant($enfant3);
+$employe($employe2)->ajouterEnfant($enfant4);
+$employe($employe3)->ajouterEnfant($enfant5);
 // Attribution des chèques Noël
 $employe->getChequesNoel();
 
