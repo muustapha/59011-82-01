@@ -67,8 +67,8 @@ class De
     }
 
 
-    function lancer()
+    public static function lancer()
     {
         return rand(1, 6);
-    }   
+    }                           
 }
