@@ -10,12 +10,7 @@ class Joueur
     {
         return $this->_pointDeVie;
     }
-public function setpointDeVie($_pointDeVie)
-    {
-        $this->_pointDeVie = $_pointDeVie;
 
-        return $this;
-    }
 
 
 
@@ -45,18 +40,49 @@ public function setpointDeVie($_pointDeVie)
             {
                 $this->$methode($value);
             }
-        
-    }}
-
-    
-    function lanceDe()
-    {
-      return  De::lanceDe();
+        }
     }
+
+    /*****************Autres Méthodes***************** */
+
+    // /**
+    //  * Transforme l'objet en chaine de caractères
+    //  *
+    //  * @return String
+    //  */
+    // public function toString()
+    // {
+    //     return "";
+    // }
+
+    // /**
+    //  * Renvoi vrai si l'objet en paramètre est égal à l'objet appelant
+    //  *
+    //  * @param [type] $obj
+    //  * @return bool
+    //  */
+    // public function equalsTo($obj)
+    // {
+    //     return true;
+    // }
+    // /**
+    //  * Compare 2 objets
+    //  * Renvoi 1 si le 1er est >
+    //  *        0 si ils sont égaux
+    //  *        -1 si le 1er est <
+    //  *
+    //  * @param [type] $obj1
+    //  * @param [type] $obj2
+    //  * @return void
+    //  */
+    // public static function compareTo($obj1, $obj2)
+    // {
+    //     return 0;
+    // }
     function estVivant()
     {
         return ($this->_pointDeVie > 0);
-        // if ($this->getpointDeVie()>0)
+        // if ($this->_pointDeVie>0)
         // {
         //     return true;
         // }
@@ -68,33 +94,41 @@ public function setpointDeVie($_pointDeVie)
 
     function attaque($monstre)
     {
-        $valjoueur = $this->lanceDe();
-        $valmonstre = $monstre->lanceDe();
-        echo "le joueur a lancé le dé et a obtenu : " . $valjoueur . "\n";
+        $joueur = self::lancerDe();
+        $monstre = $monstre->lancerDe();
 
-        if ($valjoueur >= $valmonstre) {
+        if ($joueur >= $monstre) {
             $monstre->EstVivant = (false);
         } else {
-            $this->subitDegats($valmonstre);
+            $joueur->subitDegats();
         }
-    
     }
+
 
     function subitDegats($degats)
 
     {
-        if (!$this->bouclierFonctionne()) {
-           ( $this->setpointDeVie($this->getpointDeVie() - $degats));
-            
+        $joueur->pointDeVie = -10;
     }
 
-        }
-    private function bouclierFonctionne()
-    {
-        $bouclier=$this->lanceDe();
-     
-       return ($bouclier <= 2);
 
+    function bouclierFonctionne()
+    {
+        $bouclier = self::lancerDe();
+        return i($bouclier >= 2);
+
+        //          true;
+        //     }
+        //     else
+        //     {
+        //         return false;
+        //     }
+
+    }
+
+
+    function lancerDe()
+    {
+        De::lancer();
     }
 }
-?>
