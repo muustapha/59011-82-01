@@ -73,7 +73,7 @@ function demarrerJeu() {
         cards.appendChild(elt);
         eltAjoute = cards.children[index]
         eltAjoute.addEventListener("click", clickCard)
-        eltAjoute.setAttribute("data-image", tabCartes[index])
+        eltAjoute.querySelector("img").setAttribute("data-image", tabCartes[index])
     }
 }
 /**
@@ -95,7 +95,7 @@ function gererRepartitionCartes(nbPair) {
 
 function clickCard(event) {
 
-    let card = event.currentTarget
+    let card = event.Target
     if (tabCartesRetournees.length < 2) {
 
         FlipCard(card, true);
