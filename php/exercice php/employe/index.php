@@ -9,9 +9,9 @@ spl_autoload_register('ChargerClasse');
 function afficheTableau($tab)
 {
     echo "\n";
-    foreach ($tab as $elt) // le tableau est parcouru de la 1ere à la dernière case, les cases sont mises tour à tous dans $elt
+    foreach ($tab as $elt) // le tableau est parcouru de la 1ere à la dernière case, les cases sont mises tou $elt
     {
-        echo $elt->toString() . "\n";
+        echo $elt->toString() . "\n";r à tous dans
     }
     echo "\n";
 }
