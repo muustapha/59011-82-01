@@ -9,7 +9,66 @@ class Poule
 
 
     /*****************Accesseurs***************** */
+ /**
+     * Get the value of _nom
+     */ 
+    public function get_nom()
+    {
+        return $this->_nom;
+    }
 
+    /**
+     * Set the value of _nom
+     *
+     * @return  self
+     */ 
+    public function set_nom($_nom)
+    {
+        $this->_nom = $_nom;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of _nbrEquipes
+     */ 
+    public function get_nbrEquipes()
+    {
+        return $this->_nbrEquipes;
+    }
+
+    /**
+     * Set the value of _nbrEquipes
+     *
+     * @return  self
+     */ 
+    public function set_nbrEquipes($_nbrEquipes)
+    {
+        $this->_nbrEquipes = $_nbrEquipes;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of _nbrDePoule
+     */ 
+    public function get_nbrDePoule()
+    {
+        return $this->_nbrDePoule;
+    }
+
+    /**
+     * Set the value of _nbrDePoule
+     *
+     * @return  self
+     */ 
+    public function set_nbrDePoule($_nbrDePoule)
+    {
+        $this->_nbrDePoule = $_nbrDePoule;
+
+        return $this;
+    }
+    
     
     /*****************Constructeur***************** */
 
@@ -95,7 +154,8 @@ public static function tiragePoule(array $equipes, int $nbPoules)
         }
 
         return $resultats;
-    }
+
+    }}
 
 
 <?php

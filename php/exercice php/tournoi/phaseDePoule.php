@@ -47,8 +47,9 @@ class PhasePoule extends Tournoi
                 // jouer contre toutes les autres équipes dans la poule
                 for ($j = $i + 1; $j < count($this->_equipes); $j++) {
                     $equipe2 = $this->_equipes[$j];
-    
-                    // simuler le match et stocker le résultat
+
+                     // simuler le match et stocker le résultat
+                    SelectionnerArbitres()                  
                     $resultat = $this->simulerMatch($equipe1, $equipe2);
                     $resultats[] = [
                         'equipe1' => $equipe1,

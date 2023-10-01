@@ -7,7 +7,7 @@ class Tournoi
     private $_dateDebut;
     private $_dateFin;
     private $_arbitre=[];
-    private $_Equipe = [];
+    private $_Equipe ;
     private $_poule;
     
     
