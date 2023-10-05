@@ -20,13 +20,14 @@ class VilleManager
         $requete->bindValue(":idVille", $ville->getIdVille());
         $requete->execute();
     }
+
     static public function delete(Ville $ville)
     {
         $db = DbConnect::getDb();
         $requete = $db->prepare("DELETE FROM ville WHERE idVille=:idVille");
+        $requete->bindValue(":idVille", $ville->getIdVille());
         $requete->execute();
     }
-
 
     static public function findById($id)
     {
@@ -138,14 +139,4 @@ class VilleManager
         $req = substr($req, 0, strlen($req) - 4);
         return $req;
     }
-
-
-
-
-
-
-
-
-
-
 }

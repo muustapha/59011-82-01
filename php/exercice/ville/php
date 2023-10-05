@@ -20,13 +20,14 @@ class VilleManager
         $requete->bindValue(":idVille", $ville->getIdVille());
         $requete->execute();
     }
+
     static public function delete(Ville $ville)
     {
         $db = DbConnect::getDb();
         $requete = $db->prepare("DELETE FROM ville WHERE idVille=:idVille");
+        $requete->bindValue(":idVille", $ville->getIdVille());
         $requete->execute();
     }
-
 
     static public function findById($id)
     {
@@ -94,7 +95,20 @@ class VilleManager
 
     static public function count(?array $colonnes = null, ?array $conditions = null, ?string $orderBy = null, ?string $limit = null, ?bool $debug = false)
     {
-        $colonnes = ($colonnes == null) ? Ville::getAttributes() : $colonnes;
+        class Ville {
+            // ...
+
+            public static function getAttributes() {
+                return [
+                    "idVille",
+                    "nomVille",
+                    "codePostal",
+                    "superficie",
+                ];
+            }
+
+            // ...
+        }
         $liste = self::select($colonnes, $conditions, $orderBy, $limit, $debug);
         if ($liste != false) {
             return count($liste);
@@ -138,14 +152,4 @@ class VilleManager
         $req = substr($req, 0, strlen($req) - 4);
         return $req;
     }
-
-
-
-
-
-
-
-
-
-
 }
