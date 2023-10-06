@@ -94,4 +94,24 @@ class Ville
     {
         return 0;
     }
+
+    /**
+     * Get the value of _superficie
+     */ 
+    public function getSuperficie()
+    {
+        return $this->_superficie;
+    }
+
+    /**
+     * Set the value of _superficie
+     *
+     * @return  self
+     */ 
+    public function setSuperficie($_superficie)
+    {
+        $this->_superficie = $_superficie;
+
+        return $this;
+    }
 }

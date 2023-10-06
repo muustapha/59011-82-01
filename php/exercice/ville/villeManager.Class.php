@@ -58,7 +58,7 @@ class VilleManager
         if ($conditions != null) {
             $requete .= " WHERE ";
             foreach ($conditions as $key => $value) {
-                $requete .= $key . "=:" . $key . " AND ";
+                $requete .= $key .  $value . " AND ";
             }
             $requete = substr($requete, 0, strlen($requete) - 4);
         }
@@ -72,6 +72,7 @@ class VilleManager
         if ($limit != null) {
             $requete .= " LIMIT " . $limit;
         }
+        var_dump($requete);
         $resultat = $db->query($requete);
         if ($debug) {
             $liste = [];
@@ -94,7 +95,7 @@ class VilleManager
 
     static public function count(?array $colonnes = null, ?array $conditions = null, ?string $orderBy = null, ?string $limit = null, ?bool $debug = false)
     {
-        $colonnes = ($colonnes == null) ? Ville::getAttributes() : $colonnes;
+        // $colonnes = ($colonnes == null) ? Ville::getAttributes() : $colonnes;
         $liste = self::select($colonnes, $conditions, $orderBy, $limit, $debug);
         if ($liste != false) {
             return count($liste);
