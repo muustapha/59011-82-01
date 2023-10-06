@@ -21,3 +21,5 @@ $villes = $ville->select($colonnes, $conditions, $orderBy);
 foreach ($villes as $ville) {
     echo $ville->getNomVille() . ' - ' . $ville->getCodePostal() . ' - ' . $ville->getSuperficie() . '<br>';
 }
+
+gmp_testbit()
