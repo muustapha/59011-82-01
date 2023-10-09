@@ -1,15 +1,51 @@
 <?php
 class VilleManager
-{
-
-    static public function add(Ville $ville)
+{    static public function add ($objet)
     {
         $db = DbConnect::getDb();
-        $requete = $db->prepare("INSERT INTO ville (nomVille, codePostal) VALUES (:nomVille, :codePostal)");
-        $requete->bindValue(":nomVille", $ville->getNomVille());
-        $requete->bindValue(":codePostal", $ville->getCodePostal());
+        $colonnes = $class::getAttributes();
+        $requete = $db->prepare("INSERT INTO villeDb (Properties) VALUES (:Properties)");
+        $requete->bindValue(":Properties", $objet->getProperties());
         $requete->execute();
     }
+    // public static function add($obj)
+	// {
+	// 	$db = DbConnect::getDb();
+	// 	$class = get_class($obj);
+	// 	$colonnes = $class::getAttributes();
+	// 	$requ = "INSERT INTO Ville_" . $class . "(";
+	// 	$values = "";
+	// 	$bindValue = [];
+
+	// 	for ($i = 1; $i < count($colonnes); $i++) {
+	// 		$methode = "get" . ucfirst($colonnes[$i]);
+	// 		if ($obj->$methode() !== null) {
+	// 			$requ .= $colonnes[$i] . ",";
+	// 			$values .= ":" . $colonnes[$i] . ",";
+	// 		}
+	// 	}
+	// 	$requ = substr($requ, 0, strlen($requ) - 1);
+	// 	$values = substr($values, 0, strlen($values) - 1);
+	// 	$requ .= ") VALUES (" . $values . ")";
+	// 	$q = $db->prepare($requ);
+
+	// 	for ($i = 1; $i < count($colonnes); $i++) {
+	// 		$methode = "get" . ucfirst($colonnes[$i]);
+	// 		if ($obj->$methode() !== null)
+	// 			$q->bindValue(":" . $colonnes[$i], $obj->$methode());
+	// 	}
+	// 	$q->execute();
+	// 	return $db->lastInsertId();
+    // }
+    // static public function add(Ville $ville)
+    // {
+    //     $db = DbConnect::getDb();
+    //     $requete = $db->prepare("INSERT INTO ville (nomVille, codePostal,superficie,nbHabitant) VALUES (:nomVille, :codePostal,superficie,nbHabitant)");
+    //     $requete->bindValue(":nomVille", $ville->getNomVille());
+    //     $requete->bindValue(":codePostal", $ville->getCodePostal());
+    //     $requete->bindValue(":superficie", $ville->getSuperficie());
+    //     $requete->execute();
+    // }
 
     static public function update(Ville $ville)
     {
@@ -140,7 +176,26 @@ class VilleManager
         return $req;
     }
 
+    private static function getProperties(string $classe)
+    {
+        // Instanciatin de la classe
+        $obj = new $classe();
 
+        // récupération des propriétés de la classe
+        $properties = (new ReflectionClass($obj))->getProperties();
+
+        $propertiesListe = [];
+        // création de la liste des propriétés
+        foreach($properties as $property)
+        {
+            $propertiesListe[] = substr($property->getName(), 1);
+        }
+        
+        // conversion en chaine de caractères
+        $propertiesStr = implode(", ", $propertiesListe);
+        
+        return $propertiesStr;
+    }
 
 
 

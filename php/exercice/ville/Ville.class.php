@@ -8,6 +8,7 @@ class Ville
     public $_codePostal;
     public $_idVille;
     public $_superficie;
+    public $_nbHabitant;
     /*****************Accesseurs***************** */
 
     public function getNomVille()
@@ -111,6 +112,28 @@ class Ville
     public function setSuperficie($_superficie)
     {
         $this->_superficie = $_superficie;
+
+        return $this;
+    }
+
+
+
+    /**
+     * Get the value of _nbHabitant
+     */ 
+    public function get_nbHabitant()
+    {
+        return $this->_nbHabitant;
+    }
+
+    /**
+     * Set the value of _nbHabitant
+     *
+     * @return  self
+     */ 
+    public function set_nbHabitant($_nbHabitant)
+    {
+        $this->_nbHabitant = $_nbHabitant;
 
         return $this;
     }

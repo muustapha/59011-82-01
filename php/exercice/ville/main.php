@@ -8,7 +8,7 @@ spl_autoload_register('ChargerClasse');
 
 DbConnect::init();
 // Instanciation de l'objet Ville$ville
-$ville = new Ville();
+// $ville = new Ville();
 
 // Définition des paramètres de la requête
 $colonnes = ['nomVille', 'codePostal', 'superficie'];
@@ -22,4 +22,10 @@ $villes = VilleManager::select($colonnes, $conditions, $orderBy);
 foreach ($villes as $ville) {
     echo $ville->getNomVille() . ' - ' . $ville->getCodePostal() . ' - ' . $ville->getSuperficie() . '<br>';
 }
-
+// $ville= new ville();
+$ville->setNomVille('Dunkerque');
+$ville->setCodePostal('59140');
+$ville->setSuperficie('4389000');
+$ville->setIdVille(5);
+$ville= VilleManager::select($ville);
+$ville= VilleManager::add($objet);
