@@ -9,6 +9,7 @@ class Ville
     public $_idVille;
     public $_superficie;
     public $_nbHabitant;
+    public static $_attributes = ["idVille", "nomVille", "codePostal", "superficie", "nbHabitant"];
     /*****************Accesseurs***************** */
 
     public function getNomVille()
@@ -136,5 +137,26 @@ class Ville
         $this->_nbHabitant = $_nbHabitant;
 
         return $this;
+    }
+
+
+
+
+    // /**
+    //  * Get the value of _attributes
+    //  */ 
+    // public static function get_attributes()
+    // {
+    //     return  ['idVille', 'nomVille', 'codePostal', 'superficie', 'nbHabitant'];
+    
+    // }
+
+
+    /**
+     * Get the value of _attributes
+     */ 
+    public static function get_attributes()
+    {
+        return self::$_attributes;
     }
 }

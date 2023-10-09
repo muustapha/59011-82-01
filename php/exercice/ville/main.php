@@ -22,10 +22,10 @@ $villes = VilleManager::select($colonnes, $conditions, $orderBy);
 foreach ($villes as $ville) {
     echo $ville->getNomVille() . ' - ' . $ville->getCodePostal() . ' - ' . $ville->getSuperficie() . '<br>';
 }
-// $ville= new ville();
-$ville->setNomVille('Dunkerque');
-$ville->setCodePostal('59140');
-$ville->setSuperficie('4389000');
-$ville->setIdVille(5);
-$ville= VilleManager::select($ville);
+
+
+
+$ville= new ville(["idVille"=>5,"nomVille"=>'Dunkerque',"codePostal"=>'59140',"superficie"=>'4389000',"nbHabitant"=>'43000']);
 $ville= VilleManager::add($objet);
+
+
