@@ -1,8 +1,11 @@
 <?php
 
-function ChargerClasse($class)
+function ChargerClasse($classe)
 {
-require $class.'.Class.php';
+    if (file_exists("./CONTROLLER/".$classe.".Class.php"))
+    require "./CONTROLLER/".$classe.".Class.php";
+    else if (file_exists("./MODEL/".$classe.".Class.php"))
+    require "./MODEL/".$classe.".Class.php";
 }
 spl_autoload_register('ChargerClasse');
 
@@ -25,7 +28,7 @@ foreach ($villes as $ville) {
 
 
 
-$ville= new ville(["idVille"=>5,"nomVille"=>'Dunkerque',"codePostal"=>'59140',"superficie"=>'4389000',"nbHabitant"=>'43000']);
-$ville= VilleManager::add($objet);
+// $ville= new Ville(["idVille"=>5,"nomVille"=>'Dunkerque',"codePostal"=>"59140","superficie"=>'4389000',"nbHabitant"=>"43000"]);
+// $ville= VilleManager::add($ville);
 
 

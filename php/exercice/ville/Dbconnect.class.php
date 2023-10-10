@@ -1,23 +1,21 @@
+
 <?php
-class DbConnect
+class DbConnect{
+    private static $_db;
 
-{
+    
 
-    /*****************Attributs***************** */
-    private static $db;
+    public static function getDb()
+    {
+        return self::$_db;
+    }
 
-public static function getDb()
-{
-    return self::$db;
+    public static function init()
+    {
+        try {
+            self::$_db =new PDO ('mysql:host=localhost;port=3306;dbname=personnesdb;charset=utf8',"root","");
+        } catch (Exception $e) {
+            die('Erreur : '.$e->getMessage());
+        }
+    }
 }
-public static function init()
-{ try {
-    self::$db = new PDO('mysql:host=localhost;dbname=villedb;charset=utf8', 'root', '');
-    self::$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (Exception $e) {
-    die('Erreur : ' . $e->getMessage());
-}
-}
-
-}
-   

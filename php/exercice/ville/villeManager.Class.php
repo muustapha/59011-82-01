@@ -22,20 +22,18 @@ public static function getattributes(){
 }
 
 
-	// public static function findById($id)
-	// {
- 	// 	return DAO::select(Ville::getAttributes(),"Ville",["idVille" => $id])[0];
-	// }
 
 public static function select ($nomColonnes = null, $conditions=null, $orderBy = null, $limit = null, $api = false, $debug = false){
 
-return DAO::select($nomColonnes,"Ville",   $conditions ,  $orderBy,  $limit ,  $api,  $debug );
-    }
+return DAO::select($nomColonnes,$conditions ,  $orderBy,  $limit ,  $api,  $debug );
+    } 
 
-
+	public static function findById($id)
+	{
+ 		return DAO::select(Ville::get_Attributes(),["idVille"=> $id])[0];}
 
 	public static function getList(array $nomColonnes=null,  array $conditions = null, string $orderBy = null, string $limit = null, bool $api = false, bool $debug = false)
 	{
  		$nomColonnes = ($nomColonnes==null)?Ville::get_Attributes():$nomColonnes;
-		return DAO::select($nomColonnes,"Ville",   $conditions ,  $orderBy,  $limit ,  $api,  $debug );	}
+		return DAO::select($nomColonnes, $conditions ,  $orderBy,  $limit ,  $api,  $debug );	}
 }
