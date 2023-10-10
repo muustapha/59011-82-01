@@ -8,7 +8,7 @@ class DAO
 		$db = DbConnect::getDb();
 		$class = get_class($obj);
 		$colonnes = $class::getAttributes();
-		$requ = "INSERT INTO ville_" . $class . "(";
+		$requ = "INSERT INTO Ville_" . $class . "(";
 		$values = "";
 		$bindValue = [];
 

@@ -17,9 +17,17 @@ class VilleManager
 	{
  		return DAO::delete($obj);
 	}
-public static function getattributes(){
- return Ville::get_attributes();
-}
+
+	public static function findById($id)
+	{
+ 		return DAO::select(Ville::get_Attributes(),"Ville",["idUtilisateur" => $id])[0];
+	}
+
+	public static function getList(array $nomColonnes=null,  array $conditions = null, string $orderBy = null, string $limit = null, bool $api = false, bool $debug = false)
+	{
+ 		$nomColonnes = ($nomColonnes==null)?Ville::get_Attributes():$nomColonnes;
+		return DAO::select($nomColonnes,"Ville",   $conditions ,  $orderBy,  $limit ,  $api,  $debug );	}
+
 
 
 
@@ -28,12 +36,4 @@ public static function select ($nomColonnes = null, $conditions=null, $orderBy =
 return DAO::select($nomColonnes,$conditions ,  $orderBy,  $limit ,  $api,  $debug );
     } 
 
-	public static function findById($id)
-	{
- 		return DAO::select(Ville::get_Attributes(),["idVille"=> $id])[0];}
-
-	public static function getList(array $nomColonnes=null,  array $conditions = null, string $orderBy = null, string $limit = null, bool $api = false, bool $debug = false)
-	{
- 		$nomColonnes = ($nomColonnes==null)?Ville::get_Attributes():$nomColonnes;
-		return DAO::select($nomColonnes, $conditions ,  $orderBy,  $limit ,  $api,  $debug );	}
-}
+	}

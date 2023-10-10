@@ -1,6 +1,6 @@
 {
     "host": "localhost",
-    "port": 5432,
+    "port": 3306,
     "dbname": "DbConnect",
     "user": "ville",
     "password": "",
