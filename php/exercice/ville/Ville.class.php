@@ -8,6 +8,7 @@ class Ville
     private $_idVille;
     private  $_nomVille;
     private  $_codePostal;
+
     private  $_superficie;
     private $_nbHabitant;
     private  static $_attributes = ["idVille", "nomVille", "codePostal", "superficie", "nbHabitant"];

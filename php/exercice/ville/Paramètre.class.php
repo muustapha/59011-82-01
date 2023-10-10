@@ -1,26 +1,19 @@
-<?php
+  <?php
 class Paramètre
 {
 
     /*****************Attributs***************** */
-    private $_host;
-    private $_port;
-    private $_dbname;
-    private $_user;
-    private $_password;
-    private $_nbLigne;
-    private $_init;
+    private static $_host;
+    private static $_port;
+    private static $_dbname;
+    private static $_user;
+    private static $_password;
+    private static $_nbLigne;
+    private static $_init;
 
 
 
     /*****************Accesseurs***************** */
-/**
-     * Get the value of _host
-     */ 
-    public function get_host()
-    {
-        return $this->_host;
-    }
 
     /**
      * Set the value of _host
@@ -29,37 +22,8 @@ class Paramètre
      */ 
     public function set_host($_host)
     {
-        $this->_host = $_host;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of _port
-     */ 
-    public function get_port()
-    {
-        return $this->_port;
-    }
-
-    /**
-     * Set the value of _port
-     *
-     * @return  self
-     */ 
-    public function set_port($_port)
-    {
-        $this->_port = $_port;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of _dbname
-     */ 
-    public function get_dbname()
-    {
-        return $this->_dbname;
+    
+        return    self::$_host;
     }
 
     /**
@@ -69,17 +33,8 @@ class Paramètre
      */ 
     public function set_dbname($_dbname)
     {
-        $this->_dbname = $_dbname;
+     return    self::$_dbname;
 
-        return $this;
-    }
-
-    /**
-     * Get the value of _user
-     */ 
-    public function get_user()
-    {
-        return $this->_user;
     }
 
     /**
@@ -89,17 +44,9 @@ class Paramètre
      */ 
     public function set_user($_user)
     {
-        $this->_user = $_user;
+      return   self::$_user;
 
-        return $this;
-    }
 
-    /**
-     * Get the value of _password
-     */ 
-    public function get_password()
-    {
-        return $this->_password;
     }
 
     /**
@@ -109,17 +56,7 @@ class Paramètre
      */ 
     public function set_password($_password)
     {
-        $this->_password = $_password;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of _nbLigne
-     */ 
-    public function get_nbLigne()
-    {
-        return $this->_nbLigne;
+        return    self::$_password;
     }
 
     /**
@@ -129,17 +66,7 @@ class Paramètre
      */ 
     public function set_nbLigne($_nbLigne)
     {
-        $this->_nbLigne = $_nbLigne;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of _init
-     */ 
-    public function get_init()
-    {
-        return $this->_init;
+   return     self::$_nbLigne;
     }
 
     /**
@@ -149,11 +76,74 @@ class Paramètre
      */ 
     public function set_init($_init)
     {
-        $this->_init = $_init;
+    return    self::$_init;
 
-        return $this;
     }
-    
+
+    /**
+     * Set the value of _port
+     *
+     * @return  self
+     */ 
+    public function set_port($_port)
+    {
+     return   self::$_port;
+    }
+    /**
+     * Get the value of _host
+     */
+    public function get_host()
+    {
+        return self::$_host;
+    }
+
+    /**
+     * Get the value of _port
+     */
+    public function get_port()
+    {
+        return self::$_port;
+    }
+
+    /**
+     * Get the value of _dbname
+     */
+    public function get_dbname()
+    {
+        return self::$_dbname;
+    }
+
+
+
+
+    /**
+     * Get the value of _password
+     */
+    public function get_password()
+    {
+        return self::$_password;
+    }
+
+    /**
+     * Get the value of _nbLigne
+     */
+    public function get_nbLigne()
+    {
+        return self::$_nbLigne;
+    }
+
+    /**
+     * Get the value of _init
+     */
+    public function get_init()
+    {
+        return self::$_init;
+    }
+
+    public function get_user()
+    {
+        return self::$_user;
+    }
     /*****************Constructeur***************** */
 
     public function __construct(array $options = [])
@@ -165,18 +155,17 @@ class Paramètre
     }
     public function hydrate($data)
     {
-        foreach ($data as $key => $value)
-        {
+        foreach ($data as $key => $value) {
             $methode = "set" . ucfirst($key); //ucfirst met la 1ere lettre en majuscule
             if (is_callable(([$this, $methode]))) // is_callable verifie que la methode existe
             {
-                $this->$methode($value);
+               $this->$$methode($value);
             }
         }
     }
 
     /*****************Autres Méthodes***************** */
-    
+
     // /**
     //  * Transforme l'objet en chaine de caractères
     //  *
@@ -212,6 +201,19 @@ class Paramètre
     //     return 0;
     // }
 
-    
-}
 
+
+    public static function init()
+    {
+        $jsonstr = file_get_contents("parametre.json");
+        $config = json_decode($jsonstr, true);
+        self::$_host = $config["host"];
+        self::$_port = $config["port"];
+        self::$_dbname = $config["dbname"];
+        self::$_user = $config["user"];
+        self::$_password = $config["password"];
+        self::$_nbLigne = $config["nbLigne"];
+        self::$_init = $config["init"];
+    }
+
+}
