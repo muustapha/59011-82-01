@@ -27,7 +27,7 @@ public static function getattributes(){
  	// 	return DAO::select(Ville::getAttributes(),"Ville",["idVille" => $id])[0];
 	// }
 
-public function select ($nomColonnes = null, $conditions=null, $orderBy = null, $limit = null, $api = false, $debug = false){
+public static function select ($nomColonnes = null, $conditions=null, $orderBy = null, $limit = null, $api = false, $debug = false){
 
 return DAO::select($nomColonnes,"Ville",   $conditions ,  $orderBy,  $limit ,  $api,  $debug );
     }

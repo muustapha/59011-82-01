@@ -4,12 +4,13 @@ class Ville
 {
 
     /*****************Attributs***************** */
-    public $_nomVille;
-    public $_codePostal;
-    public $_idVille;
-    public $_superficie;
-    public $_nbHabitant;
-    public static $_attributes = ["idVille", "nomVille", "codePostal", "superficie", "nbHabitant"];
+
+    private $_idVille;
+    private  $_nomVille;
+    private  $_codePostal;
+    private  $_superficie;
+    private $_nbHabitant;
+    private  static $_attributes = ["idVille", "nomVille", "codePostal", "superficie", "nbHabitant"];
     /*****************Accesseurs***************** */
 
     public function getNomVille()
@@ -99,7 +100,7 @@ class Ville
 
     /**
      * Get the value of _superficie
-     */ 
+     */
     public function getSuperficie()
     {
         return $this->_superficie;
@@ -109,7 +110,7 @@ class Ville
      * Set the value of _superficie
      *
      * @return  self
-     */ 
+     */
     public function setSuperficie($_superficie)
     {
         $this->_superficie = $_superficie;
@@ -121,7 +122,7 @@ class Ville
 
     /**
      * Get the value of _nbHabitant
-     */ 
+     */
     public function get_nbHabitant()
     {
         return $this->_nbHabitant;
@@ -131,7 +132,7 @@ class Ville
      * Set the value of _nbHabitant
      *
      * @return  self
-     */ 
+     */
     public function set_nbHabitant($_nbHabitant)
     {
         $this->_nbHabitant = $_nbHabitant;
@@ -148,13 +149,13 @@ class Ville
     // public static function get_attributes()
     // {
     //     return  ['idVille', 'nomVille', 'codePostal', 'superficie', 'nbHabitant'];
-    
+
     // }
 
 
     /**
      * Get the value of _attributes
-     */ 
+     */
     public static function get_attributes()
     {
         return self::$_attributes;
