@@ -8,7 +8,7 @@ class ManagerGenerator
      * @param string $className Le nom de la classe pour laquelle générer la classe DAO.
      * @return string Le code source de la classe DAO générée.
      */
-    public static function generateManageur($className) 
+    public static function generateManager($className) 
     {
 
         $code = "<?php\n\n";
