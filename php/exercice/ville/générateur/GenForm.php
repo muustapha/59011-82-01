@@ -17,20 +17,20 @@ class GenForm {
         $colonnes=$table[0]::getAttributes();
         // $colonnes=$classe::getAttributes();
 
-        for ($i = 0; $i < count($table); $i++) {
-            for($x = 0; $x < count($colonnes); $x++){
-                if(str_contains($colonnes[$x],"email")===true){
-                    $typeInput="email";
-                }
-                else{
+        // for ($i = 0; $i < count($table); $i++) {
+        //     for($x = 0; $x < count($colonnes); $x++){
+        //         if(str_contains($colonnes[$x],"email")===true){
+        //             $typeInput="email";
+        //         }
+        //         else{
                     // $typeSQL=$sql[$classe][$colonnes[$x]]; // recup le type de la colonne en SQL
                     $typeSQL=$sql[$colonnes[$x]];
                     $typeInput=$datas[$typeSQL][1]; // recup le type de la colonne en input
-                }      
-                $methode = "get" . ucfirst($colonnes[$x]);
-                $form.="<label for='".$colonnes[$x]."'>". $colonnes[$x]. "</label>\n";
-                $form.="<input type='".$typeInput."' id='".$colonnes[$x]."' name='".$colonnes[$x].($i+1)."' value='". $table[$i]->$methode(). "'>\n";                 
-            }
+                // }      
+            //     $methode = "get" . ucfirst($colonnes[$x]);
+            //     $form.="<label for='".$colonnes[$x]."'>". $colonnes[$x]. "</label>\n";
+            //     $form.="<input type='".$typeInput."' id='".$colonnes[$x]."' name='".$colonnes[$x].($i+1)."' value='". $table[$i]->$methode(). "'>\n";                 
+            // }
         }
         $form.="</form>";
         return $form;
