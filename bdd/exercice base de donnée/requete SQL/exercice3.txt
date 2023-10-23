@@ -1,0 +1,1 @@
+A_SELECT nomEtudiant FROM etudiants WHERE dateNaissanceEtudiant < (SELECT dateNaissanceEtudiant FROM etudiants WHERE nomEtudiant ='leclercq')
