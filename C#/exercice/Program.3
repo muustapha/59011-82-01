@@ -1,0 +1,443 @@
+﻿// See https://aka.ms/new-console-template for more information
+//3.1
+//1_demander a l utisateur son age                         
+using System.Text;
+
+Console.WriteLine("saisir l'âge de l'utilisateur");
+//lui dire s’il est majeur ou s’il est mineur
+if (int.Parse(Console.ReadLine()) >= 18)
+{
+    Console.WriteLine("vous êtes majeur");
+}
+else
+{
+    Console.WriteLine("vous êtes mineur");
+}
+
+//2_valeur absolue de cette valeur  ;
+int valeur;
+do
+{
+    Console.Write("Saisir une valeur : ");
+
+} while (!Int32.TryParse(Console.ReadLine(), out valeur));
+Console.WriteLine("la valeur absolue de cette valeur est : " + Math.Abs(valeur));
+
+
+
+//3_saisir une note
+Console.WriteLine("saisir une note");
+//si la note est inferieur a 8 "ajourné"
+if (int.Parse(Console.ReadLine()) < 8)
+{
+    Console.WriteLine("ajourné");
+}
+//si la note est entre 8et10 "rattrapage"
+else if (int.Parse(Console.ReadLine()) >= 8 && int.Parse(Console.ReadLine()) <= 10)
+{
+    Console.WriteLine("rattrapage");
+}
+//si la note est au dessus  10 "admis"
+else if (int.Parse(Console.ReadLine()) > 10)
+{
+    Console.WriteLine("admis");
+}
+
+
+//4_assurance
+Console.WriteLine("Saisir le montant des dommages");
+int montantDommages = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Montant remboursé");
+int montantRemboursé = int.Parse(Console.ReadLine());
+
+// Calculer la franchise qui est de 10% du montant remboursé et ne peut dépasser 4000€
+double franchise = montantRemboursé * 0.1;
+franchise = Math.Min(franchise, 4000); // Limiter la franchise à 4000€ maximum
+
+Console.WriteLine("Montant de la franchise : " + franchise);
+
+//5 afficher sur deux valeurs saisies le nombre de valeurs distinctes
+//saisir deux valeurs
+Console.WriteLine("saisir premiere valeur");
+int valeur1 = int.Parse(Console.ReadLine());
+Console.WriteLine("saisir deuxieme valeur");
+int valeur2 = int.Parse(Console.ReadLine());
+
+//afficher le nombre de valeurs distinctes
+
+HashSet<int> valeursDistinctes = new HashSet<int>();
+valeursDistinctes.Add(valeur1);
+valeursDistinctes.Add(valeur2);
+
+int nombreDeValeursDistinctes = valeursDistinctes.Count;
+
+Console.WriteLine("Nombre de valeurs distinctes : " + nombreDeValeursDistinctes);
+
+//6_saisir 3 valeurs
+Console.WriteLine("saisir premiere valeur");
+int valeur1 = int.Parse(Console.ReadLine());
+Console.WriteLine("saisir deuxieme valeur");
+int valeur2 = int.Parse(Console.ReadLine());
+Console.WriteLine("saisir troisieme valeur");
+int valeur3 = int.Parse(Console.ReadLine());
+//afficher la valeur la plus petite
+Console.WriteLine("la valeur la plus petite est : " + Math.Min(valeur1, Math.Min(valeur2, valeur3)));
+
+
+
+//3.2 switch
+//7_saisir 2 valeurs a et b de type int
+Console.WriteLine("saisir premiere valeur");
+int a = int.Parse(Console.ReadLine());
+Console.WriteLine("saisir deuxieme valeur");
+int b = int.Parse(Console.ReadLine());
+//saisir un operateur de type char (+,-,*,/)
+Console.WriteLine("saisir un operateur");
+char op = char.Parse(Console.ReadLine());
+//afficher le resultat de l operation a op b
+int resultat = 0;
+switch (op)
+{
+    case '+':
+        resultat = a + b;
+        break;
+    case '-':
+        resultat = a - b;
+        break;
+    case '*':
+        resultat = a * b;
+        break;
+    case '/':
+        if (b != 0)
+            resultat = a / b;
+        else
+            Console.WriteLine("Division par zéro impossible");
+        break;
+    default:
+        Console.WriteLine("Opérateur non valide");
+        break;
+}
+
+Console.WriteLine("Résultat de l'opération : " + resultat);
+
+//3.3 l'échiquier
+
+
+int rows = 8; // Nombre de lignes
+int columns = 8; // Nombre de colonnes
+
+// Créez une grille de couleurs
+ConsoleColor[,] grid = new ConsoleColor[i, j];
+
+// Définissez la case (1, 1) comme noire
+grid[1, 1] = ConsoleColor.Black;
+
+/ Créez une grille de couleurs
+        ConsoleColor[,] grid = new ConsoleColor[i, j];
+
+// Remplissez la grille en alternant entre noir et blanc
+for (int i = 0; i < rows; i++)
+{
+    for (int j = 0; j < columns; j++)
+    {
+        // Utilisez la parité des indices pour déterminer la couleur
+        if ((i + j) % 2 == 0)
+        {
+            grid[i, j] = ConsoleColor.Black;
+        }
+        else
+        {
+            grid[i, j] = ConsoleColor.White;
+        }
+    }
+}
+//_8_saisir coordonnées i
+Console.WriteLine("saisir coordonnées i");
+int i = int.Parse(Console.ReadLine());
+//saisir coordonnées j
+Console.WriteLine("saisir coordonnées j");
+int j = int.Parse(Console.ReadLine());
+//afficher la couleur de la case
+Console.WriteLine("la couleur de la case est : " + grid[i, j]);
+
+//9_saisir coordonnées i,j 1ere case
+//saisir coordonnées i
+Console.WriteLine("saisir coordonnées i");
+int i1 = int.Parse(Console.ReadLine());
+//saisir coordonnées j
+Console.WriteLine("saisir coordonnées j");
+int j1 = int.Parse(Console.ReadLine());
+//saisie coordonnées i,j 2eme case
+//saisie coordonnees i
+Console.WriteLine("saisir coordonnées i");
+int i2 = int.Parse(Console.ReadLine());
+//saisir coordonnées j
+Console.WriteLine("saisir coordonnées j");
+int j2 = int.Parse(Console.ReadLine());
+
+// Vérification si les coordonnées correspondent à un mouvement du cavalier
+
+bool mouvementValide = (Math.Abs(i2 - i1) == 2 && Math.Abs(j2 - j1) == 1) || (Math.Abs(i2 - i1) == 1 && Math.Abs(j2 - j1) == 2);
+
+if (mouvementValide)
+{
+    Console.WriteLine("Les coordonnées correspondent à un mouvement du cavalier.");
+}
+else
+{
+    Console.WriteLine("Les coordonnées ne correspondent pas à un mouvement du cavalier.");
+}
+
+
+
+//10_ switch
+//selectionné une piece a deplacer
+i = 5; j = 6;
+int cavalier = 0;
+int Tour = 1;
+int Fou = 2;
+int Dame = 3;
+int Roi = 4;
+switch {
+    case 0: // Cavalier
+        if (Math.Abs(i2 - i1) == 2 && Math.Abs(j2 - j1) == 1) || (Math.Abs(i2 - i1) == 1 && Math.Abs(j2 - j1) == 2);
+        // Le cavalier peut se déplacer en L, soit 2 cases dans une direction et 1 case dans l'autre.
+        mouvementValide = true;
+
+        break;
+
+
+    case 1: // Tour
+            // Valider le mouvement de la tour
+        if (i1 == i2 || j1 == j2)
+        {
+            // La tour se déplace horizontalement (même i) OU verticalement (même j)
+            mouvementValide = true;
+        }
+        break;
+
+    case 2: // Fou
+        // Valider le mouvement du fou
+        if (Math.Abs(i2 - i1) == Math.Abs(j2 - j1))
+        {
+            // Le fou se déplace en diagonale si la différence absolue entre les coordonnées i et j est la même
+            mouvementValide = true;
+        }
+        break;
+
+    case 3: // Dame
+            // Valider le mouvement de la dame
+        if ((i1 == i2 || j1 == j2) || (Math.Abs(i2 - i1) == Math.Abs(j2 - j1)))
+        {
+            // La dame peut se déplacer horizontalement (même i), verticalement (même j) ou en diagonale
+            mouvementValide = true;
+        }
+        break;
+
+    case 4: // Roi
+            // Valider le mouvement du roi
+        if (Math.Abs(i2 - i1) <= 1 && Math.Abs(j2 - j1) <= 1)
+        {
+            // Le roi peut se déplacer d'une case dans n'importe quelle direction
+            mouvementValide = true;
+        }
+        break;
+
+}
+
+//deplacement du roi de(5,6) a (6,7)
+i1 = 5; j1 = 6;
+i2 = 6; j2 = 7;
+//afficher si le deplacement est valide
+if (mouvementValide)
+{
+    Console.WriteLine("Le déplacement est valide.");
+}
+else
+{
+    Console.WriteLine("Le déplacement n'est pas valide.");
+}
+int i1 = 5, j1 = 6;
+int i2 = 6, j2 = 7;
+bool mouvementValide = false;
+
+int piece = 4; // 4 pour le Roi
+
+switch (piece)
+{
+    case 0: // Cavalier
+        if ((Math.Abs(i2 - i1) == 2 && Math.Abs(j2 - j1) == 1) || (Math.Abs(i2 - i1) == 1 && Math.Abs(j2 - j1) == 2))
+        {
+            mouvementValide = true;
+        }
+        break;
+
+    case 1: // Tour
+        if (i1 == i2 || j1 == j2)
+        {
+            mouvementValide = true;
+        }
+        break;
+
+    case 2: // Fou
+        if (Math.Abs(i2 - i1) == Math.Abs(j2 - j1))
+        {
+            mouvementValide = true;
+        }
+        break;
+
+    case 3: // Dame
+        if ((i1 == i2 || j1 == j2) || (Math.Abs(i2 - i1) == Math.Abs(j2 - j1))
+        {
+            mouvementValide = true;
+        }
+        break;
+
+    case 4: // Roi
+        if (Math.Abs(i2 - i1) <= 1 && Math.Abs(j2 - j1) <= 1)
+        {
+            mouvementValide = true;
+        }
+        break;
+}
+
+if (mouvementValide)
+{
+    Console.WriteLine("Le déplacement est valide.");
+}
+else
+{
+    Console.WriteLine("Le déplacement n'est pas valide.");
+}
+//4_heures et dates  
+// Saisir une heure de début
+Console.WriteLine("Saisir une heure de début (format 24 heures, ex: 14):");
+int heure = int.Parse(Console.ReadLine());
+
+// Saisir une minute de début
+Console.WriteLine("Saisir une minute de début :");
+int minute = int.Parse(Console.ReadLine());
+
+// Saisir une heure de fin
+Console.WriteLine("Saisir une heure de fin (format 24 heures, ex: 18):");
+int heure2 = int.Parse(Console.ReadLine());
+
+// Saisir une minute de fin
+Console.WriteLine("Saisir une minute de fin :");
+int minute2 = int.Parse(Console.ReadLine());
+
+// Calculer le temps écoulé entre l'heure de début et l'heure de fin
+int heure3 = heure2 - heure;
+int minute3 = minute2 - minute;
+
+// Gérer le cas où les minutes de fin sont plus petites que les minutes de début
+if (minute3 < 0)
+{
+    heure3--;
+    minute3 += 60;
+}
+
+// Afficher le temps écoulé
+Console.WriteLine($"Temps écoulé : {heure3} heures et {minute3} minutes.");
+
+
+//12_saisir un jour
+Console.WriteLine("Saisir un jour : ");
+int jour = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Saisir un mois : ");
+int mois = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Saisir une année : ");
+int année = int.Parse(Console.ReadLine());
+
+// Calculer le nombre de jours dans le mois
+int nombreDeJours = DateTime.DaysInMonth(année, mois);
+
+// Afficher le jour suivant
+if (jour < nombreDeJours)
+{
+    jour++;
+}
+else
+{
+    jour = 1;
+    if (mois < 12)
+    {
+        mois++;
+    }
+    else
+    {
+        mois = 1;
+        année++;
+    }
+}
+
+Console.WriteLine($"Le jour suivant est le {jour}/{mois}/{année}.");
+
+
+//3.5_intervalles et rectangles
+//13_saisir un intervalle
+Console.WriteLine("Saisir un intervalle [a, b] : ");
+int a = int.Parse(Console.ReadLine());
+int b = int.Parse(Console.ReadLine());
+
+// Contrôler les valeurs saisies
+if (a == b)
+{
+    Console.WriteLine("L'intervalle est vide.");
+}
+else if (a < b)
+{
+    Console.WriteLine("L'intervalle est non vide.");
+}
+else
+{
+    Console.WriteLine("L'intervalle est invalide (a doit être inférieur ou égal à b).");
+}
+    
+//14_saisir valeur x
+Console.WriteLine("Saisir une valeur x : ");
+int x = int.Parse(Console.ReadLine());
+ //controller si x est dans l intervalle
+ if (x >= a && x <= b)
+
+{
+    Console.WriteLine("La valeur x est dans l'intervalle.");    
+}
+
+ //15_saisir les coordonnées (xhautGauhe,yhautGauhe) 
+ Console.WriteLine("Saisir les coordonnées (xhautGauhe,yhautGauhe) : ");
+    int xhautGauhe = int.Parse(Console.ReadLine());
+    int yhautGauhe = int.Parse(Console.ReadLine());
+//saisir les coordonnées (xbasDroit,ybasDroit)
+Console.WriteLine("Saisir les coordonnées (xbasDroit,ybasDroit) : ");
+    int xbasDroit = int.Parse(Console.ReadLine());
+    int ybasDroit = int.Parse(Console.ReadLine());
+//controlez les valeurs saisies
+if (xhautGauhe < xbasDroit && yhautGauhe > ybasDroit)
+{
+    Console.WriteLine("Les coordonnées forment un rectangle valide.");
+}
+else
+{
+    Console.WriteLine("Les coordonnées ne forment pas un rectangle valide.");
+}
+
+//16_saisir 2 coordonnéees d un point (x,y)
+Console.WriteLine("Saisir les coordonnées d'un point (x, y) : ");
+int x = int.Parse(Console.ReadLine());
+int y = int.Parse(Console.ReadLine());
+//controlez si le point est dans le rectangle
+if (x >= xhautGauhe && x <= xbasDroit && y <= yhautGauhe && y >= ybasDroit)
+{
+    Console.WriteLine("Le point est dans le rectangle.");
+}
+else
+{
+    Console.WriteLine("Le point n'est pas dans le rectangle.");
+}
+
+
+
