@@ -1,0 +1,53 @@
+#grille{
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 10px;
+}
+
+.carte {
+width: 100px;
+height: 140px;
+background-color: #f2f2f2;
+border: 1px solid #ddd;
+border-radius: 5px;
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+transition: background-color 0.3s, transform 0.3s;
+font-size: 18px;
+}
+
+.carte.verso {
+background-color: #bbb;
+}
+
+.carte.trouvee {
+background-color: #66ff66;
+cursor: default;
+pointer-events: none;
+}
+
+.carte:hover {
+background-color: #ddd;
+transform: scale(1.05);
+}
+
+/* Styles pour les boutons */
+button {
+padding: 10px 20px;
+background-color: #007bff;
+color: #fff;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s;
+font-size: 16px;
+}
+
+button:hover {
+background-color: #0056b3;
+}
+
+
+

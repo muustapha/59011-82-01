@@ -1,0 +1,83 @@
+A_SELECT nomEtudiant FROM etudiants WHERE dateNaissanceEtudiant < (SELECT dateNaissanceEtudiant FROM etudiants WHERE nomEtudiant ='leclercq')
+B_SELECT nomEtudiant, note FROM avoir_note JOIN etudiants ON avoir_note.idEtudiant = etudiants.idEtudiant WHERE idEpreuve = 4 AND note > (SELECT AVG(note) FROM avoir_note WHERE idEpreuve = 4);
+C_ SELECT nomEtudiant
+FROM etudiants
+JOIN avoir_note ON etudiants.idEtudiant=avoir_note.idEtudiant
+WHERE note>=12; 
+D_ SELECT DISTINCT CONCAT(`nomEtudiant`," ", `prenomEtudiant`) as "Etudiant"
+FROM `etudiants` e
+INNER JOIN `avoir_note` a ON a.idEtudiant = e.idEtudiant
+WHERE idEpreuve = 4 AND a.note > (SELECT `note` FROM `avoir_note` a2
+INNER JOIN `etudiants` e2 ON e2.idEtudiant = a2.idEtudiant
+WHERE a2.idEpreuve = 4 AND e2.prenomEtudiant = 'luc' AND e2.nomEtudiant = 'dupont');
+E_SELECT DISTINCT e.nomEtudiant
+FROM avoir_note an
+JOIN etudiants e on e.idEtudiant = an.idEtudiant
+where an.note IN (SELECT an.note
+                  from avoir_note an
+                  JOIN etudiants et on et.idEtudiant = an.idEtudiant
+                  where et.nomEtudiant = "DUPONT" and e.prenomEtudiant = "LUC" )
+F_ALTER TABLE etudiants
+ADD hobbyEtudiant VARCHAR(20)
+DEFAULT 'sport';
+G_ALTER TABLE etudiants ADD newcol int ;
+
+ALTER TABLE etudiants DROP COLUMN newcol
+H_DESCRIBE etudiants;
+
+ALTER TABLE etudiants MODIFY COLUMN prenomEtudiant VARCHAR(20) NOT NULL;
+I_
+ 
+insert INTO epreuves(idEpreuve,libelleEpreuve,idEnseignantEpreuve,idMatiereEpreuve,dateEpreuve,CoefficientEpreuve) VALUES (7, 'interro écrite', 9,1, '1996-08-21',1); 
+
+    insert into avoir_note(idEtudiant, idEpreuve ,note) VALUE 
+    (1,7,10),
+    (2,7,08),
+    (3,7,05),
+    (4,7,09),
+    (17,3,15)
+J_UPDATE avoir_note SET note = 7 WHERE idEtudiant = 3 AND idEpreuve = 7;
+k_UPDATE avoir_note SET note = note + 1 WHERE idEpreuve = 7 AND idEtudiant = 1;
+L_DELETE FROM avoir_note WHERE idEpreuve = 7; 
+ DELETE FROM epreuves WHERE idEpreuve = 7; 
+M si cascade
+N_
+UPDATE
+    `avoir_note`a
+    JOIN etudiants e
+    ON a.`idEtudiant` = e.idEtudiant
+    JOIN epreuves ep 
+    ON a.`idEpreuve` = ep.idEpreuve
+    JOIN matieres m
+    ON ep.idMatiereEpreuve = m.idMatiere
+SET
+    `note` = `note`- 3
+WHERE
+    e.nomEtudiant = "marke"
+    AND
+    m.nomMatiere = "BD";
+O_
+INSERT INTO avoir_note (idEtudiant, idEpreuve, note)
+VALUES(
+        (SELECT etudiants.idEtudiant
+         FROM etudiants
+         WHERE etudiants.nomEtudiant = "dewa"),
+        4,
+        (SELECT (AVG(an.note)*0.9)
+         FROM avoir_note an
+         WHERE an.idEpreuve = 4)
+      );
+P_
+INSERT INTO etudiants(`idEtudiant`, `nomEtudiant`, `prenomEtudiant`, `HOBBY`, `anneeEtudiant`) VALUES (25, "darte", "remy", "sculpture", 1);
+
+
+
+
+même exercice avec vue
+
+B_SELECT nomEtudiant, note FROM etudiants_epreuves WHERE idEpreuve = 4 AND note > (SELECT AVG(note) FROM avoir_note WHERE idEpreuve = 4); 
+
+C_SELECT nomEtudiant FROM etudiants_epreuves WHERE note>=12; 
+D_SELECT DISTINCT CONCAT(`nomEtudiant`," ", `prenomEtudiant`) as "Etudiant" FROM etudiants_epreuves WHERE idEpreuve = 4 AND note > (SELECT `note` FROM etudiants_epreuves WHERE idEpreuve = 4 AND prenomEtudiant = 'luc' AND nomEtudiant = 'dupont'); 
+E_SELECT DISTINCT nomEtudiant FROM etudiants_epreuves where note IN (SELECT note from etudiants_epreuves where nomEtudiant = "DUPONT" and prenomEtudiant = "LUC" ); 
+

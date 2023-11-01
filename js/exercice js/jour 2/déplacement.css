@@ -1,0 +1,953 @@
+#carre {
+    width: 25px;
+    height: 25px;
+    background-color: rgb(255, 234, 47);
+    position: absolute;
+}
+
+
+
+
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Style pour les boutons */
+#button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+}
+
+/* Style pour chaque bouton */
+#top,
+#bottom,
+#left,
+#right {
+    position: absolute;
+
+
+
+    border-radius: 5%;
+}
+
+#top {
+    top: 0.50%;
+    left: 5%;
+    transform: translateX(-5%);
+}
+
+#bottom {
+    bottom: 90%;
+    left: 6%;
+    transform: translateX(-50%);
+}
+
+#left {
+    top: 5%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+#right {
+    top: 3%;
+    right: 88%;
+    transform: translateY(50%);
+}
+
+
+
+
+
+#mur {
+    position: absolute;
+    height: 1vh;
+    width: 100vw;
+    background-color: #000000;
+    left: 1vw;
+    top: 13vh;
+}
+
+#mur1 {
+    position: absolute;
+    height: 1vh;
+    width: 100.5vw;
+    background-color: #000000;
+    left: 0vw;
+    top: 85vh;
+}
+
+#mur2 {
+    position: absolute;
+    height: 85vh;
+    width: 0.5vw;
+    background-color: #000000;
+    left: vw;
+    top: vh;
+}
+
+#mur3 {
+    position: absolute;
+    height: 85vh;
+    width: 0.5vw;
+    background-color: #000000;
+    left: 100vw;
+    top: vh;
+}
+
+#obstacle {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left: 1.5vw;
+    top: 19vh;
+}
+
+#obstacle1 {
+    position: absolute;
+    height: 78vh;
+    width: 0.5vw;
+    background-color: #ff000080;
+    left: 3.5vw;
+    top: 1vh;
+}
+
+#obstacle2 {
+    position: absolute;
+    height: 31vh;
+    width: 0.5vw;
+    background-color: #ff000080;
+    left: 7vw;
+    top: 0.5vh;
+}
+
+#obstacle3 {
+    position: absolute;
+    height: 36vh;
+    width: 0.5vw;
+    background-color: #ff000080;
+    left: 7vw;
+    top: 37vh;
+}
+
+#obstacle4 {
+    position: absolute;
+    height: 1vh;
+    width: 50vw;
+    background-color: #ff000080;
+    left: 7.5vw;
+    top: 0.5vh;
+}
+
+#obstacle5 {
+    position: absolute;
+    height: 1vh;
+    width: 5vw;
+    background-color: #ff000080;
+    left: 7.5vw;
+    top: 30.5vh;
+}
+
+#obstacle6 {
+    position: absolute;
+    height: 1vh;
+    width: 2vw;
+    background-color: #ff000080;
+    left: 7.5vw;
+    top: 37vh;
+}
+
+#obstacle7 {
+    position: absolute;
+    height: 1vh;
+    width: 30vw;
+    background-color: #ff000080;
+    left:7.5vw;
+    top: 72vh;
+}
+
+#obstacle8 {
+    position: absolute;
+    height: 30vh;
+    width: 0.5vw;
+    background-color: #ff000080;
+    left: 9vw;
+    top: 38vh;
+}
+
+#obstacle9 {
+    position: absolute;
+    height: 32vh;
+    width: 0.5vw;
+    background-color: #ff000080;
+    left: 12vw;
+    top: 30.5vh;
+}
+
+#obstacle10 {
+    position: absolute;
+    height: 50vh;
+    width: 0.5vw;
+    background-color: #ff000080;
+    left: 16vw;
+    top: 12.5vh;
+}
+
+#obstacle11 {
+    position: absolute;
+    height: 50vh;
+    width: 0.5vw;
+    background-color: #ff000080;
+    left: 19vw;
+    top: 18vh;
+}
+
+#obstacle12 {
+    position: absolute;
+    height: 76vh;
+    width: 0.5vw;
+    background-color: #ff000080;
+    left: 60.5vw;
+    top: 0.5vh;
+}
+
+#obstacle13 {
+    position: absolute;
+    height: 76vh;
+    width: 0.5vw;
+    background-color: #ff000080;
+    left: 80vw;
+    top: 1.5vh;
+}
+#obstacle14 {
+    position: absolute;
+    height: 1vh;
+    width: 10vw;
+    background-color: #ff000080;
+    left: 9vw;
+    top: 67vh;
+}#obstacle15 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left: 12vw;
+    top: 61.5vh;
+}#obstacle16 {
+    position: absolute;
+    height: 1vh;
+    width: 50vw;
+    background-color: #ff000080;
+    left: 7.5vw;
+    top: 0.5vh;
+}#obstacle17 {
+    position: absolute;
+    height: 1vh;
+    width: 50vw;
+    background-color: #ff000080;
+    left: 7.5vw;
+    top: 0.5vh;
+}#obstacle18 {
+    position: absolute;
+    height: 1vh;
+    width: 50vw;
+    background-color: #ff000080;
+    left: 7.5vw;
+    top: 0.5vh;
+}#obstacle19 {
+    position: absolute;
+    height: 1vh;
+    width: 50vw;
+    background-color: #ff000080;
+    left: 7.5vw;
+    top: 0.5vh;
+}#obstacle20 {
+    position: absolute;
+    height: 1vh;
+    width: 50vw;
+    background-color: #ff000080;
+    left: 7.5vw;
+    top: 0.5vh;
+}#obstacle21 {
+    position: absolute;
+    height: 1vh;
+    width: 50vw;
+    background-color: #ff000080;
+    left: 7.5vw;
+    top: 0.5vh;
+}#obstacle22{
+    position: absolute;
+    height: 1vh;
+    width: 50vw;
+    background-color: #ff000080;
+    left: 7.5vw;
+    top: 0.5vh;
+}#obstacle23 {
+    position: absolute;
+    height: 1vh;
+    width: 50vw;
+    background-color: #ff000080;
+    left: 7.5vw;
+    top: 0.5vh;
+}#obstacle24 {
+    position: absolute;
+    height: 1vh;
+    width: 50vw;
+    background-color: #ff000080;
+    left: 7.5vw;
+    top: 0.5vh;
+}#obstacle25 {
+    position: absolute;
+    height: 1vh;
+    width: 50vw;
+    background-color: #ff000080;
+    left: 7.5vw;
+    top: 0.5vh;
+}#obstacle26 {
+    position: absolute;
+    height: 1vh;
+    width: 50vw;
+    background-color: #ff000080;
+    left: 7.5vw;
+    top: 0.5vh;
+}#obstacle27 {
+    position: absolute;
+    height: 1vh;
+    width: 50vw;
+    background-color: #ff000080;
+    left: 7.5vw;
+    top: 0.5vh;
+}#obstacle28 {
+    position: absolute;
+    height: 1vh;
+    width: 50vw;
+    background-color: #ff000080;
+    left: 7.5vw;
+    top: 0.5vh;
+}#obstacle29 {
+    position: absolute;
+    height: 1vh;
+    width: 50vw;
+    background-color: #ff000080;
+    left: 7.5vw;
+    top: 0.5vh;
+}#obstacle31 {
+    position: absolute;
+    height: 1vh;
+    width: 50vw;
+    background-color: #ff000080;
+    left: 7.5vw;
+    top: 0.5vh;
+}
+ 
+#obstacle32 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left: 12vw;
+    top: 61.5vh;
+}
+#obstacle33 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left: 12vw;
+    top: 61.5vh;
+}
+
+#obstacle34 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left: 12vw;
+    top: 61.5vh;
+}
+#obstacle35 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left: 12vw;
+    top: 61.5vh;
+}
+
+#obstacle36 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left: 12vw;
+    top: 61.5vh;
+}
+
+#obstacle37 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left: 12vw;
+    top: 61.5vh;
+}
+
+#obstacle38 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left: 12vw;
+    top: 61.5vh;
+}
+
+#obstacle39 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left: 12vw;
+    top: 61.5vh;
+}
+
+#obstacle40 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left: 12vw;
+    top: 61.5vh;
+}
+
+#obstacle41 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left: 12vw;
+    top: 61.5vh;
+
+}
+
+#obstacle42 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left:12vw;
+    top: 61.5vh;
+}
+
+#obstacle43 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left:12vw;
+    top: 61.5vh;
+}
+
+#obstacle44 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left:12vw;
+    top: 61.5vh;
+}
+
+#obstacle45 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left:12vw;
+    top: 61.5vh;
+}   
+#obstacle46 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left:12vw;
+    top: 61.5vh;
+}
+
+#obstacle47 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left:12vw;
+    top: 61.5vh;
+}
+
+#obstacle48 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left:12vw;
+    top: 61.5vh;
+}
+
+#obstacle49 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left:12vw;
+    top: 61.5vh;
+}
+
+#obstacle50 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left:12vw;
+    top: 61.5vh;
+}
+
+#obstacle51 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left:12vw;
+    top: 61.5vh;
+}
+
+#obstacle52 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left:12vw;
+    top: 61.5vh;
+}
+
+#obstacle53 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left:12vw;
+    top: 61.5vh;
+
+}
+
+#obstacle54 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left:12vw;
+    top: 61.5vh;
+
+}
+
+#obstacle55 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left:12vw;
+    top: 61.5vh;
+
+}
+
+#obstacle56 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left: 12vw;
+    top: 61.5vh;
+
+}
+
+#obstacle57 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left: 12vw;
+    top: 61.5vh;
+
+}
+
+#obstacle58 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left: 12vw;
+    top: 61.5vh;
+
+}
+
+#obstacle59 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left: 12vw;
+    top: 61.5vh;
+
+}
+
+#obstacle60 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left:12vw;
+    top: 61.5vh;
+
+}
+
+#obstacle61 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left:12.5vw;
+    top: 61.5vh;
+
+}
+
+#obstacle62 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left:.5vw;
+    top: 61.5vh;
+
+}
+
+#obstacle63 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left:.5vw;
+    top: 61.5vh;
+
+}
+
+#obstacle64 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left:.5vw;
+    top: 61.5vh;
+
+}
+
+#obstacle65 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left:.5vw;
+    top: 61.5vh;
+
+}
+
+#obstacle66 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left:.5vw;
+    top: 61.5vh;
+
+}
+
+#obstacle67 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left:.5vw;
+    top: 61.5vh;
+
+}
+
+#obstacle68 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left:.5vw;
+    top: 61.5vh;
+
+}
+
+#obstacle69 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left:.5vw;
+    top: 61.5vh;
+
+}
+
+#obstacle70 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left:.5vw;
+    top: 61.5vh;
+
+}
+
+#obstacle71 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left:.5vw;
+    top: 61.5vh;
+
+}
+
+#obstacle72 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left:.5vw;
+    top: 61.5vh;
+}
+
+#obstacle73 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left:.5vw;
+    top: 61.5vh;
+}
+
+#obstacle74 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left:.5vw;
+    top: 61.5vh;
+}
+
+#obstacle75 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left: .5vw;
+    top: 61.5vh;
+}
+
+#obstacle76 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left:.5vw;
+    top: 61.5vh;
+}
+
+#obstacle77 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left:.5vw;
+    top: 61.5vh;
+}
+
+#obstacle78 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left: .5vw;
+    top: 61.5vh;
+}
+
+#obstacle79 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left: .5vw;
+    top: 61.5vh;
+}
+
+#obstacle80 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left: .5vw;
+    top: 61.5vh;
+}
+
+#obstacle81 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left: .5vw;
+    top: 61.5vh;
+}
+
+#obstacle82 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left: .5vw;
+    top: 61.5vh;
+}
+
+#obstacle83 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left: .5vw;
+    top: 61.5vh;
+}
+
+#obstacle84 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left: .5vw;
+    top: 61.5vh;
+}
+
+#obstacle85 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left:.5vw;
+    top: 61.5vh;
+}
+
+#obstacle86 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left:.5vw;
+    top: 61.5vh;
+
+}
+
+#obstacle87 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left: .5vw;
+    top: 61.5vh;
+
+}
+
+#obstacle88 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left: .5vw;
+    top: 61.5vh;
+
+}
+
+#obstacle89 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left:.5vw;
+    top: 61.5vh;
+
+}
+
+#obstacle90 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left: .5vw;
+    top: 61.5vh;
+
+}
+
+#obstacle91 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left:.5vw;
+    top: 61.5vh;
+
+}
+
+#obstacle92 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left: .5vw;
+    top: 61.5vh;
+
+}
+
+#obstacle93 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left: .5vw;
+    top: 61.5vh;
+
+}
+
+#obstacle94 {
+    position: absolute;
+    height: 1vh;
+    width: 4vw;
+    background-color: #ff000080;
+    left:.5vw;
+    top: 61.5vh;
+
+}
+
+#obstacle95 {
+    position: absolute;
+    height: 1vh;
+    width: 40vw;
+    background-color: #ff000080;
+    left: 1.5vw;
+    top: 11.5vh;
+
+}
+
+
+
+

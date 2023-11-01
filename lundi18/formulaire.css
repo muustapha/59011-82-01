@@ -1,0 +1,64 @@
+
+body {
+    background:linear-gradient(to left, #00fff2,#17ec5e);
+    font-family:Verdana, sans-serif ;
+    font-size: 15px;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+ 
+h1 {
+    text-align: center;
+    color: rgba(104, 3, 254, 0.568);
+    margin: 0;
+    padding: 0;
+    margin-top: 100px;
+}
+  form {
+            max-width: 400px;
+            margin: 0 auto;
+            background:linear-gradient(to right, white,#17ec5e);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin-top: 40px;
+            border: 5px solid rgba(220, 255, 0, 275);
+        }
+
+
+label  {
+    display: block;
+    width: 200px;
+    float: left;
+    clear: left;
+    text-align: right;
+    margin: 0.25em 1em 0.25em 0;
+    padding: 0;
+}
+/* input, textarea{
+    margin: 0.25em 0 0.25em 0;
+    padding: 0.25em;
+    border: 5px solid rgba(217, 290, 0, 0.322);
+    border-radius: 0.25em;
+    background-color:linear-gradient(to right,#17ec5e,white);
+    font-size: 1em;
+    color: #333333;} */
+
+  /* Style pour les champs corrects */
+  .inputCorrect {
+    /* Ajoutez ici les styles que vous souhaitez pour les champs valides */
+    border: 3.5px solid green; /* Exemple : bordure verte pour les champs valides */
+}
+
+/* Style pour les champs vides */
+.inputVide {
+    /* Ajoutez ici les styles que vous souhaitez pour les champs vides */
+    border: 3.5px solid gray; /* Exemple : bordure grise pour les champs vides */
+}
+
+/* Style pour les champs incorrects */
+.inputIncorrect {
+    /* Ajoutez ici les styles que vous souhaitez pour les champs invalides */
+    border: 3.5px solid rgb(255, 0, 0); /* Exemple : bordure rouge pour les champs invalides */
+}
