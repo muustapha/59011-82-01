@@ -1,7 +1,0 @@
-A.Requêtes simples
-1.select nomDEp from departement; 
-2.select nomDep,noDep from departement;
-3.SELECT `noDep`, `nomDep`, `ville` FROM `departement`; 
-4.SELECT fonction from employe; 
-5.SELECT DISTINCT fonction from employe; 
-6.
