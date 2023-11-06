@@ -1,0 +1,14 @@
+C:\Users\utilisateur\source\repos\c_Sharp\bin\Debug\net6.0\c_Sharp.exe
+C:\Users\utilisateur\source\repos\c_Sharp\bin\Debug\net6.0\c_Sharp.deps.json
+C:\Users\utilisateur\source\repos\c_Sharp\bin\Debug\net6.0\c_Sharp.runtimeconfig.json
+C:\Users\utilisateur\source\repos\c_Sharp\bin\Debug\net6.0\c_Sharp.dll
+C:\Users\utilisateur\source\repos\c_Sharp\bin\Debug\net6.0\c_Sharp.pdb
+C:\Users\utilisateur\source\repos\c_Sharp\obj\Debug\net6.0\c_Sharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\utilisateur\source\repos\c_Sharp\obj\Debug\net6.0\c_Sharp.AssemblyInfoInputs.cache
+C:\Users\utilisateur\source\repos\c_Sharp\obj\Debug\net6.0\c_Sharp.AssemblyInfo.cs
+C:\Users\utilisateur\source\repos\c_Sharp\obj\Debug\net6.0\c_Sharp.csproj.CoreCompileInputs.cache
+C:\Users\utilisateur\source\repos\c_Sharp\obj\Debug\net6.0\c_Sharp.dll
+C:\Users\utilisateur\source\repos\c_Sharp\obj\Debug\net6.0\refint\c_Sharp.dll
+C:\Users\utilisateur\source\repos\c_Sharp\obj\Debug\net6.0\c_Sharp.pdb
+C:\Users\utilisateur\source\repos\c_Sharp\obj\Debug\net6.0\c_Sharp.genruntimeconfig.cache
+C:\Users\utilisateur\source\repos\c_Sharp\obj\Debug\net6.0\ref\c_Sharp.dll
