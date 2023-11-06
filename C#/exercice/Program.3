@@ -449,3 +449,160 @@ a=3, b=4, c=18, d= 6
 c=0, d=4.
 a=3,b=0
 a=11, B=12, c=12, d=4
+
+
+
+
+
+
+//5_chaine de caractere
+//exercice 1
+string chaine =les framboise son perchées sur le tabouret de mon grand-pere;
+créer une chaine de caractere
+console.writeline("saisir la chaine de caractere");
+string chaine = Console.ReadLine();
+//afficher la chaine de caractere
+Console.WriteLine("la chaine de caractere est : " + chaine);
+
+//afficher la chaine caractere par caractere
+for (int i = 0; i < chaine.Length; i++)
+{
+	Console.WriteLine(chaine[i]);
+}
+//2_
+//saisir une chaine de caractere t,deux indices i et j
+Console.WriteLine("saisir une chaine de caractere");
+string t = Console.ReadLine();
+Console.WriteLine("saisir un indice i");
+int i = int.Parse(Console.ReadLine());
+Console.WriteLine("saisir un indice j");
+int j = int.Parse(Console.ReadLine());
+//afficher la sous chaine de t comprise entre ti et tj
+console.writeline("la sous chaine de t comprise entre ti et tj est : " + t.Substring(i, j - i + 1));
+ afficher la sous chaine de caractere t,deux indices ti et tj en utilisan systeme .text.string.builder
+StringBuilder sousChaine = new StringBuilder();
+for (int k = i; k <= j; k++)
+{
+	sousChaine.Append(t[k]);
+}
+Console.WriteLine("la sous chaine de t comprise entre ti et tj est : " + sousChaine.ToString());
+//4_
+
+
+//Exercice 3
+
+            /*Console.WriteLine("Entrez une chaine de caractère");
+            String t = Console.ReadLine();
+            Console.WriteLine("Entrez un indice i");
+            int i = int.Parse(Console.ReadLine());
+            Console.WriteLine("Entrez un indice j");
+            int j = int.Parse(Console.ReadLine());
+            String t2 ="";
+            
+            t2=t.Insert(0,t.Substring(i,(j-i+1))) ;
+            t2 = t2.Substring(0, (j - i + 1)); ;
+            String t2 = "";
+
+            t2 = t.Insert(0, t.Substring(i, (j - i + 1)));
+            t2 = t2.Substring(0, (j - i + 1));
+            Console.WriteLine(t2);*/
+
+            //EXERCICE 4
+
+            /*Console.WriteLine("Entrez une chaine de caractère");
+            String t = Console.ReadLine();
+            Console.WriteLine("Entrez un caractère");
+            String a = Console.ReadLine();
+            Console.WriteLine("Entrez un caractère");
+            String b = Console.ReadLine();
+            String t2=t.Replace(a,b) ;
+            Console.WriteLine(t2);*/
+
+            //Exercice 5
+
+            //Console.WriteLine("Entrez une chaine de caractère");
+            //String t = Console.ReadLine();
+            //Console.WriteLine("Entrez un caractère");
+            //String a = Console.ReadLine();
+            //Console.WriteLine("Entrez un caractère");
+            //String b = Console.ReadLine();
+            //String t2="";
+            //String c;
+            //for (int i=0;i<t.Length; i++)
+            //{
+            //    c=t.Substring(i,1);
+            //    if (c==a)
+            //    {
+            //        t2 = t2 + b;
+            //    }
+            //    else
+            //    {
+            //        t2 = t2 + c;
+            //    }
+            //}
+            //Console.WriteLine(t2);
+
+
+            //EXERCICE 6
+
+            /*Console.WriteLine("Entrez un nom de fichier");
+            String t = Console.ReadLine();
+            int i=t.LastIndexOf(".");
+            Console.WriteLine("Nom du fichier : " + t.Substring(0, i));
+            Console.WriteLine("Nom de l'extension : " + t.Substring(i+1));*/
+
+            //EXERCICE 7
+
+            Console.WriteLine("Entrez une expression arithmétique");
+            String t = Console.ReadLine();
+            String c;
+            int countOuv = 0;
+            int countFer = 0;
+            String erreur =  "bien";
+            for (int i = 0; i < t.Length; i++)
+            {
+                c = t.Substring(i, 1);
+                if (c == "(")
+                {
+                    countOuv++;
+                }
+                else if (c == ")")
+                {
+                    countFer++;
+                }
+                if (countOuv < countFer)
+                {
+                    erreur = "mal";
+                }
+            }
+            if (countFer!=countOuv)
+            {
+                erreur = "mal";
+            }
+            Console.WriteLine("L'expression est "+erreur+" parenthésée");*/
+
+            //int i = 0;
+            //do
+            //{
+            //    c = t.Substring(i, 1);
+            //    if (c == "(")
+            //    {
+            //        countOuv++;
+            //    }
+            //    else if (c == ")")
+            //    {
+            //        countFer++;
+            //    }
+            //    if (countOuv < countFer)
+            //    {
+            //        erreur = "mal";
+            //    }
+            //    i++;
+            //} while (i<t.Length && erreur=="bien");
+            //if (countFer!=countOuv)
+            //{
+            //    erreur = "mal";
+            //}
+            //Console.WriteLine("L'expression est " + erreur + " parenthésée");
+
+

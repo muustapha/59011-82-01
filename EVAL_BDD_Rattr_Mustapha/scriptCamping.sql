@@ -5,7 +5,7 @@ Use camping;
 CREATE TABLE client(
    Id_client COUNTER,
    nom VARCHAR(50),
-   prénom VARCHAR(50),
+   prenom VARCHAR(50),
    adresse VARCHAR(50),
    numeroTelephone VARCHAR(50),
    adresseElectronique VARCHAR(50),
@@ -22,7 +22,7 @@ CREATE TABLE typage(
 
 CREATE TABLE emplacement(
    Id_emplacement COUNTER,
-   numéro VARCHAR(50),
+   numero VARCHAR(50),
    alOmbre LOGICAL,
    raccElectricite LOGICAL,
    zone VARCHAR(50),
@@ -31,18 +31,18 @@ CREATE TABLE emplacement(
    
 ) ENGINE = InnoDB;
 
-CREATE TABLE activité(
-   Id_activité COUNTER,
-   typeActivité VARCHAR(50),
+CREATE TABLE activitee(
+   Id_activitee COUNTER,
+   typeActivitee VARCHAR(50),
    payante LOGICAL,
    zone VARCHAR(50),
-   PRIMARY KEY(Id_activité)
+   PRIMARY KEY(Id_activitee)
 ) ENGINE = InnoDB;
 
 CREATE TABLE paye(
    Id_emplacement INT,
    acompte VARCHAR(50),
-   périodeAnnée VARCHAR(50),
+   periodeAnnee VARCHAR(50),
    nombrePoint INT,
    Id_client INT NOT NULL,
    PRIMARY KEY(Id_emplacement),
@@ -51,8 +51,8 @@ CREATE TABLE paye(
 
 CREATE TABLE participe(
    Id_client INT,
-   Id_activité INT,
-   PRIMARY KEY(Id_client, Id_activité),
+   Id_activitee INT,
+   PRIMARY KEY(Id_client, Id_activitee),
   
 ) ENGINE = InnoDB;
 
@@ -61,7 +61,7 @@ CREATE TABLE reserve(
    dateDebut DATE,
    dateFin DATE,
    optionSouhaitees VARCHAR(50),
-   dateReservation VARCHAR(50),
+   dateReservation DATE,
    annulee LOGICAL,
    Id_client INT NOT NULL,
    PRIMARY KEY(Id_emplacement),
@@ -88,7 +88,7 @@ ALTER TABLE
 ADD
     CONSTRAINT FK_participe_client FOREIGN KEY(Id_client) REFERENCES client(Id_client),
 ADD
-    CONSTRAINT FK_participe_activité FOREIGN KEY(Id_activité) REFERENCES activité(Id_activité);
+    CONSTRAINT FK_participe_activitee FOREIGN KEY(Id_activitee) REFERENCES activitee(Id_activitee);
 ALTER TABLE
     reserve
 ADD
