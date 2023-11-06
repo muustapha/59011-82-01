@@ -137,5 +137,7 @@ SELECT
     r.region_nbDepartement
 FROM
     villes_france as v
-    INNER JOIN departements as d ON v.ville_departement=d.departement_code
-    INNER JOIN regions as r ON d.departement_regionId=r.region_id
+    INNER JOIN departements as d 
+    ON v.ville_departement=d.departement_code
+    INNER JOIN regions as r
+     ON d.departement_regionId=r.region_id

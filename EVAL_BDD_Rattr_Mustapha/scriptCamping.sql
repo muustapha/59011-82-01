@@ -10,7 +10,7 @@ CREATE TABLE client(
    numeroTelephone VARCHAR(50),
    adresseElectronique VARCHAR(50),
    PRIMARY KEY(Id_client)
-) ENGINE = InnoDB;
+) ENGINE=InnoDB ;
 
 CREATE TABLE typage(
    Id_type COUNTER,
@@ -18,7 +18,7 @@ CREATE TABLE typage(
    mobileHome VARCHAR(50),
    caravane VARCHAR(50),
    PRIMARY KEY(Id_type)
-) ENGINE = InnoDB;
+) ENGINE=InnoDB;
 
 CREATE TABLE emplacement(
    Id_emplacement COUNTER,
@@ -29,7 +29,7 @@ CREATE TABLE emplacement(
    Id_type INT NOT NULL,
    PRIMARY KEY(Id_emplacement),
    
-) ENGINE = InnoDB;
+)ENGINE=InnoDB ;
 
 CREATE TABLE activitee(
    Id_activitee COUNTER,
@@ -37,7 +37,7 @@ CREATE TABLE activitee(
    payante LOGICAL,
    zone VARCHAR(50),
    PRIMARY KEY(Id_activitee)
-) ENGINE = InnoDB;
+) ENGINE=InnoDB;
 
 CREATE TABLE paye(
    Id_emplacement INT,
@@ -47,14 +47,15 @@ CREATE TABLE paye(
    Id_client INT NOT NULL,
    PRIMARY KEY(Id_emplacement),
    
-) ENGINE = InnoDB;
+) ENGINE=InnoDB;
 
 CREATE TABLE participe(
    Id_client INT,
    Id_activitee INT,
    PRIMARY KEY(Id_client, Id_activitee),
   
-) ENGINE = InnoDB;
+  
+) ENGINE=InnoDB;
 
 CREATE TABLE reserve(
    Id_emplacement INT,
@@ -66,7 +67,7 @@ CREATE TABLE reserve(
    Id_client INT NOT NULL,
    PRIMARY KEY(Id_emplacement),
    
-) ENGINE = InnoDB;
+) ENGINE=InnoDB;
 
 
 
