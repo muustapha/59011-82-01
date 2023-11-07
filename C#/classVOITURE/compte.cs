@@ -32,6 +32,10 @@ namespace c_Sharp
             set { Proprietaire = value; }
         }
 
+        public static int NombreDeComptes
+        {
+            get { return nombreDeComptes; }
+        }
 
         public Compte(double solde, string code, string proprietaire)
         {
