@@ -1,101 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace C.Sharp2
+﻿public class Employe
 {
-    public class Employe
+    public string Nom { get; set; }
+    public string Prenom { get; set; }
+    public DateTime DateDEmbauche { get; set; }
+    public string Fonction { get; set; }
+    public double Salaire { get; set; }
+    public string Service { get; set; }
+}
+    public int AnneesDansEntreprise()
+{
+    int currentYear = DateTime.Now.Year;
+    return currentYear - DateDEmbauche.Year;
+}
 
+    public double CalculerPrime()
     {
-        public string Nom;
-        public string Prenom;
-        public DateTime DateDEmbauche;
-        public string Fonction;
-        public double Salaire;
-        public string Service;
-
-        public string nom
-        {
-            get { return nom; }
-            set { nom = value; }
-        }
-        public string prenom
-        {
-            get { return prenom; }
-            set { prenom = value; }
-        }
-        public DateTime dateDEmbauche
-        {
-            get { return dateDEmbauche; }
-            set { dateDEmbauche = value; }
-        }
-        public string fonction
-        {
-            get { return fonction; }
-            set { fonction = value; }
-        }
-        public double salaire;
-        {
-            get { return salaire; }
-            set { salaire = value; }
-        }
-        public Employe (string nom, string prenom, DateTime dateDEmbauche,string fonctinnaire, double salaire, string service,)
-        {
-            Nom = nom;
-            Prenom = prenom;
-            DateDEmbauche = dateDEmbauche;
-            Fonction = fonction;
-            Salaire = salaire;
-            Service = service;
-        }
-
-
-        public string ancienter()
-        {
-            DateTime date = DateTime.Now;
-            TimeSpan anciennete = date - DateDEmbauche;
-            return anciennete.ToString();
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        public Employe(string nom, string prenom, DateTime dateDEmbauche, string fonction, double salaire, string service)
-        {
-            Nom = nom;
-            Prenom = prenom;
-            DateDEmbauche = dateDEmbauche;
-            Fonction = fonction;
-            Salaire = salaire;
-            Service = service;
-        }
-
-       
+        int annees = AnneesDansEntreprise();
+        return (Salaire * 0.05) + (Salaire * annees * 0.02);
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
+    public void OrdreDeTransfert()
+    {
+        if (DateTime.Now.Month == 11 && DateTime.Now.Day == 30)
+        {
+            double prime = CalculerPrime();
+            Console.WriteLine($"L'ordre de transfert de {prime} a été envoyé à la banque.");
+        }
+    }
 }
-}
+

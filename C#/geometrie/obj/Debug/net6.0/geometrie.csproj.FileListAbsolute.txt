@@ -1,0 +1,14 @@
+C:\Users\utilisateur\Desktop\59011-82-01\59011-82-01\C#\geometrie\bin\Debug\net6.0\geometrie.exe
+C:\Users\utilisateur\Desktop\59011-82-01\59011-82-01\C#\geometrie\bin\Debug\net6.0\geometrie.deps.json
+C:\Users\utilisateur\Desktop\59011-82-01\59011-82-01\C#\geometrie\bin\Debug\net6.0\geometrie.runtimeconfig.json
+C:\Users\utilisateur\Desktop\59011-82-01\59011-82-01\C#\geometrie\bin\Debug\net6.0\geometrie.dll
+C:\Users\utilisateur\Desktop\59011-82-01\59011-82-01\C#\geometrie\bin\Debug\net6.0\geometrie.pdb
+C:\Users\utilisateur\Desktop\59011-82-01\59011-82-01\C#\geometrie\obj\Debug\net6.0\geometrie.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\utilisateur\Desktop\59011-82-01\59011-82-01\C#\geometrie\obj\Debug\net6.0\geometrie.AssemblyInfoInputs.cache
+C:\Users\utilisateur\Desktop\59011-82-01\59011-82-01\C#\geometrie\obj\Debug\net6.0\geometrie.AssemblyInfo.cs
+C:\Users\utilisateur\Desktop\59011-82-01\59011-82-01\C#\geometrie\obj\Debug\net6.0\geometrie.csproj.CoreCompileInputs.cache
+C:\Users\utilisateur\Desktop\59011-82-01\59011-82-01\C#\geometrie\obj\Debug\net6.0\geometrie.dll
+C:\Users\utilisateur\Desktop\59011-82-01\59011-82-01\C#\geometrie\obj\Debug\net6.0\refint\geometrie.dll
+C:\Users\utilisateur\Desktop\59011-82-01\59011-82-01\C#\geometrie\obj\Debug\net6.0\geometrie.pdb
+C:\Users\utilisateur\Desktop\59011-82-01\59011-82-01\C#\geometrie\obj\Debug\net6.0\geometrie.genruntimeconfig.cache
+C:\Users\utilisateur\Desktop\59011-82-01\59011-82-01\C#\geometrie\obj\Debug\net6.0\ref\geometrie.dll
