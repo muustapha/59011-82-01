@@ -12,3 +12,17 @@ C:\Users\utilisateur\source\repos\c_Sharp\obj\Debug\net6.0\refint\c_Sharp.dll
 C:\Users\utilisateur\source\repos\c_Sharp\obj\Debug\net6.0\c_Sharp.pdb
 C:\Users\utilisateur\source\repos\c_Sharp\obj\Debug\net6.0\c_Sharp.genruntimeconfig.cache
 C:\Users\utilisateur\source\repos\c_Sharp\obj\Debug\net6.0\ref\c_Sharp.dll
+U:\59011-82-01\C#\classVOITURE\obj\Debug\net6.0\c_Sharp.GeneratedMSBuildEditorConfig.editorconfig
+U:\59011-82-01\C#\classVOITURE\obj\Debug\net6.0\c_Sharp.AssemblyInfoInputs.cache
+U:\59011-82-01\C#\classVOITURE\obj\Debug\net6.0\c_Sharp.AssemblyInfo.cs
+U:\59011-82-01\C#\classVOITURE\obj\Debug\net6.0\c_Sharp.csproj.CoreCompileInputs.cache
+U:\59011-82-01\C#\classVOITURE\bin\Debug\net6.0\c_Sharp.exe
+U:\59011-82-01\C#\classVOITURE\bin\Debug\net6.0\c_Sharp.deps.json
+U:\59011-82-01\C#\classVOITURE\bin\Debug\net6.0\c_Sharp.runtimeconfig.json
+U:\59011-82-01\C#\classVOITURE\bin\Debug\net6.0\c_Sharp.dll
+U:\59011-82-01\C#\classVOITURE\bin\Debug\net6.0\c_Sharp.pdb
+U:\59011-82-01\C#\classVOITURE\obj\Debug\net6.0\c_Sharp.dll
+U:\59011-82-01\C#\classVOITURE\obj\Debug\net6.0\refint\c_Sharp.dll
+U:\59011-82-01\C#\classVOITURE\obj\Debug\net6.0\c_Sharp.pdb
+U:\59011-82-01\C#\classVOITURE\obj\Debug\net6.0\c_Sharp.genruntimeconfig.cache
+U:\59011-82-01\C#\classVOITURE\obj\Debug\net6.0\ref\c_Sharp.dll

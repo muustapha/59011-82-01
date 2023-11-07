@@ -44,7 +44,7 @@ namespace c_Sharp
         {
             get { return motorisation; }
             set { motorisation = value; }
-        }
+        }p
 
         public Voiture(string marque, string modele, string couleur = "", int nbDeKilometres = 0, string motorisation = "")
         {
@@ -93,22 +93,32 @@ namespace c_Sharp
 
             return description.ToString();
         }
-
-    }
-
-    class Program
-    {
-
-        static void Main(string[] args)
+        public void Rouler(int kilometre)
         {
-            Voiture voiture1 = new Voiture("Citroën", "C4", "", 10000, "");
-            Voiture voiture2 = new Voiture("Renault", "Kadjar", "rouge");
-
-            voiture1.Rouler(100);
-            voiture2.Rouler(200);
-
-            Console.WriteLine(voiture1.Description());
-            Console.WriteLine(voiture2.Description());
+            NbDeKilometres += kilometre;
         }
+        public int Kilometre()
+        {
+               return NbDeKilometres;
+
+        }
+
+
     }
+
+    //class Program
+    //{
+
+    //    static void Main(string[] args)
+    //    {
+    //        Voiture voiture1 = new Voiture("Citroën", "C4", "", 10000, "");
+    //        Voiture voiture2 = new Voiture("Renault", "Kadjar", "rouge");
+
+    //        voiture1.Rouler(100);
+    //        voiture2.Rouler(200);
+
+    //        Console.WriteLine(voiture1.Description());
+    //        Console.WriteLine(voiture2.Description());
+    //    }
+    //}
 }

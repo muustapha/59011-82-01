@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace c_Sharp
 {
-     public class Voiture
+     public class Voiture1
     {
         public string Couleur { get; set; }
         public string Marque { get; set; }
@@ -14,7 +14,7 @@ namespace c_Sharp
         public int NbDeKilometres { get; set; }
         public string Motorisation { get; set; }
 
-        public Voiture(string marque, string modele, string couleur = "", int nbDeKilometres = 0, string motorisation = "")
+        public Voiture1(string marque, string modele, string couleur = "", int nbDeKilometres = 0, string motorisation = "")
         {
             Marque = marque;
             Modele = modele;
@@ -29,17 +29,17 @@ namespace c_Sharp
         }
     }
 
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Voiture voiture1 = new Voiture("Citroën", "C4", "", 10000, "");
-            Voiture voiture2 = new Voiture("Renault", "Kadjar", "rouge");
+    //class Program
+    //{
+    //    static void Main(string[] args)
+    //    {
+    //        Voiture voiture1 = new Voiture("Citroën", "C4", "", 10000, "");
+    //        Voiture voiture2 = new Voiture("Renault", "Kadjar", "rouge");
 
-            Console.WriteLine(voiture1.Description());
-            Console.WriteLine(voiture2.Description());
-        }
-    }
+    //        Console.WriteLine(voiture1.Description());
+    //        Console.WriteLine(voiture2.Description());
+    //    }
+    //}
     
     }
 
