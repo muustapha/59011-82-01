@@ -9,15 +9,13 @@ namespace geometrie
     public class Cercle
     {
         public double Diametre { get; set; }
+        public double Rayon { get; set; } 
 
-        public Cercle()
-        {
-            Diametre = 0;
-        }
 
-        public Cercle(double diametre)
+        public Cercle(double diametre, double rayon)
         {
             Diametre = diametre;
+            Rayon = rayon;
         }
 
         public double Perimetre()

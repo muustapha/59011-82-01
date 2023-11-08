@@ -6,15 +6,7 @@ using System.Threading.Tasks;
 
 namespace entreprise_national
 {
-
-    public class Agence
-    {
-        public string Nom { get; set; }
-        public string Adresse { get; set; }
-        public string CodePostal { get; set; }
-        public string Ville { get; set; }
-    }
-
+ 
     public class Employe
     {
         public string Nom { get; set; }
@@ -24,7 +16,10 @@ namespace entreprise_national
         public double Salaire { get; set; }
         public string Service { get; set; }
         public Agence Agence { get; set; }
-        public List<int> EnfantsAges { get; set; }
+        public  List<int> Age { get; set; }
+
+
+
 
         public int AnneesDansEntreprise()
         {
@@ -43,7 +38,7 @@ namespace entreprise_national
             if (DateTime.Now.Month == 11 && DateTime.Now.Day == 30)
             {
                 double prime = CalculerPrime();
-                Console.WriteLine("L'ordre de transfert de" +prime+" a été envoyé à la banque.");
+                Console.WriteLine("L'ordre de transfert de" + prime + " a été envoyé à la banque.");
             }
         }
 
@@ -54,15 +49,15 @@ namespace entreprise_national
 
         public void DistribuerChequesNoel()
         {
-            if (EnfantsAges == null || EnfantsAges.Count == 0)
+            if (Age == null || Age.Count == 0)
             {
                 Console.WriteLine("Non");
                 return;
             }
 
-            int cheques20 = EnfantsAges.Count(age => age >= 0 && age <= 10);
-            int cheques30 = EnfantsAges.Count(age => age >= 11 && age <= 15);
-            int cheques50 = EnfantsAges.Count(age => age >= 16 && age <= 18);
+            int cheques20 = Age.Count(age => age >= 0 && age <= 10);
+            int cheques30 = Age.Count(age => age >= 11 && age <= 15);
+            int cheques50 = Age.Count(age => age >= 16 && age <= 18);
 
             Console.WriteLine("Oui");
             if (cheques20 > 0) Console.WriteLine("Chèques de 20 euros : " + cheques20);
