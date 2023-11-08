@@ -14,19 +14,18 @@ namespace geometrie
         {
             Hauteur = hauteur;
         }
-
-        public override double Aire()
+        public double Perimetre()
         {
-            return 4 * Aire
-
+            return base.Perimetre() * 2 + Hauteur * 4;
+        }
         public double Volume()
         {
-            return Longueur * Largeur * Hauteur;
+            return base.Aire() * Hauteur;
         }
-
         public void AfficherParallelepipede()
         {
-            Console.WriteLine($"Longueur: {Longueur} - Largeur: {Largeur} - Hauteur: {Hauteur} - Aire: {Aire()} - Volume: {Volume()}");
+            Console.WriteLine("Longueur : " + Longueur + "- Largeur : " + Largeur + "- Hauteur : " + Hauteur + "- Périmètre : " + Perimetre() + "- Volume : " + Volume());
         }
     }
 }
+        

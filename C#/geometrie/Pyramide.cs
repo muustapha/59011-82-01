@@ -1,37 +1,22 @@
 ﻿using geometrie;
-
-public class Pyramide : Triangle
+    
+public class Pyramide : TriangleRectangle
 {
     public double HauteurPyramide { get; set; }
 
-    public Pyramide(double baseTriangle, double hauteurTriangle, double hauteurPyramide) : base(baseTriangle, hauteurTriangle)
+    public Pyramide(double Base, double Hauteur, double hauteurPyramide) : base(Base, Hauteur)
     {
         HauteurPyramide = hauteurPyramide;
     }
-
-    public double AireBase()
+    public double Perimetre()
     {
-        return 0.5 * Base * Hauteur;
-    }
-    public override double Aire()
-    {
-        double aireBase = base.Aire();
-        double aireCotes = 0.5 * Perimetre() * HauteurPyramide;
-        return aireBase + aireCotes;
+        return base.Perimetre() *2 + HauteurPyramide;
     }
 
     public double Volume()
     {
-        return (1.0 / 3.0) * base.Aire() * HauteurPyramide;
+        return base.Aire() * HauteurPyramide ;
     }
 
-    public override void AfficherTriangle()
-    {
-        Console.WriteLine($"Base: {Base} - Hauteur Triangle: {Hauteur} - Hauteur Pyramide: {HauteurPyramide} - Aire: {Aire()} - Volume: {Volume()}");
-    }
 
-    public double Perimetre()
-    {
-        return Base * 3;
-    }
 }

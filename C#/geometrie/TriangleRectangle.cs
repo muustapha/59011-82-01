@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 namespace geometrie
 {
-        public class Triangle
+        public class TriangleRectangle
         {
             public double Base { get; set; }
             public double Hauteur { get; set; }
 
-            public Triangle()
+            public TriangleRectangle()
             {
                 Base = 0;
                 Hauteur = 0;
             }
 
-            public Triangle(double baseTriangle, double hauteur)
+            public TriangleRectangle(double baseTriangleRectangle, double hauteur)
             {
-                Base = baseTriangle;
+                Base = baseTriangleRectangle;
                 Hauteur = hauteur;
             }
 
@@ -38,7 +38,7 @@ namespace geometrie
                 return 0.5 * Base * Hauteur;
             }
 
-            public void AfficherTriangle()
+            public void AfficherTriangleRectangle()
             {
             Console.WriteLine("Base: " + Base + " - Hauteur: " + Hauteur + " - Périmètre: " + Perimetre() + " - Aire: " + Aire());
         }
