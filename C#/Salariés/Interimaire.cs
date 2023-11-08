@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Salariés
 {
-    public class Interimaire : Employe
+    public class Interimaire : Technicien
     {
         protected decimal heuresTravaillees;
 
-        public Interimaire(string nom, string prenom, int age, decimal heuresTravaillees) : base(nom, prenom, age, 0)
+        public Interimaire(string nom, string prenom, int age, decimal heuresTravaillees) : base(nom, prenom, age)
         {
             this.heuresTravaillees = heuresTravaillees;
         }

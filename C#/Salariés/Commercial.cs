@@ -17,7 +17,7 @@ namespace Salariés
 
         public override decimal CalculerSalaire()
         {
-            return base.CalculerSalaire() + primes;
+            return 50 + primes;
         }
     }
 }

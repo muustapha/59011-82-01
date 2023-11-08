@@ -1,58 +1,45 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Salariés;
 
-namespace Salariés
+public class Entreprise
 {
-    public class Entreprise 
+    public string NomEntreprise { get; set; }
+    public List<Commercial> Commerciaux { get; set; }
+    public List<Technicien> Techniciens { get; set; }
+
+    public Entreprise(string nomEntreprise)
     {
-        public string NomEntreprise { get; set; }
-        public List<Commercial> commerciaux { get; set; }
-        public List<Technicien> Techniciens { get; set;
-        public Entreprise(string nomEntreprise)
-        {
-            NomEntreprise = nomEntreprise;
-           
-            
-            Techniciens = new List<Technicien>();
-           
-        }
-        public decimal CalculerSalaireMoyen()
-        {
-            decimal totalSalaires = get.Vendeurs.Sum(v => v.CalculerSalaire()) +
-                                get.Representants.Sum(r => r.CalculerSalaire()) +
-                                get.Techniciens.Sum(t => t.CalculerSalaire()) +
-                                get.Interimaires.Sum(i => i.CalculerSalaire());
+        NomEntreprise = nomEntreprise;
+        Commerciaux = new List<Commercial>();
+        Techniciens = new List<Technicien>();
+    }
 
-            decimal totalEmployes = Vendeurs.Count + Representants.Count + Techniciens.Count + Interimaires.Count;
+    public decimal CalculerSalaireMoyen()
+    {
+        decimal totalSalaires = Commerciaux.Sum(c => c.CalculerSalaire()) +
+                                Techniciens.Sum(t => t.CalculerSalaire());
 
-            return totalSalaires / totalEmployes;
-        }
+        decimal totalEmployes = Commerciaux.Count + Techniciens.Count;
 
-        public decimal CalculerSommeSalaires()
+        return totalSalaires / totalEmployes;
+    }
+
+    public decimal CalculerSommeSalaires()
+    {
+        return Commerciaux.Sum(c => c.CalculerSalaire()) +
+               Techniciens.Sum(t => t.CalculerSalaire());
+    }
+
+    public void AfficherSalaires()
+    {
+        foreach (Commercial commercial in Commerciaux)
         {
-            return get.Vendeurs.Sum(v => v.CalculerSalaire());
-                   get.Representants.Sum(r => r.CalculerSalaire());
-            get.Techniciens.Sum(t => t.CalculerSalaire());
-                   get.Interimaires.Sum(i => i.CalculerSalaire());
+            Console.WriteLine(commercial.AfficherCaracteristiques());
         }
 
-        public void AfficherSalaires()
+        foreach (Technicien technicien in Techniciens)
         {
-            foreach (var vendeur in Vendeurs)
-            {
-                Console.WriteLine($"Salaire du vendeur {vendeur.Nom}: {vendeur.CalculerSalaire()}");
-            }
-
-            // Répétez pour les autres types d'employés...
-
-            Console.WriteLine($"Salaire moyen: {CalculerSalaireMoyen()}");
-            Console.WriteLine($"Somme des salaires: {CalculerSommeSalaires()}");
+            Console.WriteLine(technicien.AfficherCaracteristiques());
         }
     }
 
-
-}
 }

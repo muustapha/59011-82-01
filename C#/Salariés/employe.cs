@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Salariés
 {
-    public class Employe
+    public abstract class Employe
     {
         protected string nom;
         protected string prenom;
@@ -16,15 +17,20 @@ namespace Salariés
             this.age = age;
             this.salaire = salaire;
         }
-
-        public virtual decimal CalculerSalaire()
+        protected Employe(string nom, string prenom, int age)
         {
-            return this.salaire;
+            this.nom = nom;
+            this.prenom = prenom;
+            this.age = age;
+            this.salaire = 0;
         }
+        public abstract decimal CalculerSalaire();
 
-        public string AfficherCaracteristiques()
+
+        public virtual string AfficherCaracteristiques()
         {
-            return $"Nom: {this.nom}, Prénom: {this.prenom}, Age: {this.age}, Salaire: {this.salaire}";
+            return $"Nom: {this.nom}, Prénom: {this.prenom}, Age: {this.age}, Salaire:" +
+                $" {this.salaire}";
         }
     }
 }
