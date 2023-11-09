@@ -16,3 +16,13 @@ C:\Users\utilisateur\Desktop\59011-82-01\59011-82-01\C#\Salariés\obj\Debug\net6
 C:\Users\utilisateur\Desktop\59011-82-01\59011-82-01\C#\Salariés\obj\Debug\net6.0\Salariés.pdb
 C:\Users\utilisateur\Desktop\59011-82-01\59011-82-01\C#\Salariés\obj\Debug\net6.0\Salariés.genruntimeconfig.cache
 C:\Users\utilisateur\Desktop\59011-82-01\59011-82-01\C#\Salariés\obj\Debug\net6.0\ref\Salariés.dll
+U:\59011-82-01\C#\Salariés\bin\Debug\net6.0\Salariés.exe
+U:\59011-82-01\C#\Salariés\bin\Debug\net6.0\Salariés.deps.json
+U:\59011-82-01\C#\Salariés\bin\Debug\net6.0\Salariés.runtimeconfig.json
+U:\59011-82-01\C#\Salariés\bin\Debug\net6.0\Salariés.dll
+U:\59011-82-01\C#\Salariés\bin\Debug\net6.0\Salariés.pdb
+U:\59011-82-01\C#\Salariés\obj\Debug\net6.0\Salariés.dll
+U:\59011-82-01\C#\Salariés\obj\Debug\net6.0\refint\Salariés.dll
+U:\59011-82-01\C#\Salariés\obj\Debug\net6.0\Salariés.pdb
+U:\59011-82-01\C#\Salariés\obj\Debug\net6.0\Salariés.genruntimeconfig.cache
+U:\59011-82-01\C#\Salariés\obj\Debug\net6.0\ref\Salariés.dll
