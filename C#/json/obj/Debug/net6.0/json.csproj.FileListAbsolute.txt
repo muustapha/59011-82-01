@@ -1,0 +1,14 @@
+U:\59011-82-01\C#\json\obj\Debug\net6.0\json.GeneratedMSBuildEditorConfig.editorconfig
+U:\59011-82-01\C#\json\obj\Debug\net6.0\json.AssemblyInfoInputs.cache
+U:\59011-82-01\C#\json\obj\Debug\net6.0\json.AssemblyInfo.cs
+U:\59011-82-01\C#\json\obj\Debug\net6.0\json.csproj.CoreCompileInputs.cache
+U:\59011-82-01\C#\json\bin\Debug\net6.0\json.exe
+U:\59011-82-01\C#\json\bin\Debug\net6.0\json.deps.json
+U:\59011-82-01\C#\json\bin\Debug\net6.0\json.runtimeconfig.json
+U:\59011-82-01\C#\json\bin\Debug\net6.0\json.dll
+U:\59011-82-01\C#\json\bin\Debug\net6.0\json.pdb
+U:\59011-82-01\C#\json\obj\Debug\net6.0\json.dll
+U:\59011-82-01\C#\json\obj\Debug\net6.0\refint\json.dll
+U:\59011-82-01\C#\json\obj\Debug\net6.0\json.pdb
+U:\59011-82-01\C#\json\obj\Debug\net6.0\json.genruntimeconfig.cache
+U:\59011-82-01\C#\json\obj\Debug\net6.0\ref\json.dll
