@@ -12,3 +12,6 @@ U:\59011-82-01\C#\json\obj\Debug\net6.0\refint\json.dll
 U:\59011-82-01\C#\json\obj\Debug\net6.0\json.pdb
 U:\59011-82-01\C#\json\obj\Debug\net6.0\json.genruntimeconfig.cache
 U:\59011-82-01\C#\json\obj\Debug\net6.0\ref\json.dll
+U:\59011-82-01\C#\json\bin\Debug\net6.0\Newtonsoft.Json.dll
+U:\59011-82-01\C#\json\obj\Debug\net6.0\json.csproj.AssemblyReference.cache
+U:\59011-82-01\C#\json\obj\Debug\net6.0\json.csproj.CopyComplete

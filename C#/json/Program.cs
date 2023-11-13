@@ -1,42 +1,50 @@
 ﻿using System.IO;
+using json;
 
-class Program
+public class Program
 {
     static void Main()
-    {
-        // Exemple d'utilisation avec une variable simple
-        string contenuVariableSimple = "Contenu de la variable simple";
-        string nomFichierVariableSimple = @"U:\59011-82-01\C#\json\test1.txt";
+    {    // Créer une instance de ObjectsHelpers
+        ObjectsHelpers objectsHelpers = new ObjectsHelpers();
 
-        GereFichier gereFichier = new GereFichier();
-        gereFichier.EcrireContenuDansFichier(contenuVariableSimple, nomFichierVariableSimple);
+        // Définir le chemin d'accès au fichier de journalisation et le contenu à écrire
+        string path = @"U:\59011-82-01\C#\json\log.txt";
+        string contenu = "Ceci est un message de journalisation.";
+
+        // Appeler la méthode Log
+        bool result = objectsHelpers.Log(path, contenu);
+
+        // Vérifier le résultat
+        if (result)
+        {
+            Console.WriteLine("Le message a été écrit dans le journal avec succès.");
+        }
+        else
+        {
+            Console.WriteLine("Échec de l'écriture du message dans le journal.");
+        
+    }
+        // Exemple d'utilisation avec une variable simple
+        string contenuVs = "Contenu de la variable simple";
+        string nomFichier = @"U:\59011-82-01\C#\json\test1.txt";
+
+        GereFichier gereFichier = new GereFichier(contenuVs, nomFichier);
+        gereFichier.EcrireContenuDansFichier(contenuVs, nomFichier);
 
         // Exemple d'utilisation avec une variable de type tableau
         int[] contenuTableau = { 1, 2, 3, 4, 5 };
-        string nomFichierTableau = @"U:\59011-82-01\C#\json\test1.txt";
+        string nomFichierTableau = @"U:\59011-82-01\C#\json\test2.txt";
 
         gereFichier.EcrireContenuTableauDansFichier(contenuTableau, nomFichierTableau);
-    }
-}
 
-public class GereFichier
-{
-    public void EcrireContenuDansFichier(string contenu, string nomFichier)
-    {
-        using (StreamWriter sw = new StreamWriter(nomFichier))
+        // Créer un objet à écrire dans le fichier JSON
+        var monObjet = new
         {
-            sw.Write(contenu);
-        }
-    }
+            Nom = "Aftiss",
+            Age = 40
+        };
+        string monFichierJson = @"C:\Users\utilisateur\Desktop\59011-82-01\59011-82-01\C#\json\test3.json";
 
-    public void EcrireContenuTableauDansFichier(int[] contenu, string nomFichier)
-    {
-        using (StreamWriter sw = new StreamWriter(nomFichier))
-        {
-            foreach (int i in contenu)
-            {
-                sw.Write(i + " ");
-            }
-        }
+        gereFichier.CreerFichierJson(monObjet, monFichierJson);
     }
 }
