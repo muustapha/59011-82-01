@@ -25,13 +25,26 @@
                 <ColumnDefinition Width="4*"/>
                 <ColumnDefinition Width="0.5*"/>
             </Grid.ColumnDefinitions>
-            <ListBox Grid.Column="1">
-                <ListBoxItem>Water Polo</ListBoxItem>
-                <ListBoxItem>Natation</ListBoxItem>
-                <ListBoxItem>Aqua Gym</ListBoxItem>
-                <ListBoxItem>Loisir</ListBoxItem>
+            <ListBox Grid.Column="3" SelectionChanged="ListBox_SelectionChanged_2" Grid.ColumnSpan="2" Margin="0,0,43,0">
+                <ListBoxItem>poussin</ListBoxItem>
+                <ListBoxItem>benjamin</ListBoxItem>
+                <ListBoxItem>Minime</ListBoxItem>
+                <ListBoxItem>Cadet</ListBoxItem>
+                <ListBoxItem>Junior</ListBoxItem>
+                <ListBoxItem>Senior</ListBoxItem>
                 <!-- Ajoutez plus d'items ici si nécessaire -->
             </ListBox>
+            <ListView Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="ListView_SelectionChanged_1">
+                <ListView>
+                    <ListView.Items>
+                        <ListViewItem>Water Polo</ListViewItem>
+                        <ListViewItem>Natation</ListViewItem>
+                        <ListViewItem>Aqua Gym</ListViewItem>
+                        <ListViewItem>Loisir</ListViewItem>
+                        <!-- Ajoutez plus d'items ici si nécessaire -->
+                    </ListView.Items>
+                </ListView>
+            </ListView>
 
         </Grid>
         <Label Content="Nom/Prénom : " HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Height="36" Grid.RowSpan="3" Width="181"/>
@@ -49,7 +62,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <GroupBox Header="Sexe" Margin="579,7,114,57" Grid.Row="4" Grid.RowSpan="2" RenderTransformOrigin="0.479,0.186"/>
+        <GroupBox Header="Sexe" Margin="579,7,122,57" Grid.Row="4" Grid.RowSpan="2" RenderTransformOrigin="0.479,0.186"/>
         <CheckBox Content="Féminin" Margin="579,37,122,57" Grid.Row="5" RenderTransformOrigin="0.447,0.437" Checked="CheckBox_Checked_1">
             <CheckBox.RenderTransform>
                 <TransformGroup>
