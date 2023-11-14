@@ -8,16 +8,16 @@
         Title="Adesion" Height="450" Width="800" MinHeight="200" MinWidth="200">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="3*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="7*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="7*"/>
-            <RowDefinition Height="15*"/>
-            <RowDefinition Height="15*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="61*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="115*"/>
+            <RowDefinition Height="76*"/>
+            <RowDefinition Height="130*"/>
         </Grid.RowDefinitions>
-        <Grid Margin="0,10,0,130" Grid.Row="6" Grid.RowSpan="2">
+        <Grid Margin="0,10,0,0" Grid.Row="6">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.2*"/>
                 <ColumnDefinition Width="4*"/>
@@ -34,32 +34,41 @@
             </ListBox>
 
         </Grid>
-        <Label Content="Nom/Prénom : " HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Height="36" Grid.RowSpan="2" Width="181"/>
-        <TextBox HorizontalAlignment="Left" Margin="188,8,0,0" TextWrapping="Wrap" Text="Aftiss Mustapha" VerticalAlignment="Top" Width="522" Grid.RowSpan="2" TextChanged="TextBox_TextChanged"/>
-        <Label Content="Adresse : " HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="3" VerticalAlignment="Top" Width="106" RenderTransformOrigin="0.5,-0.354"/>
+        <Label Content="Nom/Prénom : " HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Height="36" Grid.RowSpan="3" Width="181"/>
+        <TextBox HorizontalAlignment="Left" Margin="188,0,0,0" TextWrapping="Wrap" Text="Aftiss Mustapha" VerticalAlignment="Center" Width="522" Grid.RowSpan="2" TextChanged="TextBox_TextChanged" Height="18"/>
+        <Label Content="Adresse : " HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="3" VerticalAlignment="Top" Width="106" RenderTransformOrigin="0.5,-0.354" Height="26"/>
         <TextBox HorizontalAlignment="Left" Margin="188,0,0,0" Grid.Row="3" TextWrapping="Wrap" Text="91 avenue suwalki&#xA;59760 Grande-Synthe" VerticalAlignment="Center" Width="522" Height="44" TextChanged="TextBox_TextChanged_2" RenderTransformOrigin="0.507,0.36"/>
-        <Label Content="Label"/>
+        <Label Content="Label" Margin="0,0,0,26" Grid.RowSpan="2"/>
         <Label Content="Date de naissance :" HorizontalAlignment="Left" Margin="10,7,0,0" Grid.Row="4" VerticalAlignment="Top" Height="27" Width="128" Grid.RowSpan="2"/>
-        <ComboBox HorizontalAlignment="Left" Margin="188,1,0,0" Grid.Row="5" VerticalAlignment="Top" Width="345" SelectionChanged="ComboBox_SelectionChanged"/>
-        <ListBox d:ItemsSource="{d:SampleData ItemCount=5}"/>
-        <ListView d:ItemsSource="{d:SampleData ItemCount=5}">
+        <ComboBox HorizontalAlignment="Left" Margin="188,1,0,0" Grid.Row="5" VerticalAlignment="Top" Width="345" SelectionChanged="ComboBox_SelectionChanged" Height="22"/>
+        <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,0,0,26" Grid.RowSpan="2"/>
+        <ListView d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,0,0,26" Grid.RowSpan="2">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <GroupBox Header="Sexe" Margin="579,7,114,5" Grid.Row="4" Grid.RowSpan="2" RenderTransformOrigin="0.479,0.186">
-            <CheckBox Content="Masculin" Margin="0,0,8,0" RenderTransformOrigin="0.5,0.5" Checked="CheckBox_Checked" Height="9">
-                <CheckBox.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform ScaleY="1"/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </CheckBox.RenderTransform>
-            </CheckBox>
-        </GroupBox>
+        <GroupBox Header="Sexe" Margin="579,7,114,57" Grid.Row="4" Grid.RowSpan="2" RenderTransformOrigin="0.479,0.186"/>
+        <CheckBox Content="Féminin" Margin="579,37,122,57" Grid.Row="5" RenderTransformOrigin="0.447,0.437" Checked="CheckBox_Checked_1">
+            <CheckBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </CheckBox.RenderTransform>
+        </CheckBox>
+        <CheckBox Content="Masculin" Margin="579,20,76,67" Grid.Row="5" RenderTransformOrigin="0.5,0.5">
+            <CheckBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </CheckBox.RenderTransform>
+        </CheckBox>
     </Grid>
 </Window>
