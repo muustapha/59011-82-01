@@ -1,0 +1,31 @@
+﻿<Window x:Class="GestionInterventionMaintenance.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GestionInterventionMaintenance"
+        mc:Ignorable="d"
+        Title="GestionInterventionMaintenance" Height="600" Width="800" MinHeight="200" MinWidth="200">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.2*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="0.2*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="0.2*"/>
+        </Grid.ColumnDefinitions>
+            <Label Content="&#xA;&#xA;Année d'intervention souhaitée :" Grid.Column="1"/>
+           
+
+        </Grid>
+    </Grid>
+</Window>

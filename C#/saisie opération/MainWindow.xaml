@@ -25,7 +25,7 @@
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
-            <GroupBox Header="GroupBox" Margin="0,0,0,429"/>
+            <GroupBox Header="Navire" Margin="0,21,0,105"/>
 
 
         </Grid>
@@ -44,7 +44,7 @@
         <GroupBox Header="Saisisseur" Margin="1153,10,10,120" Grid.Row="3">
             <StackPanel Margin="139,0,21,0">
                 <Label Background="LightGray" Content="TETARD Xavier" Height="27" Width="190"/>
-                <Label Background="LightGray" Content="25/10/2013 10:16:37" Height="27" Width="190"/>
+                <Label Background="LightGray" Content="25/10/2013 10:16:37" Height="27" Width="190" Margin="0,5,0,0"/>
             </StackPanel>
         </GroupBox>
         <StackPanel Margin="10,30,1358,100" Grid.Row="3">
@@ -53,7 +53,7 @@
         </StackPanel>
         <StackPanel Margin="147,28,1163,102" Grid.Row="3">
             <Label Background="LightGray" Content="639451" Height="27" Width="190"/>
-            <Label Background="LightGray" Content="PHILICATHAN" Height="27" Width="190"/>
+            <Label Background="LightGray" Content="PHILICATHAN" Height="27" Width="190" Margin="0,5,0,0"/>
         </StackPanel>
         <StackPanel Grid.Row="3" Margin="504,28,750,102" RenderTransformOrigin="0.5,0.5">
             <StackPanel.RenderTransform>
@@ -65,7 +65,7 @@
                 </TransformGroup>
             </StackPanel.RenderTransform>
             <Label Background="LightGray" Content="22/01/2013-UCH-Granville" Height="27" Width="190"/>
-            <Label Background="LightGray" Content="23/01/2013-UCH-Granville" Height="27" Width="190"/>
+            <Label Background="LightGray" Content="23/01/2013-UCH-Granville" Height="27" Width="190" Margin="0,5,0,0"/>
         </StackPanel>
         <StackPanel Margin="1153,28,199,102" Grid.Row="3" RenderTransformOrigin="0.5,0.5">
             <StackPanel.RenderTransform>
@@ -79,7 +79,7 @@
             <Label Content="    Opérateur de saisie :"/>
             <Label Content="Dernière modification :"/>
         </StackPanel>
-        <StackPanel Margin="925,30,407,100" Grid.Row="3" RenderTransformOrigin="0.5,0.5">
+        <StackPanel Margin="925,30,407,120" Grid.Row="3" RenderTransformOrigin="0.5,0.5">
             <StackPanel.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="1"/>
@@ -89,7 +89,7 @@
                 </TransformGroup>
             </StackPanel.RenderTransform>
             <Label Background="LightGray" Content="SIH-OBSERMER" Height="27" Width="190"/>
-            <Label Background="LightGray" Content="OBSERMER démar" Height="27" Width="190"/>
+            <Label Background="LightGray" Content="OBSERMER démar" Height="27" Width="190" Margin="0,5,0,0"/>
         </StackPanel>
         <Grid Grid.Row="3" Margin="0,252,0,0" Grid.RowSpan="2"/>
         
