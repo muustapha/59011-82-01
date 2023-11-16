@@ -32,9 +32,19 @@
                 <RowDefinition Height="2*"/>
                 <RowDefinition Height="4*"/>
             </Grid.RowDefinitions>
-            <Label Content="                                                                                  Semaine souhaite : " FontSize="16" FontStyle="Oblique" FontWeight="Black" />
-            <Label Content="                                                                                  Planning semaine : " FontSize="16" FontStyle="Oblique" FontWeight="Black" Margin="0,73,0,0" Grid.RowSpan="2" />
-            <Label Content="                                                                                                 Liste film : " FontSize="16" FontStyle="Oblique" FontWeight="Black" Margin="0,0,0,293" Grid.RowSpan="2" Grid.Row="2" />
+            <Label Content="                                                                                   Semaine souhaite : " FontSize="16" FontStyle="Oblique" FontWeight="Black" />
+            <Label Content="                                                                                   Planning semaine : " FontSize="16" FontStyle="Oblique" FontWeight="Black" Margin="0,73,0,0" Grid.RowSpan="2" />
+            <Label Content="                                                                                                  Liste film : " FontSize="16" FontStyle="Oblique" FontWeight="Black" Margin="0,0,0,293" Grid.RowSpan="2" Grid.Row="2" />
+            <ListBox Grid.Column="1" Margin="5,10,-5,137" Grid.RowSpan="2">
+                <ListBoxItem>semaine32</ListBoxItem>
+                <ListBoxItem>semaine33</ListBoxItem>
+                <ListBoxItem>semaine34</ListBoxItem>
+
+            </ListBox>
+         
+
+
+
         </Grid>
     </Grid>
 </Window>
