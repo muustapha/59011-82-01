@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace GestionInterventionMaintenance
+namespace MaintenanceApp
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -26,6 +26,11 @@ namespace GestionInterventionMaintenance
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void ListBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
         {
 
         }

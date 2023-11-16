@@ -1,0 +1,40 @@
+﻿<Window x:Class="cinema.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:cinema"
+        mc:Ignorable="d"
+        Title="cinéma" Height="800" Width="1100" MinHeight="500" MinWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.3*"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="0.3*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="19*"/>
+            <RowDefinition Height="0.3*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1" Margin="256,35,256,639" Grid.Column="1" Grid.RowSpan="2">
+            <Label Content="           Cinéma  &quot;LOCAFILM&quot;" FontSize="32" FontStyle="Italic" FontWeight="Black" />
+        </StackPanel>
+        <Grid Height="660" VerticalAlignment="Center" Margin="21,0,21,0" Grid.Row="2" Grid.ColumnSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="4*"/>
+            </Grid.RowDefinitions>
+            <Label Content="                                                                                  Semaine souhaite : " FontSize="16" FontStyle="Oblique" FontWeight="Black" />
+            <Label Content="                                                                                  Planning semaine : " FontSize="16" FontStyle="Oblique" FontWeight="Black" Margin="0,73,0,0" Grid.RowSpan="2" />
+            <Label Content="                                                                                                 Liste film : " FontSize="16" FontStyle="Oblique" FontWeight="Black" Margin="0,0,0,293" Grid.RowSpan="2" Grid.Row="2" />
+        </Grid>
+    </Grid>
+</Window>
