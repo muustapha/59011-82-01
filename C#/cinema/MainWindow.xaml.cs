@@ -49,5 +49,15 @@ namespace cinema
         {
 
         }
+
+        private void ListBoxItem_Selected_2(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
