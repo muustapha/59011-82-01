@@ -18,33 +18,93 @@
             <RowDefinition Height="19*"/>
             <RowDefinition Height="0.3*"/>
         </Grid.RowDefinitions>
-        <StackPanel Grid.Row="1" Margin="256,35,256,639" Grid.Column="1" Grid.RowSpan="2">
-            <Label Content="           Cinéma  &quot;LOCAFILM&quot;" FontSize="32" FontStyle="Italic" FontWeight="Black" />
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="382,7,236,6" Grid.Column="1">
+            <Label Content="Cinéma &quot;LocaPeli&quot;" FontSize="32" FontStyle="Oblique" FontWeight="Black" Width="324" />
+            <Image Source="C:\Users\utilisateur\Desktop\GIT\principal\C#\cinema\logo.png" Width="50" Height="50" Margin="0,0,0,0" />
         </StackPanel>
-        <Grid Height="660" VerticalAlignment="Center" Margin="21,0,21,0" Grid.Row="2" Grid.ColumnSpan="3">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="2*"/>
-                <RowDefinition Height="2*"/>
-                <RowDefinition Height="4*"/>
-            </Grid.RowDefinitions>
-            <Label Content="                                                                                   Semaine souhaite : " FontSize="16" FontStyle="Oblique" FontWeight="Black" />
-            <Label Content="                                                                                   Planning semaine : " FontSize="16" FontStyle="Oblique" FontWeight="Black" Margin="0,73,0,0" Grid.RowSpan="2" />
-            <Label Content="                                                                                                  Liste film : " FontSize="16" FontStyle="Oblique" FontWeight="Black" Margin="0,0,0,293" Grid.RowSpan="2" Grid.Row="2" />
-            <ListBox Grid.Column="1" Margin="5,10,-5,137" Grid.RowSpan="2">
-                <ListBoxItem>semaine32</ListBoxItem>
-                <ListBoxItem>semaine33</ListBoxItem>
-                <ListBoxItem>semaine34</ListBoxItem>
+        <StackPanel Grid.Column="1" Grid.Row="2" Margin="0,0,0,0" Grid.RowSpan="2">
+            <Grid Height="660" VerticalAlignment="Top" Margin="21,103,21,0" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="4*"/>
+                </Grid.RowDefinitions>
+                <Label Content="                                                                              Semaine souhaite : " FontSize="16" FontStyle="Oblique" FontWeight="Black" Margin="0,18,0,3" RenderTransformOrigin="0.5,0.5" >
+                    <Label.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleX="-0.764"/>
+                            <RotateTransform/>
+                            <TranslateTransform X="-0.487"/>
+                        </TransformGroup>
+                    </Label.RenderTransform>
+                </Label>
+                <Label Content="                                                                             Planning semaine : " FontSize="16" FontStyle="Oblique" FontWeight="Black" Margin="-5,68,5,112" Grid.RowSpan="2" />
+                <Label Content="                                                                                                 Liste film :    " FontSize="16" FontStyle="Oblique" FontWeight="Black" Margin="-23,74,23,37" Grid.Row="2" />
+                <ListBox Grid.Column="1" Margin="0,23,407,23">
 
-            </ListBox>
-         
+                    <ListBoxItem Content="semaine46"/>
+                    <ListBoxItem Content="semaine47"/>
+                    <ListBoxItem Content="semaine48"/>
+                    <ListBoxItem Content="semaine49"/>
+                    <ListBoxItem Content="semaine50"/>
+                    <ListBoxItem Content="semaine51"/>
+
+
+                </ListBox>
+                <ListBox Grid.Column="1" Margin="0,73,151,119" Grid.RowSpan="2">
+
+                    <ListBoxItem Content="Planning semaine46"/>
+                    <ListBoxItem Content="Planning semaine47"/>
+                    <ListBoxItem Content="Planning semaine48"/>
+                    <ListBoxItem Content="Planning semaine49"/>
+                    <ListBoxItem Content="Planning semaine50"/>
+                    <ListBoxItem Content="Planning semaine51"/>
+
+
+                </ListBox>
+                <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="DataGrid_SelectionChanged" Margin="0,28,101,0" Grid.Column="1" Grid.Row="1"/>
+
+                <ListBox Grid.Column="1" Margin="0,10,24,0" Grid.Row="2" Height="182" VerticalAlignment="Top" SelectionChanged="ListBox_SelectionChanged" Grid.RowSpan="2">
+                    <ListBoxItem Height="180" Width="300">
+                        <StackPanel Orientation="Vertical">
+                            <Image Source="C:\Users\utilisateur\Desktop\GIT\principal\C#\cinema\comme par magie.png" Width="125" Height="125"/>
+                            <TextBlock Text="Comme par magie" Margin="10,0,0,0" FontSize="25"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem Height="180" Width="300">
+                        <StackPanel Orientation="Vertical">
+                            <Image Source="C:\Users\utilisateur\Desktop\GIT\principal\C#\cinema\guelle noire.png" Width="145" Height="140"/>
+                            <TextBlock Text="Gueules noires" Margin="10,0,0,0" FontSize="25"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem Height="180" Width="300">
+                        <StackPanel Orientation="Vertical">
+                            <Image Source="C:\Users\utilisateur\Desktop\GIT\principal\C#\cinema\hunger game.png" Width="197.5" Height="125" RenderTransformOrigin="0.5,0.5">
+                                <Image.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform ScaleY="-1"/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Image.RenderTransform>
+                            </Image>
+                            <TextBlock Text="Hunger Game" Margin="10,0,0,0" FontSize="25"/>
+                        </StackPanel>
+                    </ListBoxItem>
+
+                    <!-- Add more ListBoxItems here -->
+                </ListBox>
 
 
 
-        </Grid>
+            </Grid>
+        </StackPanel>
     </Grid>
 </Window>
