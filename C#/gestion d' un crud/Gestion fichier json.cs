@@ -12,7 +12,7 @@ namespace gestion_d__un_crud
         {
             try
             {
-                string json = JsonConvert.SerializeObject(produits);
+                string json = JsonConvert.SerializeObject(produits, Formatting.Indented);
                 File.WriteAllText(cheminFichier, json);
             }
             catch (Exception ex)

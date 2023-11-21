@@ -48,11 +48,11 @@
         </Grid>
         <DataGrid  x:Name="dtgProduit" Grid.Column="1" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="idProduit" Binding="{Binding id}"/>
-                <DataGridTextColumn Header="nom" Binding="{Binding nom}"/>
-                <DataGridTextColumn Header="prix" Binding="{Binding prix}"/>
-                <DataGridTextColumn Header="quantite" Binding="{Binding quantite}"/>
-                <DataGridTextColumn Header="date" Binding="{Binding date}"/>
+                <DataGridTextColumn Header="idProduit" Binding="{Binding IdProduit}"/>
+                <DataGridTextColumn Header="nom" Binding="{Binding Nom}"/>
+                <DataGridTextColumn Header="prix" Binding="{Binding Prix}"/>
+                <DataGridTextColumn Header="quantite" Binding="{Binding Quantite}"/>
+                <DataGridTextColumn Header="lieuxFabrication" Binding="{Binding LieuxFabrication}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
