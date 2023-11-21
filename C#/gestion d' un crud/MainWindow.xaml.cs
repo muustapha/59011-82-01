@@ -43,27 +43,15 @@ namespace gestion_d__un_crud
                 MessageBox.Show("Une erreur s'est produite lors du chargement des données.");
             }
         }
-    
+
 
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
             List<Produit> produits = CreerListe();
             gestionnaireJson.CreerFichierJson(produits, @"U:\59011-82-01\C#\gestion d' un crud\produits.json");
-
-            GestionnaireJson gestionnaireJson = new GestionnaireJson();
-            List<Produit> produits = gestionnaireJson.DownloaderDonnees("");
-
-            if (produits != null)
-            {
-                dtgProduit.ItemsSource = produits;
-            }
-            else
-            {
-                MessageBox.Show("Une erreur s'est produite lors du chargement des données.");
-            }
-
         }
+
+    }
     }
 }
