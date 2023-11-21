@@ -1,0 +1,59 @@
+﻿<Window x:Class="gestion_d__un_crud.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:gestion_d__un_crud"
+        mc:Ignorable="d"
+        Title="gestion d'un crud" Height="300" Width="800" MinHeight="250" MinWidth="600">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="98*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="46.5*"/>
+            <RowDefinition Height="46.5*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Column="1" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="0.1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="0.1*"/>
+            </Grid.RowDefinitions>
+            <Button Grid.Column="1" Content="supprimer"  Grid.Row="1" FontFamily="Lucida Calligraphy" FontSize="16" Background="White" Foreground="#FFDC1515" />
+            <Button Grid.Column="3" Content="modifier" Grid.Row="1" FontFamily="Lucida Calligraphy" FontSize="16" Background="#FFADD6A2" />
+            <Button Grid.Column="5" Content="remplir grid"  Grid.Row="1" FontFamily="Lucida Calligraphy" FontSize="16" Background="#FFADD6A2" Click="Button_Click_1" />
+            <Button Grid.Column="7" Content="ajouter" Grid.Row="1" FontSize="16" FontFamily="Lucida Calligraphy" Background="#FFADD6A2" />
+            <Button Grid.Column="9" Content="sauvegarder" Grid.Row="1" FontSize="16" FontFamily="Lucida Calligraphy" Background="#FFADD6A2"/>
+
+            <!-- Ajoutez vos contrôles ici et définissez leurs propriétés Grid.Column et Grid.Row pour les positionner dans la grille -->
+        </Grid>
+        <DataGrid  x:Name="dtgProduit" Grid.Column="1" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="idProduit" Binding="{Binding id}"/>
+                <DataGridTextColumn Header="nom" Binding="{Binding nom}"/>
+                <DataGridTextColumn Header="prix" Binding="{Binding prix}"/>
+                <DataGridTextColumn Header="quantite" Binding="{Binding quantite}"/>
+                <DataGridTextColumn Header="date" Binding="{Binding date}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

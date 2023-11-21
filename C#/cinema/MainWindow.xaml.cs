@@ -59,5 +59,40 @@ namespace cinema
         {
 
         }
+
+        private void ListBoxItem_Selected_3(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ListBoxItem_Selected_4(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ListBoxItem_Selected_5(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DataGrid_SelectionChanged_1()
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

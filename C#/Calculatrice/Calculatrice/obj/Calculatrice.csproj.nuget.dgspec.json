@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "U:\\59011-82-01\\C#\\Calculatrice\\Calculatrice\\Calculatrice.csproj": {}
+    "U:\\59011-82-01\\C#\\calculatrice\\Calculatrice\\Calculatrice.csproj": {}
   },
   "projects": {
-    "U:\\59011-82-01\\C#\\Calculatrice\\Calculatrice\\Calculatrice.csproj": {
+    "U:\\59011-82-01\\C#\\calculatrice\\Calculatrice\\Calculatrice.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "U:\\59011-82-01\\C#\\Calculatrice\\Calculatrice\\Calculatrice.csproj",
+        "projectUniqueName": "U:\\59011-82-01\\C#\\calculatrice\\Calculatrice\\Calculatrice.csproj",
         "projectName": "Calculatrice",
-        "projectPath": "U:\\59011-82-01\\C#\\Calculatrice\\Calculatrice\\Calculatrice.csproj",
+        "projectPath": "U:\\59011-82-01\\C#\\calculatrice\\Calculatrice\\Calculatrice.csproj",
         "packagesPath": "C:\\Users\\59011-82-01\\.nuget\\packages\\",
         "outputPath": "U:\\59011-82-01\\C#\\Calculatrice\\Calculatrice\\obj\\",
         "projectStyle": "PackageReference",

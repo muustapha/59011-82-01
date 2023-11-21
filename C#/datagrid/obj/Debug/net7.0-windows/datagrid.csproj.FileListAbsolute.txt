@@ -1,0 +1,4 @@
+U:\59011-82-01\C#\datagrid\obj\Debug\net7.0-windows\MainWindow.g.cs
+U:\59011-82-01\C#\datagrid\obj\Debug\net7.0-windows\App.g.cs
+U:\59011-82-01\C#\datagrid\obj\Debug\net7.0-windows\datagrid_MarkupCompile.cache
+U:\59011-82-01\C#\datagrid\obj\Debug\net7.0-windows\datagrid_MarkupCompile.lref

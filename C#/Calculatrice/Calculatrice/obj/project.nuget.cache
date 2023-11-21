@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MwveDzPrIQQpu7DUHyiGOwSpap2ZhmsfZan4PxvIia5O/krpXMIoIVnIgGEBPjr1CWKwUOi5seunmdl6mxKe5Q==",
+  "dgSpecHash": "2RmKBdBEiefwA5KhRpgyxpZDcfsq7x8pD+1/6b0lELfROQWLx6dZ9vjOX7uD7ztExnZkQAhq2bRs4CVNbInwsw==",
   "success": true,
-  "projectFilePath": "U:\\59011-82-01\\C#\\Calculatrice\\Calculatrice\\Calculatrice.csproj",
+  "projectFilePath": "U:\\59011-82-01\\C#\\calculatrice\\Calculatrice\\Calculatrice.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\59011-82-01\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
