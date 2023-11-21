@@ -1,8 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Windows;
-using Newtonsoft.Json;
 
 namespace gestion_d__un_crud
 {
@@ -35,7 +34,7 @@ namespace gestion_d__un_crud
                 return null;
             }
         }
-       
+
     }
 
 }

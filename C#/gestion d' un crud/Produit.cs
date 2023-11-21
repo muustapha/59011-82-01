@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace gestion_d__un_crud
+﻿namespace gestion_d__un_crud
 {
     public class Produit
     {

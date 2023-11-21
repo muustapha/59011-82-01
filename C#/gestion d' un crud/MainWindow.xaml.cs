@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace gestion_d__un_crud
 {
@@ -25,12 +13,12 @@ namespace gestion_d__un_crud
         public MainWindow()
         {
             InitializeComponent();
-            ChargerDonnees();
+           
         }
 
         private void ChargerDonnees()
         {
-            List<Produit> produits = gestionnaireJson.DownloaderDonnees(@"U:\59011-82-01\C#\gestion d' un crud\produits.json");
+            List<Produit> produits = gestionnaireJson.DownloaderDonnees(@"C:\Users\utilisateur\Desktop\GIT\principal\C#\gestion d' un crud\produits.json");
 
             if (produits != null)
             {
@@ -45,7 +33,7 @@ namespace gestion_d__un_crud
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             List<Produit> produits = CreerListe();
-            gestionnaireJson.UploaderDonnees(produits, @"U:\59011-82-01\C#\gestion d' un crud\produits.json");
+            gestionnaireJson.UploaderDonnees(produits, @"C:\Users\utilisateur\Desktop\GIT\principal\C#\gestion d' un crud\produits.json");
             ChargerDonnees();
         }
 

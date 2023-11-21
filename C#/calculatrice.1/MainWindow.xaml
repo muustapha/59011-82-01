@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:calculatrice"
         mc:Ignorable="d"
-        Title="calculatrice" Height="550" Width="400">
+        Title="calculatrice" Height="550" Width="700">
     <Grid >
 
         <Grid.ColumnDefinitions>
@@ -20,6 +20,8 @@
             <RowDefinition Height="81*"/>
             <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
+        <Button Content="="  FontFamily="Magneto" FontSize="16"  Grid.Row="3" Click="Button_Click_10"  Grid.Column="1"  />
+
         <Label Content="            Calculatrice" Margin="3,4,2,27" FontWeight="Black" Grid.RowSpan="2" Grid.ColumnSpan="2" FontFamily="Chiller" FontSize="24">
             <Label.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -74,28 +76,9 @@
             <Button Content="-" Grid.Column="6" Grid.Row="4"  FontSize="16" FontFamily="Magneto" />
             <Button Content="x"  Grid.Column="6" Grid.Row="6"  FontFamily="Magneto" FontSize="16"  />
             <Button Content="/" Grid.Column="4" Grid.Row="6"  FontFamily="Magneto" FontSize="16"/>
-
-            <Button Content="6" Grid.Column="4" Grid.Row="2"  FontFamily="Magneto"  FontSize="16" >
-                <Button.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform ScaleX="1" ScaleY="1"/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Button.RenderTransform>
-            </Button>
+            <Button Content="6" Grid.Column="4" Grid.Row="2"  FontFamily="Magneto"  FontSize="16" />
             <Button Content="3" Grid.Column="4"  FontFamily="Magneto"   FontSize="16" />
-            <Button Content="=" Grid.Row="7"  FontFamily="Magneto" FontSize="16" Margin="1,109,1,-171" Grid.ColumnSpan="7"   >
-                <Button.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform ScaleY="-1"/>
-                        <SkewTransform AngleY="0.488"/>
-                        <RotateTransform Angle="-0.511"/>
-                        <TranslateTransform Y="1.052"/>
-                    </TransformGroup>
-                </Button.RenderTransform>
-            </Button>
+
             <Button Grid.Column="2" Content="," Grid.Row="6"  FontFamily="Magneto" FontSize="16" />
         </Grid>
     </Grid>

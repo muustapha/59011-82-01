@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Calculatrice;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,55 +25,18 @@ namespace calculatrice
         {
             InitializeComponent();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
         {
+            //Faire apparaitre les tailles dans la sortie
+            ((Window)sender).ActualHeight.Dump();
+            ((Window)sender).ActualWidth.Dump();
+
+            ((Window)sender).Height = 4 / 3 * ((Window)sender).ActualWidth; // garder les proportions
+
+
 
         }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_3(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_4(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_5(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_6(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_7(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_8(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_9(object sender, RoutedEventArgs e)
-        {
-
-        }
+     
+        
     }
 }

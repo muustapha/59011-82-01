@@ -27,3 +27,9 @@ U:\59011-82-01\C#\calculatrice.1\obj\Debug\net7.0-windows\calculatrice_MarkupCom
 U:\59011-82-01\C#\calculatrice.1\obj\Debug\net7.0-windows\calculatrice.dll
 U:\59011-82-01\C#\calculatrice.1\obj\Debug\net7.0-windows\refint\calculatrice.dll
 U:\59011-82-01\C#\calculatrice.1\obj\Debug\net7.0-windows\calculatrice.pdb
+C:\Users\utilisateur\Desktop\GIT\principal\C#\calculatrice.1\obj\Debug\net7.0-windows\Calculatrice\App.g.cs
+C:\Users\utilisateur\Desktop\GIT\principal\C#\calculatrice.1\obj\Debug\net7.0-windows\Calculatrice\MainWindow.g.cs
+C:\Users\utilisateur\Desktop\GIT\principal\C#\calculatrice.1\obj\Debug\net7.0-windows\MainWindow.g.cs
+C:\Users\utilisateur\Desktop\GIT\principal\C#\calculatrice.1\obj\Debug\net7.0-windows\App.g.cs
+C:\Users\utilisateur\Desktop\GIT\principal\C#\calculatrice.1\obj\Debug\net7.0-windows\calculatrice_MarkupCompile.cache
+C:\Users\utilisateur\Desktop\GIT\principal\C#\calculatrice.1\obj\Debug\net7.0-windows\calculatrice_MarkupCompile.lref
