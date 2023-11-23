@@ -1,0 +1,46 @@
+U:\59011-82-01\C#\gestion d' un crud\obj\Debug\net7.0-windows\MainWindow.g.cs
+U:\59011-82-01\C#\gestion d' un crud\obj\Debug\net7.0-windows\App.g.cs
+U:\59011-82-01\C#\gestion d' un crud\obj\Debug\net7.0-windows\gestion d' un crud_MarkupCompile.cache
+U:\59011-82-01\C#\gestion d' un crud\obj\Debug\net7.0-windows\gestion d' un crud_MarkupCompile.lref
+U:\59011-82-01\C#\gestion d' un crud\bin\Debug\net7.0-windows\gestion d' un crud.exe
+U:\59011-82-01\C#\gestion d' un crud\bin\Debug\net7.0-windows\gestion d' un crud.deps.json
+U:\59011-82-01\C#\gestion d' un crud\bin\Debug\net7.0-windows\gestion d' un crud.runtimeconfig.json
+U:\59011-82-01\C#\gestion d' un crud\bin\Debug\net7.0-windows\gestion d' un crud.dll
+U:\59011-82-01\C#\gestion d' un crud\bin\Debug\net7.0-windows\gestion d' un crud.pdb
+U:\59011-82-01\C#\gestion d' un crud\obj\Debug\net7.0-windows\MainWindow.baml
+U:\59011-82-01\C#\gestion d' un crud\obj\Debug\net7.0-windows\gestion d' un crud.g.resources
+U:\59011-82-01\C#\gestion d' un crud\obj\Debug\net7.0-windows\gestion d' un crud.GeneratedMSBuildEditorConfig.editorconfig
+U:\59011-82-01\C#\gestion d' un crud\obj\Debug\net7.0-windows\gestion d' un crud.AssemblyInfoInputs.cache
+U:\59011-82-01\C#\gestion d' un crud\obj\Debug\net7.0-windows\gestion d' un crud.AssemblyInfo.cs
+U:\59011-82-01\C#\gestion d' un crud\obj\Debug\net7.0-windows\gestion d' un crud.csproj.CoreCompileInputs.cache
+U:\59011-82-01\C#\gestion d' un crud\obj\Debug\net7.0-windows\gestion d' un crud.dll
+U:\59011-82-01\C#\gestion d' un crud\obj\Debug\net7.0-windows\refint\gestion d' un crud.dll
+U:\59011-82-01\C#\gestion d' un crud\obj\Debug\net7.0-windows\gestion d' un crud.pdb
+U:\59011-82-01\C#\gestion d' un crud\obj\Debug\net7.0-windows\gestion d' un crud.genruntimeconfig.cache
+U:\59011-82-01\C#\gestion d' un crud\obj\Debug\net7.0-windows\ref\gestion d' un crud.dll
+U:\59011-82-01\C#\gestion d' un crud\obj\Debug\net7.0-windows\gestion d' un crud.csproj.AssemblyReference.cache
+U:\59011-82-01\C#\gestion d' un crud\bin\Debug\net7.0-windows\Newtonsoft.Json.dll
+U:\59011-82-01\C#\gestion d' un crud\obj\Debug\net7.0-windows\gestion d' un crud.csproj.CopyComplete
+C:\Users\utilisateur\Desktop\GIT\principal\C#\gestion d' un crud\bin\Debug\net7.0-windows\gestion d' un crud.exe
+C:\Users\utilisateur\Desktop\GIT\principal\C#\gestion d' un crud\bin\Debug\net7.0-windows\gestion d' un crud.deps.json
+C:\Users\utilisateur\Desktop\GIT\principal\C#\gestion d' un crud\bin\Debug\net7.0-windows\gestion d' un crud.runtimeconfig.json
+C:\Users\utilisateur\Desktop\GIT\principal\C#\gestion d' un crud\bin\Debug\net7.0-windows\gestion d' un crud.dll
+C:\Users\utilisateur\Desktop\GIT\principal\C#\gestion d' un crud\bin\Debug\net7.0-windows\gestion d' un crud.pdb
+C:\Users\utilisateur\Desktop\GIT\principal\C#\gestion d' un crud\bin\Debug\net7.0-windows\Newtonsoft.Json.dll
+C:\Users\utilisateur\Desktop\GIT\principal\C#\gestion d' un crud\obj\Debug\net7.0-windows\gestion d' un crud.csproj.AssemblyReference.cache
+C:\Users\utilisateur\Desktop\GIT\principal\C#\gestion d' un crud\obj\Debug\net7.0-windows\MainWindow.g.cs
+C:\Users\utilisateur\Desktop\GIT\principal\C#\gestion d' un crud\obj\Debug\net7.0-windows\App.g.cs
+C:\Users\utilisateur\Desktop\GIT\principal\C#\gestion d' un crud\obj\Debug\net7.0-windows\gestion d' un crud_MarkupCompile.cache
+C:\Users\utilisateur\Desktop\GIT\principal\C#\gestion d' un crud\obj\Debug\net7.0-windows\gestion d' un crud_MarkupCompile.lref
+C:\Users\utilisateur\Desktop\GIT\principal\C#\gestion d' un crud\obj\Debug\net7.0-windows\MainWindow.baml
+C:\Users\utilisateur\Desktop\GIT\principal\C#\gestion d' un crud\obj\Debug\net7.0-windows\gestion d' un crud.g.resources
+C:\Users\utilisateur\Desktop\GIT\principal\C#\gestion d' un crud\obj\Debug\net7.0-windows\gestion d' un crud.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\utilisateur\Desktop\GIT\principal\C#\gestion d' un crud\obj\Debug\net7.0-windows\gestion d' un crud.AssemblyInfoInputs.cache
+C:\Users\utilisateur\Desktop\GIT\principal\C#\gestion d' un crud\obj\Debug\net7.0-windows\gestion d' un crud.AssemblyInfo.cs
+C:\Users\utilisateur\Desktop\GIT\principal\C#\gestion d' un crud\obj\Debug\net7.0-windows\gestion d' un crud.csproj.CoreCompileInputs.cache
+C:\Users\utilisateur\Desktop\GIT\principal\C#\gestion d' un crud\obj\Debug\net7.0-windows\gestion d' un crud.csproj.CopyComplete
+C:\Users\utilisateur\Desktop\GIT\principal\C#\gestion d' un crud\obj\Debug\net7.0-windows\gestion d' un crud.dll
+C:\Users\utilisateur\Desktop\GIT\principal\C#\gestion d' un crud\obj\Debug\net7.0-windows\refint\gestion d' un crud.dll
+C:\Users\utilisateur\Desktop\GIT\principal\C#\gestion d' un crud\obj\Debug\net7.0-windows\gestion d' un crud.pdb
+C:\Users\utilisateur\Desktop\GIT\principal\C#\gestion d' un crud\obj\Debug\net7.0-windows\gestion d' un crud.genruntimeconfig.cache
+C:\Users\utilisateur\Desktop\GIT\principal\C#\gestion d' un crud\obj\Debug\net7.0-windows\ref\gestion d' un crud.dll

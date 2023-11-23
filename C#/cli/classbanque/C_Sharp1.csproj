@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="U:\59011-82-01\C#\C_Sharp\Class1.cs" Link="Class1.cs" />
+    <Compile Include="U:\59011-82-01\C#\C_Sharp\Class2.cs" Link="Class2.cs" />
+    <Compile Include="U:\59011-82-01\C#\C_Sharp\Class3.cs" Link="Class3.cs" />
+  </ItemGroup>
+
+</Project>

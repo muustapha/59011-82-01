@@ -1,0 +1,180 @@
+﻿<Window x:Class="GestionFichesDePaie.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GestionFichesDePaie"
+        mc:Ignorable="d"
+        Title="Gestin de fiches de paie" Height="700" Width="1000" MinHeight="450" MinWidth="700">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFE8C472" Offset="1"/>
+                <GradientStop Color="#FFDFCA9D" Offset="0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="98*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="19*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="32*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Column="1" Grid.Row="11">
+            <ComboBox FontFamily="Engravers MT" FontSize="22" >
+                <ComboBoxItem Content="Janvier" />
+                <ComboBoxItem Content="Fevrier" />
+                <ComboBoxItem Content="Mars" />
+                <ComboBoxItem Content="Avril" />
+                <ComboBoxItem Content="Mai" />
+                <ComboBoxItem Content="Juin" />
+                <ComboBoxItem Content="Juillet" />
+                <ComboBoxItem Content="Aout" />
+                <ComboBoxItem Content="Septembre" />
+                <ComboBoxItem Content="Octobre" />
+                <ComboBoxItem Content="Novembre" />
+                <ComboBoxItem Content="Decembre" />
+            </ComboBox>
+        </Grid>
+        <Label Grid.Column="1" Content="sélectionner mois " Grid.Row="9" FontFamily="Engravers MT" FontSize="22" HorizontalAlignment="Center" />
+        <Label Grid.Column="1" Content="sélectionner salarié(e)"  Grid.Row="1" HorizontalAlignment="Center" FontFamily="Engravers MT" FontSize="22" />
+        <ComboBox  Grid.Column="1" Grid.Row="2" FontFamily="Engravers MT" FontSize="22" Margin="0,6,0,0" Grid.RowSpan="2" >
+            <ComboBoxItem Content="TIKDAM"/>
+            <ComboBoxItem Content="SOKRAT" />
+            <ComboBoxItem Content="INCH" />
+            <ComboBoxItem Content="ROBEN" />
+        </ComboBox>
+        <DataGrid Grid.Column="1" Grid.Row="5" d:ItemsSource="{d:SampleData ItemCount=5}" Background="#FFEEDBB5" FontFamily="Constantia">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id"  />
+                <DataGridTextColumn Header="Nom"  />
+                <DataGridTextColumn Header="Prénom" />
+                <DataGridTextColumn Header="Genre"  />
+                <DataGridTextColumn Header="Date de naissance"  />
+                <DataGridTextColumn Header=" situation familliale" />
+                <DataGridTextColumn Header="Nb enfants"  />
+                <DataGridTextColumn Header="Fonction" />
+                <DataGridTextColumn Header="CNSS"/>
+                <DataGridTextColumn Header="Matricule"  />
+                <DataGridTextColumn Header="Departement " />
+                <DataGridTextColumn Header="Service"  />
+                <DataGridTextColumn Header="CIMR"  />
+                <DataGridTextColumn Header="Mutuelle " />
+                <DataGridTextColumn Header="Type de paiement"  />
+                <DataGridTextColumn Header="mode paiement" />
+                <DataGridTextColumn Header="Salaire de base Horaire"  />
+                <DataGridTextColumn Header="Prime"  />
+                <DataGridTextColumn Header="Adresse " />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid Grid.Column="1" Grid.Row="10"/>
+        <Grid Grid.Column="1" Grid.Row="14">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="3" Content="sauvegarder" FontFamily="Engravers MT" FontSize="22" Background="#FFC6E099" />
+            <Button Content="sortie" FontFamily="Engravers MT" FontSize="22" Background="#FFE7C475" />
+        </Grid>
+        <Button Grid.Column="1" Content="MODIFIER" Grid.Row="7" FontFamily="Engravers MT" FontSize="22" Background="#FFAFC584"  />
+        <Grid Grid.Column="1" Grid.Row="12" Background="#FFEEDBB5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width= "1*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="0.3*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="0.3*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="0.3*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="0.3*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="0.3*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="0.3*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="0.3*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Column="2" Content="Base" HorizontalAlignment="Center" FontFamily="Constantia" />
+            <Label Grid.Column="4" Content="Taux" HorizontalAlignment="Center" FontFamily="Constantia" />
+            <Label Grid.Column="6" Content="A Payer" HorizontalAlignment="Center" FontFamily="Constantia"/>
+            <Label Grid.Column="8" Content="A Retenir" HorizontalAlignment="Center" FontFamily="Constantia"/>
+            <Label Content="Salaire de base" Grid.Row="2" HorizontalAlignment="Center" FontFamily="Constantia"/>
+            <Label Content="Prime Ancienneté" Grid.Row="4" HorizontalAlignment="Center" FontFamily="Constantia"/>
+            <Label Content="Salaire Brut" Grid.Row="6" HorizontalAlignment="Center" FontFamily="Constantia"/>
+            <Label Content="Cotisation CNSS" Grid.Row="8" HorizontalAlignment="Center" FontFamily="Constantia"/>
+            <Label Content="AMO" Grid.Row="10" HorizontalAlignment="Center" FontFamily="Constantia"/>
+            <Label Content="IGR" Grid.Row="12" HorizontalAlignment="Center" FontFamily="Constantia"/>
+            <Label Content="Mutuelle" Grid.Row="14" HorizontalAlignment="Center" FontFamily="Constantia"/>
+            <Label Content="Net à Payer" Grid.Row="16" HorizontalAlignment="Center" FontFamily="Constantia"/>
+            <Label Content="191" Grid.Column="2" Grid.Row="2"  FontFamily="Consolas" HorizontalAlignment="Center" />
+            <Label Content="7000" Grid.Column="2" Grid.Row="3"  FontFamily="Consolas" HorizontalAlignment="Center" Margin="0,2,0,2" Grid.RowSpan="2" />
+            <Label Content="" Grid.Column="2" Grid.Row="6"  FontFamily="Constantia" />
+            <Label Content="7000" Grid.Column="2" Grid.Row="8"  FontFamily="Consolas" HorizontalAlignment="Center" />
+            <Label Content="7000" Grid.Column="2" Grid.Row="10"  FontFamily="Consolas" HorizontalAlignment="Center" />
+            <Label Content="7000" Grid.Column="2" Grid.Row="12"  FontFamily="Consolas" HorizontalAlignment="Center" />
+            <Label Content="20" Grid.Column="2" Grid.Row="14"  FontFamily="Consolas" HorizontalAlignment="Center" />
+            <Label Content="" Grid.Column="2" Grid.Row="16"  FontFamily="Constantia" />
+            <Label Content="" Grid.Column="4" Grid.Row="2"  FontFamily="Constantia" />
+            <Label Content="36.65" Grid.Column="4" Grid.Row="2"  FontFamily="Consolas" HorizontalAlignment="Center" />
+            <Label Content="10%" Grid.Column="4" Grid.Row="4"  FontFamily="Consolas" HorizontalAlignment="Center" />
+            <Label Content="" Grid.Column="4" Grid.Row="6"  FontFamily="Constantia" />
+            <Label Content="4.48%" Grid.Column="4" Grid.Row="8"  FontFamily="Consolas" HorizontalAlignment="Center" />
+            <Label Content="2.26%" Grid.Column="4" Grid.Row="10"  FontFamily="Consolas" HorizontalAlignment="Center" />
+            <Label Content="20%" Grid.Column="4" Grid.Row="12"  FontFamily="Consolas" HorizontalAlignment="Center" />
+            <Label Content="1" Grid.Column="4" Grid.Row="14"  FontFamily="Consolas" HorizontalAlignment="Center" />
+            <Label Content="" Grid.Column="4" Grid.Row="16"  FontFamily="Constantia" />
+            <Label Content="7 000,00 €&#xD;&#xA;7 000,00 €&#xD;&#xA;7 000,00 €&#xD;&#xA;7 000,00 €&#xD;&#xA;7 000,00 €&#xD;&#xA;" Grid.Column="6" Grid.Row="2"  FontFamily="Consolas" HorizontalAlignment="Center" />
+            <Label Content="700,00 €&#xD;&#xA;" Grid.Column="6" Grid.Row="3"  FontFamily="Consolas" HorizontalAlignment="Center" Margin="0,3,0,1" Grid.RowSpan="2" />
+            <Label Content="7 700,00 €&#xD;&#xA;" Grid.Column="6" Grid.Row="6"  FontFamily="Consolas" HorizontalAlignment="Center" />
+            <Label Content="" Grid.Column="6" Grid.Row="8"  FontFamily="Constantia" />
+            <Label Content="" Grid.Column="6" Grid.Row="10"  FontFamily="Constantia" />
+            <Label Content="" Grid.Column="6" Grid.Row="12"  FontFamily="Constantia" />
+            <Label Content="" Grid.Column="6" Grid.Row="14"  FontFamily="Constantia" />
+            <Label Content="5 808,20 €&#xD;&#xA;" Grid.Column="6" Grid.Row="16"  FontFamily="Consolas" HorizontalAlignment="Center" />
+
+            <Label Content="" Grid.Column="8" Grid.Row="2"  FontFamily="Constantia" />
+            <Label Content="" Grid.Column="8" Grid.Row="4"  FontFamily="Constantia" />
+            <Label Content="" Grid.Column="8" Grid.Row="6"  FontFamily="Constantia" />
+            <Label Content="313,60 €&#xD;&#xA;" Grid.Column="8" Grid.Row="8"  FontFamily="Consolas" HorizontalAlignment="Center" />
+            <Label Content="158,20 €&#xD;&#xA;" Grid.Column="8" Grid.Row="10"  FontFamily="Consolas" HorizontalAlignment="Center" />
+            <Label Content="1 400,00 €&#xD;&#xA;" Grid.Column="8" Grid.Row="12"  FontFamily="Consolas" HorizontalAlignment="Center" />
+            <Label Content="20,00 €&#xD;&#xA;" Grid.Column="8" Grid.Row="14"  FontFamily="Consolas" HorizontalAlignment="Center" />
+            <Label Content="" Grid.Column="8" Grid.Row="16"  FontFamily="Constantia" />
+            <Label Content="" Grid.Column="8" Grid.Row="2"  FontFamily="Constantia" />
+        </Grid>
+
+
+    </Grid>
+</Window>
