@@ -1,10 +1,7 @@
-
 using PersonnesApi.data.service;
-
 using AutoMapper;
-
-
-
+using Microsoft.EntityFrameworkCore;
+using PersonnesApi.data;
 
 namespace PersonnesApi
 {
@@ -15,6 +12,9 @@ namespace PersonnesApi
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services.AddDbContext<MyDbContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
             builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             builder.Services.AddTransient<PersonnesServices>();
             builder.Services.AddControllers();
@@ -34,7 +34,6 @@ namespace PersonnesApi
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 
