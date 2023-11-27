@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using API1.Models.Data;
+using Microsoft.EntityFrameworkCore;
 using System;
 
 namespace API1.Models.data.Services

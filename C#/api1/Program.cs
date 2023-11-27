@@ -1,7 +1,7 @@
-using Microsoft.EntityFrameworkCore;
-using Pomelo.EntityFrameworkCore.MySql;
-using API1.Models.data;
 using API1.Models.data.Services;
+using API1.Models.Data;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace API1
 {

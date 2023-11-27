@@ -1,8 +1,8 @@
-﻿namespace API1.Models.data.Dtos
+﻿namespace API1.Models.Dtos
 {
     public class JoueursDTO
     {
-       
+
         public string Nom { get; set; } = null!;
         public string Prenom { get; set; } = null!;
         public int Age { get; set; }

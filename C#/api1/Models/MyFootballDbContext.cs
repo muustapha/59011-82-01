@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace API1.Models.data
+namespace API1.Models.Data
 {
     public class MyFootballDbContext : DbContext
     {

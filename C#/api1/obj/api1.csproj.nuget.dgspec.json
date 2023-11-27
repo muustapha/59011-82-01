@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "U:\\59011-82-01\\C#\\API1\\API1.csproj": {}
+    "C:\\Users\\utilisateur\\Desktop\\GIT\\principal\\C#\\api1\\API1.csproj": {}
   },
   "projects": {
-    "U:\\59011-82-01\\C#\\API1\\API1.csproj": {
+    "C:\\Users\\utilisateur\\Desktop\\GIT\\principal\\C#\\api1\\API1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "U:\\59011-82-01\\C#\\API1\\API1.csproj",
+        "projectUniqueName": "C:\\Users\\utilisateur\\Desktop\\GIT\\principal\\C#\\api1\\API1.csproj",
         "projectName": "API1",
-        "projectPath": "U:\\59011-82-01\\C#\\API1\\API1.csproj",
-        "packagesPath": "C:\\Users\\59011-82-01\\.nuget\\packages\\",
-        "outputPath": "U:\\59011-82-01\\C#\\API1\\obj\\",
+        "projectPath": "C:\\Users\\utilisateur\\Desktop\\GIT\\principal\\C#\\api1\\API1.csproj",
+        "packagesPath": "C:\\Users\\utilisateur\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\utilisateur\\Desktop\\GIT\\principal\\C#\\api1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\59011-82-01\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\utilisateur\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -49,6 +49,10 @@
               "target": "Package",
               "version": "[7.0.1, )"
             },
+            "Microsoft.AspNetCore.JsonPatch": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.13, )"
@@ -62,6 +66,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.10, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
