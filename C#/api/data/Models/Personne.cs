@@ -1,15 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace PersonnesApi.data.Models;
+namespace API.DATA.Models;
 
 public partial class Personne
 {
-    public int Id { get; set; }
+    public uint Id { get; set; }
 
-    public string Prenom { get; set; } = null!;
+    public string? Nom { get; set; }
 
-    public string Nom { get; set; } = null!;
+    public string? Prenom { get; set; }
 
-    public sbyte Age { get; set; }
+    public int? CodePostal { get; set; }
+
+    public string Adresse { get; set; } = null!;
+
+    public string Ville { get; set; } = null!;
 }

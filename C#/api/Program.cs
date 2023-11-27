@@ -1,9 +1,9 @@
-using PersonnesApi.data.service;
-using AutoMapper;
+using API.DATA;
+using API.DATA.Services;
 using Microsoft.EntityFrameworkCore;
-using PersonnesApi.data;
-
-namespace PersonnesApi
+using Microsoft.Extensions.Configuration;
+using AutoMapper;
+namespace API
 {
     public class Program
     {
@@ -13,10 +13,10 @@ namespace PersonnesApi
 
             // Add services to the container.
             builder.Services.AddDbContext<MyDbContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
-            builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+                options.UseMySQL(builder.Configuration.GetConnectionString("DefaultConnection")));
+            builder.Services.AddControllersWithViews();
             builder.Services.AddTransient<PersonnesServices>();
+            builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();

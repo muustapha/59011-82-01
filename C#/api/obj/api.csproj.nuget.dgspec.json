@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\utilisateur\\Desktop\\GIT\\principal\\C#\\api\\api.csproj": {}
+    "C:\\Users\\utilisateur\\Desktop\\GIT\\principal\\C#\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\utilisateur\\Desktop\\GIT\\principal\\C#\\api\\api.csproj": {
+    "C:\\Users\\utilisateur\\Desktop\\GIT\\principal\\C#\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\utilisateur\\Desktop\\GIT\\principal\\C#\\api\\api.csproj",
-        "projectName": "api",
-        "projectPath": "C:\\Users\\utilisateur\\Desktop\\GIT\\principal\\C#\\api\\api.csproj",
+        "projectUniqueName": "C:\\Users\\utilisateur\\Desktop\\GIT\\principal\\C#\\API\\API.csproj",
+        "projectName": "API",
+        "projectPath": "C:\\Users\\utilisateur\\Desktop\\GIT\\principal\\C#\\API\\API.csproj",
         "packagesPath": "C:\\Users\\utilisateur\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\utilisateur\\Desktop\\GIT\\principal\\C#\\api\\obj\\",
+        "outputPath": "C:\\Users\\utilisateur\\Desktop\\GIT\\principal\\C#\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,10 +45,6 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
-            "AutoMapper": {
-              "target": "Package",
-              "version": "[12.0.1, )"
-            },
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[12.0.1, )"
@@ -57,7 +53,7 @@
               "target": "Package",
               "version": "[7.0.13, )"
             },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
+            "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.10, )"
             },
@@ -70,6 +66,14 @@
             "MySql.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.10, )"
+            },
+            "MySql.data": {
+              "target": "Package",
+              "version": "[8.2.0, )"
+            },
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[2.3.1, )"
             },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",

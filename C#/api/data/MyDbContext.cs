@@ -1,18 +1,18 @@
-﻿using PersonnesApi.data.Models;
-using Microsoft.EntityFrameworkCore;        
+﻿using API.DATA.Models;
+using Microsoft.EntityFrameworkCore;
 
-namespace PersonnesApi.data
+
+namespace API.DATA
 {
-    public class MyDbContext:DbContext
-    {
-        public MyDbContext()
-        {
-            
-        }
 
+    public class MyDbContext : DbContext
+    {
         public MyDbContext(DbContextOptions<MyDbContext> options) : base(options)
         {
         }
+
         public DbSet<Personne> Personnes { get; set; }
+
+
     }
 }
