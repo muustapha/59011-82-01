@@ -23,7 +23,7 @@ namespace API1.Controllers
 
         //GET api/Arbitres
         [HttpGet]
-        public ActionResult<IEnumerable<Joueur>> GetAllArbitres()
+        public ActionResult<IEnumerable<Arbitre>> GetAllArbitres()
         {
             IEnumerable<Arbitre> listeArbitres = _service.GetAllArbitres();
             return Ok(_mapper.Map<IEnumerable<ArbitresDTO>>(listeArbitres));
@@ -31,10 +31,10 @@ namespace API1.Controllers
 
 
         //GET api/Arbitres/{id}
-        [HttpGet("{id}", Name = "GetJoueurById")]
-        public ActionResult<ArbitresDTO> GetJoueurById(int id)
+        [HttpGet("{id}", Name = "GetJoById")]
+        public ActionResult<ArbitresDTO> GetArbitreById(int id)
         {
-            var item = _service.GetJoueurById(id);
+            var item = _service.GetArbitreById(id);
             if (item != null)
             {
                 return Ok(_mapper.Map<ArbitresDTO>(item));
@@ -50,7 +50,7 @@ namespace API1.Controllers
             //on ajoute l’objet à la base de données
             _service.AddArbitres(footballPOCO);
             //on retourne le chemin de findById avec l'objet créé
-            return CreatedAtRoute(nameof(GetJoueurById), new { Id = footballPOCO.IdArbitre }, footballPOCO);
+            return CreatedAtRoute(nameof(GetArbitreById), new { Id = footballPOCO.IdArbitre }, footballPOCO);
 
         }
 
@@ -58,17 +58,17 @@ namespace API1.Controllers
         [HttpPut("{id}")]
         public ActionResult UpdateJoueur(int id, ArbitresDTO football)
         {
-            var footballFromRepo = _service.GetJoueurById(id);
-            if (footballFromRepo == null)
+            var ArbitreFromRepo = _service.GetArbitreById(id);
+            if (ArbitreFromRepo == null)
             {
                 return NotFound();
             }
-            footballFromRepo.Dump();
-            _mapper.Map(football, footballFromRepo);
-            footballFromRepo.Dump();
+            ArbitreFromRepo.Dump();
+            _mapper.Map(football, ArbitreFromRepo);
+            ArbitreFromRepo.Dump();
             football.Dump();
             // inutile puisque la fonction ne fait rien, mais garde la cohérence
-            _service.UpdateArbitre(footballFromRepo);
+            _service.UpdateArbitre(ArbitreFromRepo);
 
             return NoContent();
         }
@@ -80,19 +80,17 @@ namespace API1.Controllers
         //    "path":"prenom",
         //    "value":"test"
         //    }]
-
         [HttpPatch("{id}")]
-        public ActionResult PartialJoueurUpdate(int id, JsonPatchDocument<Joueur> patchDoc)
+        public ActionResult PartialArbitreUpdate(int id, JsonPatchDocument<Arbitre> patchDoc)
         {
             patchDoc.Dump();
-            var footballFromRepo = _service.GetJoueurById(id);
-            if (footballFromRepo == null)
+            var ArbitreFromRepo = _service.GetArbitreById(id);
+            if (ArbitreFromRepo == null)
             {
                 return NotFound();
             }
 
-            var footballToPatch = _mapper.Map<Joueur>(footballFromRepo);
-            //var footballToPatch = footballFromRepo;
+            var footballToPatch = _mapper.Map<Arbitre>(ArbitreFromRepo);
             patchDoc.ApplyTo(footballToPatch, (Microsoft.AspNetCore.JsonPatch.Adapters.IObjectAdapter)ModelState);
 
             if (!TryValidateModel(footballToPatch))
@@ -100,22 +98,23 @@ namespace API1.Controllers
                 return ValidationProblem(ModelState);
             }
 
-            _mapper.Map(footballToPatch, footballFromRepo);
+            _mapper.Map(footballToPatch, ArbitreFromRepo);
 
-            _service.UpdateArbitre(footballFromRepo);
+            _service.UpdateArbitre(ArbitreFromRepo);
 
             return NoContent();
         }
+
         //DELETE api/footballs/{id}
         [HttpDelete("{id}")]
         public ActionResult DeleteJoueur(int id)
         {
-            var footballModelFromRepo = _service.GetJoueurById(id);
-            if (footballModelFromRepo == null)
+            var ArbitreModelFromRepo = _service.GetArbitreById(id);
+            if (ArbitreModelFromRepo == null)
             {
                 return NotFound();
             }
-            _service.DeleteArbitre(footballModelFromRepo);
+            _service.DeleteArbitre(ArbitreModelFromRepo);
 
             return NoContent();
         }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace API1.Models;
+namespace API1.Models.Data;
 
 public partial class Arbitre
 {
@@ -9,7 +9,7 @@ public partial class Arbitre
 
     public string Nom { get; set; } = null!;
 
-    public string Prénom { get; set; } = null!;
+    public string Prenom { get; set; } = null!;
 
     public int Age { get; set; }
 

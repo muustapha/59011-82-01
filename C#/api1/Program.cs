@@ -2,7 +2,6 @@ using API1.Models.data.Services;
 using API1.Models.Data;
 using Microsoft.EntityFrameworkCore;
 
-
 namespace API1
 {
     public class Program
@@ -13,12 +12,14 @@ namespace API1
 
             // Add services to the container.
             builder.Services.AddDbContext<MyFootballDbContext>(options =>
-            options.UseMySql(builder.Configuration.GetConnectionString("Default"), new MySqlServerVersion(new Version(8, 0, 21)))); 
+            options.UseMySQL(builder.Configuration.GetConnectionString("Default")));
             builder.Services.AddControllersWithViews();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddTransient<JoueursServices>(); 
             builder.Services.AddTransient<ArbitresServices>();
+            builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            builder.Services.AddControllers().AddNewtonsoftJson();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

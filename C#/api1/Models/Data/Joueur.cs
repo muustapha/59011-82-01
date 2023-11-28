@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace API1.Models;
+namespace API1.Models.Data;
 
 public partial class Joueur
 {
@@ -15,5 +15,5 @@ public partial class Joueur
 
     public string Poste { get; set; } = null!;
 
-    public int Nationnalite { get; set; }
+    public string Nationalite { get; set; } = null!;
 }
