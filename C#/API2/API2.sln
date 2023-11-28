@@ -5,6 +5,11 @@ VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API2", "API2.csproj", "{187DC17E-2398-4740-899C-46D2F8889BF1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sql", "Sql", "{1CE6F635-0790-45AF-A140-2446E20172B2}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\59011-82-01\Downloads\football(1).sql = C:\Users\59011-82-01\Downloads\football(1).sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
