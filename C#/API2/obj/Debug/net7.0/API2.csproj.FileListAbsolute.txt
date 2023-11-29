@@ -1,0 +1,7 @@
+U:\59011-82-01\C#\API2\obj\Debug\net7.0\API2.csproj.AssemblyReference.cache
+U:\59011-82-01\C#\API2\obj\Debug\net7.0\API2.GeneratedMSBuildEditorConfig.editorconfig
+U:\59011-82-01\C#\API2\obj\Debug\net7.0\API2.AssemblyInfoInputs.cache
+U:\59011-82-01\C#\API2\obj\Debug\net7.0\API2.AssemblyInfo.cs
+U:\59011-82-01\C#\API2\obj\Debug\net7.0\API2.csproj.CoreCompileInputs.cache
+U:\59011-82-01\C#\API2\obj\Debug\net7.0\API2.MvcApplicationPartsAssemblyInfo.cs
+U:\59011-82-01\C#\API2\obj\Debug\net7.0\API2.MvcApplicationPartsAssemblyInfo.cache

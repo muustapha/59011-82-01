@@ -1,9 +1,5 @@
 
-using API2.Models;
-using Microsoft.EntityFrameworkCore;
-using API2.Models.Services;
-
-namespace API2
+namespace testRecupTable1
 {
     public class Program
     {
@@ -12,15 +8,7 @@ namespace API2
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-         
-                builder.Services.AddDbContext<footballDbContext>(options =>
-                options.UseMySQL(builder.Configuration.GetConnectionString("Default")));
-                builder.Services.AddControllersWithViews();
-            builder.Services.AddTransient<JoueursService>();
-            builder.Services.AddTransient<EquipesService>();
-            builder.Services.AddTransient<RelationsService>();
-            builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-            builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
