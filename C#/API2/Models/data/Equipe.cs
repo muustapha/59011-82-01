@@ -16,4 +16,14 @@ public partial class Equipe
     public string StadePrincipal { get; set; } = null!;
 
     public string SiteWeb { get; set; } = null!;
+    
+    public int IdPartita { get; set; }
+
+
+
+
+
+
+    public virtual ICollection<Partita> Partita { get; set; }
+    public virtual ICollection<Relation> Relations { get; set; }
 }

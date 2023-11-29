@@ -16,4 +16,16 @@ public partial class Relation
     public int NumeroDeMaillot { get; set; }
 
     public int Salaire { get; set; }
+
+    public int IdJoueurs { get; set; }
+
+    public int IdEquipes { get; set; }
+
+    public virtual ICollection<Joueur> Joueurs { get; set; }
+    public virtual ICollection<Equipe> Equipes { get; set; }
+
+
+
+
+
 }

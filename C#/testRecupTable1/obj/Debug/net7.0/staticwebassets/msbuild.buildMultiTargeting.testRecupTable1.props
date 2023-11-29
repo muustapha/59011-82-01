@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\testRecupTable1.props" />
+</Project>

@@ -4,7 +4,7 @@ using API1.Models.data.Services;
 using API1.Models.Data;
 using API1.Models.Dtos;
 using AutoMapper;
-using Microsoft.AspNetCore.JsonPatch;   
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API_Joueurs2.Controllers

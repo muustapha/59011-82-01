@@ -16,4 +16,6 @@ public partial class Joueur
     public string Poste { get; set; } = null!;
 
     public string Nationalite { get; set; } = null!;
+
+    public virtual ICollection<Relation> Relations { get; set; }
 }
