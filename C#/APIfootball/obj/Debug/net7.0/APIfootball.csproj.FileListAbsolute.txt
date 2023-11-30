@@ -1,0 +1,7 @@
+U:\59011-82-01\C#\APIfootball\obj\Debug\net7.0\APIfootball.csproj.AssemblyReference.cache
+U:\59011-82-01\C#\APIfootball\obj\Debug\net7.0\APIfootball.GeneratedMSBuildEditorConfig.editorconfig
+U:\59011-82-01\C#\APIfootball\obj\Debug\net7.0\APIfootball.AssemblyInfoInputs.cache
+U:\59011-82-01\C#\APIfootball\obj\Debug\net7.0\APIfootball.AssemblyInfo.cs
+U:\59011-82-01\C#\APIfootball\obj\Debug\net7.0\APIfootball.csproj.CoreCompileInputs.cache
+U:\59011-82-01\C#\APIfootball\obj\Debug\net7.0\APIfootball.MvcApplicationPartsAssemblyInfo.cs
+U:\59011-82-01\C#\APIfootball\obj\Debug\net7.0\APIfootball.MvcApplicationPartsAssemblyInfo.cache
