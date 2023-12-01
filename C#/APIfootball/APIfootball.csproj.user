@@ -1,9 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
-    <ActiveDebugProfile>IIS Express</ActiveDebugProfile>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
-  </PropertyGroup>
-</Project>
+﻿public IEnumerable<Partita> GetAllPartitaAvecEquipe()
+{
+
+    return _context.Partita.Include("Equipe").ToList();
+}
+
+public Partita GetPartitaByIdAvecEquipe(int id)
+{
+    return _context.Partita.Include("Equipe").FirstOrDefault(obj => obj.IdPartita == id);
+}

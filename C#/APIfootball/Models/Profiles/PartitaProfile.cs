@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using static APIfootball.PartitaDTO;
 
 namespace APIfootball
 {

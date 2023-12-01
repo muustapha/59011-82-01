@@ -22,45 +22,25 @@ namespace APIfootball
 
             //GET api/Partita
             [HttpGet]
-            public ActionResult<IEnumerable<PartitaDTOAvecEquipe>> GetAllPartita()
+            public ActionResult<IEnumerable<PartitaDTOAvecEquipeEtArbitre>> GetAllPartita()
             {
                 IEnumerable<Partita> listePartita = _service.GetAllPartita();
-                return Ok(_mapper.Map<IEnumerable<PartitaDTOAvecEquipe>>(listePartita));
+                return Ok(_mapper.Map<IEnumerable<PartitaDTOAvecEquipeEtArbitre>>(listePartita));
             }
 
             //GET api/Partita/{i}
             [HttpGet("{id}", Name = "GetPartitaById")]
-            public ActionResult<PartitaDTOAvecEquipe> GetPartitaById(int id)
+            public ActionResult<PartitaDTOAvecEquipeEtArbitre> GetPartitaById(int id)
             {
                 Partita commandItem = _service.GetPartitaById(id);
                 if (commandItem != null)
                 {
-                    return Ok(_mapper.Map<PartitaDTOAvecEquipe>(commandItem));
+                    return Ok(_mapper.Map<PartitaDTOAvecEquipeEtArbitre>(commandItem));
                 }
                 return NotFound();
             }
 
-            //GET api/Partita
-            [HttpGet]
-            public ActionResult<IEnumerable<PartitaDTOAvecArbitre>> GetAllPartita()
-            {
-                IEnumerable<Partita> listePartita = _service.GetAllPartita();
-                return Ok(_mapper.Map<IEnumerable<PartitaDTOAvecArbitre>>(listePartita));
-            }
-
-            //GET api/Partita/{i}
-            [HttpGet("{id}", Name = "GetPartitaById")]
-            public ActionResult<PartitaDTOAvecArbitre> GetPartitaById(int id)
-            {
-                Partita commandItem = _service.GetPartitaById(id);
-                if (commandItem != null)
-                {
-                    return Ok(_mapper.Map<PartitaDTOAvecEquipe>(commandItem));
-                }
-                return NotFound();
-            }
-
-
+           
 
 
 

@@ -1,4 +1,5 @@
 ﻿using static APIfootball.ArbitreDTOcs;
+using static APIfootball.EquipesDTO;
 
 namespace APIfootball
 {
@@ -10,7 +11,13 @@ namespace APIfootball
             {
             }
 
-            public string PartitaName { get; set; }
+            public DateTime DateHeure { get; set; }
+
+            public string Ligue { get; set; } = null!;
+
+            public bool VideoAssistantReferees { get; set; }
+
+            public int Score { get; set; }
 
         }
 
@@ -20,7 +27,13 @@ namespace APIfootball
             {
             }
 
-            public string PartitaName { get; set; }
+            public DateTime DateHeure { get; set; }
+
+            public string Ligue { get; set; } = null!;
+
+            public bool VideoAssistantReferees { get; set; }
+
+            public int Score { get; set; }
         }
 
 
@@ -31,7 +44,13 @@ namespace APIfootball
                 Equipe = new HashSet<EquipeDTOOut>();
             }
 
-            public string PartitaName { get; set; }
+            public DateTime DateHeure { get; set; }
+
+            public string Ligue { get; set; } = null!;
+
+            public bool VideoAssistantReferees { get; set; }
+
+            public int Score { get; set; }
 
             public virtual ICollection<EquipeDTOOut> Equipe { get; set; }
         }
@@ -42,10 +61,34 @@ namespace APIfootball
                 Arbitre = new HashSet<ArbitreDTOOut>();
             }
 
-            public string PartitaName { get; set; }
+            public DateTime DateHeure { get; set; }
+
+            public string Ligue { get; set; } = null!;
+
+            public bool VideoAssistantReferees { get; set; }
+
+            public int Score { get; set; }
 
             public virtual ICollection<ArbitreDTOOut> Arbitre { get; set; }
         }   
-        
+        public class PartitaDTOAvecEquipeEtArbitre
+        {
+            public PartitaDTOAvecEquipeEtArbitre()
+            {
+                Equipe = new HashSet<EquipeDTOOut>();
+                Arbitre = new HashSet<ArbitreDTOOut>();
+            }
+
+            public DateTime DateHeure { get; set; }
+
+            public string Ligue { get; set; } = null!;
+
+            public bool VideoAssistantReferees { get; set; }
+
+            public int Score { get; set; }
+
+            public virtual ICollection<EquipeDTOOut> Equipe { get; set; }
+            public virtual ICollection<ArbitreDTOOut> Arbitre { get; set; } 
+        }
         }
     }

@@ -4,8 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace APIfootball
 {
-    public class RelationsController
-    {
+    
 
         [Route("api/[controller]")]
         [ApiController]
@@ -106,3 +105,4 @@ namespace APIfootball
 
         }
     }
+

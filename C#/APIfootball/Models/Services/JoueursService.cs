@@ -35,12 +35,12 @@ namespace APIfootball
 
         public IEnumerable<Joueur> GetAllJoueurs()
         {
-            return _context.Joueurs.Include("Relations.Equipe").ToList();
+            return _context.Joueurs.Include("Relation").ToList();
         }
 
         public Joueur GetJoueurById(int id)
         {
-            return _context.Joueurs.Include("Relations.Equipe").FirstOrDefault(obj => obj.IdJoueur == id);
+            return _context.Joueurs.Include("Relation").FirstOrDefault(obj => obj.IdJoueur == id);
         }
 
         public void UpdateJoueur(Joueur obj)

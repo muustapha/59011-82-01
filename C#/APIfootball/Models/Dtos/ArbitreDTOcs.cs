@@ -10,17 +10,31 @@ namespace APIfootball
             {
             }
 
-            public string ArbitreName { get; set; }
+            public string Nom { get; set; } = null!;
 
-        }
+            public string Prenom { get; set; } = null!;
+
+            public int Age { get; set; }
+
+            public string Poste { get; set; } = null!;
+
+            public int IdPartita { get; set; }
+
+            }
 
         public class ArbitreDTOOut
         {
             public ArbitreDTOOut()
             {
             }
+            public string Nom { get; set; } = null!;
 
-            public string ArbitreName { get; set; }
+            public string Prenom { get; set; } = null!;
+
+            public int Age { get; set; }
+
+            public string Poste { get; set; } = null!;
+
         }
 
 
@@ -31,7 +45,15 @@ namespace APIfootball
                 Partita = new HashSet<PartitaDTOOut>();
             }
 
-            public string ArbitreName { get; set; }
+            public string Nom { get; set; } = null!;
+
+            public string Prenom { get; set; } = null!;
+
+            public int Age { get; set; }
+
+            public string Poste { get; set; } = null!;
+
+            public int IdPartita { get; set; }
 
             public virtual ICollection<PartitaDTOOut> Partita { get; set; }
         }

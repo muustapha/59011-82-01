@@ -1,4 +1,5 @@
 ﻿using APIfootball.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace APIfootball
 {
@@ -39,7 +40,7 @@ namespace APIfootball
 
             public Relation GetRelationById(int id)
             {
-                return _context.Relations.Include("Equipe").Include("Joueur").FirstOrDefault(obj => obj.StudentCourseId == id);
+                return _context.Relations.Include("Equipe").Include("Joueur").FirstOrDefault(obj => obj.IdRelation == id);
             }
 
             public void UpdateRelation(Relation obj)

@@ -1,23 +1,23 @@
 ﻿using AutoMapper;
+
 namespace APIfootball
 {
     public class JoueursProfile : Profile
     {
 
-        public JoueurssProfile()
+        public JoueursProfile()
         {
 
-            CreateMap<Joueurs, JoueursDTOIn>();
-            CreateMap<JoueursDTOIn, Joueurs>();
+            CreateMap<Joueur, JoueurDTOIn>();
+            CreateMap<JoueurDTOIn, Joueur>();
 
-            CreateMap<Joueurs, JoueursDTOAvecEquipe>();
-            CreateMap<JoueursDTOAvecEquipe, Joueurs>();
+            
 
-            CreateMap<Joueurs, JoueursDTOOut>();
-            CreateMap<JoueursDTOOut, Joueurs>();
+            CreateMap<Joueur, JoueurDTOOut>();
+            CreateMap<JoueurDTOOut, Joueur>();
 
-            CreateMap<Joueurs, JoueursDTOAvecRelation>();
-            CreateMap<JoueursDTOAvecRelation, Joueurs>();
+            CreateMap<Joueur, JoueurDTOAvecRelation>();
+            CreateMap<JoueurDTOAvecRelation, Joueur>();
 
         }
     }

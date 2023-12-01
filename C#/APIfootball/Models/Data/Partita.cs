@@ -15,8 +15,7 @@ public partial class Partita
 
     public int Score { get; set; }
 
-
-    public virtual Arbitre Arbitre { get; set; }
-    public virtual Equipe Equipe { get; set; }
+    public virtual ICollection<Equipe> Equipes { get; set; }
+    public virtual ICollection<Arbitre> Arbitres { get; set; }
 
 }

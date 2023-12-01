@@ -36,13 +36,14 @@ namespace APIfootball
         public IEnumerable<Partita> GetAllPartita()
         {
 
-            return _context.Partita.Include("Arbitre").Include("Relation.Equipe").ToList();
+            return _context.Partita.Include("Arbitre").Include("Equipe").ToList();
         }
 
         public Partita GetPartitaById(int id)
         {
-            return _context.Partita.Include("Arbitre").Include("Relation.Equipe").FirstOrDefault(obj => obj.IdPartita == id);
+            return _context.Partita.Include("Arbitre").Include("Equipe").FirstOrDefault(obj => obj.IdPartita == id);
         }
+       
 
         public void UpdatePartita(Partita obj)
         {

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
+using static APIfootball.EquipesDTO;
 
 namespace APIfootball
 {
@@ -9,10 +10,10 @@ namespace APIfootball
         [ApiController]
         public class EquipesController : ControllerBase
         {
-            private readonly EquipesServices _service;
+            private readonly EquipesService _service;
             private readonly IMapper _mapper;
 
-            public EquipesController(EquipesServices service, IMapper mapper)
+            public EquipesController(EquipesService service, IMapper mapper)
             {
                 _service = service;
                 _mapper = mapper;
@@ -20,20 +21,20 @@ namespace APIfootball
 
             //GET api/Equipes
             [HttpGet]
-            public ActionResult<IEnumerable<EquipeDTOAvecPartitaEtArbitre>> GetAllEquipes()
+            public ActionResult<IEnumerable<EquipeDTOAvecPartitaEtJoueur>> GetAllEquipes()
             {
                 IEnumerable<Equipe> listeEquipes = _service.GetAllEquipes();
-                return Ok(_mapper.Map<IEnumerable<EquipeDTOAvecPartitaEtArbitre>>(listeEquipes));
+                return Ok(_mapper.Map<IEnumerable<EquipeDTOAvecPartitaEtJoueur>>(listeEquipes));
             }
 
             //GET api/Equipes/{i}
             [HttpGet("{id}", Name = "GetEquipeById")]
-            public ActionResult<EquipeDTOAvecPartitaEtArbitre> GetEquipeById(int id)
+            public ActionResult<EquipeDTOAvecPartitaEtJoueur> GetEquipeById(int id)
             {
-                Equipe commandItem = _service.GetEquipesById(id);
+                Equipe commandItem = _service.GetEquipeById(id);
                 if (commandItem != null)
                 {
-                    return Ok(_mapper.Map<EquipeDTOAvecPartitaEtArbitre>(commandItem));
+                    return Ok(_mapper.Map<EquipeDTOAvecPartitaEtJoueur>(commandItem));
                 }
                 return NotFound();
             }
@@ -49,7 +50,7 @@ namespace APIfootball
 
                 // sans l'id dans le DTOIn
                 Equipe newEquipe = _mapper.Map<Equipe>(obj);
-                _service.AddEquipes(newEquipe);
+                _service.AddEquipe(newEquipe);
                 return CreatedAtRoute(nameof(GetEquipeById), new { Id = newEquipe.IdEquipe }, newEquipe);
             }
 
@@ -57,13 +58,13 @@ namespace APIfootball
             [HttpPut("{id}")]
             public ActionResult UpdateEquipe(int id, EquipeDTOIn obj)
             {
-                Equipe objFromRepo = _service.GetEquipesById(id);
+                Equipe objFromRepo = _service.GetEquipeById(id);
                 if (objFromRepo == null)
                 {
                     return NotFound();
                 }
                 _mapper.Map(obj, objFromRepo);
-                _service.UpdateEquipes(objFromRepo);
+                _service.UpdateEquipe(objFromRepo);
                 return NoContent();
             }
 
@@ -77,7 +78,7 @@ namespace APIfootball
             [HttpPatch("{id}")]
             public ActionResult PartialEquipeUpdate(int id, JsonPatchDocument<Equipe> patchDoc)
             {
-                Equipe objFromRepo = _service.GetEquipesById(id);
+                Equipe objFromRepo = _service.GetEquipeById(id);
                 if (objFromRepo == null)
                 {
                     return NotFound();
@@ -89,7 +90,7 @@ namespace APIfootball
                     return ValidationProblem(ModelState);
                 }
                 _mapper.Map(objToPatch, objFromRepo);
-                _service.UpdateEquipes(objFromRepo);
+                _service.UpdateEquipe(objFromRepo);
                 return NoContent();
             }
 
@@ -97,12 +98,12 @@ namespace APIfootball
             [HttpDelete("{id}")]
             public ActionResult DeleteEquipe(int id)
             {
-                Equipe obj = _service.GetEquipesById(id);
+                Equipe obj = _service.GetEquipeById(id);
                 if (obj == null)
                 {
                     return NotFound();
                 }
-                _service.DeleteEquipes(obj);
+                _service.DeleteEquipe(obj);
                 return NoContent();
             }
 

@@ -1,14 +1,23 @@
 ﻿namespace APIfootball
 {
-    public class JoueurDTO
+    public class JoueurDTOIn
     {
 
         public JoueurDTOIn()
         {
         }
 
-        public string JoueurName { get; set; }
-        public string Description { get; set; }
+       
+
+        public string Nom { get; set; } = null!;
+
+        public string Prenom { get; set; } = null!;
+
+        public int Age { get; set; }
+
+        public string Poste { get; set; } = null!;
+
+        public string Nationalite { get; set; } = null!;
 
     }
 
@@ -18,16 +27,24 @@
         public JoueurDTOOut()
         {
         }
+        public string Nom { get; set; } = null!;
 
-        public string JoueurName { get; set; }
-        public string Description { get; set; }
+        public string Prenom { get; set; } = null!;
+
+        public int Age { get; set; }
+
+        public string Poste { get; set; } = null!;
+
+        public string Nationalite { get; set; } = null!;
+
+       
 
     }
 
 
-    public class JoueurDTOAvecStudentJoueur
+    public class JoueurDTOAvecRelation
     {
-        public JoueurDTOAvecStudentJoueur()
+        public JoueurDTOAvecRelation()
         {
             Relations = new HashSet<RelationDTOAvecEquipe>();
         }

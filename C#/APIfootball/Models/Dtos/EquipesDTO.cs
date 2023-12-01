@@ -1,55 +1,92 @@
-﻿namespace APIfootball
+﻿using static APIfootball.PartitaDTO;
+
+namespace APIfootball
 {
     public class EquipesDTO
     {
+        public class EquipeDTOIn
+        {
+            public EquipeDTOIn()
+            {
+            }
+                 
+            public string Nom { get; set; } = null!;
+
+            public string Ville { get; set; } = null!;
+
+            public string Pays { get; set; } = null!;
+
+            public string StadePrincipal { get; set; } = null!;
+
+            public string SiteWeb { get; set; } = null!;
+
+            public int IdPartita { get; set; }
+        }
+
+        public class EquipeDTOOut
+        {
+            public EquipeDTOOut()
+            {
+            }
+            public int IdEquipe { get; set; }
+
+            public string Nom { get; set; } = null!;
+
+            public string Ville { get; set; } = null!;
+
+            public string Pays { get; set; } = null!;
+
+            public string StadePrincipal { get; set; } = null!;
+
+            public string SiteWeb { get; set; } = null!;
+        }
     }
-    public EquipeDTOIn()
+    public class EquipeDTOAvecPartita
     {
+        public EquipeDTOAvecPartita()
+        {
+            
+        }
+
+        public string Nom { get; set; } = null!;
+
+        public string Ville { get; set; } = null!;
+
+        public string Pays { get; set; } = null!;
+
+        public string StadePrincipal { get; set; } = null!;
+
+        public string SiteWeb { get; set; } = null!;
+
+        
+
+        public virtual PartitaDTOOut Partita { get; set; }
     }
 
-    // les données présentes dans la tables uniquement
-    public string Name { get; set; }
-    public int IdPartita { get; set; }
+    public class EquipeDTOAvecPartitaEtJoueur
 
-}
-
-
-public class EquipeDTOOut
-{
-    public EquipeDTOOut()
     {
+        public EquipeDTOAvecPartitaEtJoueur()
+        {
+            Relation = new HashSet<RelationDTOAvecJoueurs>();
 
+        }
+
+        public string Nom { get; set; } = null!;
+
+        public string Ville { get; set; } = null!;
+
+        public string Pays { get; set; } = null!;
+
+        public string StadePrincipal { get; set; } = null!;
+
+        public string SiteWeb { get; set; } = null!;
+
+        public int Idpartita { get; set; }
+
+        public virtual PartitaDTOOut Partita { get; set; }
+        public virtual ICollection<RelationDTOAvecJoueurs> Relation { get; set; }
     }
-    // les données de la table sans les id et sans les clés etrangères
-    public string Name { get; set; }
-}
-
-public class EquipeDTOAvecPartita
-{
-    public EquipeDTOAvecPartita()
-    {
-    }
-    // les colonnes de la table sans les id
-    public string Name { get; set; }
-    public int IdPartita { get; set; }
-
-    // ajouter les données attachées
-    // ATTENTION il faut retourner un DTOOut
-    public virtual PartitaDTOOut Partita { get; set; }
-}
-
-public class EquipeDTOAvecPartitaEtCourses
-{
-    public EquipeDTOAvecPartitaEtCourses()
-    {
-        Relation = new HashSet<RelationDTOAvecCours>();
-    }
-
-    public string Name { get; set; }
-    public int Idpartita { get; set; }
-
-    public virtual PartitaDTOOut Partita { get; set; }
-    public virtual ICollection<RelationDTOAvecJoueur> Relation { get; set; }
 }
 
 
