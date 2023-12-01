@@ -106,6 +106,7 @@ public partial class footballDbContext : DbContext
                 .HasMaxLength(50)
                 .HasColumnName("ligue");
             entity.Property(e => e.Score).HasMaxLength(50);
+            entity.Property(e => e.VideoAssistance).HasColumnType("int(1)");
         });
 
         modelBuilder.Entity<Relation>(entity =>

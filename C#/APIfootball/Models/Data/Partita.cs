@@ -11,7 +11,7 @@ public partial class Partita
 
     public string Ligue { get; set; } = null!;
 
-    public bool VideoAssistantReferees { get; set; }
+    public bool VideoAssistance { get; set; }
 
     public int Score { get; set; }
 

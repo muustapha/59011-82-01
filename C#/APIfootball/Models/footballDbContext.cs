@@ -34,6 +34,8 @@ namespace APIfootball.Models
 
                 entity.ToTable("arbitres");
 
+                entity.HasIndex(e => e.IdPartita, "IdPartita");
+
                 entity.Property(e => e.IdArbitre)
                     .HasColumnType("int(11)")
                     .HasColumnName("idArbitre");
@@ -42,6 +44,10 @@ namespace APIfootball.Models
                 entity.Property(e => e.Nom).HasMaxLength(50);
                 entity.Property(e => e.Poste).HasMaxLength(50);
                 entity.Property(e => e.Prenom).HasMaxLength(50);
+
+                entity.HasOne(d => d.Partita).WithMany(p => p.Arbitres)
+                    .HasForeignKey(d => d.IdPartita)
+                    .HasConstraintName("arbitres_ibfk_1");
             });
 
             modelBuilder.Entity<Equipe>(entity =>
@@ -49,6 +55,8 @@ namespace APIfootball.Models
                 entity.HasKey(e => e.IdEquipe).HasName("PRIMARY");
 
                 entity.ToTable("equipes");
+
+                entity.HasIndex(e => e.IdPartita, "IdPartita");
 
                 entity.Property(e => e.IdEquipe).HasColumnType("int(11)");
                 entity.Property(e => e.IdPartita).HasColumnType("int(11)");
@@ -59,6 +67,10 @@ namespace APIfootball.Models
                     .IsFixedLength();
                 entity.Property(e => e.StadePrincipal).HasMaxLength(50);
                 entity.Property(e => e.Ville).HasMaxLength(50);
+
+                entity.HasOne(d => d.Partita).WithMany(p => p.Equipes)
+                    .HasForeignKey(d => d.IdPartita)
+                    .HasConstraintName("equipes_ibfk_1");
             });
 
             modelBuilder.Entity<Joueur>(entity =>
@@ -90,10 +102,8 @@ namespace APIfootball.Models
                 entity.Property(e => e.Ligue)
                     .HasMaxLength(50)
                     .HasColumnName("ligue");
-                entity.Property(e => e.Score)
-                .HasMaxLength(50)
-                    .HasColumnName("score");
-    
+                entity.Property(e => e.Score).HasMaxLength(50); 
+                entity.Property(e => e.VideoAssistance).HasColumnType("int(1)");
             });
 
             modelBuilder.Entity<Relation>(entity =>
@@ -102,12 +112,24 @@ namespace APIfootball.Models
 
                 entity.ToTable("relation");
 
+                entity.HasIndex(e => new { e.IdEquipe, e.IdJoueur }, "IdEquipe");
+
+                entity.HasIndex(e => e.IdJoueur, "IdJoueur");
+
                 entity.Property(e => e.IdRelation).HasColumnType("int(11)");
                 entity.Property(e => e.DateDebutContract).HasColumnType("date");
                 entity.Property(e => e.IdEquipe).HasColumnType("int(11)");
                 entity.Property(e => e.IdJoueur).HasColumnType("int(11)");
                 entity.Property(e => e.NumeroDeMaillot).HasColumnType("int(11)");
                 entity.Property(e => e.Salaire).HasColumnType("int(11)");
+
+                entity.HasOne(d => d.Equipe).WithMany(p => p.Relation)
+                    .HasForeignKey(d => d.IdEquipe)
+                    .HasConstraintName("relation_ibfk_2");
+
+                entity.HasOne(d => d.Joueur).WithMany(p => p.Relation)
+                    .HasForeignKey(d => d.IdJoueur)
+                    .HasConstraintName("relation_ibfk_1");
             });
 
             OnModelCreatingPartial(modelBuilder);

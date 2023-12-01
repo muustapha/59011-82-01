@@ -34,7 +34,7 @@
     {
         public JoueurDTOAvecRelation()
         {
-            Relations = new HashSet<RelationDTOAvecEquipe>();
+            Relation = new HashSet<RelationDTOAvecEquipe>();
         }
         public int IdJoueur { get; set; }
 
@@ -48,6 +48,6 @@
 
         public string Nationalite { get; set; } = null!;
 
-        public virtual ICollection<RelationDTOAvecEquipe> Relations { get; set; }
+        public virtual ICollection<RelationDTOAvecEquipe> Relation { get; set; }
     }
 }

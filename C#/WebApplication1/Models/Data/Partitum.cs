@@ -11,7 +11,7 @@ public partial class Partitum
 
     public string Ligue { get; set; } = null!;
 
-    public bool VideoAssitance { get; set; }
+    public int VideoAssistance { get; set; }
 
     public string Score { get; set; } = null!;
 

@@ -18,6 +18,9 @@ namespace APIfootball
             CreateMap<Partita, PartitaDTOAvecEquipe>();
             CreateMap<PartitaDTOAvecEquipe, Partita>();
 
+            CreateMap<Partita, PartitaDTOAvecEquipeEtArbitre>();
+            CreateMap<PartitaDTOAvecEquipeEtArbitre, Partita>();
+
             CreateMap<Partita, PartitaDTOOut>();
             CreateMap<PartitaDTOOut, Partita>();
 

@@ -12,7 +12,7 @@ namespace APIfootball
 
             public string Ligue { get; set; } = null!;
 
-            public bool VideoAssistantReferees { get; set; }
+            public bool VideoAssistance { get; set; }
 
             public int Score { get; set; }
 
@@ -24,7 +24,7 @@ namespace APIfootball
 
             public string Ligue { get; set; } = null!;
 
-            public bool VideoAssistantReferees { get; set; }
+            public bool VideoAssistance { get; set; }
 
             public int Score { get; set; }
         }
@@ -34,54 +34,54 @@ namespace APIfootball
         {
             public PartitaDTOAvecEquipe()
             {
-                Equipe = new HashSet<EquipeDTOOut>();
+                Equipes = new HashSet<EquipeDTOOut>();
             }
 
             public DateTime DateHeure { get; set; }
 
             public string Ligue { get; set; } = null!;
 
-            public bool VideoAssistantReferees { get; set; }
+            public bool VideoAssistance { get; set; }
 
             public int Score { get; set; }
 
-            public virtual ICollection<EquipeDTOOut> Equipe { get; set; }
+            public virtual ICollection<EquipeDTOOut> Equipes { get; set; }
         }
         public class PartitaDTOAvecArbitre
         {
             public PartitaDTOAvecArbitre()
             {
-                Arbitre = new HashSet<ArbitreDTOOut>();
+                Arbitres = new HashSet<ArbitreDTOOut>();
             }
 
             public DateTime DateHeure { get; set; }
 
             public string Ligue { get; set; } = null!;
 
-            public bool VideoAssistantReferees { get; set; }
+            public bool VideoAssistance { get; set; }
 
             public int Score { get; set; }
 
-            public virtual ICollection<ArbitreDTOOut> Arbitre { get; set; }
+            public virtual ICollection<ArbitreDTOOut> Arbitres { get; set; }
         }   
         public class PartitaDTOAvecEquipeEtArbitre
         {
             public PartitaDTOAvecEquipeEtArbitre()
             {
-                Equipe = new HashSet<EquipeDTOOut>();
-                Arbitre = new HashSet<ArbitreDTOOut>();
+                Equipes = new HashSet<EquipeDTOOut>();
+                Arbitres = new HashSet<ArbitreDTOOut>();
             }
 
             public DateTime DateHeure { get; set; }
 
             public string Ligue { get; set; } = null!;
 
-            public bool VideoAssistantReferees { get; set; }
+            public bool VideoAssistance { get; set; }
 
             public int Score { get; set; }
 
-            public virtual ICollection<EquipeDTOOut> Equipe { get; set; }
-            public virtual ICollection<ArbitreDTOOut> Arbitre { get; set; } 
+            public virtual ICollection<EquipeDTOOut> Equipes { get; set; }
+            public virtual ICollection<ArbitreDTOOut> Arbitres { get; set; } 
         }
         }
     }
