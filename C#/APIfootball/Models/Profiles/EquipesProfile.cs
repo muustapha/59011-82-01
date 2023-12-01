@@ -19,8 +19,8 @@ namespace APIfootball
         CreateMap<Equipe, EquipeDTOAvecPartita>();
         CreateMap<EquipeDTOAvecPartita, Equipe>();
 
-        CreateMap<Equipe, EquipeDTORelationAvecJoueur>();
-            CreateMap<EquipeDTORelationAvecJoueur, Equipe>();
+        CreateMap<Equipe, EquipeDTOAvecPartitaEtRelation>();
+            CreateMap<EquipeDTOAvecPartitaEtRelation, Equipe>();
 
     }
 }

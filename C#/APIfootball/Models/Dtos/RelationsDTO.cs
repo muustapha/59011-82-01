@@ -35,17 +35,51 @@ namespace APIfootball
     }
     public class RelationDTOAvecEquipe
     {
+        public int IdRelation { get; set; }
+
+        public int IdEquipe { get; set; }
+
+        public int IdJoueur { get; set; }
+
+        public DateTime DateDebutContract { get; set; }
+
+        public int NumeroDeMaillot { get; set; }
+
+        public int Salaire { get; set; }
         public virtual EquipeDTOOut Equipe { get; set; }
     }
 
     public class RelationDTOAvecEquipeEtJoueur
     {
-        public virtual Joueur Joueur { get; set; }
-        public virtual Equipe Equipe { get; set; }
+        public int IdRelation { get; set; }
+
+        public int IdEquipe { get; set; }
+
+        public int IdJoueur { get; set; }
+
+        public DateTime DateDebutContract { get; set; }
+
+        public int NumeroDeMaillot { get; set; }
+
+        public int Salaire { get; set; }
+        public virtual JoueurDTOOut Joueur { get; set; }
+        public virtual EquipeDTOOut Equipe { get; set; }
     }
 
     public class RelationDTOAvecJoueurs
     {
+        public int IdRelation { get; set; }
+
+        public int IdEquipe { get; set; }
+
+        public int IdJoueur { get; set; }
+
+        public DateTime DateDebutContract { get; set; }
+
+        public int NumeroDeMaillot { get; set; }
+
+        public int Salaire { get; set; }
+
         public virtual JoueurDTOOut Joueur { get; set; }
     }
 }

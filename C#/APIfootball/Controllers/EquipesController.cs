@@ -21,20 +21,20 @@ namespace APIfootball
 
             //GET api/Equipes
             [HttpGet]
-            public ActionResult<IEnumerable<EquipeDTOAvecPartitaEtJoueur>> GetAllEquipes()
+            public ActionResult<IEnumerable<EquipeDTOAvecPartitaEtRelation>> GetAllEquipes()
             {
                 IEnumerable<Equipe> listeEquipes = _service.GetAllEquipes();
-                return Ok(_mapper.Map<IEnumerable<EquipeDTOAvecPartitaEtJoueur>>(listeEquipes));
+                return Ok(_mapper.Map<IEnumerable<EquipeDTOAvecPartitaEtRelation>>(listeEquipes));
             }
 
             //GET api/Equipes/{i}
             [HttpGet("{id}", Name = "GetEquipeById")]
-            public ActionResult<EquipeDTOAvecPartitaEtJoueur> GetEquipeById(int id)
+            public ActionResult<EquipeDTOAvecPartitaEtRelation> GetEquipeById(int id)
             {
                 Equipe commandItem = _service.GetEquipeById(id);
                 if (commandItem != null)
                 {
-                    return Ok(_mapper.Map<EquipeDTOAvecPartitaEtJoueur>(commandItem));
+                    return Ok(_mapper.Map<EquipeDTOAvecPartitaEtRelation>(commandItem));
                 }
                 return NotFound();
             }

@@ -6,9 +6,6 @@ namespace APIfootball
     {
         public class EquipeDTOIn
         {
-            public EquipeDTOIn()
-            {
-            }
                  
             public string Nom { get; set; } = null!;
 
@@ -25,9 +22,6 @@ namespace APIfootball
 
         public class EquipeDTOOut
         {
-            public EquipeDTOOut()
-            {
-            }
             public int IdEquipe { get; set; }
 
             public string Nom { get; set; } = null!;
@@ -43,11 +37,6 @@ namespace APIfootball
     }
     public class EquipeDTOAvecPartita
     {
-        public EquipeDTOAvecPartita()
-        {
-            
-        }
-
         public string Nom { get; set; } = null!;
 
         public string Ville { get; set; } = null!;
@@ -58,15 +47,13 @@ namespace APIfootball
 
         public string SiteWeb { get; set; } = null!;
 
-        
-
         public virtual PartitaDTOOut Partita { get; set; }
     }
 
-    public class EquipeDTOAvecPartitaEtJoueur
+    public class EquipeDTOAvecPartitaEtRelation
 
     {
-        public EquipeDTOAvecPartitaEtJoueur()
+        public EquipeDTOAvecPartitaEtRelation()
         {
             Relation = new HashSet<RelationDTOAvecJoueurs>();
 

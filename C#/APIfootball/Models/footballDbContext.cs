@@ -89,7 +89,7 @@ namespace APIfootball.Models
                 entity.Property(e => e.DateHeure).HasMaxLength(6);
                 entity.Property(e => e.Ligue)
                     .HasMaxLength(50)
-                    .HasColumnName("score");
+                    .HasColumnName("ligue");
                 entity.Property(e => e.Score)
                 .HasMaxLength(50)
                     .HasColumnName("score");

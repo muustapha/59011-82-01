@@ -6,9 +6,7 @@ namespace APIfootball
     {
         public class ArbitreDTOIn
         {
-            public ArbitreDTOIn()
-            {
-            }
+            
 
             public string Nom { get; set; } = null!;
 
@@ -40,11 +38,6 @@ namespace APIfootball
 
         public class ArbitreDTOAvecPartita
         {
-            public ArbitreDTOAvecPartita()
-            {
-                Partita = new HashSet<PartitaDTOOut>();
-            }
-
             public string Nom { get; set; } = null!;
 
             public string Prenom { get; set; } = null!;
@@ -55,7 +48,7 @@ namespace APIfootball
 
             public int IdPartita { get; set; }
 
-            public virtual ICollection<PartitaDTOOut> Partita { get; set; }
+            public virtual PartitaDTOOut Partita { get; set; }
         }
     }
 }

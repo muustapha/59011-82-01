@@ -7,9 +7,6 @@ namespace APIfootball
     {
         public class PartitaDTOIn
         {
-            public PartitaDTOIn()
-            {
-            }
 
             public DateTime DateHeure { get; set; }
 
@@ -23,10 +20,6 @@ namespace APIfootball
 
         public class PartitaDTOOut
         {
-            public PartitaDTOOut()
-            {
-            }
-
             public DateTime DateHeure { get; set; }
 
             public string Ligue { get; set; } = null!;

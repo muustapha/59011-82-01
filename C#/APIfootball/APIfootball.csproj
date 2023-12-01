@@ -4,7 +4,7 @@
 		<TargetFramework>net7.0</TargetFramework>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
-		<RootNamespace>Tables_1_vers_plusieurs</RootNamespace>
+		<RootNamespace>APIfootball</RootNamespace>
 	</PropertyGroup>
 
 	<ItemGroup>
