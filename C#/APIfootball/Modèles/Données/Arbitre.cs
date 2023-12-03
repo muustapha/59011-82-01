@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace APIfootball;
+namespace APIfootball.Modèles.Données;
 
 public partial class Arbitre
 {
@@ -15,5 +15,5 @@ public partial class Arbitre
 
     public string Poste { get; set; } = null!;
 
-
+    public virtual ICollection<Arbitrespartitum> Arbitrespartita { get; set; } = new List<Arbitrespartitum>();
 }

@@ -1,4 +1,4 @@
-﻿using static APIfootball.PartitaDTO;
+﻿using static APIfootball.ArbitresPartitaDTO;
 
 namespace APIfootball
 {
@@ -16,7 +16,7 @@ namespace APIfootball
 
             public string Poste { get; set; } = null!;
 
-            public int IdPartita { get; set; }
+          
 
             }
 
@@ -36,8 +36,14 @@ namespace APIfootball
         }
 
 
-        public class ArbitreDTOAvecPartita
+        public class ArbitreDTOAvecArbitresPartita
         {
+            public CourseDTOAvecArbitresPartita()
+            {
+                ArbitresPartita = new HashSet<ArbitresPartitaDTOAvecEquipe>();
+            }
+
+
             public string Nom { get; set; } = null!;
 
             public string Prenom { get; set; } = null!;
@@ -46,9 +52,9 @@ namespace APIfootball
 
             public string Poste { get; set; } = null!;
 
-            public int IdPartita { get; set; }
+       
 
-            public virtual PartitaDTOOut Partita { get; set; }
+            public virtual ArbitresPartitaDTOOut ArbitresPartita { get; set; }
         }
     }
 }

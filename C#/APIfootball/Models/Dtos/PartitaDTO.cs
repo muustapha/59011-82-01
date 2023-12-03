@@ -14,7 +14,7 @@ namespace APIfootball
 
             public bool VideoAssistance { get; set; }
 
-            public int Score { get; set; }
+            public string Score { get; set; }
 
         }
 
@@ -26,7 +26,7 @@ namespace APIfootball
 
             public bool VideoAssistance { get; set; }
 
-            public int Score { get; set; }
+            public string Score { get; set; }
         }
 
 
@@ -43,15 +43,15 @@ namespace APIfootball
 
             public bool VideoAssistance { get; set; }
 
-            public int Score { get; set; }
+            public string Score { get; set; }
 
             public virtual ICollection<EquipeDTOOut> Equipes { get; set; }
         }
-        public class PartitaDTOAvecArbitre
+        public class PartitaDTOAvecArbitresPartita
         {
-            public PartitaDTOAvecArbitre()
+            public PartitaDTOAvecArbitresPartita()
             {
-                Arbitres = new HashSet<ArbitreDTOOut>();
+                ArbitresPartita = new HashSet<ArbitreDTOOut>();
             }
 
             public DateTime DateHeure { get; set; }
@@ -60,16 +60,16 @@ namespace APIfootball
 
             public bool VideoAssistance { get; set; }
 
-            public int Score { get; set; }
+            public string Score { get; set; }
 
-            public virtual ICollection<ArbitreDTOOut> Arbitres { get; set; }
+            public virtual ICollection<ArbitresPartitaDTOOut> Arbitres { get; set; }
         }   
-        public class PartitaDTOAvecEquipeEtArbitre
+        public class PartitaDTOAvecEquipeEtArbitresPartita
         {
-            public PartitaDTOAvecEquipeEtArbitre()
+            public PartitaDTOAvecEquipeEtArbitresPartita()
             {
                 Equipes = new HashSet<EquipeDTOOut>();
-                Arbitres = new HashSet<ArbitreDTOOut>();
+                Arbitres = new HashSet<ArbitresPartitaDTOOut>();
             }
 
             public DateTime DateHeure { get; set; }
@@ -78,10 +78,10 @@ namespace APIfootball
 
             public bool VideoAssistance { get; set; }
 
-            public int Score { get; set; }
+            public string Score { get; set; }
 
             public virtual ICollection<EquipeDTOOut> Equipes { get; set; }
-            public virtual ICollection<ArbitreDTOOut> Arbitres { get; set; } 
+            public virtual ICollection<ArbitresPartitaDTOOut> ArbitresPartita { get; set; } 
         }
         }
     }

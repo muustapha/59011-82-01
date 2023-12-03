@@ -11,9 +11,9 @@ public partial class Partita
 
     public string Ligue { get; set; } = null!;
 
-    public bool VideoAssistance { get; set; }
+    public bool VideoAssitance { get; set; }
 
-    public int Score { get; set; }
+    public string Score { get; set; }
 
     public virtual ICollection<Equipe> Equipes { get; set; }
     public virtual ICollection<Arbitre> Arbitres { get; set; }
