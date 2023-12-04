@@ -1,5 +1,6 @@
-﻿using static APIfootball.ArbitreDTOcs;
+﻿using static APIfootball.ArbitreDTO;
 using static APIfootball.EquipesDTO;
+using static APIfootball.Models.Dtos.ArbitresPartitaDTO;
 
 namespace APIfootball
 {

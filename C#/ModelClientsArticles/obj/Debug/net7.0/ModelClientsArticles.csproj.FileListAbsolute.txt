@@ -1,0 +1,9 @@
+U:\59011-82-01\C#\ModelClientsArticles\obj\Debug\net7.0\ModelClientsArticles.csproj.AssemblyReference.cache
+U:\59011-82-01\C#\ModelClientsArticles\obj\Debug\net7.0\ModelClientsArticles.GeneratedMSBuildEditorConfig.editorconfig
+U:\59011-82-01\C#\ModelClientsArticles\obj\Debug\net7.0\ModelClientsArticles.AssemblyInfoInputs.cache
+U:\59011-82-01\C#\ModelClientsArticles\obj\Debug\net7.0\ModelClientsArticles.AssemblyInfo.cs
+U:\59011-82-01\C#\ModelClientsArticles\obj\Debug\net7.0\ModelClientsArticles.csproj.CoreCompileInputs.cache
+U:\59011-82-01\C#\ModelClientsArticles\obj\Debug\net7.0\ModelClientsArticles.MvcApplicationPartsAssemblyInfo.cs
+U:\59011-82-01\C#\ModelClientsArticles\obj\Debug\net7.0\ModelClientsArticles.MvcApplicationPartsAssemblyInfo.cache
+U:\59011-82-01\C#\ModelClientsArticles\obj\Debug\net7.0\ModelClientsArticles.RazorAssemblyInfo.cache
+U:\59011-82-01\C#\ModelClientsArticles\obj\Debug\net7.0\ModelClientsArticles.RazorAssemblyInfo.cs

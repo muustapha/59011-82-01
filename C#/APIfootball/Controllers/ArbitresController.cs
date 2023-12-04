@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using static APIfootball.ArbitreDTOcs;
+using static APIfootball.ArbitreDTO;
 
 namespace APIfootball
 {

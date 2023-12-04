@@ -17,17 +17,17 @@
             {
                 throw new ArgumentNullException(nameof(obj));
             }
-            _context.ArbitrePartita.Add(obj);
+            _context.ArbitresPartita.Add(obj);
             _context.SaveChanges();
         }
 
-        public void DeleteArbitrePartita(ArbitrePartita obj)
+        public void DeleteArbitrePartita(ArbitresPartita obj)
         {
             if (obj == null)
             {
                 throw new ArgumentNullException(nameof(obj));
             }
-            _context.ArbitrePartita.Remove(obj);
+            _context.ArbitresPartita.Remove(obj);
             _context.SaveChanges();
         }
 

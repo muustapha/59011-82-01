@@ -2,7 +2,7 @@ DROP DATABASE IF EXISTS `footballDb`;
 
 -- Créer la base de données
 
-CR
+
 CREATE DATABASE `footballDb`;
 
 
@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `arbitres` (
   `Age` int NOT NULL,
   `Poste` varchar(50) NOT NULL,
   PRIMARY KEY (`idArbitre`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `arbitres`
@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS `arbitrespartita` (
   PRIMARY KEY (`idArbitresPartita`),
   KEY `idPartita` (`idPartita`),
   KEY `idArbitre` (`idArbitres`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `arbitrespartita`
@@ -58,10 +58,7 @@ INSERT INTO `arbitrespartita` (`idArbitresPartita`, `idPartita`, `idArbitres`) V
 (1, 1, 1),
 (2, 2, 2),
 (3, 3, 3),
-(4, 4, 1),
-(5, 5, 2),
-(6, 6, 3),
-(7, 7, 1);
+
 
 -- --------------------------------------------------------
 
@@ -69,8 +66,8 @@ INSERT INTO `arbitrespartita` (`idArbitresPartita`, `idPartita`, `idArbitres`) V
 -- Structure de la table `equipes`
 --
 
-DROP TABLE IF EXISTS `equipes`;
-CREATE TABLE IF NOT EXISTS `equipes` (
+DROP TABLE IF EXISTS `Equipes`;
+CREATE TABLE IF NOT EXISTS `Equipes` (
   `IdEquipe` int NOT NULL AUTO_INCREMENT,
   `Nom` varchar(50) NOT NULL,
   `Ville` varchar(50) NOT NULL,
@@ -80,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `equipes` (
   `IdPartita` int NOT NULL,
   PRIMARY KEY (`IdEquipe`),
   KEY `IdPartita` (`IdPartita`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `equipes`
@@ -96,6 +93,28 @@ INSERT INTO `equipes` (`IdEquipe`, `Nom`, `Ville`, `Pays`, `StadePrincipal`, `Si
 (7, 'Al-Nassr', 'Riyad', 'Arabie saoudite', 'Stade Roi Fahd', 'https://www.alnassrclub.com', 4);
 
 -- --------------------------------------------------------
+DROP TABLE IF EXISTS `Equipespartita`;
+CREATE TABLE IF NOT EXISTS `Equipespartita` (
+  `idEquipesPartita` int NOT NULL AUTO_INCREMENT,
+  `idPartita` int NOT NULL,
+  `idEquipe` int NOT NULL,
+  PRIMARY KEY (`idEquipesPartita`),
+  KEY `idPartita` (`idPartita`),
+  KEY `idEquipes` (`idEquipes`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `arbitrespartita`
+--
+
+INSERT INTO `Equipeespartita` (`idEquipesPartita`, `idPartita`, `idEquipes`) VALUES
+(1, 1, 1),
+(1, 1, 4),
+(2, 2, 2),
+(2, 2, 5),
+(3, 3, 3),
+(3, 3, 6),
+
 
 --
 -- Structure de la table `joueurs`
@@ -110,7 +129,7 @@ CREATE TABLE IF NOT EXISTS `joueurs` (
   `Poste` varchar(50) NOT NULL,
   `nationalite` varchar(50) NOT NULL,
   PRIMARY KEY (`idJoueur`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `joueurs`
@@ -150,7 +169,7 @@ CREATE TABLE IF NOT EXISTS `partita` (
   `VideoAssitance` tinyint(1) NOT NULL,
   `Score` varchar(50) NOT NULL,
   PRIMARY KEY (`IdPartita`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `partita`
@@ -182,7 +201,7 @@ CREATE TABLE IF NOT EXISTS `relation` (
   PRIMARY KEY (`IdRelation`),
   KEY `IdEquipe` (`IdEquipe`,`IdJoueur`),
   KEY `IdJoueur` (`IdJoueur`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `relation`
@@ -218,6 +237,10 @@ ALTER TABLE `arbitrespartita`
   ADD CONSTRAINT `fk_arbitre_partita_arbitre` FOREIGN KEY (`idArbitres`) REFERENCES `arbitres` (`idArbitre`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_arbitre_partita_partita` FOREIGN KEY (`idPartita`) REFERENCES `partita` (`IdPartita`) ON DELETE CASCADE ON UPDATE CASCADE;
 
+ALTER TABLE `Equipespartita`
+  ADD CONSTRAINT `fk_Equipe_partita_Equipe.` FOREIGN KEY (`idEquipes`) REFERENCES `Equipes` (`idEquipe`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_Equipe_partita_partita` FOREIGN KEY (`idPartita`) REFERENCES `partita` (`IdPartita`) ON DELETE CASCADE ON UPDATE CASCADE;
+
 --
 -- Contraintes pour la table `equipes`
 --
@@ -230,8 +253,3 @@ ALTER TABLE `equipes`
 ALTER TABLE `relation`
   ADD CONSTRAINT `relation_ibfk_1` FOREIGN KEY (`IdJoueur`) REFERENCES `joueurs` (`idJoueur`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `relation_ibfk_2` FOREIGN KEY (`IdEquipe`) REFERENCES `equipes` (`IdEquipe`) ON DELETE CASCADE ON UPDATE CASCADE;
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
