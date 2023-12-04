@@ -1,28 +1,67 @@
-DROP DATABASE [IF EXISTS] footballDb;
-CREATE DATABASE IF NOT EXISTS `footballDb`;
-USE `footballDb`;
+DROP DATABASE IF EXISTS `footballDb`;
 
+-- Créer la base de données
+
+CR
+CREATE DATABASE `footballDb`;
+
+
+USE `footballDb`;
+--
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `arbitres`
+--
 
 DROP TABLE IF EXISTS `arbitres`;
 CREATE TABLE IF NOT EXISTS `arbitres` (
-  `idArbitre` int(11) NOT NULL AUTO_INCREMENT,
+  `idArbitre` int NOT NULL AUTO_INCREMENT,
   `Nom` varchar(50) NOT NULL,
   `Prenom` varchar(50) NOT NULL,
-  `Age` int(11) NOT NULL,
+  `Age` int NOT NULL,
   `Poste` varchar(50) NOT NULL,
-  `IdPartita` int(11) NOT NULL,
-  PRIMARY KEY (`idArbitre`),
-  KEY `IdPartita` (`IdPartita`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+  PRIMARY KEY (`idArbitre`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `arbitres`
 --
 
-INSERT INTO `arbitres` (`idArbitre`, `Nom`, `Prenom`, `Age`, `Poste`, `IdPartita`) VALUES
-(1, 'Smith', 'John', 42, 'Arbitre principal', 2),
-(2, 'Garcia', 'Maria', 30, 'Arbitre assistant', 1),
-(3, 'Müller', 'Hans', 38, 'Arbitre principal', 3);
+INSERT INTO `arbitres` (`idArbitre`, `Nom`, `Prenom`, `Age`, `Poste`) VALUES
+(1, 'Smith', 'John', 42, 'Arbitre principal'),
+(2, 'Garcia', 'Maria', 30, 'Arbitre assistant'),
+(3, 'Müller', 'Hans', 38, 'Arbitre principal');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `arbitrespartita`
+--
+
+DROP TABLE IF EXISTS `arbitrespartita`;
+CREATE TABLE IF NOT EXISTS `arbitrespartita` (
+  `idArbitresPartita` int NOT NULL AUTO_INCREMENT,
+  `idPartita` int NOT NULL,
+  `idArbitres` int NOT NULL,
+  PRIMARY KEY (`idArbitresPartita`),
+  KEY `idPartita` (`idPartita`),
+  KEY `idArbitre` (`idArbitres`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `arbitrespartita`
+--
+
+INSERT INTO `arbitrespartita` (`idArbitresPartita`, `idPartita`, `idArbitres`) VALUES
+(1, 1, 1),
+(2, 2, 2),
+(3, 3, 3),
+(4, 4, 1),
+(5, 5, 2),
+(6, 6, 3),
+(7, 7, 1);
 
 -- --------------------------------------------------------
 
@@ -32,16 +71,16 @@ INSERT INTO `arbitres` (`idArbitre`, `Nom`, `Prenom`, `Age`, `Poste`, `IdPartita
 
 DROP TABLE IF EXISTS `equipes`;
 CREATE TABLE IF NOT EXISTS `equipes` (
-  `IdEquipe` int(11) NOT NULL AUTO_INCREMENT,
+  `IdEquipe` int NOT NULL AUTO_INCREMENT,
   `Nom` varchar(50) NOT NULL,
   `Ville` varchar(50) NOT NULL,
   `Pays` varchar(50) NOT NULL,
   `StadePrincipal` varchar(50) NOT NULL,
   `SiteWeb` char(50) NOT NULL,
-  `IdPartita` int(11) NOT NULL,
+  `IdPartita` int NOT NULL,
   PRIMARY KEY (`IdEquipe`),
   KEY `IdPartita` (`IdPartita`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `equipes`
@@ -64,14 +103,14 @@ INSERT INTO `equipes` (`IdEquipe`, `Nom`, `Ville`, `Pays`, `StadePrincipal`, `Si
 
 DROP TABLE IF EXISTS `joueurs`;
 CREATE TABLE IF NOT EXISTS `joueurs` (
-  `idJoueur` int(11) NOT NULL AUTO_INCREMENT,
+  `idJoueur` int NOT NULL AUTO_INCREMENT,
   `Nom` varchar(50) NOT NULL,
   `Prenom` varchar(50) NOT NULL,
-  `Age` int(11) NOT NULL,
+  `Age` int NOT NULL,
   `Poste` varchar(50) NOT NULL,
   `nationalite` varchar(50) NOT NULL,
   PRIMARY KEY (`idJoueur`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `joueurs`
@@ -105,26 +144,26 @@ INSERT INTO `joueurs` (`idJoueur`, `Nom`, `Prenom`, `Age`, `Poste`, `nationalite
 
 DROP TABLE IF EXISTS `partita`;
 CREATE TABLE IF NOT EXISTS `partita` (
-  `IdPartita` int(11) NOT NULL AUTO_INCREMENT,
+  `IdPartita` int NOT NULL AUTO_INCREMENT,
   `DateHeure` datetime(6) NOT NULL,
   `ligue` varchar(50) NOT NULL,
   `VideoAssitance` tinyint(1) NOT NULL,
   `Score` varchar(50) NOT NULL,
   PRIMARY KEY (`IdPartita`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `partita`
 --
 
 INSERT INTO `partita` (`IdPartita`, `DateHeure`, `ligue`, `VideoAssitance`, `Score`) VALUES
-(1, '2023-11-28 21:00:00.000000', 'Championleague', 1, '0'),
-(2, '2023-11-28 21:00:00.000000', 'Championleague', 1, '2'),
-(3, '2023-11-29 21:00:00.000000', 'Championleague', 1, '-1'),
-(4, '2023-11-29 21:00:00.000000', 'Championleague', 1, '6'),
-(5, '2023-12-13 21:00:00.000000', 'Championleague', 1, '0'),
-(6, '2023-12-13 21:00:00.000000', 'Championleague', 1, '-3'),
-(7, '2023-12-12 21:00:00.000000', 'Championleague', 1, '0');
+(1, '2023-11-28 21:00:00.000000', 'Championleague', 1, '0-2'),
+(2, '2023-11-28 21:00:00.000000', 'Championleague', 1, '3-2'),
+(3, '2023-11-29 21:00:00.000000', 'Championleague', 1, '1-1'),
+(4, '2023-11-29 21:00:00.000000', 'Championleague', 1, '2-1'),
+(5, '2023-12-13 21:00:00.000000', 'Championleague', 1, '2-2'),
+(6, '2023-12-13 21:00:00.000000', 'Championleague', 1, '3-3'),
+(7, '2023-12-12 21:00:00.000000', 'Championleague', 1, '1-0');
 
 -- --------------------------------------------------------
 
@@ -134,16 +173,16 @@ INSERT INTO `partita` (`IdPartita`, `DateHeure`, `ligue`, `VideoAssitance`, `Sco
 
 DROP TABLE IF EXISTS `relation`;
 CREATE TABLE IF NOT EXISTS `relation` (
-  `IdRelation` int(11) NOT NULL AUTO_INCREMENT,
-  `IdEquipe` int(11) NOT NULL,
-  `IdJoueur` int(11) NOT NULL,
+  `IdRelation` int NOT NULL AUTO_INCREMENT,
+  `IdEquipe` int NOT NULL,
+  `IdJoueur` int NOT NULL,
   `DateDebutContract` date NOT NULL,
-  `NumeroDeMaillot` int(11) NOT NULL,
-  `Salaire` int(11) NOT NULL,
+  `NumeroDeMaillot` int NOT NULL,
+  `Salaire` int NOT NULL,
   PRIMARY KEY (`IdRelation`),
   KEY `IdEquipe` (`IdEquipe`,`IdJoueur`),
   KEY `IdJoueur` (`IdJoueur`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `relation`
@@ -173,10 +212,11 @@ INSERT INTO `relation` (`IdRelation`, `IdEquipe`, `IdJoueur`, `DateDebutContract
 --
 
 --
--- Contraintes pour la table `arbitres`
+-- Contraintes pour la table `arbitrespartita`
 --
-ALTER TABLE `arbitres`
-  ADD CONSTRAINT `arbitres_ibfk_1` FOREIGN KEY (`IdPartita`) REFERENCES `partita` (`IdPartita`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `arbitrespartita`
+  ADD CONSTRAINT `fk_arbitre_partita_arbitre` FOREIGN KEY (`idArbitres`) REFERENCES `arbitres` (`idArbitre`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_arbitre_partita_partita` FOREIGN KEY (`idPartita`) REFERENCES `partita` (`IdPartita`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Contraintes pour la table `equipes`
