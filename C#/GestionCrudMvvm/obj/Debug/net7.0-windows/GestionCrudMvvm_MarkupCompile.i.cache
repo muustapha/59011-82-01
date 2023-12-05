@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-U:\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\
+C:\Users\utilisateur\Desktop\GIT\Nouveau dossier\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\
 GestionCrudMvvm
 none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
-U:\59011-82-01\C#\GestionCrudMvvm\App.xaml
-1-2076526208
+C:\Users\utilisateur\Desktop\GIT\Nouveau dossier\59011-82-01\C#\GestionCrudMvvm\App.xaml
+31312278542
 
-12-119803067
-351-694589773
-vue\MainWindow.xaml;
+14-22357413
+351-651753521
+vue\AjouterProduit.xaml;vue\MainWindow.xaml;vue\ModifierProduit.xaml;
 
-False
+True
 

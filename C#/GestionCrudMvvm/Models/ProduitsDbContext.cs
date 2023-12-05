@@ -5,11 +5,23 @@ using System.Collections.Generic;
 using System.IO;
 using GestionCrudMvvm.Json;
 
-namespace GestionCrudMvvm.Models.Services
+namespace GestionCrudMvvm.Models
 {
     public partial class ProduitsDbContext : DbContext
     {
-        private const string JsonPath = @"U:\59011-82-01\C#\gereCrudMvc\produits.json";
+
+        private List<Produit> ChargerDonnees(string jsonPath)
+        {
+            if (File.Exists(jsonPath))
+            {
+                string json = File.ReadAllText(jsonPath);
+                return JsonConvert.DeserializeObject<List<Produit>>(json);
+            }
+
+            return new List<Produit>();
+        }
+
+        private const string JsonPath = @"C:\Users\utilisateur\Desktop\GIT\Nouveau dossier\59011-82-01\C#\GestionCrudMvvmproduits.json";
 
         public DbSet<Produit> Produits { get; set; }
 
@@ -19,7 +31,7 @@ namespace GestionCrudMvvm.Models.Services
             Directory.CreateDirectory(Path.GetDirectoryName(JsonPath));
 
             // Load data from JSON file
-            List<Produit> produits = DownloaderDonnees(JsonPath);
+            List<Produit> produits = ChargerDonnees(JsonPath);
             if (produits != null)
             {
                 Produits.AddRange(produits);

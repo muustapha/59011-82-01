@@ -59,7 +59,7 @@ namespace GereCrudMvc {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/GereCrudMvc;component/vue/app.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/GereCrudMvc;V1.0.0.0;component/vue/app.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Vue\App.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

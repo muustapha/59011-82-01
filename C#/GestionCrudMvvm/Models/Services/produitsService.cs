@@ -1,56 +1,63 @@
-﻿using GestionCrudMvvm.Models.Services;
-using System;
+﻿using GestionCrudMvvm;
+using Newtonsoft.Json;
 using System.Collections.Generic;
+using System;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace GestionCrudMvvm.Models
+public class ProduitsService
 {
-    class ProduitsService
+    private const string JsonPath = @"C:\Users\utilisateur\Desktop\GIT\Nouveau dossier\59011-82-01\C#\GestionCrudMvvmproduits.json";
+
+    public List<Produit> GetAllProduits()
     {
-        private readonly ProduitsDbContext _context;
+        var jsonData = File.ReadAllText(JsonPath);
+        return JsonConvert.DeserializeObject<List<Produit>>(jsonData);
+    }
 
-        public ProduitsService(ProduitsDbContext context)
+    public Produit GetProduitById(int id)
+    {
+        var produits = GetAllProduits();
+        return produits.FirstOrDefault(p => p.IdProduit == id);
+    }
+
+    public void AddProduits(Produit p)
+    {
+        var produits = GetAllProduits();
+        produits.Add(p);
+        SaveProduits(produits);
+    }
+
+    public void UpdateProduit(Produit p)
+    {
+        var produits = GetAllProduits();
+        var produitToUpdate = produits.FirstOrDefault(prod => prod.IdProduit == p.IdProduit);
+
+        if (produitToUpdate != null)
         {
-            _context = context;
-        }
+            // Mettre à jour les propriétés
+            produitToUpdate.Nom = p.Nom;
+            produitToUpdate.Prix = p.Prix;
+            // Ajoutez ici les autres propriétés à mettre à jour
 
-        public void AddProduits(Produit p)
+            SaveProduits(produits);
+        }
+        else
         {
-            if (p == null) throw new ArgumentNullException(nameof(p));
-
-            _context.produits.Add(p);
-            _context.SaveChanges();
+            throw new ArgumentException("Produit non trouvé");
         }
+    }
 
-        public void DeleteProduit(Produit p)
-        {
-            //si l'objet personne est null, on renvoi une exception
-            if (p == null) throw new ArgumentNullException(nameof(p));
+    public void DeleteProduit(Produit p)
+    {
+        var produits = GetAllProduits();
+        produits.Remove(p);
+        SaveProduits(produits);
+    }
 
-            // on met à jour le context
-            _context.produits.Remove(p);
-            _context.SaveChanges();
-        }
-
-        public IEnumerable<Produit> GetAllProduits()
-        {
-            return _context.produits.ToList();
-        }
-
-        public Produit GetProduitById(int id)
-        {
-            return _context.produits.FirstOrDefault(p => p.IdProduit == id);
-        }
-
-        public void UpdateProduit(Produit p)
-        {
-        }
-        //nothing
-        //on va mettre à jour le context dans le controller par mapping et passer
-        //les modifs à la base
-
+    private void SaveProduits(List<Produit> produits)
+    {
+        var jsonData = JsonConvert.SerializeObject(produits);
+        File.WriteAllText(JsonPath, jsonData);
     }
 }
-

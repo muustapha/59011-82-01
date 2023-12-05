@@ -23,7 +23,7 @@ namespace GestionCrudMvvm.Json
             }
         }
 
-        public List<Produit> DownloaderDonnees(string cheminFichier)
+        public List<Produit> chargerDonnees(string cheminFichier)
         {
             try
             {
