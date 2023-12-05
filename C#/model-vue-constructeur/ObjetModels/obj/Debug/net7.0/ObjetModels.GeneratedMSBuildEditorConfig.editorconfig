@@ -9,37 +9,37 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ObjetModels
 build_property.RootNamespace = ObjetModels
-build_property.ProjectDir = \\59011VMFIC02.exchange.Ad.afpanet\59011-DATA\GRP-82\59011-82-01\C#\ObjetModels\
+build_property.ProjectDir = U:\59011-82-01\C#\model-vue-constructeur\ObjetModels\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = \\59011VMFIC02.exchange.Ad.afpanet\59011-DATA\GRP-82\59011-82-01\C#\ObjetModels
+build_property.MSBuildProjectDirectory = U:\59011-82-01\C#\model-vue-constructeur\ObjetModels
 build_property._RazorSourceGeneratorDebug = 
 
-[//59011VMFIC02.exchange.Ad.afpanet/59011-DATA/GRP-82/59011-82-01/C\#/ObjetModels/Views/Home/Index.cshtml]
+[U:/59011-82-01/C\#/model-vue-constructeur/ObjetModels/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[//59011VMFIC02.exchange.Ad.afpanet/59011-DATA/GRP-82/59011-82-01/C\#/ObjetModels/Views/Home/Privacy.cshtml]
+[U:/59011-82-01/C\#/model-vue-constructeur/ObjetModels/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[//59011VMFIC02.exchange.Ad.afpanet/59011-DATA/GRP-82/59011-82-01/C\#/ObjetModels/Views/Shared/Error.cshtml]
+[U:/59011-82-01/C\#/model-vue-constructeur/ObjetModels/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[//59011VMFIC02.exchange.Ad.afpanet/59011-DATA/GRP-82/59011-82-01/C\#/ObjetModels/Views/Shared/_ValidationScriptsPartial.cshtml]
+[U:/59011-82-01/C\#/model-vue-constructeur/ObjetModels/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[//59011VMFIC02.exchange.Ad.afpanet/59011-DATA/GRP-82/59011-82-01/C\#/ObjetModels/Views/_ViewImports.cshtml]
+[U:/59011-82-01/C\#/model-vue-constructeur/ObjetModels/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[//59011VMFIC02.exchange.Ad.afpanet/59011-DATA/GRP-82/59011-82-01/C\#/ObjetModels/Views/_ViewStart.cshtml]
+[U:/59011-82-01/C\#/model-vue-constructeur/ObjetModels/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[//59011VMFIC02.exchange.Ad.afpanet/59011-DATA/GRP-82/59011-82-01/C\#/ObjetModels/Views/Shared/_Layout.cshtml]
+[U:/59011-82-01/C\#/model-vue-constructeur/ObjetModels/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-w7bi26a9tm

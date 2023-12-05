@@ -3,3 +3,8 @@ C:\Users\utilisateur\Desktop\GIT\Nouveau dossier\59011-82-01\C#\GereCrudMvc\obj\
 C:\Users\utilisateur\Desktop\GIT\Nouveau dossier\59011-82-01\C#\GereCrudMvc\obj\Debug\net7.0-windows\Vue\MainWindow.g.cs
 C:\Users\utilisateur\Desktop\GIT\Nouveau dossier\59011-82-01\C#\GereCrudMvc\obj\Debug\net7.0-windows\GereCrudMvc_MarkupCompile.cache
 C:\Users\utilisateur\Desktop\GIT\Nouveau dossier\59011-82-01\C#\GereCrudMvc\obj\Debug\net7.0-windows\GereCrudMvc_MarkupCompile.lref
+U:\59011-82-01\C#\GereCrudMvc\obj\Debug\net7.0-windows\GereCrudMvc.csproj.AssemblyReference.cache
+U:\59011-82-01\C#\GereCrudMvc\obj\Debug\net7.0-windows\Vue\App.g.cs
+U:\59011-82-01\C#\GereCrudMvc\obj\Debug\net7.0-windows\Vue\MainWindow.g.cs
+U:\59011-82-01\C#\GereCrudMvc\obj\Debug\net7.0-windows\GereCrudMvc_MarkupCompile.cache
+U:\59011-82-01\C#\GereCrudMvc\obj\Debug\net7.0-windows\GereCrudMvc_MarkupCompile.lref

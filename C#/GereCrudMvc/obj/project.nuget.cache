@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ZaGoebH38ZwbXDGAPOVMXjDtR8Nxyqmxe8bT0VAgn1MFFrkRczjjMB0DKkVQRYnrBfeotcvFK4arebJP+kVaHQ==",
+  "dgSpecHash": "ey3gcwLbV8k2t6LZ3qfd6fBMUKtD5yQDKcxaG+fPCHZ1NPuFc4HJ8YTGxc5AWWIqfW+GiLZ6fip/WPFvH+feIA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\utilisateur\\Desktop\\GIT\\Nouveau dossier\\59011-82-01\\C#\\GereCrudMvc\\GereCrudMvc.csproj",
+  "projectFilePath": "U:\\59011-82-01\\C#\\GereCrudMvc\\GereCrudMvc.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\utilisateur\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\59011-82-01\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }

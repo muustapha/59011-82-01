@@ -44,7 +44,7 @@
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="0.1*"/>
             </Grid.RowDefinitions>
-            <Button Grid.Column="1" Content="supprimer"  Grid.Row="1" FontFamily="Lucida Calligraphy" FontSize="16" Foreground="#FFDC1515" Click="Button_Click_supprimer">
+            <Button x:Name="Button_Click_supprimer" Grid.Column="1" Content="supprimer"  Grid.Row="1" FontFamily="Lucida Calligraphy" FontSize="16" Foreground="#FFDC1515" Click="Button_Click_supprimer">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF1B7275" Offset="1"/>
@@ -52,7 +52,7 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <Button Grid.Column="3" Content="modifier" Grid.Row="1" FontFamily="Palatino Linotype" FontSize="22" Click="Button_Click_Modifier">
+            <Button x:Name="Button_Click_Modifier" Grid.Column="3" Content="modifier" Grid.Row="1" FontFamily="Palatino Linotype" FontSize="22" Click="Button_Click_Modifier">
                 <Button.Background>
                     <RadialGradientBrush>
                         <GradientStop Color="#FF11D5D6" Offset="0.007"/>
@@ -60,7 +60,7 @@
                     </RadialGradientBrush>
                 </Button.Background>
             </Button>
-            <Button Grid.Column="5" Content="remplir grid"  Grid.Row="1" FontFamily="Palatino Linotype" FontSize="22" Click="Button_Click_rempliDatagrid" >
+            <Button x:Name="Button_Click_remplirGrid" Grid.Column="5" Content="remplir grid"  Grid.Row="1" FontFamily="Palatino Linotype" FontSize="22" Click="Button_Click_rempliDatagrid" >
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FFA7FFFF"/>
@@ -69,7 +69,7 @@
                 </Button.Background>
             </Button>
 
-            <Button Grid.Column="7" Content="ajouter" Grid.Row="1" FontSize="22" FontFamily="Palatino Linotype" Click="Button_Click_Ajouter">
+            <Button x:Name="Button_Click_ajouter" Grid.Column="7" Content="ajouter" Grid.Row="1" FontSize="22" FontFamily="Palatino Linotype" Click="Button_Click_Ajouter">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF1AD3D3" Offset="1"/>
@@ -77,7 +77,7 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <Button Grid.Column="9" Content="sauvegarder" Grid.Row="1" FontSize="22" FontFamily="Palatino Linotype" Click="Button_Click_sauvegarder">
+            <Button x:Name="Button_Click_sauvegarder" Grid.Column="9" Content="sauvegarder" Grid.Row="1" FontSize="22" FontFamily="Palatino Linotype" Click="Button_Click_sauvegarder">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF1BD3D3" Offset="1"/>
@@ -89,11 +89,12 @@
         </Grid>
         <DataGrid  x:Name="dtgProduit" Grid.Column="1" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="idProduit" Binding="{Binding IdProduit}"/>
+                <!--<DataGridTextColumn Header="idProduit" Binding="{Binding IdProduit}"/>-->
                 <DataGridTextColumn Header="nom" Binding="{Binding Nom}"/>
                 <DataGridTextColumn Header="prix" Binding="{Binding Prix}"/>
                 <DataGridTextColumn Header="quantite" Binding="{Binding Quantite}"/>
-                <DataGridTextColumn Header="lieuxFabrication" Binding="{Binding LieuxFabrication}"/>
+                <DataGridTextColumn Header="coutProduction" Binding="{Binding CoutFabrication}"/>
+                <DataGridTextColumn Header="lieuxProduction" Binding="{Binding LieuxFabrication}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

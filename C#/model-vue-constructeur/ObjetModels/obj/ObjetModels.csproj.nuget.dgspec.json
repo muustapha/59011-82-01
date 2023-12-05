@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "U:\\59011-82-01\\C#\\ObjetModels\\ObjetModels.csproj": {}
+    "U:\\59011-82-01\\C#\\model-vue-constructeur\\ObjetModels\\ObjetModels.csproj": {}
   },
   "projects": {
-    "U:\\59011-82-01\\C#\\ObjetModels\\ObjetModels.csproj": {
+    "U:\\59011-82-01\\C#\\model-vue-constructeur\\ObjetModels\\ObjetModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "U:\\59011-82-01\\C#\\ObjetModels\\ObjetModels.csproj",
+        "projectUniqueName": "U:\\59011-82-01\\C#\\model-vue-constructeur\\ObjetModels\\ObjetModels.csproj",
         "projectName": "ObjetModels",
-        "projectPath": "U:\\59011-82-01\\C#\\ObjetModels\\ObjetModels.csproj",
+        "projectPath": "U:\\59011-82-01\\C#\\model-vue-constructeur\\ObjetModels\\ObjetModels.csproj",
         "packagesPath": "C:\\Users\\59011-82-01\\.nuget\\packages\\",
-        "outputPath": "U:\\59011-82-01\\C#\\ObjetModels\\obj\\",
+        "outputPath": "U:\\59011-82-01\\C#\\model-vue-constructeur\\ObjetModels\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
