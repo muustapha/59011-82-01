@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "U:\\59011-82-01\\C#\\WpfFootball\\Wpffootball.csproj": {}
+    "C:\\Users\\utilisateur\\Desktop\\GIT\\Nouveau dossier\\59011-82-01\\C#\\WpfFootball\\Wpffootball.csproj": {}
   },
   "projects": {
-    "U:\\59011-82-01\\C#\\WpfFootball\\Wpffootball.csproj": {
+    "C:\\Users\\utilisateur\\Desktop\\GIT\\Nouveau dossier\\59011-82-01\\C#\\WpfFootball\\Wpffootball.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "U:\\59011-82-01\\C#\\WpfFootball\\Wpffootball.csproj",
+        "projectUniqueName": "C:\\Users\\utilisateur\\Desktop\\GIT\\Nouveau dossier\\59011-82-01\\C#\\WpfFootball\\Wpffootball.csproj",
         "projectName": "Wpffootball",
-        "projectPath": "U:\\59011-82-01\\C#\\WpfFootball\\Wpffootball.csproj",
-        "packagesPath": "C:\\Users\\59011-82-01\\.nuget\\packages\\",
-        "outputPath": "U:\\59011-82-01\\C#\\WpfFootball\\obj\\",
+        "projectPath": "C:\\Users\\utilisateur\\Desktop\\GIT\\Nouveau dossier\\59011-82-01\\C#\\WpfFootball\\Wpffootball.csproj",
+        "packagesPath": "C:\\Users\\utilisateur\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\utilisateur\\Desktop\\GIT\\Nouveau dossier\\59011-82-01\\C#\\WpfFootball\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\59011-82-01\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\utilisateur\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

@@ -1,0 +1,100 @@
+﻿<Window x:Class="gereCrudMvc.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:gereCrudMvc"
+        mc:Ignorable="d"
+        Title="gereCrudMvc" Height="300" Width="800" MinHeight="300" MinWidth="800">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF1B6F72" Offset="1"/>
+                <GradientStop Color="#FF0FE8E8" Offset="0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="98*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="46.5*"/>
+            <RowDefinition Height="46.5*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Column="1" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="0.1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="0.1*"/>
+            </Grid.RowDefinitions>
+            <Button Grid.Column="1" Content="supprimer"  Grid.Row="1" FontFamily="Lucida Calligraphy" FontSize="16" Foreground="#FFDC1515" Click="Button_Click_supprimer">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF1B7275" Offset="1"/>
+                        <GradientStop Color="#FF16A6A7" Offset="0.007"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="3" Content="modifier" Grid.Row="1" FontFamily="Palatino Linotype" FontSize="22" Click="Button_Click_Modifier">
+                <Button.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#FF11D5D6" Offset="0.007"/>
+                        <GradientStop Color="#FF1AD3D3" Offset="1"/>
+                    </RadialGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="5" Content="remplir grid"  Grid.Row="1" FontFamily="Palatino Linotype" FontSize="22" Click="Button_Click_rempliDatagrid" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFA7FFFF"/>
+                        <GradientStop Color="#FF70FFFF" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <Button Grid.Column="7" Content="ajouter" Grid.Row="1" FontSize="22" FontFamily="Palatino Linotype" Click="Button_Click_Ajouter">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF1AD3D3" Offset="1"/>
+                        <GradientStop Color="#FF11D5D6" Offset="0.007"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="9" Content="sauvegarder" Grid.Row="1" FontSize="22" FontFamily="Palatino Linotype" Click="Button_Click_sauvegarder">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF1BD3D3" Offset="1"/>
+                        <GradientStop Color="#FF11D5D6" Offset="0.015"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+        </Grid>
+        <DataGrid  x:Name="dtgProduit" Grid.Column="1" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="idProduit" Binding="{Binding IdProduit}"/>
+                <DataGridTextColumn Header="nom" Binding="{Binding Nom}"/>
+                <DataGridTextColumn Header="prix" Binding="{Binding Prix}"/>
+                <DataGridTextColumn Header="quantite" Binding="{Binding Quantite}"/>
+                <DataGridTextColumn Header="lieuxFabrication" Binding="{Binding LieuxFabrication}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

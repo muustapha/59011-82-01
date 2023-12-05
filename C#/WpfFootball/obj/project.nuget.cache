@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "g691uCf6BGqQVK6YA947CeIb3jqYcCZsU0FUcoUq80lJB8PLP8bsDb50qxTOU//O5D95QHXWVl8vYmGS0uH8EA==",
+  "dgSpecHash": "J8Zg9dZjOhABWJY5kFLXYVbm8qHXDcfp7CHaIG+tkPKhmyvMDmFhGLgfy0pg9tSwiCLW+eUM7Z12Z9ZpOI9dTQ==",
   "success": true,
-  "projectFilePath": "U:\\59011-82-01\\C#\\WpfFootball\\Wpffootball.csproj",
+  "projectFilePath": "C:\\Users\\utilisateur\\Desktop\\GIT\\Nouveau dossier\\59011-82-01\\C#\\WpfFootball\\Wpffootball.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\59011-82-01\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\utilisateur\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }
