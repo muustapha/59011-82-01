@@ -1,50 +1,53 @@
-﻿[
-  {
-    "Id": 1,
-    "Nom": "Produit 1",
-    "Prix": 10.99,
-    "CoutProduction": 2,
-    "Quantite": 100,
-    "LieuxProduction": "dunkerque"
-  },
-  {
-    "Id": 2,
-    "Nom": "Produit 2",
-    "Prix": 20.99,
-    "CoutProduction": 3,
-    "Quantite": 200,
-    "LieuxProduction": "Lyon"
-  },
-  {
-    "Id": 3,
-    "Nom": "Produit 3",
-    "Prix": 30.99,
-    "CoutProduction": 3.5,
-    "Quantite": 300,
-    "LieuxProduction": "Paris"
-  },
-  {
-    "Id": 4,
-    "Nom": "Produit 4",
-    "Prix": 90.99,
-    "CoutProduction": 20,
-    "Quantite": 100,
-    "LieuxProduction": "Nice"
-  },
-  {
-    "Id": 5,
-    "Nom": "Produit 5",
-    "Prix": 50.99,
-    "CoutProduction": 13,
-    "Quantite": 200,
-    "LieuxProduction": "Lille"
-  },
-  {
-    "Id": 6,
-    "Nom": "Produit 6",
-    "Prix": 70.99,
-    "CoutProduction": 18.5,
-    "Quantite": 300,
-    "LieuxProduction": "Montpelier"
-  }
-]
+﻿{
+  "NextId": 8,
+  "Liste": [
+    {
+      "Id": 1,
+      "Nom": "Produit 1",
+      "Prix": 10.99,
+      "CoutProduction": 2,
+      "Quantite": 100,
+      "LieuxProduction": "dunkerque"
+    },
+    {
+      "Id": 2,
+      "Nom": "Produit 2",
+      "Prix": 20.99,
+      "CoutProduction": 3,
+      "Quantite": 200,
+      "LieuxProduction": "Lyon"
+    },
+    {
+      "Id": 3,
+      "Nom": "Produit 3",
+      "Prix": 30.99,
+      "CoutProduction": 3.5,
+      "Quantite": 300,
+      "LieuxProduction": "Paris"
+    },
+    {
+      "Id": 4,
+      "Nom": "Produit 4",
+      "Prix": 90.99,
+      "CoutProduction": 20,
+      "Quantite": 100,
+      "LieuxProduction": "Nice"
+    },
+    {
+      "Id": 5,
+      "Nom": "Produit 5",
+      "Prix": 50.99,
+      "CoutProduction": 13,
+      "Quantite": 200,
+      "LieuxProduction": "Lille"
+    },
+    {
+      "Id": 6,
+      "Nom": "Produit 6",
+      "Prix": 70.99,
+      "CoutProduction": 18.5,
+      "Quantite": 300,
+      "LieuxProduction": "Montpelier"
+    }
+  ]
+}

@@ -24,5 +24,10 @@ namespace GestionCrudMvvm
             Quantite = quantite;
             LieuxProduction = lieuxProduction;
         }
+
+        public Produit()
+        {
+        }
+
     }
 }

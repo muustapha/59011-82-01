@@ -7,18 +7,12 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="vue\ModifierProduit.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="vue\AjouterProduit.xaml.cs">
+    <Compile Update="vue\detail.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="vue\ModifierProduit.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="vue\AjouterProduit.xaml">
+    <Page Update="vue\Detail.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="vue\MainWindow.xaml">
