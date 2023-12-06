@@ -29,9 +29,9 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.1*"/>
                 <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="0.5*"/>
                 <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="0.5*"/>
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="0.1*"/>
 
@@ -41,15 +41,10 @@
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="0.1*"/>
             </Grid.RowDefinitions>
-            <Button x:Name="ButtonSupprimer" Grid.Column="1" Content="supprimer"  Grid.Row="1" FontFamily="Lucida Calligraphy" FontSize="16" Foreground="#FFDC1515" Click="Button_Click">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FF7CA1B5" Offset="0.997"/>
-                        <GradientStop Color="#FF90B6C2" Offset="0.007"/>
-                    </LinearGradientBrush>
-                </Button.Background>
+            <Button x:Name="btnSupprimer" Grid.Column="1" Content="supprimer"  Grid.Row="1" FontFamily="Lucida Calligraphy" FontSize="16" Background="Transparent" Foreground="#FFDC1515" Click="Button_Click">
+               
             </Button>
-            <Button x:Name="ButtonModifier" Grid.Column="3" Content="modifier" Grid.Row="1" FontFamily="Palatino Linotype" FontSize="22" Click="Button_Click">
+            <Button x:Name="btnModifier" Grid.Column="3" Content="modifier" Grid.Row="1" FontFamily="Palatino Linotype" FontSize="22" Click="Button_Click">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF91B7C3" Offset="1"/>
@@ -58,7 +53,7 @@
                 </Button.Background>
             </Button>
 
-            <Button x:Name="ButtonAjouter" Grid.Column="5" Content="ajouter" Grid.Row="1" FontSize="22" FontFamily="Palatino Linotype" Click="Button_Click">
+            <Button x:Name="btnAjouter" Grid.Column="5" Content="ajouter" Grid.Row="1" FontSize="22" FontFamily="Palatino Linotype" Click="Button_Click">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF91B7C3" Offset="1"/>
@@ -71,7 +66,7 @@
         </Grid>
         <DataGrid  x:Name="dtgProduit" Grid.Column="1" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True">
             <DataGrid.Columns>
-                <!--<DataGridTextColumn Header="idProduit" Binding="{Binding IdProduit}"/>-->
+                <DataGridTextColumn Header="idProduit" Binding="{Binding IdProduit}"/>
                 <DataGridTextColumn Header="nom" Binding="{Binding Nom}"/>
                 <DataGridTextColumn Header="prix" Binding="{Binding Prix}"/>
                 <DataGridTextColumn Header="coutProduction" Binding="{Binding CoutProduction}"/>

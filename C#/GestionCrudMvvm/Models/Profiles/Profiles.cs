@@ -14,7 +14,7 @@ namespace GestionCrudMvvm.Models.Profiles
         {
             string listeSerialize = JsonConvert.SerializeObject(liste);
             List<Produit> produits = JsonConvert.DeserializeObject<List<Produit>>(listeSerialize);
-            return produit;
+            return produits;
         }
         public static List<Object> FromProduitsToObject(List<Produit> liste)
         {

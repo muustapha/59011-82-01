@@ -29,10 +29,10 @@ namespace GestionCrudMvvm
         }
         private void RemplirGrid()
         {
-            dtgProduit.ItemsSource = ProduitsService.GetAllProduit();
+            dtgProduit.ItemsSource = ProduitsService.GetAllProduits();
         }
 
-        private void btnActionClick(object sender, EventArgs e)
+        private void Button_Click(object sender, EventArgs e)
         {
             Produit item;
             if (((Button)sender).Name == "btnAjouter")

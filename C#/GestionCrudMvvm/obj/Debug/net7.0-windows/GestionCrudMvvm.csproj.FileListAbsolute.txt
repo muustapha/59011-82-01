@@ -1,3 +1,8 @@
+U:\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\GestionCrudMvvm.csproj.AssemblyReference.cache
+U:\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\vue\MainWindow.g.cs
+U:\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\App.g.cs
+U:\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\GestionCrudMvvm_MarkupCompile.cache
+U:\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\GestionCrudMvvm_MarkupCompile.lref
 C:\Users\utilisateur\Desktop\GIT\Nouveau dossier\59011-82-01\C#\GestionCrudMvvm\bin\Debug\net7.0-windows\GestionCrudMvvm.exe
 C:\Users\utilisateur\Desktop\GIT\Nouveau dossier\59011-82-01\C#\GestionCrudMvvm\bin\Debug\net7.0-windows\GestionCrudMvvm.deps.json
 C:\Users\utilisateur\Desktop\GIT\Nouveau dossier\59011-82-01\C#\GestionCrudMvvm\bin\Debug\net7.0-windows\GestionCrudMvvm.runtimeconfig.json
@@ -35,15 +40,13 @@ C:\Users\utilisateur\Desktop\GIT\Nouveau dossier\59011-82-01\C#\GestionCrudMvvm\
 C:\Users\utilisateur\Desktop\GIT\Nouveau dossier\59011-82-01\C#\GestionCrudMvvm\bin\Debug\net7.0-windows\runtimes\win-x64\native\krb5_64.dll
 C:\Users\utilisateur\Desktop\GIT\Nouveau dossier\59011-82-01\C#\GestionCrudMvvm\bin\Debug\net7.0-windows\runtimes\win-x64\native\krbcc64.dll
 C:\Users\utilisateur\Desktop\GIT\Nouveau dossier\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\GestionCrudMvvm.csproj.AssemblyReference.cache
-C:\Users\utilisateur\Desktop\GIT\Nouveau dossier\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\vue\AjouterProduit.g.cs
+C:\Users\utilisateur\Desktop\GIT\Nouveau dossier\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\vue\Detail.g.cs
 C:\Users\utilisateur\Desktop\GIT\Nouveau dossier\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\vue\MainWindow.g.cs
-C:\Users\utilisateur\Desktop\GIT\Nouveau dossier\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\vue\ModifierProduit.g.cs
 C:\Users\utilisateur\Desktop\GIT\Nouveau dossier\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\App.g.cs
 C:\Users\utilisateur\Desktop\GIT\Nouveau dossier\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\GestionCrudMvvm_MarkupCompile.cache
 C:\Users\utilisateur\Desktop\GIT\Nouveau dossier\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\GestionCrudMvvm_MarkupCompile.lref
-C:\Users\utilisateur\Desktop\GIT\Nouveau dossier\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\vue\AjouterProduit.baml
+C:\Users\utilisateur\Desktop\GIT\Nouveau dossier\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\vue\Detail.baml
 C:\Users\utilisateur\Desktop\GIT\Nouveau dossier\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\vue\MainWindow.baml
-C:\Users\utilisateur\Desktop\GIT\Nouveau dossier\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\vue\ModifierProduit.baml
 C:\Users\utilisateur\Desktop\GIT\Nouveau dossier\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\GestionCrudMvvm.g.resources
 C:\Users\utilisateur\Desktop\GIT\Nouveau dossier\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\GestionCrudMvvm.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\utilisateur\Desktop\GIT\Nouveau dossier\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\GestionCrudMvvm.AssemblyInfoInputs.cache
@@ -55,8 +58,3 @@ C:\Users\utilisateur\Desktop\GIT\Nouveau dossier\59011-82-01\C#\GestionCrudMvvm\
 C:\Users\utilisateur\Desktop\GIT\Nouveau dossier\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\GestionCrudMvvm.pdb
 C:\Users\utilisateur\Desktop\GIT\Nouveau dossier\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\GestionCrudMvvm.genruntimeconfig.cache
 C:\Users\utilisateur\Desktop\GIT\Nouveau dossier\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\ref\GestionCrudMvvm.dll
-U:\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\GestionCrudMvvm.csproj.AssemblyReference.cache
-U:\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\vue\MainWindow.g.cs
-U:\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\App.g.cs
-U:\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\GestionCrudMvvm_MarkupCompile.cache
-U:\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\GestionCrudMvvm_MarkupCompile.lref

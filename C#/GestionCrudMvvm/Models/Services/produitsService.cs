@@ -8,10 +8,10 @@ public class ProduitsService
         static public string Path { get; set; } = "../../../Produit.json";
         static public int NextId { get; set; }
 
-        public static List<Produit> GetAllProduit()
+        public static List<Produit> GetAllProduits()
         {
             StructureJson sj = DaoJson.LireFichier(Path);
-            List<Produit> liste = Profiles.FromObjectToProduit(sj.Liste);
+            List<Produit> liste = Profiles.FromObjectToProduits(sj.Liste);
             NextId = sj.NextId;
 
             return liste;
@@ -21,7 +21,7 @@ public class ProduitsService
         static public void SaveProduit(List<Produit> liste)
         {
             StructureJson sj = new StructureJson();
-            sj.Liste = Profiles.FromProduitToObject(liste);
+            sj.Liste = Profiles.FromProduitsToObject(liste);
             sj.NextId = NextId;
             DaoJson.EcrireFichier(sj, Path); //enregistrer fichier
         }
@@ -29,7 +29,7 @@ public class ProduitsService
         static public Produit GetById(int idProduit)
         //Méthode qui permet de modifier un enregistrement
         {
-            List<Produit> liste = GetAllProduit();
+            List<Produit> liste = GetAllProduits();
             // on recherche la position du produit dans la liste
             Produit p = liste.Find(r => r.IdProduit == idProduit);
             return p;
@@ -38,7 +38,7 @@ public class ProduitsService
         static public void AddProduit(Produit p)
         //Méthode qui permet d'entrer un enregistrement
         {
-            List<Produit> liste = GetAllProduit();
+            List<Produit> liste = GetAllProduits();
             p.IdProduit = NextId++;
             // on ajoute l'enregistrement
             liste.Add(p);
@@ -47,7 +47,7 @@ public class ProduitsService
         static public void UpdateProduit(Produit p)
         //Méthode qui permet de modifier un enregistrement
         {
-            List<Produit> liste = GetAllProduit();
+            List<Produit> liste = GetAllProduits();
             // on recherche la position du produit dans la liste
             int position = liste.FindIndex(r => r.IdProduit == p.IdProduit);
             // on met à jour le produit dans la liste
@@ -64,7 +64,7 @@ public class ProduitsService
         static public void DeleteProduit(Produit p)
         //Méthode qui permet de modifier un enregistrement
         {
-            List<Produit> liste = GetAllProduit();
+            List<Produit> liste = GetAllProduits();
             // on recherche la position du produit dans la liste
             liste.RemoveAll(x => x.IdProduit == p.IdProduit);
             // on sauvegarde dans le fichier

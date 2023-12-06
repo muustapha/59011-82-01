@@ -14,16 +14,11 @@ using System.Windows.Shapes;
 using GestionCrudMvvm.Models;
 
 
+
 namespace GestionCrudMvvm.vue
 {
-    /// <summary>
-    /// Logique d'interaction pour Detail.xaml
-    /// </summary>
     public partial class Detail : Window
     {
-
-        public Detail()
-        { }
         public string Mode { get; set; }
 
         public Detail(Produit p, MainWindow w, string mode)
@@ -33,16 +28,22 @@ namespace GestionCrudMvvm.vue
             valider.Content = Mode;
             RemplissageChamp(p);
         }
+
         public void RemplissageChamp(Produit p)
         {
-            if (Mode != "Ajouter")
+
+            if (p == null)
             {
-                IdProduit.content = p.IdProduit.ToString();
-                Nom.text = p.Nom.ToString();
-                Prix.text = p.Prix.ToString();
-                CoutProduction.text = p.CoutProduction.ToString();
-                Quantite.text = p.Quantite.ToString();
-                LieuxProduction.text = p.LieuxProduction.ToString();
+                return;
+            }
+
+            if (Mode != "Ajouter")
+            {   Nom.Text = p.Nom;
+                idProduit.Content = p.IdProduit.ToString();
+                Prix.Text = p.Prix.ToString();
+                CoutProduction.Text = p.CoutProduction.ToString();
+                Quantite.Text = p.Quantite.ToString();
+                LieuxProduction.Text = p.LieuxProduction;
             }
             else
             {
@@ -50,10 +51,16 @@ namespace GestionCrudMvvm.vue
             }
         }
 
-        private void valider_Click(object sender, RoutedEventArgs e)
+        private void Click_Valider(object sender, RoutedEventArgs e)
         {
-            Produit p = new Produit(int Idproduit, string nom, double prix, double coutProduction, int quantite, string lieuxProduction);
-                ;
+            //int idProduit = Int32.Parse((string)idProduit.Content);
+            //string nom = Nom.Text;
+            //double prix = double.Parse(Prix.Text);
+            //double coutProduction = double.Parse(CoutProduction.Text);
+            //int quantite = Int32.Parse(Quantite.Text);
+            //string lieuxProduction = LieuxProduction.Text;
+
+            Produit p = new Produit(Int32.Parse((string)idProduit.Content), Nom.Text, double.Parse(Prix.Text), double.Parse(CoutProduction.Text), Int32.Parse(Quantite.Text), LieuxProduction.Text);
             switch (Mode)
             {
                 case "Ajouter": ProduitsService.AddProduit(p); break;
@@ -62,10 +69,15 @@ namespace GestionCrudMvvm.vue
             }
             this.Close();
         }
-        private void annuler_Click(object sender, RoutedEventArgs e)
+
+        private void Click_Annuler(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
-    }
-}
 
+        
+
+        
+    }
+
+}
