@@ -7,7 +7,7 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="vue\detail.xaml.cs">
+    <Compile Update="vue\Detail.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

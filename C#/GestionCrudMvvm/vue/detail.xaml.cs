@@ -23,7 +23,7 @@ namespace GestionCrudMvvm.vue
     {
 
         public Detail()
-        {
+        { }
         public string Mode { get; set; }
 
         public Detail(Produit p, MainWindow w, string mode)

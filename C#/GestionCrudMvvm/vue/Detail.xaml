@@ -219,7 +219,7 @@
                     </RadialGradientBrush>
                 </Button.Background>
             </Button>
-            <Button Grid.Column="2" Content="Valider" FontFamily="Palatino Linotype" FontSize="22" Click="Button_Click_Valideder" Margin="8,0,-8,0">
+            <Button x:Name="valider" Grid.Column="2" Content="Valider" FontFamily="Palatino Linotype" FontSize="22" Click="Button_Click_Valider" Margin="8,0,-8,0">
                 <Button.Background>
                     <RadialGradientBrush>
                         <GradientStop Color="#FFB1D8E4" Offset="1"/>
