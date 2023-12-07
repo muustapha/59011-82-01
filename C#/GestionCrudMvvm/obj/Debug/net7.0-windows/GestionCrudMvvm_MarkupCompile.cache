@@ -4,17 +4,28 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
 U:\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\
+=======
+C:\Users\59011-82-01\Documents\GitLocal\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\
+>>>>>>> d0a2c3b4a5ad6e1256edaaa9f8d51b7bbacb6cf0
 GestionCrudMvvm
 none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
+<<<<<<< HEAD
 U:\59011-82-01\C#\GestionCrudMvvm\App.xaml
 2-840126488
 
 101643292777
+=======
+C:\Users\59011-82-01\Documents\GitLocal\59011-82-01\C#\GestionCrudMvvm\App.xaml
+2-840126488
+
+4640936290
+>>>>>>> d0a2c3b4a5ad6e1256edaaa9f8d51b7bbacb6cf0
 351-694589773
 vue\Detail.xaml;vue\MainWindow.xaml;
 
-False
+True
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 U:\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\GestionCrudMvvm.csproj.AssemblyReference.cache
 U:\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\vue\MainWindow.g.cs
 U:\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\App.g.cs
@@ -108,3 +109,11 @@ U:\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\refint\GestionCrudMvv
 U:\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\GestionCrudMvvm.pdb
 U:\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\GestionCrudMvvm.genruntimeconfig.cache
 U:\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\ref\GestionCrudMvvm.dll
+=======
+C:\Users\59011-82-01\Documents\GitLocal\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\GestionCrudMvvm.csproj.AssemblyReference.cache
+C:\Users\59011-82-01\Documents\GitLocal\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\vue\Detail.g.cs
+C:\Users\59011-82-01\Documents\GitLocal\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\vue\MainWindow.g.cs
+C:\Users\59011-82-01\Documents\GitLocal\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\App.g.cs
+C:\Users\59011-82-01\Documents\GitLocal\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\GestionCrudMvvm_MarkupCompile.cache
+C:\Users\59011-82-01\Documents\GitLocal\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\GestionCrudMvvm_MarkupCompile.lref
+>>>>>>> d0a2c3b4a5ad6e1256edaaa9f8d51b7bbacb6cf0
