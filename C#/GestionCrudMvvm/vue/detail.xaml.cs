@@ -75,9 +75,25 @@ namespace GestionCrudMvvm.vue
             this.Close();
         }
 
-        
+        private void Prix_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (!Prix.Text.StartsWith("€"))
+            {
+                Prix.Text = "€" + Prix.Text;
+                Prix.SelectionStart = Prix.Text.Length; // place le curseur à la fin du texte
+            }
+        }
 
-        
+        private void CoutProduction_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (!CoutProduction.Text.StartsWith("€"))
+            {
+                CoutProduction.Text = "€" + CoutProduction.Text;
+                CoutProduction.SelectionStart = CoutProduction.Text.Length; // place le curseur à la fin du texte
+            }
+        }
+
+
     }
 
 }
