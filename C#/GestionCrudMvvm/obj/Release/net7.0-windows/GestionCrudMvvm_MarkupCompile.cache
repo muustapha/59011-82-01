@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-U:\59011-82-01\C#\GestionCrudMvvm\obj\Debug\net7.0-windows\
+U:\59011-82-01\C#\GestionCrudMvvm\obj\Release\net7.0-windows\
 GestionCrudMvvm
 none
 false
-TRACE;DEBUG;NET;NET7_0;NETCOREAPP
+TRACE;RELEASE;NET;NET7_0;NETCOREAPP
 U:\59011-82-01\C#\GestionCrudMvvm\App.xaml
 2-840126488
 
@@ -16,5 +16,5 @@ U:\59011-82-01\C#\GestionCrudMvvm\App.xaml
 351-694589773
 vue\Detail.xaml;vue\MainWindow.xaml;
 
-False
+True
 
