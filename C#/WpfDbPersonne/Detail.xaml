@@ -1,9 +1,9 @@
-﻿<Window x:Class="GestionCrudMvvm.vue.Detail"
+﻿<Window x:Class="WpfDbPersonne.Detail"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:GestionCrudMvvm.vue"
+        xmlns:local="clr-namespace:WpfDbPersonne"
         mc:Ignorable="d"
         Title="Detail" Height="909" Width="1200" MinHeight="709" MinWidth="800">
     <Grid >
@@ -22,30 +22,29 @@
 
             <RowDefinition Height="0.5*" />
             <RowDefinition Height="1.5*" />
-            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="0.25*" />
             <RowDefinition Height="1.5*" />
             <RowDefinition Height="0.75*" />
             <RowDefinition Height="1.5*" />
-            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="0.25*" />
             <RowDefinition Height="1.5*" />
             <RowDefinition Height="0.75*" />
             <RowDefinition Height="1.5*" />
-            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="0.25*" />
             <RowDefinition Height="1.5*" />
             <RowDefinition Height="0.75*" />
             <RowDefinition Height="1.5*" />
-            <RowDefinition Height="0.5*" />
-            <RowDefinition Height="1.5*" />
-            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="0.25*" />
             <RowDefinition Height="1.5*" />
             <RowDefinition Height="0.75*" />
+            <RowDefinition Height="1.5*" />
+            <RowDefinition Height="0.25*" />
             <RowDefinition Height="1.5*" />
             <RowDefinition Height="0.5*" />
             <RowDefinition Height="2.5*" />
             <RowDefinition Height="0.5*" />
         </Grid.RowDefinitions>
-
-        <Label Name="idProduit" Visibility="Hidden">
+        <Label Name="idPersonne" Visibility="Hidden">
             <Label.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
@@ -62,23 +61,23 @@
             </Label.Background>
         </Label>
         <!--<TextBlock x:Name="IdProduit" Grid.Row ="3" Grid.Column ="1"  >
-            <TextBlock.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <LinearGradientBrush.RelativeTransform>
-                        <TransformGroup>
-                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
-                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
-                            <RotateTransform Angle="56.31" CenterX="0.5" CenterY="0.5"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </LinearGradientBrush.RelativeTransform>
-                    <GradientStop Color="#FF91B7C3"/>
-                    <GradientStop Color="#FF90B6C2" Offset="1"/>
-                </LinearGradientBrush>
-            </TextBlock.Background>
-        </TextBlock>-->
+    <TextBlock.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <LinearGradientBrush.RelativeTransform>
+                <TransformGroup>
+                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                    <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                    <RotateTransform Angle="56.31" CenterX="0.5" CenterY="0.5"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </LinearGradientBrush.RelativeTransform>
+            <GradientStop Color="#FF91B7C3"/>
+            <GradientStop Color="#FF90B6C2" Offset="1"/>
+        </LinearGradientBrush>
+    </TextBlock.Background>
+</TextBlock>-->
 
-        <Label Content="Nom" Grid.Column="1" FontFamily="Palatino Linotype" FontSize="22"   Grid.Row="1" >
+        <Label Content="Nom" Grid.Row="1" Grid.Column="1" FontFamily="Palatino Linotype" FontSize="22" >
             <Label.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
@@ -94,16 +93,16 @@
                 </LinearGradientBrush>
             </Label.Background>
         </Label>
-        <TextBox x:Name="Nom" Grid.Row="3" Grid.ColumnSpan="3" Height="49" Margin="36,0,36,0" Grid.RowSpan="2" VerticalAlignment="Top" Background="#FFABADB3"/>
+        <TextBox x:Name="Nom" Grid.Row="3" Grid.Column="1" Background="#FFABADB3" />
 
-        <Label Content="Prix" Grid.Row="5" Grid.Column="1" FontSize="22" FontFamily="Palatino Linotype" >
+        <Label Content="Prenom" Grid.Row="5" Grid.Column="1" FontSize="22" FontFamily="Palatino Linotype" >
             <Label.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
                         <TransformGroup>
                             <ScaleTransform CenterY="0.5" CenterX="0.5"/>
                             <SkewTransform CenterX="0.5" CenterY="0.5"/>
-                            <RotateTransform Angle="245.59199999999998" CenterX="0.5" CenterY="0.5"/>
+                            <RotateTransform Angle="250.54499999999998" CenterX="0.5" CenterY="0.5"/>
                             <TranslateTransform/>
                         </TransformGroup>
                     </LinearGradientBrush.RelativeTransform>
@@ -112,16 +111,16 @@
                 </LinearGradientBrush>
             </Label.Background>
         </Label>
-        <TextBox x:Name="Prix" Grid.Row="7" Grid.Column ="1" TextChanged="Prix_TextChanged" Background="#FFABADB3"/>
+        <TextBox x:Name="Prenom" Grid.Row="7" Grid.Column ="1" Background="#FFABADB3" />
 
-        <Label Content="CoutProduction" Grid.Row="9" Grid.Column ="1" FontFamily="Palatino Linotype" FontSize="22" >
+        <Label Content="CodePostal" Grid.Row="9" Grid.Column ="1" FontFamily="Palatino Linotype" FontSize="22" >
             <Label.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
                         <TransformGroup>
                             <ScaleTransform CenterY="0.5" CenterX="0.5"/>
                             <SkewTransform CenterX="0.5" CenterY="0.5"/>
-                            <RotateTransform Angle="245.59199999999998" CenterX="0.5" CenterY="0.5"/>
+                            <RotateTransform Angle="253.87199999999999" CenterX="0.5" CenterY="0.5"/>
                             <TranslateTransform/>
                         </TransformGroup>
                     </LinearGradientBrush.RelativeTransform>
@@ -130,16 +129,16 @@
                 </LinearGradientBrush>
             </Label.Background>
         </Label>
-        <TextBox x:Name="CoutProduction" Grid.Row="11"  Grid.Column ="1" TextChanged="CoutProduction_TextChanged" Background="#FFABADB3"/>
+        <TextBox x:Name="CodePostal" Grid.Row="11"  Grid.Column ="1" Background="#FFABADB3" />
 
-        <Label Content="Quantité" Grid.Row="13" Grid.Column ="1" FontFamily="Palatino Linotype" FontSize="22" >
+        <Label Content="Adresse" Grid.Row="13" Grid.Column ="1" FontFamily="Palatino Linotype" FontSize="22" >
             <Label.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
                         <TransformGroup>
                             <ScaleTransform CenterY="0.5" CenterX="0.5"/>
                             <SkewTransform CenterX="0.5" CenterY="0.5"/>
-                            <RotateTransform Angle="245.59199999999998" CenterX="0.5" CenterY="0.5"/>
+                            <RotateTransform Angle="242.526" CenterX="0.5" CenterY="0.5"/>
                             <TranslateTransform/>
                         </TransformGroup>
                     </LinearGradientBrush.RelativeTransform>
@@ -148,16 +147,16 @@
                 </LinearGradientBrush>
             </Label.Background>
         </Label>
-        <TextBox x:Name="Quantite" Grid.Row="15" Grid.Column ="1" Background="#FFABADB3" />
+        <TextBox x:Name="Adresse" Grid.Row="15" Grid.Column ="1" Background="#FFABADB3" />
 
-        <Label Content="LieuxProduction" Grid.Row="17" FontFamily="Palatino Linotype" FontSize="22" Grid.Column ="1" >
+        <Label Content="Ville" Grid.Row="17" FontFamily="Palatino Linotype" FontSize="22" Grid.Column ="1" >
             <Label.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
                         <TransformGroup>
                             <ScaleTransform CenterY="0.5" CenterX="0.5"/>
                             <SkewTransform CenterX="0.5" CenterY="0.5"/>
-                            <RotateTransform Angle="245.59199999999998" CenterX="0.5" CenterY="0.5"/>
+                            <RotateTransform Angle="237.995" CenterX="0.5" CenterY="0.5"/>
                             <TranslateTransform/>
                         </TransformGroup>
                     </LinearGradientBrush.RelativeTransform>
@@ -166,33 +165,18 @@
                 </LinearGradientBrush>
             </Label.Background>
         </Label>
-        <TextBox x:Name="LieuxProduction" Grid.Row="19" Grid.Column ="1" >
-            <TextBox.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <LinearGradientBrush.RelativeTransform>
-                        <TransformGroup>
-                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
-                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
-                            <RotateTransform Angle="270" CenterX="0.5" CenterY="0.5"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </LinearGradientBrush.RelativeTransform>
-                    <GradientStop Color="#FF98BFCB" Offset="0"/>
-                    <GradientStop Color="#FFABADB3" Offset="1"/>
-                </LinearGradientBrush>
-            </TextBox.Background>
-        </TextBox>
-        <Grid Grid.Row="21" Grid.Column="1" Visibility="Visible" >
+        <TextBox x:Name="Ville" Grid.Row="19" Grid.Column ="1" Background="#FFABADB3" />
+        <Grid Grid.Row="21" Grid.Column="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*" />
                 <ColumnDefinition Width="1*" />
                 <ColumnDefinition Width="1*" />
             </Grid.ColumnDefinitions>
-            <Button x:Name ="Annuler" Grid.Column="0" Content="Annuler" Click="Click_Annuler" FontFamily="Palatino Linotype" FontSize="22" >
+            <Button x:Name ="Annuler" Content="Annuler" Click="Click_Annuler" FontFamily="Palatino Linotype" FontSize="22" >
                 <Button.Background>
                     <RadialGradientBrush>
-                        <GradientStop Color="#FFB1D8E4" Offset="0"/>
-                        <GradientStop Color="#FF8FA8AF" Offset="1"/>
+                        <GradientStop Color="#FFA6CDD9" Offset="0"/>
+                        <GradientStop Color="#FF90B8C5" Offset="1"/>
                     </RadialGradientBrush>
                 </Button.Background>
             </Button>
@@ -200,10 +184,11 @@
                 <Button.Background>
                     <RadialGradientBrush>
                         <GradientStop Color="#FFB1D8E4" Offset="0"/>
-                        <GradientStop Color="#FF8FA8AF" Offset="1"/>
+                        <GradientStop Color="#FF8EBAC8" Offset="1"/>
                     </RadialGradientBrush>
                 </Button.Background>
             </Button>
+
         </Grid>
     </Grid>
 </Window>
