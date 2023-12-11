@@ -117,7 +117,7 @@ namespace GestionCrudMvvm.vue {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/GestionCrudMvvm;V1.0.0.0;component/vue/detail.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/GestionCrudMvvm;component/vue/detail.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\vue\Detail.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

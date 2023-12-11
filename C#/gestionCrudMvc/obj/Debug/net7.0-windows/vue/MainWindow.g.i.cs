@@ -101,7 +101,7 @@ namespace gestionCrudMvc {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/gestionCrudMvc;component/vue/mainwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/gestionCrudMvc;V1.0.0.0;component/vue/mainwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\vue\MainWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "aG3wbV4Bgc/AHh218QiDHWGA86sP0oqT1x39HplwggIup9ASnPT1jRSNFLc+3bIsh9oKJ3XFahl9CdpO1JVK6w==",
-  "success": true,
-  "projectFilePath": "U:\\59011-82-01\\C#\\GestionCrudMvvm\\GestionCrudMvvm.csproj",
-=======
   "dgSpecHash": "zV3THMIe9iStW7caKfShYS/0+vF19DFSphXSOdeIAlHor2nWWHO4u13agXIQMPOq3eYTAlflpvfAm4vfe4KRuw==",
   "success": true,
   "projectFilePath": "C:\\Users\\59011-82-01\\Documents\\GitLocal\\59011-82-01\\C#\\GestionCrudMvvm\\GestionCrudMvvm.csproj",
->>>>>>> d0a2c3b4a5ad6e1256edaaa9f8d51b7bbacb6cf0
   "expectedPackageFiles": [
     "C:\\Users\\59011-82-01\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\59011-82-01\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
