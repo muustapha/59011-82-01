@@ -25,7 +25,8 @@ namespace WpfDbPersonne
     public partial class MainWindow : Window
     {
         private PersonneDbContext _context;
-        private PersonneController _controller;
+        private PersonneController _controller; 
+        //private PersonneService _service;
         public MainWindow()
         {
             // scaffold-DbContext -Connection name=default -Provider MySql.EntityFrameworkCore -OutputDir Models/Data -Context PersonneDbContext -ContextDir Models
@@ -33,6 +34,7 @@ namespace WpfDbPersonne
             InitializeComponent();
             _context = new PersonneDbContext();
             _controller = new PersonneController(_context);
+            //_service = new PersonneService(_context);
             Dtg.ItemsSource = _controller.GetAllPersonne();
 
         }
