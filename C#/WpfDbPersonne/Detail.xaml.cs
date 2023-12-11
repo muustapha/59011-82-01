@@ -39,7 +39,10 @@ namespace WpfDbPersonne
 
         public void RemplissageChamp(Personne p)
         {
+<<<<<<< HEAD
 
+=======
+>>>>>>> b67ce01701993ec024796d17cecfcede0e52d689
             if (p == null)
             {
                 return;
@@ -48,26 +51,49 @@ namespace WpfDbPersonne
             if (Mode != "Ajouter")
             {
                 Nom.Text = p.Nom;
+<<<<<<< HEAD
                 idPersonne.Content = p.IdPersonne.ToString();
                 Prenom.Text = p.Prenom.ToString();
                 CodePostal.Text = p.CodePostal.ToString();
                 Ville.Text = p.Ville.ToString();
+=======
+                Prenom.Text = p.Prenom != null ? p.Prenom.ToString() : "";
+                CodePostal.Text = p.CodePostal.HasValue ? p.CodePostal.Value.ToString() : "";
+                Adresse.Text = p.Adresse;
+>>>>>>> b67ce01701993ec024796d17cecfcede0e52d689
                 Ville.Text = p.Ville;
             }
             else
             {
+<<<<<<< HEAD
                 idPersonne.Content = "0";
+=======
+                if (idPersonne != null)
+                {
+                    idPersonne.Content = "0";
+                }
+>>>>>>> b67ce01701993ec024796d17cecfcede0e52d689
             }
         }
         private void Click_Valider(object sender, RoutedEventArgs e)
         {
+<<<<<<< HEAD
             
+=======
+           
+>>>>>>> b67ce01701993ec024796d17cecfcede0e52d689
             string nom = Nom.Text;
             string prenom = Prenom.Text;
             int codePostal = Int32.Parse(CodePostal.Text);
             string ville = Ville.Text;
+<<<<<<< HEAD
 
             Personne p = new Personne(nom, prenom, codePostal, ville);
+=======
+            string adresse = Adresse.Text;
+
+            Personne p = new Personne(nom, prenom, codePostal, adresse, ville);
+>>>>>>> b67ce01701993ec024796d17cecfcede0e52d689
             switch (Mode)
             {
                 case "Ajouter": _service.AddPersonne(p); break;
@@ -76,7 +102,10 @@ namespace WpfDbPersonne
             }
             this.Close();
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> b67ce01701993ec024796d17cecfcede0e52d689
         private void Click_Annuler(object sender, RoutedEventArgs e)
         {
             this.Close();
@@ -88,4 +117,7 @@ namespace WpfDbPersonne
     }
 
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> b67ce01701993ec024796d17cecfcede0e52d689

@@ -46,19 +46,19 @@
             </Button>
             <Button x:Name="btnModifier" Grid.Column="3" Content="modifier" Grid.Row="1" FontFamily="Palatino Linotype" FontSize="22" Click="Button_Click">
                 <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <RadialGradientBrush>
                         <GradientStop Color="#FF91B7C3" Offset="1"/>
                         <GradientStop Color="#FFC0E8F4" Offset="0.007"/>
-                    </LinearGradientBrush>
+                    </RadialGradientBrush>
                 </Button.Background>
             </Button>
 
             <Button x:Name="btnAjouter" Grid.Column="5" Content="ajouter" Grid.Row="1" FontSize="22" FontFamily="Palatino Linotype" Click="Button_Click">
                 <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <RadialGradientBrush>
                         <GradientStop Color="#FF91B7C3" Offset="1"/>
                         <GradientStop Color="#FFC0E8F4" Offset="0.007"/>
-                    </LinearGradientBrush>
+                    </RadialGradientBrush>
                 </Button.Background>
             </Button>
 
