@@ -14,7 +14,8 @@ namespace WpfDbPersonne
     public partial class MainWindow : Window
     {
         private PersonneDbContext _context;
-        private PersonneController _controller;
+        private PersonneController _controller; 
+        //private PersonneService _service;
         public MainWindow()
         {
             InitializeComponent();
@@ -22,6 +23,7 @@ namespace WpfDbPersonne
             InitializeComponent();
             _context = new PersonneDbContext();
             _controller = new PersonneController(_context);
+            //_service = new PersonneService(_context);
             Dtg.ItemsSource = _controller.GetAllPersonne();
         }
         private void RemplirGrid()
