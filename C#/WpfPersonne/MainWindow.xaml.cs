@@ -13,18 +13,15 @@ namespace WpfDbPersonne
     /// </summary>
     public partial class MainWindow : Window
     {
-        private PersonneService _service;
-        public PersonneDbContext _contextRead;
-        public PersonneDbContext _contextWrite;
+        private PersonneDbContext _context;
         private PersonneController _controller;
         public MainWindow()
         {
             InitializeComponent();
 
-            _contextRead = new PersonneDbContext();
-            _contextWrite = new PersonneDbContext();
-            _controller = new PersonneController(_contextRead);
-            _service = new PersonneService(_contextWrite, _contextRead);
+            InitializeComponent();
+            _context = new PersonneDbContext();
+            _controller = new PersonneController(_context);
             Dtg.ItemsSource = _controller.GetAllPersonne();
         }
         private void RemplirGrid()
