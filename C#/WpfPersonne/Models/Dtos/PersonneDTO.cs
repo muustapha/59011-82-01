@@ -13,6 +13,8 @@ namespace WpfDbPersonne.Models.Dtos
 
         public string Prenom { get; set; } = null!;
 
+        public int? CodePostal { get; set; }
+
         public string? Adresse { get; set; }
 
         public string? Ville { get; set; }

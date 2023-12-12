@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\C#",
+    "\\C#\\WpfDbPersonne",
+    "\\C#\\WpfDbPersonne\\Models",
+    "\\C#\\WpfDbPersonne\\Models\\Dtos"
   ],
-  "SelectedNode": "\\C_Sharp.sln (bdd\\C#\\classbanque\\C_Sharp.sln)",
+  "SelectedNode": "\\C#\\WpfDbPersonne\\Models\\Dtos\\PersonneDTO.cs",
   "PreviewInSolutionExplorer": false
 }

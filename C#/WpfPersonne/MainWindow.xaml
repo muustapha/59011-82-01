@@ -67,12 +67,12 @@
         </Grid>
         <DataGrid  x:Name="Dtg" Grid.Column="1" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="idPersonne" Binding="{Binding IdPersonne}"/>
+                <!--<DataGridTextColumn Header="idPersonne" Binding="{Binding IdPersonne}"/>-->
                 <DataGridTextColumn Header="nom" Binding="{Binding Nom}"/>
                 <DataGridTextColumn Header="prenom" Binding="{Binding Prenom}"/>
                 <DataGridTextColumn Header="codePostal" Binding="{Binding CodePostal}"/>
-                <DataGridTextColumn Header="adresse" Binding="{Binding adresse}"/>
-                <DataGridTextColumn Header="ville" Binding="{Binding ville}"/>
+                <DataGridTextColumn Header="adresse" Binding="{Binding Adresse}"/>
+                <DataGridTextColumn Header="ville" Binding="{Binding Ville}"/>
                     
             </DataGrid.Columns>
         </DataGrid>

@@ -38,7 +38,7 @@ namespace WpfDbPersonne
         }
         private void RemplirGrid()
         {
-            //Dtg.ItemsSource = PersonneService.GetAllPersonne();
+            Dtg.ItemsSource = _controller.GetAllPersonne();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

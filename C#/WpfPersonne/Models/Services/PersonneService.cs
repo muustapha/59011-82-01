@@ -18,7 +18,8 @@ namespace WpfDbPersonne.Models.Services
 
         public IEnumerable<Personne> GetAllPersonne()
         {
-            return _context.Personne.ToList();
+             var tt =_context.Personne.ToList();
+            return tt;  
         }
         public Personne GetPersonneById(int id)
         {
