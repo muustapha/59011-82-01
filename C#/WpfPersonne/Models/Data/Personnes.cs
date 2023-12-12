@@ -17,7 +17,7 @@ public partial class Personne
 
     public string Ville { get; set; } = null!;
 
-    public Personne(uint idPersonne, string nom, string prenom, int codePostal, string adresse, string ville)
+    public Personne(uint idPersonne, string nom, string prenom, int? codePostal, string adresse, string ville)
     {   
         IdPersonne = idPersonne;
         Nom = nom;
@@ -28,7 +28,7 @@ public partial class Personne
     }
 
 
-    public Personne(string nom, string prenom, int codePostal, string adresse, string ville)
+    public Personne(string nom, string prenom, int? codePostal, string adresse, string ville)
     {
         Nom = nom;
         Prenom = prenom;

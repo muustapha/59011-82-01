@@ -8,6 +8,7 @@ namespace WpfDbPersonne.Models.Dtos
 {
     public class PersonneDTO
     {
+        public uint IdPersonne { get; set; }
 
         public string Nom { get; set; } = null!;
 
