@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using WpfDbPersonne.Models.Data;
+
+namespace WpfDbPersonne.Models.Services
+{
+    internal class PersonneService
+    {
+=======
 ﻿using System.Collections.Generic;
 using System;
 using WpfDbPersonne.Models.Data;
@@ -15,8 +28,13 @@ public class PersonneService
 
         _contextWrite = contextWrite;
         _contextRead = contextRead;
+<<<<<<< HEAD
     }
 
+=======
+=======
+>>>>>>> 792324299911de2ccb8adc04230e69bc2a84aa9c
+>>>>>>> aa304caf87c688038fbdc532dd6b71646075f7ab
         private readonly PersonneDbContext _context;
 
         public PersonneService(PersonneDbContext context)
@@ -24,6 +42,7 @@ public class PersonneService
             _context = context;
         }
 
+<<<<<<< HEAD
        // public IEnumerable<Personne> GetAllPersonne()
        // {
        //     var tt = _context.Personne.ToList();
@@ -37,6 +56,26 @@ public class PersonneService
        // public void AddPersonne(Personne p)
        // {
        //     if (p == null) throw new ArgumentNullException(nameof(p));
+=======
+        public IEnumerable<Personne> GetAllPersonne()
+        {
+<<<<<<< HEAD
+             var tt =_context.Personne.ToList();
+            return tt;  
+=======
+            var tt = _context.Personne.ToList();
+            return tt;
+            //return _context.Personne.ToList();
+>>>>>>> 792324299911de2ccb8adc04230e69bc2a84aa9c
+        }
+        public Personne GetPersonneById(int id)
+        {
+            return _context.Personne.FirstOrDefault(p => p.IdPersonne == id);
+        }
+        public void AddPersonne(Personne p)
+        {
+            if (p == null) throw new ArgumentNullException(nameof(p));
+>>>>>>> aa304caf87c688038fbdc532dd6b71646075f7ab
 
        //     _context.Personne.Add(p);
        //     _context.SaveChanges();
@@ -60,7 +99,16 @@ public class PersonneService
 
 
 
+<<<<<<< HEAD
     //}
+=======
+<<<<<<< HEAD
+    }
+}
+=======
+>>>>>>> 9607937be504466c5f0905c45b8450172be80b8f
+    }
+>>>>>>> aa304caf87c688038fbdc532dd6b71646075f7ab
 
     public IEnumerable<Personne> GetAllPersonne()
     {
@@ -93,3 +141,4 @@ public class PersonneService
 
     }
 }
+>>>>>>> 792324299911de2ccb8adc04230e69bc2a84aa9c

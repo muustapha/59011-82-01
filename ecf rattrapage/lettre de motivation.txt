@@ -1,8 +1,8 @@
 ‌Madame, Monsieur,
 
-Actuellement en formation de Concepteur Développeur d'Applications à l'AFPA de Dunkerque, je me permets de vous adresser ma candidature pour effectuer un stage au sein de votre entreprise. Ma période en entreprise est prévu du 26 février 2023 au 24 mai 2023, et je suis particulièrement intéressé par les missions que propose Cfi Gestion.
+Actuellement en formation de Concepteur Développeur d'Applications à l'AFPA de Dunkerque, je me permets de vous adresser ma candidature pour effectuer un stage au sein de votre entreprise. Ma période en entreprise est prévu du 26 février 2024 au 24 mai 2024, et je suis particulièrement intéressé par les missions que propose Infotel.
 
-Ayant suivi une formation complète en conception et développement d'applications, je suis doté de solides compétences techniques dans les langages de programmation tels que Javascript, PHP, C#, HTLM et CSS. J'ai également acquis des connaissances approfondies en matière de conception de bases de données, de développement web, et de gestion de projets informatiques.
+Ayant suivi une formation complète en conception et développement d'applications, je suis doté de solides compétences techniques dans les langages de programmation tels que Javascript, PHP, C#, HTML et CSS. J'ai également acquis des connaissances approfondies en matière de conception de bases de données, de développement web, et de gestion de projets informatiques.
 
 Je m'adresse à votre entreprise spécifiquement en raison de votre expertise dans le domaine informatique. Je suis convaincu que rejoindre votre équipe me permettra de mettre en pratique mes compétences tout en enrichissant mon expérience professionnelle.
 
@@ -18,4 +18,3 @@ Cordialement, Aftiss Mustapha
 
 
 
-Candidature Spontanée pour un période en entreprise en Concepteur Développement d'Applications
