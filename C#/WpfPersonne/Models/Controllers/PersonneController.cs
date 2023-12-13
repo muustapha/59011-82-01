@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using WpfDbPersonne.Models.Data;
 using WpfDbPersonne.Models.Profiles;
 using WpfDbPersonne.Models.Dtos;
-using WpfDbPersonne.Models.Services;
 
 namespace WpfDbPersonne.Models.Controllers
 {
@@ -15,7 +14,8 @@ namespace WpfDbPersonne.Models.Controllers
 
         public PersonneController(PersonneDbContext context)
         {
-            _service = new PersonneService(context);
+            var contextRead = new PersonneDbContext();
+            _service = new PersonneService(context, contextRead);
             var config = new MapperConfiguration(cfg =>
             {
                 cfg.AddProfile<PersonneProfile>();

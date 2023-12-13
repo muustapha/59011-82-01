@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-U:\59011-82-01\C#\adhesion\obj\Debug\net7.0-windows\
+C:\Users\59011-82-01\Documents\GitLocal\59011-82-01\C#\wpf\adhesion\obj\Debug\net7.0-windows\
 adhesion
 none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
-U:\59011-82-01\C#\adhesion\App.xaml
+C:\Users\59011-82-01\Documents\GitLocal\59011-82-01\C#\wpf\adhesion\App.xaml
 11407045341
 
 3-1233169557
 198-306949569
 MainWindow.xaml;
 
-False
+True
 
