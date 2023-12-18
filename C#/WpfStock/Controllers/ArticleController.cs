@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -6,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WpfStock.Models.Dtos;
+using WpfStock.Models.Data;
 using WpfStock.Models.Profiles;
 using WpfStock.Models.Services;
 
@@ -13,8 +15,7 @@ namespace WpfStock.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-
-    class ArticleController
+    public class ArticleController : ControllerBase
     {
         private readonly ArticleService _service;
         private readonly IMapper _mapper;
@@ -33,7 +34,7 @@ namespace WpfStock.Controllers
 
         public IEnumerable<ArticleDTOAvecCategorie> GetAllArticle()
         {
-            IEnumerable<Categorie> listeArticles = _service.GetAllArticle();
+            IEnumerable<Article> listeArticles = (IEnumerable<Article>)_service.GetAllArticle();
             return _mapper.Map<IEnumerable<ArticleDTOAvecCategorie>>(listeArticles);
         }
 
@@ -50,39 +51,39 @@ namespace WpfStock.Controllers
         }
 
 
-        public ActionResult<Article> CreateArticle(ArticleDTOIn personneDTO)
+        public ActionResult<Article> CreateArticle(ArticleDTOIn articleDTO)
         {
-            Categorie personnePOCO = _mapper.Map<Categorie>(personneDTO);
+            Article articlePOCO = _mapper.Map<Article>(articleDTO);
             //on ajoute l’objet à la base de données
-            _service.AddArticle(personnePOCO);
+            _service.AddArticle(articlePOCO);
             //on retourne le chemin de findById avec l'objet créé
-            return CreatedAtRoute(nameof(GetArticleById), new { Id = personnePOCO.IdArticle }, personnePOCO);
+            return CreatedAtRoute(nameof(GetArticleById), new { Id = articlePOCO.IdArticle }, articlePOCO);
 
         }
 
 
-        public ActionResult UpdateArticle(int id, ArticleDTOIn personne)
+        public ActionResult UpdateArticle(int id, ArticleDTOIn article)
         {
-            var personneFromRepo = _service.GetArticleById(id);
-            if (personneFromRepo == null)
+            var articleFromRepo = _service.GetArticleById(id);
+            if (articleFromRepo == null)
             {
                 return NotFound();
             }
-            _mapper.Map(personne, personneFromRepo);
+            _mapper.Map(article, articleFromRepo);
             // inutile puisque la fonction ne fait rien, mais garde la cohérence
-            _service.UpdateArticle(personneFromRepo);
+            _service.UpdateArticle(articleFromRepo);
 
             return NoContent();
         }
 
         public ActionResult DeleteArticle(int id)
         {
-            var personneModelFromRepo = _service.GetArticleById(id);
-            if (personneModelFromRepo == null)
+            var articleModelFromRepo = _service.GetArticleById(id);
+            if (articleModelFromRepo == null)
             {
                 return NotFound();
             }
-            _service.DeleteArticle(personneModelFromRepo);
+            _service.DeleteArticle(articleModelFromRepo);
 
             return NoContent();
         }

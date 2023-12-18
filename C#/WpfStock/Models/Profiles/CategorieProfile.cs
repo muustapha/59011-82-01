@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WpfStock.Models.Dtos;
+using WpfStock.Models.Data; 
 
 namespace WpfStock.Models.Profiles
 { public class CategorieProfile : Profile

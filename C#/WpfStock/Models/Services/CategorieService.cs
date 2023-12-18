@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WpfStock.Models.Data; 
 
 namespace WpfStock.Models.Services
 {
@@ -19,13 +20,13 @@ namespace WpfStock.Models.Services
 
         public IEnumerable<Categorie> GetAllCategorie()
         {
-            var tt = _context.Categories.Include(a => a.IdTypeProduitNavigation).ToList();
+            var tt = _context.Categories.Include(a => a.TypesProduit).ToList();
             return tt;
             //return _context.Categorie.ToList();
         }
         public Categorie GetCategorieById(int id)
         {
-            return _context.Categories.Include(a => a.IdTypeProduitNavigation).FirstOrDefault(p => p.IdCategorie == id);
+            return _context.Categories.Include(a => a.TypesProduit).FirstOrDefault(p => p.IdCategorie == id);
         }
         public void AddCategorie(Categorie p)
         {

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using WpfStock.Models.Data;
 
 namespace WpfStock;
 
@@ -15,7 +16,7 @@ public partial class GestionstocksContext : DbContext
     {
     }
 
-    public virtual DbSet<Categorie> Articles { get; set; }
+    public virtual DbSet<Article> Articles { get; set; }
 
     public virtual DbSet<Categorie> Categories { get; set; }
 
@@ -27,7 +28,7 @@ public partial class GestionstocksContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Categorie>(entity =>
+        modelBuilder.Entity<Article>(entity =>
         {
             entity.HasKey(e => e.IdArticle).HasName("PRIMARY");
 
@@ -42,7 +43,7 @@ public partial class GestionstocksContext : DbContext
                 .IsFixedLength();
             entity.Property(e => e.QuantiteStockee).HasColumnType("int(11)");
 
-            entity.HasOne(d => d.IdCategorieNavigation).WithMany(p => p.Articles)
+            entity.HasOne(d => d.Categorie).WithMany(p => p.Articles)
                 .HasForeignKey(d => d.IdCategorie)
                 .OnDelete(DeleteBehavior.Restrict)
                 .HasConstraintName("articles_ibfk_1");
@@ -60,7 +61,7 @@ public partial class GestionstocksContext : DbContext
             entity.Property(e => e.IdTypeProduit).HasColumnType("int(11)");
             entity.Property(e => e.LibelleCategorie).HasMaxLength(100);
 
-            entity.HasOne(d => d.IdTypeProduitNavigation).WithMany(p => p.Categories)
+            entity.HasOne(d => d.TypesProduit).WithMany(p => p.Categories)
                 .HasForeignKey(d => d.IdTypeProduit)
                 .OnDelete(DeleteBehavior.Restrict)
                 .HasConstraintName("categories_ibfk_1");

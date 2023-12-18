@@ -6,6 +6,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WpfStock.Models.Data;
+using WpfStock.Models.Dtos;
+using WpfStock.Models.Profiles;
 using WpfStock.Models.Services;
 
 namespace WpfStock.Controllers
@@ -17,94 +20,74 @@ namespace WpfStock.Controllers
         private readonly CategorieService _service;
         private readonly IMapper _mapper;
 
-        public CategorieController(CategorieService service, IMapper mapper)
+        public CategorieController(GestionstocksContext context)
         {
-            _service = service;
-            _mapper = mapper;
-        }
-
-        //GET api/Categorie
-        [HttpGet]
-        public ActionResult<IEnumerable<GradeDTOAvecStudents>> GetAllCategorie()
-        {
-            IEnumerable<Grade> listeCategorie = _service.GetAllGrade();
-            return Ok(_mapper.Map<IEnumerable<GradeDTOAvecStudents>>(listeCategorie));
-        }
-
-        //GET api/Categorie/{i}
-        [HttpGet("{id}", Name = "GetGradeById")]
-        public ActionResult<GradeDTOAvecStudents> GetGradeById(int id)
-        {
-            Grade commandItem = _service.GetGradeById(id);
-            if (commandItem != null)
+            var contextRead = new GestionstocksContext();
+            _service = new CategorieService(context);
+            var config = new MapperConfiguration(cfg =>
             {
-                return Ok(_mapper.Map<GradeDTOAvecStudents>(commandItem));
+                cfg.AddProfile<CategorieProfile>();
+            });
+            _mapper = config.CreateMapper();
+        }
+
+
+        public IEnumerable<CategorieDTOAvecTypesProduit> GetAllCategorie()
+        {
+            IEnumerable<Categorie> listeCategories = _service.GetAllCategorie();
+            return _mapper.Map<IEnumerable<CategorieDTOAvecTypesProduit>>(listeCategories);
+        }
+
+
+
+        public ActionResult<CategorieDTOAvecTypesProduit> GetCategorieById(int id)
+        {
+            var item = _service.GetCategorieById(id);
+            if (item != null)
+            {
+                return Ok(_mapper.Map<CategorieDTOAvecTypesProduit>(item));
             }
             return NotFound();
         }
 
-        //POST api/Categorie
-        [HttpPost]
-        public ActionResult<Grade> CreateGrade(GradeDTOIn obj)
+
+        public ActionResult<Categorie> CreateCategorie(CategorieDTOIn categorieDTO)
         {
-            Grade newGrade = _mapper.Map<Grade>(obj);
-            _service.AddGrade(newGrade);
-            return CreatedAtRoute(nameof(GetGradeById), new { Id = newGrade.GradeId }, newGrade);
+            Categorie categoriePOCO = _mapper.Map<Categorie>(categorieDTO);
+            //on ajoute l’objet à la base de données
+            _service.AddCategorie(categoriePOCO);
+            //on retourne le chemin de findById avec l'objet créé
+            return CreatedAtRoute(nameof(GetCategorieById), new { Id = categoriePOCO.IdCategorie }, categoriePOCO);
+
         }
 
-        //POST api/Categorie/{id}
-        [HttpPut("{id}")]
-        public ActionResult UpdateGrade(int id, GradeDTOIn obj)
+
+        public ActionResult UpdateCategorie(int id, CategorieDTOIn categorie)
         {
-            Grade objFromRepo = _service.GetGradeById(id);
-            if (objFromRepo == null)
+            var categorieFromRepo = _service.GetCategorieById(id);
+            if (categorieFromRepo == null)
             {
                 return NotFound();
             }
-            _mapper.Map(obj, objFromRepo);
-            _service.UpdateGrade(objFromRepo);
+            _mapper.Map(categorie, categorieFromRepo);
+            // inutile puisque la fonction ne fait rien, mais garde la cohérence
+            _service.UpdateCategorie(categorieFromRepo);
+
             return NoContent();
         }
 
-        // Exemple d'appel
-        // [{
-        // "op":"replace",
-        // "path":"",
-        // "value":""
-        // }]
-        //PATCH api/Categorie/{id}
-        [HttpPatch("{id}")]
-        public ActionResult PartialGradeUpdate(int id, JsonPatchDocument<Grade> patchDoc)
+        public ActionResult DeleteCategorie(int id)
         {
-            Grade objFromRepo = _service.GetGradeById(id);
-            if (objFromRepo == null)
+            var categorieModelFromRepo = _service.GetCategorieById(id);
+            if (categorieModelFromRepo == null)
             {
                 return NotFound();
             }
-            Grade objToPatch = _mapper.Map<Grade>(objFromRepo);
-            patchDoc.ApplyTo(objToPatch, ModelState);
-            if (!TryValidateModel(objToPatch))
-            {
-                return ValidationProblem(ModelState);
-            }
-            _mapper.Map(objToPatch, objFromRepo);
-            _service.UpdateGrade(objFromRepo);
+            _service.DeleteCategorie(categorieModelFromRepo);
+
             return NoContent();
         }
-
-        //DELETE api/Categorie/{id}
-        [HttpDelete("{id}")]
-        public ActionResult DeleteGrade(int id)
-        {
-            Grade obj = _service.GetGradeById(id);
-            if (obj == null)
-            {
-                return NotFound();
-            }
-            _service.DeleteGrade(obj);
-            return NoContent();
-        }
-
 
     }
 }
+

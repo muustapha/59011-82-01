@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace WpfStock;
+namespace WpfStock.Models.Data;
 
 public partial class Categorie
 { 
     public Categorie()
     {
-        Articles = new HashSet<Categorie>();
+        Articles = new HashSet<Article>();
     }
     public int IdCategorie { get; set; }
 
@@ -15,7 +15,7 @@ public partial class Categorie
 
     public int IdTypeProduit { get; set; }
 
-    public virtual ICollection<Categorie> Articles { get; set; } = new List<Categorie>();
+    public virtual ICollection<Article> Articles { get; set; }
 
-    public virtual TypesProduit IdTypeProduitNavigation { get; set; } = null!;
+    public virtual TypesProduit TypesProduit { get; set; } = null!;
 }

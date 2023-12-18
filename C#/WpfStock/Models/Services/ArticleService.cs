@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WpfStock.Models;
+using WpfStock.Models.Data;
 
 namespace WpfStock.Models.Services
 {
@@ -17,38 +17,37 @@ namespace WpfStock.Models.Services
             _context = context;
         }
 
-        public IEnumerable<Categorie> GetAllArticle()
+        public IEnumerable<Article> GetAllArticle()
         {
-            var tt = _context.Articles.Include(a => a.IdCategorieNavigation).ToList();
-            return tt;
-            //return _context.Categorie.ToList();
+            return _context.Articles.Include("Categorie").ToList();
+            //return _context.Article.ToList();
         }
-        public Categorie GetArticleById(int id)
+        public Article GetArticleById(int id)
         {
-            return _context.Articles.Include(a => a.IdCategorieNavigation).FirstOrDefault(p => p.IdArticle == id);
+            return _context.Articles.Include("Categorie").FirstOrDefault(a => a.IdArticle == id);
         }
-        public void AddArticle(Categorie p)
+        public void AddArticle(Article a)
         {
-            if (p == null) throw new ArgumentNullException(nameof(p));
+            if (a == null) throw new ArgumentNullException(nameof(a));
 
-            _context.Articles.Add(p);
+            _context.Articles.Add(a);
             _context.SaveChanges();
         }
-        public void DeleteArticle(Categorie p)
+        public void DeleteArticle(Article a)
         {
             //si l'objet personne est null, on renvoi une exception
-            if (p == null) throw new ArgumentNullException(nameof(p));
+            if (a == null) throw new ArgumentNullException(nameof(a));
 
             // on met à jour le context
-            _context.Articles.Remove(p);
+            _context.Articles.Remove(a);
             _context.SaveChanges();
         }
-        public void UpdateArticle(Categorie p)
+        public void UpdateArticle(Article a)
         {
 
-            _context.Entry(p).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            _context.Entry(a).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
             _context.SaveChanges();
-            _context.Entry(p).Reload();
+            _context.Entry(a).Reload();
         }
         //nothing
         //on va mettre à jour le context dans le controller par mapping et passer

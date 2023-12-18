@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace WpfStock;
+namespace WpfStock.Models.Data;
 
 public partial class Article
 {
@@ -13,7 +13,7 @@ public partial class Article
 
     public int IdCategorie { get; set; }
 
-    public virtual Categorie IdCategorieNavigation { get; set; } = null!;
+    public virtual Categorie Categorie { get; set; }
 
     public Article(int idArticle, string libelleArticle, int quantiteStockee, int idCategorie)
     {
