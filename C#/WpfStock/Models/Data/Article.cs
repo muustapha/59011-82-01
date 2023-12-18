@@ -22,9 +22,6 @@ public partial class Article
         QuantiteStockee = quantiteStockee;
         IdCategorie = idCategorie;
 
-
-
-
     }
 
 

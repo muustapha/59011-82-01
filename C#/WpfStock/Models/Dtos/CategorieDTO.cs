@@ -17,7 +17,7 @@ namespace WpfStock.Models.Dtos
 
         public int IdTypeProduit { get; set; }
 
-        public virtual ICollection<Article> Articles { get; set; } = new List<Article>();
+        public virtual ICollection<Categorie> Articles { get; set; } = new List<Categorie>();
 
         
     }
@@ -44,6 +44,21 @@ namespace WpfStock.Models.Dtos
         public int IdTypeProduit { get; set; }
 
         public virtual TypesProduitDTOOut TypesProduit { get; set; }
+    }
+    public class CategorieDTOAvecTypesProduitEtArticle
+    {
+        public CategorieDTOAvecTypesProduitEtArticle()
+        { 
+            Article = new HashSet<ArticleDTOAvecCategorie>();
+        }
+
+
+        public string LibelleCategorie { get; set; } = null!;
+
+        public int IdTypeProduit { get; set; }
+
+        public virtual TypesProduitDTOOut TypesProduit { get; set; }
+        public virtual ICollection<ArticleDTOAvecCategorie> Article { get; set; }
     }
 
 

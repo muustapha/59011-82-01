@@ -5,10 +5,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WpfStock.Models.Dtos;
+using WpfStock.Models.Profiles;
 using WpfStock.Models.Services;
 
 namespace WpfStock.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
+
     class ArticleController
     {
         private readonly ArticleService _service;
@@ -16,7 +21,7 @@ namespace WpfStock.Controllers
 
         public ArticleController(GestionstocksContext context)
         {
-            var contextRead = new GestionstocksDbContext();
+            var contextRead = new GestionstocksContext();
             _service = new ArticleService(context);
             var config = new MapperConfiguration(cfg =>
             {
@@ -26,28 +31,28 @@ namespace WpfStock.Controllers
         }
 
 
-        public IEnumerable<ArticleDTO> GetAllArticle()
+        public IEnumerable<ArticleDTOAvecCategorie> GetAllArticle()
         {
-            IEnumerable<Article> listeArticles = _service.GetAllArticle();
-            return _mapper.Map<IEnumerable<ArticleDTO>>(listeArticles);
+            IEnumerable<Categorie> listeArticles = _service.GetAllArticle();
+            return _mapper.Map<IEnumerable<ArticleDTOAvecCategorie>>(listeArticles);
         }
 
 
 
-        public ActionResult<ArticleDTO> GetArticleById(int id)
+        public ActionResult<ArticleDTOAvecCategorie> GetArticleById(int id)
         {
             var item = _service.GetArticleById(id);
             if (item != null)
             {
-                return Ok(_mapper.Map<ArticleDTO>(item));
+                return Ok(_mapper.Map<ArticleDTOAvecCategorie>(item));
             }
             return NotFound();
         }
 
 
-        public ActionResult<ArticleDTO> CreateArticle(ArticleDTO personneDTO)
+        public ActionResult<Article> CreateArticle(ArticleDTOIn personneDTO)
         {
-            Article personnePOCO = _mapper.Map<Article>(personneDTO);
+            Categorie personnePOCO = _mapper.Map<Categorie>(personneDTO);
             //on ajoute l’objet à la base de données
             _service.AddArticle(personnePOCO);
             //on retourne le chemin de findById avec l'objet créé
@@ -56,7 +61,7 @@ namespace WpfStock.Controllers
         }
 
 
-        public ActionResult UpdateArticle(int id, ArticleDTO personne)
+        public ActionResult UpdateArticle(int id, ArticleDTOIn personne)
         {
             var personneFromRepo = _service.GetArticleById(id);
             if (personneFromRepo == null)

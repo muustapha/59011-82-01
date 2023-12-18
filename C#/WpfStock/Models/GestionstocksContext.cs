@@ -15,7 +15,7 @@ public partial class GestionstocksContext : DbContext
     {
     }
 
-    public virtual DbSet<Article> Articles { get; set; }
+    public virtual DbSet<Categorie> Articles { get; set; }
 
     public virtual DbSet<Categorie> Categories { get; set; }
 
@@ -27,7 +27,7 @@ public partial class GestionstocksContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Article>(entity =>
+        modelBuilder.Entity<Categorie>(entity =>
         {
             entity.HasKey(e => e.IdArticle).HasName("PRIMARY");
 
