@@ -8,5 +8,11 @@ namespace WpfStock.Controllers
 {
     class TypesProduitController
     {
+        private GestionstocksContext context;
+
+        public TypesProduitController(GestionstocksContext context)
+        {
+            this.context = context;
+        }
     }
 }

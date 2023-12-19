@@ -34,7 +34,9 @@ public partial class Article
     }
 
 
-
+    public Article()
+    {
+    }   
 
 
 

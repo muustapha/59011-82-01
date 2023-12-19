@@ -5,27 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfStock"
         mc:Ignorable="d"
-        Title="GestionStock" Height="450" Width="800">
+        Title="GestionStock" Height="309" Width="400" MinHeight="209" MinWidth="800">
     <Grid><Grid.Background>
     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
         <GradientStop Color="#FF7A9FB4" Offset="1"/>
         <GradientStop Color="#FFA9D0D3" Offset="0"/>
     </LinearGradientBrush>
 </Grid.Background>
-<Grid.ColumnDefinitions>
+<!--<Grid.ColumnDefinitions>
     <ColumnDefinition Width="1*"/>
     <ColumnDefinition Width="98*"/>
     <ColumnDefinition Width="1*"/>
 </Grid.ColumnDefinitions>
 <Grid.RowDefinitions>
     <RowDefinition Height="1*"/>
-    <RowDefinition Height="46.5*"/>
-    <RowDefinition Height="46.5*"/>
-    <RowDefinition Height="46.5*"/>
+    <RowDefinition Height="76.5*"/>
+    <RowDefinition Height="16.5*"/>
     <RowDefinition Height="1*"/>
 </Grid.RowDefinitions>
 
-<Grid Grid.Column="1" Grid.Row="3">
+<Grid Grid.Column="1" Grid.Row="2">-->
     <Grid.ColumnDefinitions>
         <ColumnDefinition Width="0.1*"/>
         <ColumnDefinition Width="1*"/>
@@ -41,10 +40,16 @@
         <RowDefinition Height="1*"/>
         <RowDefinition Height="0.1*"/>
     </Grid.RowDefinitions>
-    <Button x:Name="btnSupprimer" Grid.Column="1" Content="supprimer"  Grid.Row="1" FontFamily="Lucida Calligraphy" FontSize="16" Background="Transparent" Foreground="#FFDC1515" Click="Button_Click">
+    <Button x:Name="btnTypesproduit" Grid.Column="1" Content="TypesProduit"  Grid.Row="1" FontFamily="Lucida Calligraphy" FontSize="16" Click="Button_Click_TypesProduit">
+                <Button.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#FF91B7C3" Offset="1"/>
+                        <GradientStop Color="#FFC0E8F4" Offset="0.007"/>
+                    </RadialGradientBrush>
+                </Button.Background>
 
-    </Button>
-    <Button x:Name="btnModifier" Grid.Column="3" Content="modifier" Grid.Row="1" FontFamily="Palatino Linotype" FontSize="22" Click="Button_Click">
+            </Button>
+    <Button x:Name="btnCategorie" Grid.Column="3" Content="Categorie" Grid.Row="1" FontFamily="Palatino Linotype" FontSize="22" Click="Button_Click_Categorie">
         <Button.Background>
             <RadialGradientBrush>
                 <GradientStop Color="#FF91B7C3" Offset="1"/>
@@ -53,7 +58,7 @@
         </Button.Background>
     </Button>
 
-    <Button x:Name="btnAjouter" Grid.Column="5" Content="ajouter" Grid.Row="1" FontSize="22" FontFamily="Palatino Linotype" Click="Button_Click">
+    <Button x:Name="btnArticle" Grid.Column="5" Content="Article" Grid.Row="1" FontSize="22" FontFamily="Palatino Linotype" Click="Button_Click_Article">
         <Button.Background>
             <RadialGradientBrush>
                 <GradientStop Color="#FF91B7C3" Offset="1"/>
@@ -63,17 +68,5 @@
     </Button>
 
         </Grid>
-
-
-        <DataGrid  x:Name="Dtg" Grid.Column="1" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True">
-    <DataGrid.Columns>
-        <!--<DataGridTextColumn Header="idArticle" Binding="{Binding IdArticle}"/>-->
-                <DataGridTextColumn Header="LibelleArticle" Binding="{Binding LibelleArticle}"/>
-                <DataGridTextColumn Header=QuantiteStockee" Binding="{Binding QuantiteStockee}"/>
-        <DataGridTextColumn Header="LibelleCategorie" Binding="{Binding Idcategorie}"/>
-        <DataGridTextColumn Header="LibelleTypesProduits" Binding="{Binding LibelleTypesProduits}"/>
-
-            </DataGrid.Columns>
-</DataGrid>
-        </Grid>
+    <!--</Grid>-->
 </Window>

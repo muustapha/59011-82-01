@@ -11,4 +11,13 @@ public partial class TypesProduit
     public string LibelleTypeProduit { get; set; } = null!;
 
     public virtual ICollection<Categorie> Categories { get; set; } = new List<Categorie>();
+
+
+    public TypesProduit()
+    { }
+
+
+
+
+
 }
