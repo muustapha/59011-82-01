@@ -11,17 +11,59 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfStock.Models.Data;
+using WpfStock.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using WpfStock.Controllers;
+using WpfStock.Models.Dtos;
 
 namespace WpfStock.Vue
 {
-    /// <summary>
-    /// Logique d'interaction pour Article.xaml
-    /// </summary>
     public partial class Article : Window
     {
+        private GestionstocksContext _context;
+        private ArticleController _controller;
+
         public Article()
         {
             InitializeComponent();
+
+            _context = new GestionstocksContext();
+            _controller = new ArticleController(_context);
+            Dtg.ItemsSource = _controller.GetAllArticle();
+        }
+
+        private void RemplirGrid()
+        {
+            Dtg.ItemsSource = _controller.GetAllArticle();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Article item;
+            if (((Button)sender).Name == "btnAjouter")
+            {
+                item = new Article();
+            }
+            else
+            {
+                ArticleDTOOut selectedItem = Dtg.SelectedItem as ArticleDTOOut;
+                item = new Article(selectedItem!.IdArticle, selectedItem!.LibelleArticle, selectedItem.QuantiteStockee, selectedItem.LibelleCategorie)
+            }
+
+            Window w = new ArticleDetail(item, this, (string)((Button)sender).Content);
+            w.ShowDialog();
+            RemplirGrid();
+        }
+
+        private void Row_DoubleClick(object sender, EventArgs e)
+        {
+            Article item = (Article)((DataGridRow)sender).Item;
+
+            Window w = new ArticleDetail(item, this, "Modifier");
+            w.ShowDialog();
+            RemplirGrid();
         }
     }
 }

@@ -23,14 +23,38 @@ public partial class MainWindow : Window
      
     }
 
+
+    private void Button_Click_article(object sender, RoutedEventArgs e)
+    {
+        var articleWindow = new WpfStock.Vue.Article();
+
+        // Afficher la fenêtre Article
+        articleWindow.Show();
+
+    }
     private void InitializeComponent()
     {
         throw new NotImplementedException();
     }
 
-    private void Button_Click_article(object sender, RoutedEventArgs e)
+    private void Button_Click_Categorie(object sender, RoutedEventArgs e)
     {
+        var CategorieWindow = new WpfStock.Vue.Categorie();
 
+        // Afficher la fenêtre Categorie
+        CategorieWindow.Show();
 
     }
+
+
+
+    private void Button_Click_TypesProduit(object sender, RoutedEventArgs e)
+    {
+        var TypesProduitWindow = new WpfStock.Vue.TypesProduit();
+
+        // Afficher la fenêtre Article
+        TypesProduitWindow.Show();
+
+    }
+         
 }

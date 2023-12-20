@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WpfStock.Vue
 {
     /// <summary>
-    /// Logique d'interaction pour CategorieDetail.xaml
+    /// Logique d'interaction pour Typesproduit.xaml
     /// </summary>
-    public partial class CategorieDetail : Window
+    public partial class TypesProduit : Window
     {
-        public CategorieDetail()
+        public TypesProduit()
         {
             InitializeComponent();
         }

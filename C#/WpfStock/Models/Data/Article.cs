@@ -13,7 +13,7 @@ public partial class Article
 
     public int IdCategorie { get; set; }
 
-    public virtual Categorie Categorie { get; set; }
+    public virtual LibelleCategorie Categorie { get; set; }
 
     public Article(int idArticle, string libelleArticle, int quantiteStockee, int idCategorie)
     {
@@ -32,6 +32,18 @@ public partial class Article
         QuantiteStockee = quantiteStockee;
         IdCategorie = idCategorie;
     }
+
+
+
+    public Article(int idArticle, string libelleArticle, int quantiteStockee, string libelleCategorie)
+    {
+              IdArticle = idArticle;
+        LibelleArticle = libelleArticle;
+        QuantiteStockee = quantiteStockee;
+       LibelleCategorie = libelleCategorie;
+
+    }
+}
 
 
     public Article()

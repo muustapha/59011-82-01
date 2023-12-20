@@ -30,8 +30,10 @@ namespace WpfStock.Models.Dtos
 
         public int QuantiteStockee { get; set; }
 
-    }   
- public class ArticleDTOAvecCategorie
+        public string LibelleCategorie { get; set; } = null!;
+
+    }
+    public class ArticleDTOAvecCategorie
     {
     public ArticleDTOAvecCategorie()
         { }
@@ -41,7 +43,7 @@ namespace WpfStock.Models.Dtos
 
         public int QuantiteStockee { get; set; }
 
-        public int IdCategorie { get; set; }
+        public int LibelleCategorie { get; set; }
 
         public virtual CategorieDTOOut Categorie { get; set; }
     }
