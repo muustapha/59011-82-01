@@ -23,7 +23,7 @@ namespace WpfStock.Models.Services
         }
         public TypesProduit GetTypesProduitById(int id)
         {
-            return _context.TypesProduits.FirstOrDefault(p => p.IdTypeProduit == id);
+            return _context.TypesProduits.FirstOrDefault(p => p.IdTypesProduit == id);
         }
         public void AddTypesProduit(TypesProduit p)
         {

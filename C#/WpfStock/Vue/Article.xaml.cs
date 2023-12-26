@@ -49,11 +49,11 @@ namespace WpfStock.Vue
             else
             {
                 ArticleDTOOut selectedItem = Dtg.SelectedItem as ArticleDTOOut;
-                item = new Article(selectedItem!.IdArticle, selectedItem!.LibelleArticle, selectedItem.QuantiteStockee, selectedItem.LibelleCategorie)
+                item = new Article();
             }
 
-            Window w = new ArticleDetail(item, this, (string)((Button)sender).Content);
-            w.ShowDialog();
+            //Window w = new ArticleDetail(item, this, (string)((Button)sender).Content);
+           // w.ShowDialog();
             RemplirGrid();
         }
 
@@ -61,8 +61,8 @@ namespace WpfStock.Vue
         {
             Article item = (Article)((DataGridRow)sender).Item;
 
-            Window w = new ArticleDetail(item, this, "Modifier");
-            w.ShowDialog();
+            //Window w = new ArticleDetail(item, this, "Modifier");
+            //w.ShowDialog();
             RemplirGrid();
         }
     }

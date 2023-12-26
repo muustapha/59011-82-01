@@ -24,5 +24,16 @@ namespace WpfStock.Vue
         {
             InitializeComponent();
         }
+
+        private void Click_Annuler(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
+        private void Click_Valider(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -6,7 +6,7 @@ namespace WpfStock;
 
 public partial class TypesProduit
 {
-    public int IdTypeProduit { get; set; }
+    public int IdTypesProduit { get; set; }
 
     public string LibelleTypeProduit { get; set; } = null!;
 

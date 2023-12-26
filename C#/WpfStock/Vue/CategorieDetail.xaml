@@ -34,7 +34,7 @@
             <RowDefinition Height="0.75*" />
             <RowDefinition Height="1.5*" />
             <RowDefinition Height="0.25*" />
-           
+
         </Grid.RowDefinitions>
         <Label Name="idCategorie" Visibility="Hidden">
             <Label.Background>
@@ -126,9 +126,10 @@
 
         <Grid Grid.Row="9" Grid.Column="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*" />
-                <ColumnDefinition Width="1*" />
-                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="242*" />
+                <ColumnDefinition Width="242*" />
+                <ColumnDefinition Width="201*" />
+                <ColumnDefinition Width="42*"/>
             </Grid.ColumnDefinitions>
             <Button x:Name ="Annuler" Content="Annuler" Click="Click_Annuler" FontFamily="Palatino Linotype" FontSize="22" >
                 <Button.Background>
@@ -138,7 +139,7 @@
                     </RadialGradientBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="valider" Grid.Column="2" Content="Valider" FontFamily="Palatino Linotype" FontSize="22" Click="Click_Valider">
+            <Button x:Name="valider" Grid.Column="2" Content="Valider" FontFamily="Palatino Linotype" FontSize="22" Click="Click_Valider" Grid.ColumnSpan="2">
                 <Button.Background>
                     <RadialGradientBrush>
                         <GradientStop Color="#FFB1D8E4" Offset="0"/>
@@ -149,5 +150,5 @@
 
         </Grid>
     </Grid>
-    </Window>
+</Window>
 
