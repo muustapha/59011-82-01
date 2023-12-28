@@ -68,7 +68,7 @@
         </Grid>
         <DataGrid  x:Name="Dtg" Grid.Column="1" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True" Height="283" VerticalAlignment="Center">
             <DataGrid.Columns>
-                <!--<DataGridTextColumn Header="idTypesProduit" Binding="{Binding IdTypesProduit}"/>-->
+                <!--<DataGridTextColumn Header="IdTypeProduit" Binding="{Binding IdTypeProduit}"/>-->
                 <DataGridTextColumn Header="libelleTypesProduit" Binding="{Binding LibelleTypesProduit}"/>
 
             </DataGrid.Columns>

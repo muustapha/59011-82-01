@@ -20,13 +20,13 @@ namespace WPFGestionStock1.Models.Services
 
         public IEnumerable<Categorie> GetAllCategorie()
         {
-            var tt = _context.Categories.Include(a => a.TypesProduit).ToList();
+            var tt = _context.Categories.Include(t => t.TypesProduit).ToList();
             return tt;
             //return _context.Categorie.ToList();
         }
         public Categorie GetCategorieById(int id)
         {
-            return _context.Categories.Include(a => a.TypesProduit).FirstOrDefault(p => p.IdCategorie == id);
+            return _context.Categories.Include(t => t.TypesProduit).FirstOrDefault(p => p.IdCategorie == id);
         }
         public void AddCategorie(Categorie p)
         {

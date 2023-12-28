@@ -22,6 +22,10 @@ namespace WPFGestionStock1.Models.Profiles
             CreateMap<Article, ArticleDTOAvecCategorie>();
             CreateMap<ArticleDTOAvecCategorie,Article  >();
 
+            CreateMap<Article, ArticleDTOAvecCategorieEtTypesProduit>()
+     .ForMember(dest => dest.Categorie, opt => opt.MapFrom(src => src.Categorie))
+     .ForMember(dest => dest.TypesProduit, opt => opt.MapFrom(src => src.Categorie.TypesProduit));
+
         }
     }
 }

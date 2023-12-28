@@ -23,7 +23,7 @@ namespace WPFGestionStock1.Models.Services
         }
         public TypesProduit GetTypesProduitById(int id)
         {
-            return _context.TypesProduits.FirstOrDefault(p => p.IdTypesProduit == id);
+            return _context.TypesProduits.FirstOrDefault(p => p.IdTypeProduit == id);
         }
         public void AddTypesProduit(TypesProduit p)
         {

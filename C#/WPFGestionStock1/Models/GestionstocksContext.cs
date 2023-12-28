@@ -18,6 +18,11 @@ public partial class GestionstocksContext : DbContext
 
     public virtual DbSet<Article> Articles { get; set; }
 
+    public GestionstocksContext(DbSet<Article> articles)
+    {
+        Articles = articles;
+    }
+
     public virtual DbSet<Categorie> Categories { get; set; }
 
     public virtual DbSet<TypesProduit> TypesProduits { get; set; }
@@ -69,11 +74,11 @@ public partial class GestionstocksContext : DbContext
 
         modelBuilder.Entity<TypesProduit>(entity =>
         {
-            entity.HasKey(e => e.IdTypesProduit).HasName("PRIMARY");
+            entity.HasKey(e => e.IdTypeProduit).HasName("PRIMARY");
 
             entity.ToTable("TypesProduits");
 
-            entity.Property(e => e.IdTypesProduit).HasColumnType("int(11)");
+            entity.Property(e => e.IdTypeProduit).HasColumnType("int(11)");
             entity.Property(e => e.LibelleTypeProduit).HasMaxLength(100);
         });
 

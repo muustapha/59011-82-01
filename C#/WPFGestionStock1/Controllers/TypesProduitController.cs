@@ -64,7 +64,7 @@ namespace WPFGestionStock1.Controllers
             //on ajoute l’objet à la base de données
             _service.AddTypesProduit(typesProduitPOCO);
             //on retourne le chemin de findById avec l'objet créé
-            return CreatedAtRoute(nameof(GetTypesProduitById), new { Id = typesProduitPOCO.IdTypesProduit }, typesProduitPOCO);
+            return CreatedAtRoute(nameof(GetTypesProduitById), new { Id = typesProduitPOCO.IdTypeProduit }, typesProduitPOCO);
 
         }
 

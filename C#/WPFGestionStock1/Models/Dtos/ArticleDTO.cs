@@ -48,6 +48,17 @@ namespace WPFGestionStock1.Models.Dtos
         public virtual CategorieDTOOut Categorie { get; set; }
     }
 
+    public class ArticleDTOAvecCategorieEtTypesProduit
+    {
+        public ArticleDTOAvecCategorieEtTypesProduit()
+        { }
+        public string LibelleArticle { get; set; } = null!;
 
+        public int QuantiteStockee { get; set; }
+
+        public virtual CategorieDTOOut Categorie { get; set; }
+
+        public virtual TypesProduitDTOOut TypesProduit { get; set; }
+    }   
 }
 

@@ -6,7 +6,7 @@ namespace WPFGestionStock1;
 
 public partial class TypesProduit
 {
-    public int IdTypesProduit { get; set; }
+    public int IdTypeProduit { get; set; }
 
     public string LibelleTypeProduit { get; set; } = null!;
 
