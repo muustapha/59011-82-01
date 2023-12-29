@@ -14,8 +14,7 @@ using WPFGestionStock1.Models;
 
 namespace WPFGestionStock1.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
+    
     public class ArticleController : ControllerBase
     {
         private readonly ArticleService _service;

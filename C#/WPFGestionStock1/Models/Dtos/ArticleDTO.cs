@@ -6,59 +6,49 @@ using System.Threading.Tasks;
 
 namespace WPFGestionStock1.Models.Dtos
 {
- public class ArticleDTOIn
+    public class ArticleDTOIn
     {
 
         public ArticleDTOIn()
         { }
-            public string LibelleArticle { get; set; } = null!;
+        public string LibelleArticle { get; set; } = null!;
 
-            public int QuantiteStockee { get; set; }
+        public int QuantiteStockee { get; set; }
 
-            public int IdCategorie { get; set; }
-        }
-    
+        public int IdCategorie { get; set; }
+    }
 
- public class ArticleDTOOut
+
+    public class ArticleDTOOut
     {
 
-       public ArticleDTOOut()
+        public ArticleDTOOut()
         { }
-       
+
 
         public string LibelleArticle { get; set; } = null!;
 
         public int QuantiteStockee { get; set; }
 
-        public string LibelleCategorie { get; set; } = null!;
+        //public string LibelleCategorie { get; set; } = null!;
 
     }
     public class ArticleDTOAvecCategorie
     {
-    public ArticleDTOAvecCategorie()
+        public ArticleDTOAvecCategorie()
         { }
-       
+
 
         public string LibelleArticle { get; set; } = null!;
 
         public int QuantiteStockee { get; set; }
 
-        public int LibelleCategorie { get; set; }
+        public int IdCategorie { get; set; }
 
         public virtual CategorieDTOOut Categorie { get; set; }
-    }
-
-    public class ArticleDTOAvecCategorieEtTypesProduit
-    {
-        public ArticleDTOAvecCategorieEtTypesProduit()
-        { }
-        public string LibelleArticle { get; set; } = null!;
-
-        public int QuantiteStockee { get; set; }
-
-        public virtual CategorieDTOOut Categorie { get; set; }
-
-        public virtual TypesProduitDTOOut TypesProduit { get; set; }
-    }   
+        
+}
+        
+    
 }
 

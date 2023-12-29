@@ -18,7 +18,7 @@ namespace WPFGestionStock1.Models.Dtos
 
         public int IdTypeProduit { get; set; }
 
-        public virtual ICollection<Categorie> Articles { get; set; } = new List<Categorie>();
+        //public virtual ICollection<Categorie> Articles { get; set; } = new List<Categorie>();
 
         
     }

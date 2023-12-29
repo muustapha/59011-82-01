@@ -19,13 +19,14 @@ namespace WPFGestionStock1.Models.Services
 
         public IEnumerable<Article> GetAllArticle()
         {
-            return _context.Articles.Include("Categorie").ToList();
-            //return _context.Article.ToList();
+            return _context.Articles.Include(a => a.Categorie).ToList();
         }
+
         public Article GetArticleById(int id)
         {
-            return _context.Articles.Include("Categorie").FirstOrDefault(a => a.IdArticle == id);
+            return _context.Articles.Include(a => a.Categorie).FirstOrDefault(a => a.IdArticle == id);
         }
+    
         public void AddArticle(Article a)
         {
             if (a == null) throw new ArgumentNullException(nameof(a));

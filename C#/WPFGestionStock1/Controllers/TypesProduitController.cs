@@ -22,7 +22,7 @@ namespace WPFGestionStock1.Controllers
         private readonly TypesProduitService _service;
         private readonly IMapper _mapper;
         //private GestionstocksContext context;
-
+  
         public TypesProduitController(GestionstocksContext context)
         {
             //var contextRead = new GestionstocksContext();

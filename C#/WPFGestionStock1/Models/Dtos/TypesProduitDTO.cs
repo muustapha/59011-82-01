@@ -37,16 +37,16 @@ namespace WPFGestionStock1.Models.Dtos
         public virtual ICollection<CategorieDTOOut> Categorie { get; set; }
             }
 
-    public class TypesProduitDTOAvecCategorieEtArticle
-    {
-        public TypesProduitDTOAvecCategorieEtArticle()
-        {
-            Article = new HashSet<ArticleDTOAvecCategorie>();
-        }
+    //public class TypesProduitDTOAvecCategorieEtArticle
+    //{
+    //    public TypesProduitDTOAvecCategorieEtArticle()
+    //    {
+    //        Article = new HashSet<ArticleDTOAvecCategorie>();
+    //    }
 
-        public string LibelleTypeProduit { get; set; } = null!;
-        public virtual ICollection<CategorieDTOOut> Categorie { get; set; }
-        public virtual ICollection<ArticleDTOAvecCategorie> Article { get; set; }
-    }
+    //    public string LibelleTypeProduit { get; set; } = null!;
+    //    public virtual ICollection<CategorieDTOOut> Categorie { get; set; }
+    //    public virtual ICollection<ArticleDTOAvecCategorie> Article { get; set; }
+    //}
 }
 

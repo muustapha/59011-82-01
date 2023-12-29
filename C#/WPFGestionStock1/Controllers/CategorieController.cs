@@ -33,25 +33,12 @@ namespace WPFGestionStock1.Controllers
         }
 
 
-        public List<CategorieDTOAvecTypesProduit> GetAllCategorie()
+        public IEnumerable<CategorieDTOAvecTypesProduit> GetAllCategorie()
         {
-            List<Categorie> listeCategories = _service.GetAllCategorie().ToList();
-            var test = new List<CategorieDTOAvecTypesProduit>();
-            foreach (var item in listeCategories)
-            {
-                var tt = new CategorieDTOAvecTypesProduit()
-                {
-                    LibelleCategorie = item.LibelleCategorie,
-                    IdTypeProduit = item.IdTypeProduit,
-                    TypesProduit = new TypesProduitDTOOut() { 
-                    LibelleTypeProduit = item.TypesProduit.LibelleTypeProduit
-                    }
-                };
-                test.Add(tt);
-            }
-            return test;
-            //return _mapper.Map<List<CategorieDTOAvecTypesProduit>>(listeCategories);
+            IEnumerable<Categorie> listeCategories = (IEnumerable<Categorie>)_service.GetAllCategorie();
+            return _mapper.Map<IEnumerable<CategorieDTOAvecTypesProduit>>(listeCategories);
         }
+
 
 
 
