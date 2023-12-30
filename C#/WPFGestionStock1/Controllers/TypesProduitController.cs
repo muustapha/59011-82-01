@@ -15,13 +15,11 @@ using WPFGestionStock1.Models.Services;
 namespace WPFGestionStock1.Controllers
 {
 
-    [Route("api/[controller]")]
-    [ApiController]
     public class TypesProduitController : ControllerBase
     {
         private readonly TypesProduitService _service;
         private readonly IMapper _mapper;
-        //private GestionstocksContext context;
+       
   
         public TypesProduitController(GestionstocksContext context)
         {
@@ -34,15 +32,11 @@ namespace WPFGestionStock1.Controllers
             _mapper = config.CreateMapper();
         }
 
-        //public TypesProduitController(GestionstocksContext context)
-        //{
-        //    this.context = context;
-        //}
 
-        public IEnumerable<TypesProduitDTOAvecCategorie> GetAllTypesProduit()
+        public IEnumerable<string> GetAllTypesProduit()
         {
             IEnumerable<TypesProduit> listeTypesProduits = (IEnumerable<TypesProduit>)_service.GetAllTypesProduit();
-            return _mapper.Map<IEnumerable<TypesProduitDTOAvecCategorie>>(listeTypesProduits);
+            return listeTypesProduits.Select(tp => tp.LibelleTypeProduit).ToList();
         }
 
 

@@ -35,6 +35,13 @@ namespace WPFGestionStock1.Controllers
         public IEnumerable<ArticleDTOAvecCategorie> GetAllArticle()
         {
             IEnumerable<Article> listeArticles = (IEnumerable<Article>)_service.GetAllArticle();
+
+            // Ajouter une instruction de débogage pour imprimer les articles et leurs catégories
+            //foreach (var article in listeArticles)
+            //{
+            //    Console.WriteLine($"Article: {article.LibelleArticle}, Categorie: {article.Categorie?.LibelleCategorie}");
+            //}
+
             return _mapper.Map<IEnumerable<ArticleDTOAvecCategorie>>(listeArticles);
         }
 

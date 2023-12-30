@@ -42,7 +42,7 @@ namespace WPFGestionStock1.Models.Dtos
 
         public string LibelleCategorie { get; set; } = null!;
 
-        public int IdTypeProduit { get; set; }
+        public int LibelleTypesProduit { get; set; }
 
         public virtual TypesProduitDTOOut TypesProduit { get; set; }
     }

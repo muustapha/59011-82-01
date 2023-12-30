@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,13 +18,11 @@ namespace WPFGestionStock1.Models.Services
 
         public IEnumerable<TypesProduit> GetAllTypesProduit()
         {
-            var tt = _context.TypesProduits.ToList();
-            return tt;
-            //return _context.TypesProduit.ToList();
+            return _context.TypesProduits.Include(tp => tp.Categories).ToList();
         }
         public TypesProduit GetTypesProduitById(int id)
         {
-            return _context.TypesProduits.FirstOrDefault(p => p.IdTypeProduit == id);
+            return _context.TypesProduits.Include(tp => tp.Categories).FirstOrDefault(p => p.IdTypeProduit == id);
         }
         public void AddTypesProduit(TypesProduit p)
         {

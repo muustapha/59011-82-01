@@ -43,7 +43,7 @@ namespace WPFGestionStock1.Models.Dtos
 
         public int QuantiteStockee { get; set; }
 
-        public int IdCategorie { get; set; }
+        public int LibelleCategorie { get; set; }
 
         public virtual CategorieDTOOut Categorie { get; set; }
         
