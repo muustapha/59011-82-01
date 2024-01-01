@@ -23,24 +23,24 @@ namespace WPFGestionStock1.Models.Profiles
 
             CreateMap<Categorie, CategorieDTOAvecTypesProduit>()
             .ForMember(dest => dest.TypesProduit, opt => opt.MapFrom(src => src.TypesProduit));
-        CreateMap<CategorieDTOAvecTypesProduit, Categorie>()
-            .ForMember(dest => dest.TypesProduit, opt => opt.MapFrom(src => src.TypesProduit));
+            CreateMap<CategorieDTOAvecTypesProduit, Categorie>()
+                .ForMember(dest => dest.TypesProduit, opt => opt.MapFrom(src => src.TypesProduit));
 
-        CreateMap<Categorie, CategorieDTOAvecTypesProduitEtArticle>()
-            .ForMember(dest => dest.TypesProduit, opt => opt.MapFrom(src => src.TypesProduit))
-            .ForMember(dest => dest.Article, opt => opt.MapFrom(src => src.Articles));
+            //CreateMap<Categorie, CategorieDTOAvecTypesProduitEtArticle>()
+            //    .ForMember(dest => dest.TypesProduit, opt => opt.MapFrom(src => src.TypesProduit))
+            //    .ForMember(dest => dest.Article, opt => opt.MapFrom(src => src.Articles));
 
-        CreateMap<CategorieDTOAvecTypesProduitEtArticle, Categorie>()
-            .ForMember(dest => dest.TypesProduit, opt => opt.MapFrom(src => src.TypesProduit))
-            .ForMember(dest => dest.Articles, opt => opt.MapFrom(src => src.Article));
+            //CreateMap<CategorieDTOAvecTypesProduitEtArticle, Categorie>()
+            //    .ForMember(dest => dest.TypesProduit, opt => opt.MapFrom(src => src.TypesProduit))
+            //    .ForMember(dest => dest.Articles, opt => opt.MapFrom(src => src.Article));
 
-            CreateMap<Categorie, CategorieDTOOut>()
-           .ForMember(dest => dest.LibelleCategorie, opt => opt.MapFrom(src => src.LibelleCategorie));
+            //    CreateMap<Categorie, CategorieDTOOut>()
+            //   .ForMember(dest => dest.LibelleCategorie, opt => opt.MapFrom(src => src.LibelleCategorie));
 
-            CreateMap<CategorieDTOOut, Categorie>()
-                .ForMember(dest => dest.LibelleCategorie, opt => opt.MapFrom(src => src.LibelleCategorie));
+            //    CreateMap<CategorieDTOOut, Categorie>()
+            //        .ForMember(dest => dest.LibelleCategorie, opt => opt.MapFrom(src => src.LibelleCategorie));
 
         }
 
-}
+    }
 }

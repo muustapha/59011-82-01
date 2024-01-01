@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WPFGestionStock1.Models.Data;
 
 namespace WPFGestionStock1.Models.Services
 {
@@ -18,7 +19,8 @@ namespace WPFGestionStock1.Models.Services
 
         public IEnumerable<TypesProduit> GetAllTypesProduit()
         {
-            return _context.TypesProduits.Include(tp => tp.Categories).ToList();
+            var TT = _context.TypesProduits.Include(tp => tp.Categories).ToList();
+            return TT;
         }
         public TypesProduit GetTypesProduitById(int id)
         {

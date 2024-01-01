@@ -18,4 +18,19 @@ public partial class Categorie
     public virtual ICollection<Article> Articles { get; set; }
 
     public virtual TypesProduit TypesProduit { get; set; } = null!;
+
+
+
+    public Categorie(int idCategorie, string libelleCategorie, int idTypeProduit)
+    {
+        IdCategorie = idCategorie;
+        LibelleCategorie = libelleCategorie;
+        IdTypeProduit = idTypeProduit;
+    }
+
+    public Categorie(string libelleCategorie, int idTypeProduit)
+    {
+    }
+      
+
 }
