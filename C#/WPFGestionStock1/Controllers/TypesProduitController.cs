@@ -33,10 +33,11 @@ namespace WPFGestionStock1.Controllers
         }
 
 
-        public IEnumerable<string> GetAllTypesProduit()
+        public IEnumerable<TypesProduitDTOIn> GetAllTypesProduit()
         {
             IEnumerable<TypesProduit> listeTypesProduits = (IEnumerable<TypesProduit>)_service.GetAllTypesProduit();
-            return listeTypesProduits.Select(tp => tp.LibelleTypeProduit).ToList();
+            var tt =  listeTypesProduits.Select(tp => tp.LibelleTypeProduit).ToList();
+            return _mapper.Map<IEnumerable<TypesProduitDTOIn>>(listeTypesProduits);
         }
 
 
