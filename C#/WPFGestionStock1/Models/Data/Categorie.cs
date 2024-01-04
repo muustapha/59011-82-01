@@ -21,11 +21,11 @@ public partial class Categorie
 
 
 
-    public Categorie(int idCategorie, string libelleCategorie, int idTypeProduit)
+    public Categorie(int idCategorie, string libelleCategorie, string libelleTypeProduit)
     {
         IdCategorie = idCategorie;
         LibelleCategorie = libelleCategorie;
-        IdTypeProduit = idTypeProduit;
+        TypesProduit.LibelleTypeProduit = libelleTypeProduit;
     }
 
     public Categorie(string libelleCategorie, int idTypeProduit)

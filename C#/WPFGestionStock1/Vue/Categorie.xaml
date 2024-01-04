@@ -70,7 +70,7 @@
             <DataGrid.Columns>
                 <!--<DataGridTextColumn Header="idCategorie" Binding="{Binding IdCategorie}"/>-->
                 <DataGridTextColumn Header="libelleCategorie" Binding="{Binding LibelleCategorie}"/>
-                <DataGridTextColumn Header="libelleTypesProduit" Binding="{Binding LibelleTypesProduit}"/>
+                <DataGridTextColumn Header="libelleTypesProduit" Binding="{Binding TypesProduit.LibelleTypeProduit}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

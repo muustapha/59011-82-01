@@ -71,7 +71,7 @@
                 <!--<DataGridTextColumn Header="idArticle" Binding="{Binding IdArticle}"/>-->
                 <DataGridTextColumn Header="libelleArticle" Binding="{Binding LibelleArticle}"/>
                 <DataGridTextColumn Header="quantiteStockee" Binding="{Binding QuantiteStockee}"/>
-                <DataGridTextColumn Header="libelleCategorie" Binding="{Binding LibelleCategorie}"/>
+                <DataGridTextColumn Header="libelleCategorie" Binding="{Binding Categorie.LibelleCategorie}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

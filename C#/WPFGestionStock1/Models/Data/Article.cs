@@ -15,22 +15,22 @@ public partial class Article
 
     public virtual Categorie Categorie { get; set; }
 
-    public Article(int idArticle, string libelleArticle, int quantiteStockee, int idCategorie)
+    public Article(int idArticle, string libelleArticle, int quantiteStockee, string libelleCategorie)
     {
         IdArticle = idArticle;
         LibelleArticle = libelleArticle;
         QuantiteStockee = quantiteStockee;
-        IdCategorie = idCategorie;
+        Categorie.LibelleCategorie = libelleCategorie;
 
     }
 
 
 
-    public Article(string libelleArticle, int quantiteStockee, int idCategorie)
+    public Article(string libelleArticle, int quantiteStockee, string libelleCategorie)
     {
         LibelleArticle = libelleArticle;
         QuantiteStockee = quantiteStockee;
-        IdCategorie = idCategorie;
+        Categorie.LibelleCategorie = libelleCategorie;
     }
 
     public Article()
