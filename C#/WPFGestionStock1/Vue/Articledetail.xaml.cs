@@ -11,17 +11,75 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WPFGestionStock1.Models;
+using WPFGestionStock1.Models.Data;
+using WPFGestionStock1.Models.Services;
+using static Org.BouncyCastle.Crypto.Engines.SM2Engine;
 
 namespace WPFGestionStock1.Vue
 {
     /// <summary>
-    /// Logique d'interaction pour Articledetail.xaml
+    /// Logique d'interaction pour ArticleDetail.xaml
     /// </summary>
-    public partial class Articledetail : Window
+    public partial class ArticleDetail : Window
     {
-        public Articledetail()
+        GestionstocksContext _context;
+        ArticleService _service;
+        public string Mode { get; set; }
+
+        public ArticleDetail()
         {
             InitializeComponent();
+            _context = new GestionstocksContext();
+            _service = new ArticleService(_context);
+            Mode = mode;
+            valider.Content = Mode;
+            RemplissageChamp(a);
+        }
+        public void RemplissageChamp(Article a)
+        {
+            if (a == null)
+            {
+                return;
+            }
+
+            if (Mode != "Ajouter")
+            {
+                idArticle.Content = a.IdArticle.ToString();
+                LibelleArticle.Text = a.LibelleArticle.ToString(); 
+                QuantiteStockee.Text = a.QuantiteStockee.ToString();
+                LibelleCategorie.Text = a.LibelleCategorie.ToString();
+
+            }
+            else
+            {
+                if (idArticle != null)
+                {
+                    idArticle.Content = "0";
+                }
+            }
+        }
+        private void Click_Valider(object sender, RoutedEventArgs e)
+        {
+            a.IdArticle = int.Parse(idArticle.Content.ToString());
+            a.LibelleArticle = LibelleArticle.Text;
+            a.QuantiteStockee = int.Parse(QuantiteStockee.Text);
+            a.LibelleCategorie = LibelleCategorie.Text;
+          
+            Article a = new Article(idArticle, LibelleArticle, QuantiteStockee, LibelleCategorie);
+            switch (Mode)
+            {
+                case "ajouter": _service.AddArticle(a); break;
+                case "modifier": _service.UpdateArticle(a); break;
+                case "supprimer": _service.DeleteArticle(a); break;
+            }
+            this.Close();
+
+        }
+
+        private void Click_Annuler(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

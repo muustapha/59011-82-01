@@ -52,8 +52,8 @@ namespace WPFGestionStock1.Vue
                 item = new Article();
             }
 
-            //Window w = new ArticleDetail(item, this, (string)((Button)sender).Content);
-            // w.ShowDialog();
+            Window w = new ArticleDetail(item, this, (string)((Button)sender).Content);
+            w.ShowDialog();
             RemplirGrid();
         }
 
@@ -61,8 +61,8 @@ namespace WPFGestionStock1.Vue
         {
             Article item = (Article)((DataGridRow)sender).Item;
 
-            //Window w = new ArticleDetail(item, this, "Modifier");
-            //w.ShowDialog();
+            Window w = new ArticleDetail(item, this, "Modifier");
+            w.ShowDialog();
             RemplirGrid();
         }
     }
