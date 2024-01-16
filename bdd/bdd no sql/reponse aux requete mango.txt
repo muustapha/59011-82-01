@@ -1,0 +1,122 @@
+1[
+  {
+    _id: 1,
+    nom: 'AJMI Jazz Club',
+    adresse: {
+      numero: 4,
+      voie: 'Rue des Escaliers Sainte-Anne',
+      codePostal: '84000',
+      ville: 'Avignon',
+      localisation: { type: 'Point', coordinates: [ 43.951616, 4.808657 ] }
+    },
+    styles: [ 'jazz', 'soul', 'funk', 'blues' ],
+    avis: [
+      { date: ISODate('2019-11-01T00:00:00.000Z'), note: 8 },
+      { date: ISODate('2019-11-30T00:00:00.000Z'), note: 9 }
+    ],
+    capacite: 300,
+    smac: true
+  },
+  {
+    _id: 2,
+    nom: 'Paloma',
+    adresse: {
+      numero: 250,
+      voie: "Chemin de l'Aérodrome",
+      codePostal: '30000',
+      ville: 'Nîmes',
+      localisation: { type: 'Point', coordinates: [ 43.85643, 4.405415 ] }
+    },
+    avis: [ { date: ISODate('2019-07-06T00:00:00.000Z'), note: 10 } ],
+    capacite: 4000,
+    smac: true
+  }
+]
+
+2[ { nom: 'AJMI Jazz Club' }, { nom: 'Paloma' }, { nom: 'Sonograf' } ]
+
+3[ { _id: 3 } ]
+
+4[ { _id: 2, nom: 'Paloma' } ]
+
+5[
+  { styles: [ 'jazz', 'soul', 'funk', 'blues' ] },
+  { styles: [ 'blues', 'rock' ] }
+]
+
+6[ { styles: [ 'blues', 'rock' ] } ]
+
+7[
+  { adresse: { ville: 'Avignon' } },
+  { adresse: { ville: 'Le Thor' } }
+]
+
+8[ { _id: 2 }, { _id: 3 } ]
+
+9[ { nom: 'AJMI Jazz Club' }, { nom: 'Paloma' } ]
+
+10[ { nom: 'AJMI Jazz Club' } ]
+
+11[ { nom: 'Sonograf', capacite: 200 } ]
+
+12
+
+
+
+13[ '30000', '84000', '84250' ]
+
+14{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 3,
+  modifiedCount: 3,
+  upsertedCount: 0
+}
+
+15{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 2,
+  modifiedCount: 2,
+  upsertedCount: 0
+}
+
+16{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+17{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+18{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+19{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+20{
+  acknowledged: true,
+  insertedId: ObjectId('659bd7a93ea37de20342c446'),
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 1
+}

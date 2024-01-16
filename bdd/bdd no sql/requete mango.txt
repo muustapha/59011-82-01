@@ -1,0 +1,49 @@
+ 1_db.salles.find({"smac":true});
+
+2_db.salles.find({ $gt: 100}},{_id: 0, nom: 1})
+
+3_db.salles.find( { "adresse.numero": { $exists: false } }, { _id: 1 } )
+
+4_ db.salles.find( { avis: { $size: 1 } }, { _id: 1, nom: 1 } )
+
+5_db.salles.find({styles: "blues"},{_id: 0,styles: 1})
+
+6_db.salles.find({"styles.0": "blues"}, {"_id": 0, "styles": 1})
+
+7_ db.salles.find( { "adresse.codePostal": /^84/, capacite: { $lt: 500 } }, { _id: 0, "adresse.ville": 1 } )
+
+8_db.salles.find( { $or: [{ _id: { $mod: [2, 0] } }, { avis: { $exists: false } }] }, { _id: 1 } )
+
+9_ db.salles.find( { avis: { $elemMatch: { note: { $gte: 8, $lte: 10 } } } }, { _id: 0, nom: 1 } )
+
+10_db.salles.find( { avis: { $elemMatch: { date: { $gt: new Date("2019-11-15") } } } }, { _id: 0, nom: 1 } )
+
+11_db.salles.find( { $expr: { $gt: [{ $multiply: ["$_id", 100] }, "$capacite"] } }, { _id: 0, nom: 1, capacite: 1 } )
+
+12_db.salles.find( { $where: "this.smac == true && this.styles.length > 2" }, { _id: 0, nom: 1 } )
+
+13_db.salles.distinct("adresse.codePostal")
+
+14_db.salles.updateMany( {}, { $inc: { capacite: 100 } } )
+
+15_db.salles.updateMany( { styles: { $ne: "jazz" } }, { $push: { styles: "jazz" } } )
+
+16_db.salles.updateMany( { _id: { $nin: [2, 3] } }, { $pull: { styles: "funk" } } )
+
+17_db.salles.updateOne( { _id: 3 }, { $push: { styles: { $each: ["techno", "reggae"] } } } )
+
+18_db.salles.updateMany( { nom: /^p/i }, { $inc: { capacite: 150 }, $set: { contact: [{ telephone: "04 11 94 00 10" }] } } )
+
+19_db.salles.updateMany( { nom: /^[aeiou]/i }, { $push: { avis: { date: new Date(), note: 10 } } } ) 
+
+20_db.salles.updateMany( { nom: /^z/i }, { $set: { nom: "Pub Z", capacite: 50, smac: false } }, { upsert: true } )
+
+21_db.collection.countDocuments({_id: {$type: "objectId"}})
+
+22_db.salles.find({ _id: { $not: { $type: "objectId" } } }).sort({ capacite: -1 }).limit(1).project({ _id: 0, nom: 1 })
+
+23_db.salles.replaceOne({ _id: "id_de_l_exercice_20" },{ nom: "nom_préexistant", capacite: 60 })
+
+24_db.salles.deleteOne({ _id: { $type: "objectId" }, capacite: { $lte: 60 } })
+
+25_db.salles.findOneAndUpdate({ ville: "Nîmes" }, { $inc: { capacite: -15 } })

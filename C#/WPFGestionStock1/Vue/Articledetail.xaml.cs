@@ -48,7 +48,7 @@ namespace WPFGestionStock1.Vue
                 idArticle.Content = a.IdArticle.ToString();
                 LibelleArticle.Text = a.LibelleArticle.ToString(); 
                 QuantiteStockee.Text = a.QuantiteStockee.ToString();
-                LibelleCategorie.Text = a.LibelleCategorie.ToString();
+                LibelleCategorie.Text = c.LibelleCategorie.ToString();
 
             }
             else
@@ -61,12 +61,12 @@ namespace WPFGestionStock1.Vue
         }
         private void Click_Valider(object sender, RoutedEventArgs e)
         {
-            a.IdArticle = int.Parse(idArticle.Content.ToString());
+            a.IdArticle = int.Parse(IdArticle.Content.ToString());
             a.LibelleArticle = LibelleArticle.Text;
             a.QuantiteStockee = int.Parse(QuantiteStockee.Text);
-            a.LibelleCategorie = LibelleCategorie.Text;
+            c.LibelleCategorie = LibelleCategorie.Text;
           
-            Article a = new Article(idArticle, LibelleArticle, QuantiteStockee, LibelleCategorie);
+            Article a = new Article(IdArticle, LibelleArticle, QuantiteStockee, LibelleCategorie);
             switch (Mode)
             {
                 case "ajouter": _service.AddArticle(a); break;
